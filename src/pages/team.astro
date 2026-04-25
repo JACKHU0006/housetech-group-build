@@ -1,0 +1,101 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+
+const title = 'Our Team - HouseTech Group | Experienced Kitchen Appliance Professionals';
+const description = 'Meet the experienced team behind HouseTech Group - 500+ professionals including engineers, quality specialists, and international sales experts dedicated to your success.';
+---
+
+<Layout title={title} description={description}>
+  <Header activeNav="team" />
+
+  <!-- Page Hero -->
+  <section class="page-hero">
+    <div class="container">
+      <h1>Our Team</h1>
+      <p>The people driving innovation and excellence in kitchen appliance manufacturing</p>
+      <nav class="breadcrumb">
+        <a href="/">Home</a>
+        <span class="separator">/</span>
+        <span>Team</span>
+      </nav>
+    </div>
+  </section>
+
+  <!-- Content -->
+  <section class="content-section">
+    <div class="container">
+
+      <!-- Team Overview -->
+      <div style="text-align: center; margin-bottom: var(--spacing-2xl);">
+        <p style="font-size: var(--font-size-lg); color: var(--color-text-light); max-width: 700px; margin: 0 auto;">
+          With over 500 employees, our team combines decades of industry experience with fresh innovation to deliver world-class kitchen appliances.
+        </p>
+      </div>
+
+      <!-- Team Sections -->
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: var(--spacing-lg);">
+        
+        <div class="feature-card" style="text-align: center;">
+          <div class="feature-icon" style="margin: 0 auto var(--spacing-md); background: linear-gradient(135deg, #3b82f6, #1d4ed8);">
+            <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M16 21v-2a4 4 0 00-4-4H6a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 00-3-3.87"/><path d="M16 3.13a4 4 0 010 7.75"/></svg>
+          </div>
+          <h3>Leadership Team</h3>
+          <p>Visionary executives with 20+ years in the appliance industry, guiding our strategic direction and global expansion.</p>
+        </div>
+
+        <div class="feature-card" style="text-align: center;">
+          <div class="feature-icon" style="margin: 0 auto var(--spacing-md); background: linear-gradient(135deg, #10b981, #059669);">
+            <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M14.7 6.3a1 1 0 000 1.4l1.6 1.6a1 1 0 001.4 0l3.77-3.77a6 6 0 01-7.94 7.94l-6.91 6.91a2.12 2.12 0 01-3-3l6.91-6.91a6 6 0 017.94-7.94l-3.76 3.76z"/></svg>
+          </div>
+          <h3>R&D Engineers</h3>
+          <p>50+ engineers specializing in product design, electronics, thermal dynamics, and smart technology integration.</p>
+        </div>
+
+        <div class="feature-card" style="text-align: center;">
+          <div class="feature-icon" style="margin: 0 auto var(--spacing-md); background: linear-gradient(135deg, #f59e0b, #d97706);">
+            <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+          </div>
+          <h3>Quality Assurance</h3>
+          <p>Dedicated QC team ensuring every product meets ISO9001 and international safety standards.</p>
+        </div>
+
+        <div class="feature-card" style="text-align: center;">
+          <div class="feature-icon" style="margin: 0 auto var(--spacing-md); background: linear-gradient(135deg, #8b5cf6, #7c3aed);">
+            <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2v10z"/></svg>
+          </div>
+          <h3>Sales Team</h3>
+          <p>Multilingual sales professionals with deep understanding of global markets and B2B customer needs.</p>
+        </div>
+
+        <div class="feature-card" style="text-align: center;">
+          <div class="feature-icon" style="margin: 0 auto var(--spacing-md); background: linear-gradient(135deg, #ec4899, #db2777);">
+            <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="1" y="3" width="15" height="13" rx="2"/><path d="M16 8h4a2 2 0 012 2v9a2 2 0 01-2 2H6a2 2 0 01-2-2v-1"/></svg>
+          </div>
+          <h3>Production Workers</h3>
+          <p>Skilled manufacturing workforce operating advanced production lines with precision and efficiency.</p>
+        </div>
+
+        <div class="feature-card" style="text-align: center;">
+          <div class="feature-icon" style="margin: 0 auto var(--spacing-md); background: linear-gradient(135deg, #06b6d4, #0891b2);">
+            <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15.3 15.3 0 014 10 15.3 15.3 0 01-4 10A15.3 15.3 0 018 12 15.3 15.3 0 0112 2z"/></svg>
+          </div>
+          <h3>After-Sales Support</h3>
+          <p>Technical support team providing installation guidance, troubleshooting, and spare parts management.</p>
+        </div>
+
+      </div>
+
+      <!-- Join Us CTA -->
+      <div style="margin-top: var(--spacing-3xl); text-align: center; background: linear-gradient(135deg, var(--color-primary), var(--color-primary-light)); padding: var(--spacing-2xl); border-radius: var(--radius-lg); color: white;">
+        <h2 style="color: white; margin-bottom: var(--spacing-sm);">Join Our Team</h2>
+        <p style="opacity: 0.85; margin-bottom: var(--spacing-lg); max-width: 500px; margin-left: auto; margin-right: auto;">We are always looking for talented individuals to join our growing team.</p>
+        <a href="/careers" class="btn btn-white">View Open Positions →</a>
+      </div>
+
+    </div>
+  </section>
+
+  <Footer />
+</Layout>
