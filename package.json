@@ -1,0 +1,1 @@
+{"name": "housetech-website", "type": "module", "version": "1.0.0", "engines": {"node": ">=18.12.0"}, "scripts": {"dev": "astro dev", "start": "astro dev", "build": "astro build", "preview": "astro preview", "deploy": "echo 'Deploy completed - Cloudflare will auto-deploy from dist/'"}, "dependencies": {"astro": "^4.16.0"}}
