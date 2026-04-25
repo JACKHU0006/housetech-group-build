@@ -1,0 +1,85 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+
+const title = 'Factory - HouseTech Group | Modern Manufacturing Facility Tour';
+const description = 'Tour our 30,000 sqm modern manufacturing facility with advanced production lines, QC labs, and ISO9001 certified processes for kitchen appliances.';
+---
+
+<Layout title={title} description={description}>
+  <Header activeNav="factory" />
+
+  <!-- Page Hero -->
+  <section class="page-hero">
+    <div class="container">
+      <h1>Our Factory</h1>
+      <p>A world-class manufacturing facility delivering quality and innovation</p>
+      <nav class="breadcrumb">
+        <a href="/">Home</a>
+        <span class="separator">/</span>
+        <span>Factory</span>
+      </nav>
+    </div>
+  </section>
+
+  <!-- Content -->
+  <section class="content-section">
+    <div class="container">
+      <div class="content-area">
+
+        <h2>Manufacturing Facility Overview</h2>
+        <p>Our factory spans over 30,000 square meters of modern production space, equipped with state-of-the-art manufacturing equipment and staffed by over 500 skilled workers and engineers. Every aspect of our facility is designed to ensure the highest quality standards in kitchen appliance production.</p>
+
+        <h2>Production Lines</h2>
+        <ul>
+          <li><strong>Range Hood Line:</strong> Automated sheet metal processing, welding, coating, assembly, and testing stations with annual capacity of 300,000+ units.</li>
+          <li><strong>Gas Stove/Hob Line:</strong> Precision die-casting, burner assembly, safety testing, and quality inspection systems.</li>
+          <li><strong>Oven Production:</strong> Insulation, heating element installation, control system assembly, and thermal performance testing.</li>
+          <li><strong>Air Fryer Assembly:</strong> Compact appliance production line with automated component insertion and function testing.</li>
+          <li><strong>Water Heater Manufacturing:</strong> Heat exchanger fabrication, gas valve integration, and combustion safety testing.</li>
+        </ul>
+
+        <h2>Quality Control System</h2>
+        <p>Our ISO9001-certified quality management system ensures every product meets international standards:</p>
+        <ul>
+          <li><strong>Incoming Material Inspection:</strong> All raw materials undergo strict quality checks before entering production.</li>
+          <li><strong>In-Process Quality Checks:</strong> Multi-stage inspections during assembly to catch issues early.</li>
+          <li><strong>Final Product Testing:</strong> Comprehensive functionality, safety, and durability tests on every unit.</li>
+          <li><strong>Certification Testing:</strong> Products tested against CE, CB, ETL, SASO, and other international standards.</li>
+        </ul>
+
+        <h2>R&D Center</h2>
+        <p>Our dedicated R&D center features:</p>
+        <ul>
+          <li>50+ engineers specializing in product design, electronics, and thermal dynamics</li>
+          <li>Advanced CAD/CAM design capabilities and prototyping workshop</li>
+          <li>Acoustic lab for noise level optimization (especially for range hoods)</li>
+          <li>Combustion efficiency laboratory for gas appliances</li>
+          <li>New model development: 20+ new products launched annually</li>
+        </ul>
+
+        <h2>Key Factory Stats</h2>
+        <ul>
+          <li>Total Area: 30,000+ square meters</li>
+          <li>Production Capacity: 1 million units per year</li>
+          <li>Number of Employees: 500+</li>
+          <li>Production Lines: 10+ specialized lines</li>
+          <li>Daily Output: 3,000+ units</li>
+          <li>QC Pass Rate: 99.5%+</li>
+        </ul>
+
+        <h2>Schedule a Visit</h2>
+        <p>We warmly welcome clients and partners to visit our factory. See our production process firsthand, meet our team, and discuss your requirements face-to-face.</p>
+
+        <div style="margin-top: var(--spacing-xl); text-align: center;">
+          <a href="/contact" class="btn btn-primary">Schedule a Factory Visit →</a>
+          <a href="/download" class="btn btn-outline" style="margin-left: var(--spacing-sm); background-color: transparent; color: var(--color-accent); border-color: var(--color-accent);">Download Company Profile</a>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <Footer />
+</Layout>
