@@ -1,0 +1,168 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+
+const title = 'Contact Us - HouseTech Group | Get a Quote for Kitchen Appliances';
+const description = 'Contact HouseTech Group for B2B kitchen appliance inquiries, quotes, OEM/ODM requests, and factory visits. Fast response guaranteed within 24 hours.';
+---
+
+<Layout title={title} description={description}>
+  <Header activeNav="contact" />
+
+  <!-- Page Hero -->
+  <section class="page-hero">
+    <div class="container">
+      <h1>Contact Us</h1>
+      <p>Get in touch for quotes, inquiries, and partnership opportunities</p>
+      <nav class="breadcrumb">
+        <a href="/">Home</a>
+        <span class="separator">/</span>
+        <span>Contact Us</span>
+      </nav>
+    </div>
+  </section>
+
+  <!-- Content -->
+  <section class="content-section">
+    <div class="container">
+      <div style="display: grid; grid-template-columns: 1fr 1fr; gap: var(--spacing-2xl);">
+
+        <!-- Contact Info -->
+        <div>
+          <h2 style="margin-bottom: var(--spacing-md);">Get In Touch</h2>
+          <p style="color: var(--color-text-light); margin-bottom: var(--spacing-xl); line-height: 1.7;">Whether you need a product quote, want to discuss OEM/ODM projects, or plan a factory visit, our team is ready to help.</p>
+
+          <div style="display: flex; flex-direction: column; gap: var(--spacing-lg);">
+
+            <div style="display: flex; gap: var(--spacing-md); align-items: flex-start;">
+              <div style="width: 48px; height: 48px; border-radius: var(--radius-md); background: var(--color-accent-light); display: flex; align-items: center; justify-content: center; color: var(--color-accent); flex-shrink: 0;">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+              </div>
+              <div>
+                <h3 style="font-size: var(--font-size-base); margin-bottom: 0.25rem;">Email</h3>
+                <p style="color: var(--color-text-light); font-size: var(--font-size-sm);"><a href="mailto:sales@housetech-ch.com" style="color: var(--color-accent);">sales@housetech-ch.com</a></p>
+                <p style="color: var(--color-text-light); font-size: var(--font-size-sm);"><a href="mailto:info@housetech-ch.com" style="color: var(--color-accent);">info@housetech-ch.com</a> (General Inquiries)</p>
+              </div>
+            </div>
+
+            <div style="display: flex; gap: var(--spacing-md); align-items: flex-start;">
+              <div style="width: 48px; height: 48px; border-radius: var(--radius-md); background: #dcfce7; display: flex; align-items: center; justify-content: center; color: #16a34a; flex-shrink: 0;">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
+              </div>
+              <div>
+                <h3 style="font-size: var(--font-size-base); margin-bottom: 0.25rem;">WhatsApp / Phone</h3>
+                <p style="color: var(--color-text-light); font-size: var(--font-size-sm);"><strong>Sales:</strong> +86 xxx xxxx xxxx</p>
+                <p style="color: var(--color-text-light); font-size: var(--font-size-sm);"><strong>OEM Support:</strong> +86 xxx xxxx xxxx</p>
+              </div>
+            </div>
+
+            <div style="display: flex; gap: var(--spacing-md); align-items: flex-start;">
+              <div style="width: 48px; height: 48px; border-radius: var(--radius-md); background: #fef3c7; display: flex; align-items: center; justify-content: center; color: #d97706; flex-shrink: 0;">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+              </div>
+              <div>
+                <h3 style="font-size: var(--font-size-base); margin-bottom: 0.25rem;">Business Hours</h3>
+                <p style="color: var(--color-text-light); font-size: var(--font-size-sm);">Monday - Saturday</p>
+                <p style="color: var(--color-text-light); font-size: var(--font-size-sm);">8:30 AM - 6:00 PM (CST / UTC+8)</p>
+              </div>
+            </div>
+
+            <div style="display: flex; gap: var(--spacing-md); align-items: flex-start;">
+              <div style="width: 48px; height: 48px; border-radius: var(--radius-md); background: #ede9fe; display: flex; align-items: center; justify-content: center; color: #7c3aed; flex-shrink: 0;">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+              </div>
+              <div>
+                <h3 style="font-size: var(--font-size-base); margin-bottom: 0.25rem;">Factory Address</h3>
+                <p style="color: var(--color-text-light); font-size: var(--font-size-sm);">[Factory Address]</p>
+                <p style="color: var(--color-text-light); font-size: var(--font-size-sm);">Zhongshan City, Guangdong Province, China</p>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- Contact Form -->
+        <div>
+          <div style="background: white; padding: var(--spacing-xl); border-radius: var(--radius-lg); border: 1px solid var(--color-border);">
+            <h2 style="margin-bottom: var(--spacing-lg);">Send Us a Message</h2>
+
+            <form action="#" method="POST" style="display: flex; flex-direction: column; gap: var(--spacing-md);">
+              <div style="display: grid; grid-template-columns: 1fr 1fr; gap: var(--spacing-md);">
+                <div>
+                  <label style="display: block; font-size: var(--font-size-sm); font-weight: 600; margin-bottom: 0.35rem; color: var(--color-primary);">First Name *</label>
+                  <input type="text" name="firstName" required placeholder="John" style="width: 100%; padding: 0.75rem; border: 1px solid var(--color-border); border-radius: var(--radius-md); font-family: inherit; font-size: var(--font-size-base);" />
+                </div>
+                <div>
+                  <label style="display: block; font-size: var(--font-size-sm); font-weight: 600; margin-bottom: 0.35rem; color: var(--color-primary);">Last Name *</label>
+                  <input type="text" name="lastName" required placeholder="Smith" style="width: 100%; padding: 0.75rem; border: 1px solid var(--color-border); border-radius: var(--radius-md); font-family: inherit; font-size: var(--font-size-base);" />
+                </div>
+              </div>
+
+              <div>
+                <label style="display: block; font-size: var(--font-size-sm); font-weight: 600; margin-bottom: 0.35rem; color: var(--color-primary);">Email Address *</label>
+                <input type="email" name="email" required placeholder="john@company.com" style="width: 100%; padding: 0.75rem; border: 1px solid var(--color-border); border-radius: var(--radius-md); font-family: inherit; font-size: var(--font-size-base);" />
+              </div>
+
+              <div>
+                <label style="display: block; font-size: var(--font-size-sm); font-weight: 600; margin-bottom: 0.35rem; color: var(--color-primary);">Company Name</label>
+                <input type="text" name="company" placeholder="Your Company Ltd." style="width: 100%; padding: 0.75rem; border: 1px solid var(--color-border); border-radius: var(--radius-md); font-family: inherit; font-size: var(--font-size-base);" />
+              </div>
+
+              <div>
+                <label style="display: block; font-size: var(--font-size-sm); font-weight: 600; margin-bottom: 0.35rem; color: var(--color-primary);">Inquiry Type *</label>
+                <select name="inquiryType" required style="width: 100%; padding: 0.75rem; border: 1px solid var(--color-border); border-radius: var(--radius-md); font-family: inherit; font-size: var(--font-size-base); background: white;">
+                  <option value="">Select an option...</option>
+                  <option value="quote">Product Quote Request</option>
+                  <option value="oem">OEM / ODM Inquiry</option>
+                  <option value="sample">Sample Request</option>
+                  <option value="factory">Factory Visit</option>
+                  <option value="partnership">Partnership Discussion</option>
+                  <option value="support">Technical Support</option>
+                  <option value="other">Other</option>
+                </select>
+              </div>
+
+              <div>
+                <label style="display: block; font-size: var(--font-size-sm); font-weight: 600; margin-bottom: 0.35rem; color: var(--color-primary);">Product Interest</label>
+                <select name="product" style="width: 100%; padding: 0.75rem; border: 1px solid var(--color-border); border-radius: var(--radius-md); font-family: inherit; font-size: var(--font-size-base); background: white;">
+                  <option value="">Select product category...</option>
+                  <option value="range-hood">Range Hoods</option>
+                  <option value="gas-stove">Gas Stoves & Hobs</option>
+                  <option value="oven">Ovens</option>
+                  <option value="air-fryer">Air Fryers</option>
+                  <option value="water-heater">Gas Water Heaters</option>
+                  <option value="multiple">Multiple Categories</option>
+                </select>
+              </div>
+
+              <div>
+                <label style="display: block; font-size: var(--font-size-sm); font-weight: 600; margin-bottom: 0.35rem; color: var(--color-primary);">Message *</label>
+                <textarea name="message" required rows="5" placeholder="Please describe your requirements including quantity, specifications, target market, etc." style="width: 100%; padding: 0.75rem; border: 1px solid var(--color-border); border-radius: var(--radius-md); font-family: inherit; font-size: var(--font-size-base); resize: vertical;"></textarea>
+              </div>
+
+              <button type="submit" class="btn btn-primary" style="width: 100%;">Send Message</button>
+              <p style="text-align: center; font-size: var(--font-size-xs); color: var(--color-text-light);">We typically respond within 24 business hours.</p>
+            </form>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Map Placeholder -->
+  <section style="padding: 0; background: var(--color-bg-alt);">
+    <div class="container" style="padding: var(--spacing-xl) 0;">
+      <div style="height: 300px; border-radius: var(--radius-lg); background: linear-gradient(135deg, #e2e8f0, #cbd5e1); display: flex; align-items: center; justify-content: center; color: var(--color-text-light);">
+        <div style="text-align: center;">
+          <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" style="margin: 0 auto var(--spacing-sm); opacity: 0.5;"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+          <p>Map — Factory Location</p>
+          <p style="font-size: var(--font-size-sm);">Zhongshan, Guangdong, China</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <Footer />
+</Layout>

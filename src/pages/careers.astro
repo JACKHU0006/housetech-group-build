@@ -1,0 +1,129 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+
+const title = 'Careers - HouseTech Group | Join Our Growing Team';
+const description="Explore career opportunities at HouseTech Group. Join a leading kitchen appliance manufacturer with global impact and growth opportunities.";
+---
+
+<Layout title={title} description={description}>
+  <Header activeNav="" />
+
+  <!-- Page Hero -->
+  <section class="page-hero">
+    <div class="container">
+      <h1>Careers</h1>
+      <p>Build your future with HouseTech Group</p>
+      <nav class="breadcrumb">
+        <a href="/">Home</a>
+        <span class="separator">/</span>
+        <span>Careers</span>
+      </nav>
+    </div>
+  </section>
+
+  <!-- Content -->
+  <section class="content-section">
+    <div class="container">
+
+      <div style="max-width: 700px; margin: 0 auto var(--spacing-2xl); text-align: center;">
+        <h2 style="margin-bottom: var(--spacing-sm);">Why Work With Us?</h2>
+        <p style="color: var(--color-text-light); line-height: 1.7;">Join a dynamic team at the forefront of kitchen appliance innovation. We offer competitive compensation, professional development opportunities, and a collaborative work environment where your contributions make a real difference.</p>
+      </div>
+
+      <!-- Benefits -->
+      <div class="features-grid" style="margin-bottom: var(--spacing-3xl);">
+        <div class="feature-card" style="text-align: center;">
+          <div class="feature-icon" style="margin: 0 auto var(--spacing-md);">
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 000 7h5a3.5 3.5 0 010 7H6"/></svg>
+          </div>
+          <h3>Competitive Salary</h3>
+          <p>Above-market compensation packages based on experience and skills.</p>
+        </div>
+        <div class="feature-card" style="text-align: center;">
+          <div class="feature-icon" style="margin: 0 auto var(--spacing-md); background: linear-gradient(135deg, #10b981, #059669);">
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><polyline points="23 6 13.5 15.5 8.5 10.5 1 18"/><polyline points="17 6 23 6 23 12"/></svg>
+          </div>
+          <h3>Growth Opportunities</h3>
+          <p>Clear career paths and promotion opportunities within the organization.</p>
+        </div>
+        <div class="feature-card" style="text-align: center;">
+          <div class="feature-icon" style="margin: 0 auto var(--spacing-md); background: linear-gradient(135deg, #f59e0b, #d97706);">
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M2 3h6a4 4 0 014 4v14a3 3 0 00-3-3H2z"/><path d="M22 3h-6a4 4 0 00-4 4v14a3 3 0 013-3h7z"/></svg>
+          </div>
+          <h3>Training & Development</h3>
+          <p>Continuous learning programs and skill enhancement opportunities.</p>
+        </div>
+        <div class="feature-card" style="text-align: center;">
+          <div class="feature-icon" style="margin: 0 auto var(--spacing-md); background: linear-gradient(135deg, #ec4899, #db2777);">
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="10"/><path d="M16.24 7.76l-2.12 6.36-6.36 2.12 2.12-6.36 6.36-2.12z"/></svg>
+          </div>
+          <h3>Global Exposure</h3>
+          <p>Work with international clients and participate in global trade shows.</p>
+        </div>
+      </div>
+
+      <!-- Open Positions -->
+      <h2 style="text-align: center; margin-bottom: var(--spacing-xl);">Open Positions</h2>
+
+      <div style="display: flex; flex-direction: column; gap: var(--spacing-md); max-width: 800px; margin: 0 auto;">
+
+        <div style="border: 1px solid var(--color-border); border-radius: var(--radius-md); padding: var(--spacing-lg); background: white;">
+          <div style="display: flex; justify-content: space-between; align-items: start; gap: var(--spacing-md); flex-wrap: wrap;">
+            <div>
+              <h3 style="font-size: var(--font-size-base); color: var(--color-primary);">International Sales Manager</h3>
+              <p style="color: var(--color-text-light); font-size: var(--font-size-sm); margin-top: 0.35rem;">Full-time · Zhongshan, Guangdong</p>
+            </div>
+            <span style="background: #dcfce7; color: #16a34a; padding: 0.25rem 0.75rem; border-radius: var(--radius-full); font-size: var(--font-size-xs); font-weight: 600; white-space: nowrap;">Open</span>
+          </div>
+          <p style="color: var(--color-text-light); font-size: var(--font-size-sm); margin-top: var(--spacing-sm); line-height: 1.6;">Lead international sales efforts for kitchen appliance products. Develop new markets and manage key accounts in Europe, Middle East, Southeast Asia regions. B2B sales experience required.</p>
+          <a href="/contact" class="btn btn-primary btn-sm" style="margin-top: var(--spacing-sm);">Apply Now</a>
+        </div>
+
+        <div style="border: 1px solid var(--color-border); border-radius: var(--radius-md); padding: var(--spacing-lg); background: white;">
+          <div style="display: flex; justify-content: space-between; align-items: start; gap: var(--spacing-md); flex-wrap: wrap;">
+            <div>
+              <h3 style="font-size: var(--font-size-base); color: var(--color-primary);">R&D Engineer (Kitchen Appliances)</h3>
+              <p style="color: var(--color-text-light); font-size: var(--font-size-sm); margin-top: 0.35rem;">Full-time · Zhongshan, Guangdong</p>
+            </div>
+            <span style="background: #dcfce7; color: #16a34a; padding: 0.25rem 0.75rem; border-radius: var(--radius-full); font-size: var(--font-size-xs); font-weight: 600; white-space: nowrap;">Open</span>
+          </div>
+          <p style="color: var(--color-text-light); font-size: var(--font-size-sm); margin-top: var(--spacing-sm); line-height: 1.6;">Join our R&D team to design next-generation kitchen appliances. Experience in product design, thermal dynamics, or electronics preferred.</p>
+          <a href="/contact" class="btn btn-primary btn-sm" style="margin-top: var(--spacing-sm);">Apply Now</a>
+        </div>
+
+        <div style="border: 1px solid var(--color-border); border-radius: var(--radius-md); padding: var(--spacing-lg); background: white;">
+          <div style="display: flex; justify-content: space-between; align-items: start; gap: var(--spacing-md); flex-wrap: wrap;">
+            <div>
+              <h3 style="font-size: var(--font-size-base); color: var(--color-primary);">Quality Control Specialist</h3>
+              <p style="color: var(--color-text-light); font-size: var(--font-size-sm); margin-top: 0.35rem;">Full-time · Zhongshan, Guangdong</p>
+            </div>
+            <span style="background: #dcfce7; color: #16a34a; padding: 0.25rem 0.75rem; border-radius: var(--radius-full); font-size: var(--font-size-xs); font-weight: 600; white-space: nowrap;">Open</span>
+          </div>
+          <p style="color: var(--color-text-light); font-size: var(--font-size-sm); margin-top: var(--spacing-sm); line-height: 1.6;">Ensure product quality through systematic inspection processes. ISO9001 experience and quality management knowledge required.</p>
+          <a href="/contact" class="btn btn-primary btn-sm" style="margin-top: var(--spacing-sm);">Apply Now</a>
+        </div>
+
+        <div style="border: 1px solid var(--color-border); border-radius: var(--radius-md); padding: var(--spacing-lg); background: white; opacity: 0.65;">
+          <div style="display: flex; justify-content: space-between; align-items: start; gap: var(--spacing-md); flex-wrap: wrap;">
+            <div>
+              <h3 style="font-size: var(--font-size-base); color: var(--color-text-light);">E-commerce Operations Specialist</h3>
+              <p style="color: var(--color-text-light); font-size: var(--font-size-sm); margin-top: 0.35rem;">Full-time / Remote</p>
+            </div>
+            <span style="background: #e2e8f0; color: #64748b; padding: 0.25rem 0.75rem; border-radius: var(--radius-full); font-size: var(--font-size-xs); font-weight: 600; white-space: nowrap;">Coming Soon</span>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Application Note -->
+      <div style="margin-top: var(--spacing-2xl); text-align: center;">
+        <p style="color: var(--color-text-light);">Don't see a position that fits? Send your resume to <a href="mailto:hr@housetech-ch.com" style="color: var(--color-accent);">hr@housetech-ch.com</a></p>
+      </div>
+
+    </div>
+  </section>
+
+  <Footer />
+</Layout>
