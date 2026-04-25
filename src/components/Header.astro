@@ -1,0 +1,83 @@
+---
+import '../styles/global.css';
+
+interface Props {
+  activeNav?: string;
+}
+
+const { activeNav = '' } = Astro.props;
+
+const navItems = [
+  { label: 'Home', href: '/', key: 'home' },
+  { label: 'About Us', href: '/about', key: 'about' },
+  { label: 'Products', href: '/products', key: 'products' },
+  { label: 'Factory', href: '/factory', key: 'factory' },
+  { label: 'Team', href: '/team', key: 'team' },
+  { label: 'Service', href: '/service', key: 'service' },
+  { label: 'FAQ', href: '/faq', key: 'faq' },
+  { label: 'News', href: '/news', key: 'news' },
+  { label: 'Contact Us', href: '/contact', key: 'contact' },
+];
+---
+
+<!-- Header -->
+<header class="header" id="header">
+  <div class="container header-inner">
+    <!-- Logo -->
+    <a href="/" class="logo">
+      <img src="/logo-full.png" alt="HouseTech Group - Kitchen Appliance Manufacturer" class="logo-img" />
+    </a>
+
+    <!-- Mobile Menu Toggle -->
+    <button class="mobile-toggle" id="mobileToggle" aria-label="Toggle menu" aria-expanded="false">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+
+    <!-- Navigation -->
+    <nav class="nav" id="mainNav">
+      <ul class="nav-list">
+        {navItems.map((item) => (
+          <li>
+            <a
+              href={item.href}
+              class:list={['nav-link', { active: activeNav === item.key }]}
+            >
+              {item.label}
+            </a>
+          </li>
+        ))}
+      </ul>
+      <div class="nav-cta-mobile">
+        <a href="/contact" class="btn btn-primary btn-sm">Get a Quote</a>
+      </div>
+    </nav>
+
+    <!-- Desktop CTA -->
+    <div class="header-cta">
+      <a href="/contact" class="btn btn-primary btn-sm">Get a Quote</a>
+    </div>
+  </div>
+</header>
+
+<script>
+  // Sticky header on scroll
+  const header = document.getElementById('header');
+  window.addEventListener('scroll', () => {
+    if (window.scrollY > 50) {
+      header?.classList.add('scrolled');
+    } else {
+      header?.classList.remove('scrolled');
+    }
+  });
+
+  // Mobile menu toggle
+  const mobileToggle = document.getElementById('mobileToggle');
+  const mainNav = document.getElementById('mainNav');
+
+  mobileToggle?.addEventListener('click', () => {
+    const isOpen = mainNav?.classList.toggle('open');
+    mobileToggle.setAttribute('aria-expanded', String(isOpen));
+  });
+</script>
