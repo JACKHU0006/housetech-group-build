@@ -1,1 +1,1 @@
-/// <reference path="../.astro/types.d.ts" />
+Ly8vIDxyZWZlcmVuY2UgcGF0aD0iLi4vLmFzdHJvL3R5cGVzLmQudHMiIC8+

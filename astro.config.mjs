@@ -1,13 +1,1 @@
-import { defineConfig } from 'astro/config';
-
-export default defineConfig({
-  site: 'https://housetech-ch.com',
-  build: {
-    inlineStylesheets: 'auto',
-  },
-  vite: {
-    build: {
-      cssMinify: true,
-    },
-  },
-});
+aW1wb3J0IHsgZGVmaW5lQ29uZmlnIH0gZnJvbSAnYXN0cm8vY29uZmlnJzsNCg0KZXhwb3J0IGRlZmF1bHQgZGVmaW5lQ29uZmlnKHsNCiAgc2l0ZTogJ2h0dHBzOi8vaG91c2V0ZWNoLWNoLmNvbScsDQogIGJ1aWxkOiB7DQogICAgaW5saW5lU3R5bGVzaGVldHM6ICdhdXRvJywNCiAgfSwNCiAgdml0ZTogew0KICAgIGJ1aWxkOiB7DQogICAgICBjc3NNaW5pZnk6IHRydWUsDQogICAgfSwNCiAgfSwNCn0pOw0K
