@@ -1,0 +1,69 @@
+> llms.txt — HouseTech Group AI Engine Optimization
+> Version: 1.0
+> Last updated: 2026-04-26
+
+# HouseTech Group
+
+**HouseTech Group** is a leading B2B manufacturer of premium kitchen appliances, established in 2010 in Zhongshan, Guangdong, China. With a 30,000+ sqm modern factory and 500+ employees, HouseTech serves 1,000+ global clients across 50+ countries.
+
+## Quick Facts
+- **Industry:** Kitchen Appliance Manufacturing (B2B OEM/ODM)
+- **Founded:** 2010 (15+ years)
+- **Location:** Zhongshan, Guangdong, China
+- **Factory Size:** 30,000+ sqm
+- **Employees:** 500+
+- **Annual Capacity:** 1 million+ units
+- **Export Markets:** 50+ countries (Europe, Middle East, Southeast Asia, Africa, Latin America, North America)
+- **Certifications:** ISO9001:2015, CE, CB, ETL, SASO, GCC, NOM, RoHS
+
+## Product Categories
+
+### Range Hoods / Kitchen Hoods
+Wall Mount, Island, Built-in, Slim, Chimney & Commercial range hoods with advanced ventilation technology. Extraction fans, grease filters, LED lighting systems.
+
+### Gas Stoves & Built-in Hobs
+Built-in Gas/Electric/Ceramic/Induction Hobs, 2-5 burners, portable options with auto-ignition and flame failure protection.
+
+### Induction Cookers
+Commercial and household induction cookers with touch controls, multiple power levels, timer functions, rapid heating technology.
+
+### Ceramic Cookers
+Touch-control ceramic cookers with multiple heating zones, child lock safety features, overheat protection.
+
+### Built-in Ovens
+Electric, Gas, Convection & Steam ovens for residential and commercial use. Built-in, freestanding, countertop models.
+
+### Air Fryers
+Digital and mechanical air fryers with oil-free cooking technology, temperature control, timer functions, multiple accessories.
+
+### Gas Water Heaters
+Instant/Tankless gas water heaters, flue type and balanced combustion types, digital display, multiple safety protections.
+
+## Services
+- **OEM Manufacturing:** Custom branding, packaging, specifications per client requirements
+- **ODM Development:** Full product development from concept to mass production
+- **Private Label:** White-label solutions for kitchen appliance brands worldwide
+- **Custom Packaging:** Branded packaging design and production
+- **Quality Assurance:** Comprehensive QC at every production stage, 99.5% on-time delivery rate
+- **Global Logistics:** Export documentation, shipping coordination, customs clearance support
+
+## Contact Information
+- **Website:** https://housetech-ch.com
+- **Email:** sales@housetech-ch.com
+- **Phone/WhatsApp:** +86 137 0299 5368
+- **Address:** No. 88 Huagang Road, Dongfeng Town, Zhongshan City, Guangdong Province, China
+
+## Key Site Sections
+- `/` - Homepage with product categories overview, company stats, certifications
+- `/products` - All product category listings
+- `/about` - Company overview, mission, vision, values, milestones
+- `/factory` - Factory tour, manufacturing capabilities, quality control
+- `/contact` - Contact form, inquiry submission, location map
+- `/news` - Industry news, company announcements, trade show participation
+- `/faq` - Frequently asked questions about products, services, ordering
+- `/warranty` - Warranty terms, after-sales service policy
+- `/privacy` - Privacy policy
+- `/terms` - Terms and conditions
+
+## SEO Keywords
+HouseTech, HouseTech Group, kitchen appliance manufacturer, range hood manufacturer, gas stove OEM ODM, built-in oven supplier, air fryer factory, induction cooker manufacturer, ceramic cooker supplier, gas water heater B2B, kitchen hood factory, China kitchen appliances, B2B kitchen equipment, commercial kitchen appliances, extractor hood, chimney hood, island hood, gas hob, induction hob, ceramic hob, convection oven, steam oven, electric air fryer, oil free air fryer, instant water heater, tankless water heater
