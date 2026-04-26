@@ -1,0 +1,107 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450" width="800" height="450">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0a2540"/>
+      <stop offset="100%" stop-color="#0d3052"/>
+    </linearGradient>
+    <linearGradient id="orangeAccent" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#f7931e"/>
+      <stop offset="100%" stop-color="#e07010"/>
+    </linearGradient>
+    <filter id="shadow">
+      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#000" flood-opacity="0.3"/>
+    </filter>
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="4" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <radialGradient id="globeGrad" cx="40%" cy="40%">
+      <stop offset="0%" stop-color="#3498db"/>
+      <stop offset="100%" stop-color="#0a2540"/>
+    </radialGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect width="800" height="450" fill="url(#bg)" rx="12"/>
+
+  <!-- World map outline -->
+  <g transform="translate(400, 210)" opacity="0.12">
+    <!-- Simplified world continents -->
+    <ellipse cx="-200" cy="-40" rx="120" ry="90" fill="#3498db" transform="rotate(-10)"/>
+    <ellipse cx="-60" cy="-20" rx="80" ry="60" fill="#3498db"/>
+    <ellipse cx="40" cy="-80" rx="100" ry="80" fill="#3498db"/>
+    <ellipse cx="160" cy="-20" rx="90" ry="70" fill="#3498db"/>
+    <ellipse cx="260" cy="40" rx="70" ry="90" fill="#3498db"/>
+    <ellipse cx="100" cy="80" rx="50" ry="40" fill="#3498db"/>
+    <ellipse cx="-160" cy="100" rx="60" ry="40" fill="#3498db"/>
+  </g>
+
+  <!-- Globe center -->
+  <g transform="translate(400, 210)" filter="url(#shadow)">
+    <circle cx="0" cy="0" r="160" fill="url(#globeGrad)" opacity="0.3"/>
+    <circle cx="0" cy="0" r="140" fill="none" stroke="#3498db" stroke-width="1" opacity="0.3"/>
+    <circle cx="0" cy="0" r="120" fill="none" stroke="#3498db" stroke-width="0.5" opacity="0.2"/>
+    <!-- Lat/lng lines -->
+    <ellipse cx="0" cy="0" rx="140" ry="50" fill="none" stroke="#3498db" stroke-width="0.5" opacity="0.2"/>
+    <ellipse cx="0" cy="0" rx="140" ry="100" fill="none" stroke="#3498db" stroke-width="0.5" opacity="0.15"/>
+    <line x1="-140" y1="0" x2="140" y2="0" stroke="#3498db" stroke-width="0.5" opacity="0.2"/>
+    <line x1="0" y1="-140" x2="0" y2="140" stroke="#3498db" stroke-width="0.5" opacity="0.2"/>
+  </g>
+
+  <!-- Trade route lines -->
+  <g opacity="0.5" stroke="#f7931e" stroke-width="1.5" fill="none" filter="url(#glow)">
+    <path d="M300,120 Q350,100 400,110 Q450,120 500,100" stroke-dasharray="5,3"/>
+    <path d="M200,180 Q300,150 400,160 Q500,170 600,150" stroke-dasharray="5,3"/>
+    <path d="M250,250 Q350,220 450,240 Q550,260 650,230" stroke-dasharray="5,3"/>
+    <path d="M180,200 Q280,180 380,195 Q480,210 580,190" stroke-dasharray="5,3"/>
+    <path d="M350,130 Q400,160 450,140 Q500,120 550,140" stroke-dasharray="5,3"/>
+    <path d="M220,160 Q320,200 420,170 Q520,140 620,170" stroke-dasharray="5,3"/>
+  </g>
+
+  <!-- Country dots -->
+  <g filter="url(#glow)">
+    <circle cx="200" cy="120" r="6" fill="#f7931e"/>
+    <circle cx="280" cy="150" r="5" fill="#f7931e" opacity="0.8"/>
+    <circle cx="350" cy="100" r="7" fill="#f7931e"/>
+    <circle cx="420" cy="130" r="6" fill="#f7931e"/>
+    <circle cx="480" cy="90" r="5" fill="#f7931e" opacity="0.8"/>
+    <circle cx="550" cy="120" r="6" fill="#f7931e"/>
+    <circle cx="620" cy="100" r="5" fill="#f7931e" opacity="0.8"/>
+    <circle cx="680" cy="150" r="6" fill="#f7931e"/>
+
+    <circle cx="180" cy="200" r="5" fill="#3498db" opacity="0.8"/>
+    <circle cx="260" cy="220" r="6" fill="#3498db" opacity="0.8"/>
+    <circle cx="340" cy="190" r="5" fill="#3498db" opacity="0.8"/>
+    <circle cx="460" cy="200" r="6" fill="#3498db" opacity="0.8"/>
+    <circle cx="540" cy="180" r="5" fill="#3498db" opacity="0.8"/>
+    <circle cx="620" cy="210" r="6" fill="#3498db" opacity="0.8"/>
+    <circle cx="700" cy="190" r="5" fill="#3498db" opacity="0.8"/>
+
+    <circle cx="300" cy="270" r="5" fill="#2ecc71" opacity="0.8"/>
+    <circle cx="400" cy="250" r="6" fill="#2ecc71" opacity="0.8"/>
+    <circle cx="500" cy="280" r="5" fill="#2ecc71" opacity="0.8"/>
+    <circle cx="600" cy="260" r="6" fill="#2ecc71" opacity="0.8"/>
+    <circle cx="680" cy="270" r="5" fill="#2ecc71" opacity="0.8"/>
+  </g>
+
+  <!-- "40" large number -->
+  <g transform="translate(400, 200)" filter="url(#shadow)">
+    <text x="0" y="30" text-anchor="middle" font-family="Arial Black, Arial" font-size="80" font-weight="900" fill="#f7931e" opacity="0.9">40</text>
+    <text x="0" y="-50" text-anchor="middle" font-family="Arial" font-size="14" font-weight="700" fill="#ffd700" letter-spacing="2">COUNTRIES</text>
+  </g>
+
+  <!-- Globe icon top-left -->
+  <g transform="translate(70, 50)" opacity="0.6">
+    <circle cx="30" cy="30" r="28" fill="none" stroke="#3498db" stroke-width="2"/>
+    <ellipse cx="30" cy="30" rx="28" ry="10" fill="none" stroke="#3498db" stroke-width="1"/>
+    <line x1="30" y1="2" x2="30" y2="58" stroke="#3498db" stroke-width="1"/>
+    <line x1="2" y1="30" x2="58" y2="30" stroke="#3498db" stroke-width="1"/>
+  </g>
+
+  <!-- Bottom label -->
+  <text x="400" y="400" text-anchor="middle" font-family="Arial" font-size="22" font-weight="900" fill="#f7931e" letter-spacing="4">GLOBAL JOURNEY</text>
+  <text x="400" y="420" text-anchor="middle" font-family="Arial" font-size="12" fill="#5a9fd4" letter-spacing="2">40 COUNTRIES · WORLDWIDE REACH</text>
+
+  <!-- Brand watermark -->
+  <text x="790" y="438" text-anchor="end" font-family="Arial, sans-serif" font-size="10" fill="white" opacity="0.4">HouseTech Group</text>
+</svg>

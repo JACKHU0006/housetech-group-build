@@ -1,0 +1,8 @@
+# Robots.txt for housetech-ch.com
+# HouseTech Group - Professional Kitchen Appliance Manufacturer
+
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://housetech-ch.com/sitemap.xml

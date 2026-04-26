@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 800" width="800" height="800">
+  <defs><linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" style="stop-color:#f8f9fa"/><stop offset="100%" style="stop-color:#e9ecef"/></linearGradient><linearGradient id="glass" x1="0%" y1="0%" x2="100%" x2="0%"><stop offset="0%" style="stop-color:#1a1a24"/><stop offset="50%" style="stop-color:#2a2a35"/><stop offset="100%" style="stop-color:#1a1a24"/></linearGradient><linearGradient id="plastic" x1="0%" y1="0%" x2="100%" x2="0%"><stop offset="0%" style="stop-color:#e8eaed"/><stop offset="100%" style="stop-color:#d0d4d8"/></linearGradient><linearGradient id="accent" x1="0%" y1="0%" x2="100%" x2="0%"><stop offset="0%" style="stop-color:#0a2540"/><stop offset="100%" style="stop-color:#1a3a5c"/></linearGradient><filter id="shadow"><feDropShadow dx="0" dy="8" stdDeviation="12" flood-opacity="0.15"/></filter></defs>
+  <rect width="800" height="800" fill="url(#bg)" rx="20"/>
+  <g transform="translate(120, 170)" filter="url(#shadow)">
+    <!-- Portable body (compact flat box) -->
+    <rect x="30" y="80" width="500" height="200" rx="16" fill="url(#plastic)" stroke="#b0b8c0" stroke-width="2"/>
+    <!-- Glass cooktop surface -->
+    <rect x="50" y="95" width="460" height="140" rx="10" fill="url(#glass)" stroke="#444" stroke-width="1.5"/>
+    <!-- Single zone -->
+    <circle cx="280" cy="165" r="75" fill="none" stroke="#f7931e" stroke-opacity="0.35" stroke-width="3" stroke-dasharray="6,3"/>
+    <circle cx="280" cy="165" r="55" fill="rgba(247,147,30,0.05)"/><circle cx="280" cy="165" r="12" fill="#f7931e" opacity="0.45"/>
+    <!-- Control knobs/buttons on right side -->
+    <circle cx="430" cy="125" r="14" fill="#333" stroke="#555" stroke-width="2"/>
+    <line x1="430" y1="117" x2="436" y2="122" stroke="#f7931e" stroke-width="2" stroke-linecap="round"/>
+    <circle cx="430" cy="175" r="14" fill="#333" stroke="#555" stroke-width="2"/>
+    <line x1="430" y1="167" x2="436" y2="172" stroke="#f7931e" stroke-width="2" stroke-linecap="round"/>
+    <!-- LED display -->
+    <rect x="350" y="195" width="70" height="22" rx="3" fill="#111"/><text x="385" y="211" text-anchor="middle" font-family="monospace" font-weight="bold" font-size="11" fill="#4af">2000W</text>
+    <!-- Power cord -->
+    <path d="M480 260 Q510 270, 520 290 L530 310" fill="none" stroke="#444" stroke-width="4" stroke-linecap="round"/>
+    <!-- Feet/stand -->
+    <rect x="80" y="280" width="30" height="15" rx="3" fill="#888"/>
+    <rect x="450" y="280" width="30" height="15" rx="3" fill="#888"/>
+    <!-- Handle on left side -->
+    <rect x="18" y="150" width="14" height="80" rx="7" fill="#aaa" stroke="#999" stroke-width="1"/>
+    <!-- Indicator -->
+    <circle cx="80" cy="115" r="5" fill="#4ade80" opacity="0.7"/>
+  </g>
+  <g transform="translate(400, 700)"><rect x="-105" y="-28" width="210" height="56" rx="28" fill="url(#accent)"/><text x="0" y="6" text-anchor="middle" font-family="'Inter',sans-serif" font-weight="800" font-size="18" fill="white">HT-IC20</text><text x="0" y="20" text-anchor="middle" font-family="'Inter',sans-serif" font-weight="500" font-size="10" fill="#f7931e" letter-spacing="3">PORTABLE INDUCTION</text></g>
+</svg>

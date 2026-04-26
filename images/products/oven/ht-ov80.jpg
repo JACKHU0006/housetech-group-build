@@ -1,0 +1,84 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 800" width="800" height="800">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#f8f9fa"/>
+      <stop offset="100%" style="stop-color:#e9ecef"/>
+    </linearGradient>
+    <linearGradient id="steelGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#e8e8e8"/>
+      <stop offset="25%" style="stop-color:#f2f2f2"/>
+      <stop offset="50%" style="stop-color:#d8d8d8"/>
+      <stop offset="75%" style="stop-color:#c0c0c0"/>
+      <stop offset="100%" style="stop-color:#a8a8a8"/>
+    </linearGradient>
+    <linearGradient id="steelDark" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#b0b0b0"/>
+      <stop offset="50%" style="stop-color:#909090"/>
+      <stop offset="100%" style="stop-color:#707070"/>
+    </linearGradient>
+    <linearGradient id="doorGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#e0e0e0"/>
+      <stop offset="50%" style="stop-color:#c8c8c8"/>
+      <stop offset="100%" style="stop-color:#a8a8a8"/>
+    </linearGradient>
+    <linearGradient id="glassGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#3a4a5a"/>
+      <stop offset="30%" style="stop-color:#2a3a4a"/>
+      <stop offset="70%" style="stop-color:#1a2a3a"/>
+      <stop offset="100%" style="stop-color:#0a1a2a"/>
+    </linearGradient>
+    <linearGradient id="handleGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#e0e0e0"/>
+      <stop offset="30%" style="stop-color:#ffffff"/>
+      <stop offset="50%" style="stop-color:#d0d0d0"/>
+      <stop offset="70%" style="stop-color:#f0f0f0"/>
+      <stop offset="100%" style="stop-color:#b0b0b0"/>
+    </linearGradient>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="3" dy="8" stdDeviation="15" flood-color="#000" flood-opacity="0.25"/>
+    </filter>
+  </defs>
+  
+  <rect width="800" height="800" rx="20" fill="url(#bgGrad)"/>
+  
+  <g filter="url(#shadow)" transform="translate(400, 430)">
+    <rect x="-180" y="-180" width="360" height="380" fill="url(#steelGrad)" rx="10"/>
+    <rect x="-170" y="-170" width="340" height="360" fill="none" stroke="#c0c0c0" stroke-width="2" rx="8"/>
+    <rect x="-175" y="-175" width="350" height="60" fill="url(#steelDark)" rx="5"/>
+    <rect x="-60" y="-165" width="120" height="35" fill="#0a1a2a" rx="4"/>
+    <rect x="-55" y="-160" width="50" height="25" fill="#001a0a" rx="2"/>
+    <text x="-30" y="-142" text-anchor="middle" fill="#00ff88" font-family="monospace" font-size="14" font-weight="bold">180</text>
+    <rect x="0" y="-160" width="55" height="25" fill="#001a0a" rx="2"/>
+    <text x="27" y="-142" text-anchor="middle" fill="#00ffaa" font-family="monospace" font-size="12">C</text>
+    <circle cx="-120" cy="-145" r="15" fill="#404040" stroke="#606060" stroke-width="2"/>
+    <circle cx="-75" cy="-145" r="15" fill="#404040" stroke="#606060" stroke-width="2"/>
+    <circle cx="75" cy="-145" r="15" fill="#404040" stroke="#606060" stroke-width="2"/>
+    <circle cx="120" cy="-145" r="15" fill="#404040" stroke="#606060" stroke-width="2"/>
+    <line x1="-120" y1="-155" x2="-120" y2="-148" stroke="#a0a0a0" stroke-width="2"/>
+    <line x1="-75" y1="-155" x2="-75" y2="-148" stroke="#a0a0a0" stroke-width="2"/>
+    <line x1="75" y1="-155" x2="75" y2="-148" stroke="#a0a0a0" stroke-width="2"/>
+    <line x1="120" y1="-155" x2="120" y2="-148" stroke="#a0a0a0" stroke-width="2"/>
+    <rect x="-165" y="-105" width="330" height="260" fill="url(#doorGrad)" rx="8"/>
+    <rect x="-150" y="-90" width="300" height="230" fill="url(#glassGrad)" rx="5"/>
+    <rect x="-140" y="-80" width="280" height="210" fill="#1a1a1a" rx="3"/>
+    <rect x="-135" y="-75" width="270" height="200" fill="#252525" rx="2"/>
+    <line x1="-130" y1="-50" x2="135" y2="-50" stroke="#606060" stroke-width="3"/>
+    <line x1="-130" y1="-20" x2="135" y2="-20" stroke="#606060" stroke-width="3"/>
+    <line x1="-130" y1="10" x2="135" y2="10" stroke="#606060" stroke-width="3"/>
+    <line x1="-130" y1="40" x2="135" y2="40" stroke="#606060" stroke-width="3"/>
+    <line x1="-130" y1="70" x2="135" y2="70" stroke="#606060" stroke-width="3"/>
+    <line x1="-130" y1="100" x2="135" y2="100" stroke="#606060" stroke-width="3"/>
+    <rect x="-140" y="150" width="280" height="18" fill="url(#handleGrad)" rx="9"/>
+    <rect x="-138" y="152" width="276" height="14" fill="none" stroke="#d0d0d0" stroke-width="1" rx="7"/>
+    <rect x="-163" y="-103" width="326" height="4" fill="white" opacity="0.35" rx="2"/>
+    <path d="M-145 -85 Q-50 -80 50 -85" fill="none" stroke="rgba(255,255,255,0.25)" stroke-width="2"/>
+    <rect x="-178" y="0" width="8" height="40" fill="#808080" rx="2"/>
+    <rect x="170" y="0" width="8" height="40" fill="#808080" rx="2"/>
+  </g>
+  
+  <g transform="translate(400, 730)">
+    <rect x="-110" y="-25" width="220" height="50" fill="#0a2540" rx="8" filter="url(#shadow)"/>
+    <text x="0" y="-4" text-anchor="middle" fill="white" font-family="Arial, sans-serif" font-size="20" font-weight="bold">HT-OV80</text>
+    <text x="0" y="16" text-anchor="middle" fill="#f7931e" font-family="Arial, sans-serif" font-size="11" letter-spacing="1">BUILT-IN OVEN 80L</text>
+  </g>
+</svg>

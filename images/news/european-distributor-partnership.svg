@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450" width="800" height="450">
+  <defs><linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" style="stop-color:#4f46e5"/><stop offset="100%" style="stop-color:#3730a3"/></linearGradient></defs>
+  <rect width="800" height="450" fill="url(#bg)" rx="12"/>
+  <g transform="translate(400, 190)">
+    <!-- Simplified Europe map outline -->
+    <path d="M-60 -80 Q-20 -90, 30 -85 Q70 -95, 100 -70 Q130 -40, 120 10 Q110 60, 60 80 Q10 90 -40 75 Q-90 55, -100 10 Q-110 -35, -60 -80Z" fill="rgba(255,255,255,0.08)" stroke="rgba(255,255,255,0.3)" stroke-width="2"/>
+    <!-- Network points -->
+    <circle cx="-40" cy="-40" r="7" fill="#f7931e" opacity="0.8"/><circle cx="20" cy="-50" r="6" fill="#f7931e" opacity="0.7"/>
+    <circle cx="60" cy="-30" r="8" fill="#f7931e" opacity="0.8"/><circle cx="80" cy="10" r="6" fill="#f7931e" opacity="0.7"/>
+    <circle cx="50" cy="45" r="7" fill="#f7931e" opacity="0.75"/><circle cx="0" cy="50" r="6" fill="#f7931e" opacity="0.7"/>
+    <circle cx="-30" cy="25" r="7" fill="#f7931e" opacity="0.75"/><circle cx="-60" cy="-5" r="5" fill="#f7931e" opacity="0.6"/>
+    <circle cx="30" cy="10" r="5" fill="#f7931e" opacity="0.65"/>
+    <!-- Connection lines -->
+    <g stroke="rgba(255,255,255,0.15)" stroke-width="1">
+      <line x1="-40" y1="-40" x2="20" y2="-50"/><line x1="20" y1="-50" x2="60" y2="-30"/>
+      <line x1="60" y1="-30" x2="80" y2="10"/><line x1="80" y1="10" x2="50" y2="45"/>
+      <line x1="50" y1="45" x2="0" y2="50"/><line x1="0" y1="50" x2="-30" y2="25"/>
+      <line x1="-30" y1="25" x2="-60" y2="-5"/><line x1="-60" y1="-5" x2="-40" y2="-40"/>
+      <line x1="-40" y1="-40" x2="30" y2="10"/><line x1="60" y1="-30" x2="0" y2="50"/>
+      <line x1="20" y1="-50" x2="-30" y2="25"/><line x1="80" y1="10" x2="-60" y2="-5"/>
+    </g>
+    <!-- Handshake icon -->
+    <g transform="translate(140, 20)">
+      <circle cx="0" cy="0" r="38" fill="rgba(247,147,30,0.2)" stroke="rgba(247,147,30,0.5)" stroke-width="2"/>
+      <path d="M-18 5 Q-10 12, 0 5 Q10 -2, 18 5" fill="none" stroke="white" stroke-opacity="0.7" stroke-width="3" stroke-linecap="round"/>
+    </g>
+  </g>
+  <g transform="translate(400, 385)"><rect x="-150" y="-20" width="300" height="40" rx="20" fill="rgba(0,0,0,0.3)"/><text x="0" y="6" text-anchor="middle" font-family="'Inter',sans-serif" font-weight="700" font-size="13" fill="white">EUROPEAN DISTRIBUTOR PARTNERSHIP</text></g>
+  <text x="778" y="438" text-anchor="end" font-size="10" fill="white" opacity="0.4">HouseTech Group</text>
+</svg>

@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 800" width="800" height="800">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" style="stop-color:#f8f9fa"/><stop offset="100%" style="stop-color:#e9ecef"/></linearGradient>
+    <linearGradient id="steelGrad" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" style="stop-color:#e8e8e8"/><stop offset="30%" style="stop-color:#d4d4d4"/><stop offset="60%" style="stop-color:#f5f5f5"/><stop offset="100%" style="stop-color:#b0b0b0"/></linearGradient>
+    <linearGradient id="glassGrad" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" style="stop-color:#2a2a2a"/><stop offset="50%" style="stop-color:#151515"/><stop offset="100%" style="stop-color:#1f1f1f"/></linearGradient>
+    <linearGradient id="copperGrad" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" style="stop-color:#cd7f32"/><stop offset="50%" style="stop-color:#b87333"/><stop offset="100%" style="stop-color:#8b5a2b"/></linearGradient>
+    <linearGradient id="flameGrad" x1="0%" y1="100%" x2="0%" y2="0%"><stop offset="0%" style="stop-color:#ff5722"/><stop offset="50%" style="stop-color:#ff9800"/><stop offset="100%" style="stop-color:#ffeb3b"/></linearGradient>
+    <linearGradient id="btnGrad" x1="0%" y1="0%" x2="0%" y2="100%"><stop offset="0%" style="stop-color:#444"/><stop offset="100%" style="stop-color:#222"/></linearGradient>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%"><feDropShadow dx="0" dy="6" stdDeviation="10" flood-color="#000" flood-opacity="0.2"/></filter>
+    <filter id="glow"><feGaussianBlur stdDeviation="3" result="blur"/><feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+  </defs>
+  <rect x="0" y="0" width="800" height="800" rx="20" fill="url(#bgGrad)"/>
+  <rect x="100" y="150" width="600" height="480" rx="12" fill="#000" opacity="0.12" filter="url(#shadow)"/>
+  <rect x="95" y="145" width="610" height="485" rx="10" fill="url(#steelGrad)" stroke="#a0a0a0" stroke-width="2"/>
+  <rect x="115" y="165" width="570" height="400" rx="6" fill="url(#glassGrad)"/>
+  <line x1="125" y1="175" x2="675" y2="175" stroke="#fff" stroke-width="1" opacity="0.12"/>
+  <g transform="translate(230, 270)">
+    <circle cx="0" cy="0" r="70" fill="#1c1c1c" stroke="#3a3a3a" stroke-width="2"/><circle cx="0" cy="0" r="58" fill="url(#copperGrad)"/><circle cx="0" cy="0" r="45" fill="#1a1a1a"/><circle cx="0" cy="0" r="35" fill="url(#copperGrad)" opacity="0.65"/>
+    <ellipse cx="0" cy="0" rx="26" ry="18" fill="url(#flameGrad)" filter="url(#glow)" opacity="0.9"><animate attributeName="ry" values="18;21;18" dur="0.4s" repeatCount="indefinite"/></ellipse>
+    <ellipse cx="0" cy="0" rx="35" ry="26" fill="none" stroke="url(#flameGrad)" stroke-width="3" opacity="0.5"><animate attributeName="ry" values="26;29;26" dur="0.45s" repeatCount="indefinite"/></ellipse>
+  </g>
+  <g transform="translate(570, 270)">
+    <circle cx="0" cy="0" r="70" fill="#1c1c1c" stroke="#3a3a3a" stroke-width="2"/><circle cx="0" cy="0" r="58" fill="url(#copperGrad)"/><circle cx="0" cy="0" r="45" fill="#1a1a1a"/><circle cx="0" cy="0" r="35" fill="url(#copperGrad)" opacity="0.65"/>
+    <ellipse cx="0" cy="0" rx="26" ry="18" fill="url(#flameGrad)" filter="url(#glow)" opacity="0.9"><animate attributeName="ry" values="18;20;18" dur="0.42s" repeatCount="indefinite"/></ellipse>
+    <ellipse cx="0" cy="0" rx="35" ry="26" fill="none" stroke="url(#flameGrad)" stroke-width="3" opacity="0.5"><animate attributeName="ry" values="26;28;26" dur="0.48s" repeatCount="indefinite"/></ellipse>
+  </g>
+  <g transform="translate(230, 430)">
+    <circle cx="0" cy="0" r="55" fill="#1c1c1c" stroke="#3a3a3a" stroke-width="2"/><circle cx="0" cy="0" r="44" fill="url(#copperGrad)"/><circle cx="0" cy="0" r="34" fill="#1a1a1a"/><circle cx="0" cy="0" r="26" fill="url(#copperGrad)" opacity="0.65"/>
+    <ellipse cx="0" cy="0" rx="19" ry="13" fill="url(#flameGrad)" filter="url(#glow)" opacity="0.85"><animate attributeName="ry" values="13;15;13" dur="0.5s" repeatCount="indefinite"/></ellipse>
+  </g>
+  <g transform="translate(570, 430)">
+    <circle cx="0" cy="0" r="55" fill="#1c1c1c" stroke="#3a3a3a" stroke-width="2"/><circle cx="0" cy="0" r="44" fill="url(#copperGrad)"/><circle cx="0" cy="0" r="34" fill="#1a1a1a"/><circle cx="0" cy="0" r="26" fill="url(#copperGrad)" opacity="0.65"/>
+    <ellipse cx="0" cy="0" rx="19" ry="13" fill="url(#flameGrad)" filter="url(#glow)" opacity="0.85"><animate attributeName="ry" values="13;15;13" dur="0.52s" repeatCount="indefinite"/></ellipse>
+  </g>
+  <rect x="370" y="510" width="60" height="30" rx="5" fill="url(#btnGrad)" stroke="#555" stroke-width="1"/><circle cx="400" cy="525" r="8" fill="#1a1a1a" stroke="#f7931e" stroke-width="2"/><text x="400" y="528" font-family="Arial" font-size="6" fill="#f7931e" text-anchor="middle">ON</text>
+  <rect x="115" y="520" width="570" height="90" rx="5" fill="#181818"/>
+  <g transform="translate(185, 565)"><circle cx="0" cy="0" r="30" fill="url(#steelGrad)" stroke="#777" stroke-width="2"/><circle cx="0" cy="0" r="22" fill="#2a2a2a"/><line x1="0" y1="-10" x2="0" y2="-20" stroke="#ddd" stroke-width="3" stroke-linecap="round"/></g>
+  <g transform="translate(315, 565)"><circle cx="0" cy="0" r="30" fill="url(#steelGrad)" stroke="#777" stroke-width="2"/><circle cx="0" cy="0" r="22" fill="#2a2a2a"/><line x1="0" y1="-10" x2="0" y2="-20" stroke="#ddd" stroke-width="3" stroke-linecap="round"/></g>
+  <g transform="translate(485, 565)"><circle cx="0" cy="0" r="30" fill="url(#steelGrad)" stroke="#777" stroke-width="2"/><circle cx="0" cy="0" r="22" fill="#2a2a2a"/><line x1="0" y1="-10" x2="0" y2="-20" stroke="#ddd" stroke-width="3" stroke-linecap="round"/></g>
+  <g transform="translate(615, 565)"><circle cx="0" cy="0" r="30" fill="url(#steelGrad)" stroke="#777" stroke-width="2"/><circle cx="0" cy="0" r="22" fill="#2a2a2a"/><line x1="0" y1="-10" x2="0" y2="-20" stroke="#ddd" stroke-width="3" stroke-linecap="round"/></g>
+  <rect x="250" y="700" width="300" height="50" rx="10" fill="#0a2540"/>
+  <text x="400" y="722" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="#fff" text-anchor="middle">HT-GH243</text>
+  <text x="400" y="742" font-family="Arial, sans-serif" font-size="12" fill="#f7931e" text-anchor="middle">4-BURNER GAS HOB 75CM</text>
+</svg>
