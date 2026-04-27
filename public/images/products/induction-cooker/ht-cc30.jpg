@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 800" width="800" height="800">
+  <defs><linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" style="stop-color:#f8f9fa"/><stop offset="100%" style="stop-color:#e9ecef"/></linearGradient><linearGradient id="glass" x1="0%" y1="0%" x2="100%" x2="0%"><stop offset="0%" style="stop-color:#1a1a24"/><stop offset="50%" style="stop-color:#2a2a35"/><stop offset="100%" style="stop-color:#1a1a24"/></linearGradient><linearGradient id="redGlow" cx="50%" cy="50%" r="50%"><stop offset="0%" style="stop-color:#ef4444;stop-opacity:0.3"/><stop offset="100%" style="stop-color:#dc2626;stop-opacity:0"/></linearGradient><linearGradient id="accent" x1="0%" y1="0%" x2="100%" x2="0%"><stop offset="0%" style="stop-color:#0a2540"/><stop offset="100%" style="stop-color:#1a3a5c"/></linearGradient><filter id="shadow"><feDropShadow dx="0" dy="8" stdDeviation="12" flood-opacity="0.15"/></filter></defs>
+  <rect width="800" height="800" fill="url(#bg)" rx="20"/>
+  <g transform="translate(120, 180)" filter="url(#shadow)">
+    <rect x="20" y="10" width="520" height="300" rx="12" fill="url(#glass)" stroke="#444" stroke-width="2"/>
+    <!-- Red infrared heating element (visible through glass - key difference from induction) -->
+    <circle cx="280" cy="160" r="120" fill="url(#redGlow)"/>
+    <circle cx="280" cy="160" r="95" fill="none" stroke="#ef4444" stroke-opacity="0.5" stroke-width="3"/>
+    <circle cx="280" cy="160" r="75" fill="none" stroke="#f87171" stroke-opacity="0.35" stroke-width="2"/>
+    <circle cx="280" cy="160" r="55" fill="none" stroke="#fca5a5" stroke-opacity="0.25" stroke-width="2"/>
+    <!-- Coil pattern visible -->
+    <path d="M220 130 Q240 110, 270 115 Q310 108, 330 130 M210 150 Q235 135, 275 138 Q315 132, 340 150 M215 175 Q245 162, 280 165 Q320 158, 345 175" fill="none" stroke="#ef4444" stroke-opacity="0.4" stroke-width="3"/>
+    <circle cx="280" cy="160" r="18" fill="#ef4444" opacity="0.5"/>
+    <!-- Control panel -->
+    <rect x="400" y="250" width="120" height="45" rx="6" fill="#111" stroke="#333" stroke-width="1"/>
+    <circle cx="420" cy="272" r="7" fill="#ef4444" opacity="0.8"/>
+    <rect x="440" y="260" width="65" height="14" rx="2" fill="#0a2540"/>
+    <text x="472" y="271" text-anchor="middle" font-family="monospace" font-size="9" fill="#f88">2000W</text>
+    <!-- Frame -->
+    <rect x="16" y="6" width="528" height="308" rx="14" fill="none" stroke="#c0c7d0" stroke-width="3"/>
+    <circle cx="60" cy="42" r="5" fill="#ef4444" opacity="0.7"/>
+  </g>
+  <g transform="translate(400, 700)"><rect x="-105" y="-28" width="210" height="56" rx="28" fill="url(#accent)"/><text x="0" y="6" text-anchor="middle" font-family="'Inter',sans-serif" font-weight="800" font-size="18" fill="white">HT-CC30</text><text x="0" y="20" text-anchor="middle" font-family="'Inter',sans-serif" font-weight="500" font-size="10" fill="#f7931e" letter-spacing="3">CERAMIC COOKER</text></g>
+</svg>

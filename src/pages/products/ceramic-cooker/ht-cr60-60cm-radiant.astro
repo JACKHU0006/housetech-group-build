@@ -1,0 +1,230 @@
+---
+import Layout from '../../../layouts/Layout.astro';
+import Header from '../../../components/Header.astro';
+import Footer from '../../../components/Footer.astro';
+
+const title = 'HT-CR60 60cm Radiant Ceramic Hob - HouseTech Group | Vitroceramic Cooker, Electric Radiant Hob';
+const description = 'HouseTech HT-CR60 60cm Radiant Ceramic Hob: Halogen heating, vitroceramic surface, residual heat indicator, child safety lock. Premium ceramic cooker manufacturer for global markets.';
+
+const product = {
+  name: 'HT-CR60 60cm Radiant Ceramic Hob',
+  sku: 'HT-CR60',
+  category: 'Ceramic Cookers',
+  shortDesc: '60cm radiant ceramic hob with vitroceramic surface, halogen heating elements, and modern touch controls. Elegant design for contemporary kitchens.',
+  specs: {
+    'Width': '60cm',
+    'Type': 'Radiant Ceramic Hob',
+    'Burners': '4',
+    'Heating Elements': '2x Radiant + 2x Halogen',
+    'Power': '6000W (total)',
+    'Control Type': 'Touch Control',
+    'Surface': 'Vitroceramic Glass',
+    'Dimensions': '60 x 52 x 5.2cm',
+    'Cut-out': '56 x 48cm',
+    'Voltage': '220-240V / 50Hz',
+    'Child Lock': 'Yes',
+    'Residual Heat Indicator': 'Yes'
+  },
+  features: [
+    'Vitroceramic glass surface for easy cleaning',
+    'Halogen rapid heat elements for fast cooking',
+    '4 cooking zones with different power levels',
+    'Touch control panel with digital display',
+    'Residual heat indicator on each zone',
+    'Child safety lock for peace of mind',
+    'Timer function on each zone (up to 99 minutes)',
+    '9 power levels for precise temperature control',
+    'Automatic shut-off protection',
+    'Scratch-resistant ceramic surface'
+  ],
+  applications: [
+    'Modern residential kitchens',
+    'Apartment kitchens',
+    'Home renovations',
+    'Condo units',
+    'Contemporary interior designs'
+  ]
+};
+
+const relatedProducts = [
+  { name: 'HT-CR90 90cm Ceramic Hob', slug: '/products/ceramic-cooker/ht-cr90-90cm-ceramic', sku: 'HT-CR90' },
+  { name: 'HT-CR4Q 4-Burner Ceramic Hob', slug: '/products/ceramic-cooker/ht-cr4q-4-burner-ceramic', sku: 'HT-CR4Q' },
+  { name: 'HT-CR2H Dual Zone Ceramic Hob', slug: '/products/ceramic-cooker/ht-cr2h-dual-hob-ceramic', sku: 'HT-CR2H' }
+];
+---
+
+<Layout title={title} description={description}>
+  <!-- Product Schema -->
+  <script type="application/ld+json" set:html={JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": "Product",
+    "name": product.name,
+    "image": "https://housetech-ch.com/images/products/ceramic-cooker/ht-cr60.jpg",
+    "description": description,
+    "brand": { "@type": "Brand", "name": "HouseTech" },
+    "manufacturer": { "@type": "Organization", "name": "HouseTech Group" },
+    "sku": product.sku,
+    "category": "Ceramic Cookers",
+    "offers": {
+      "@type": "AggregateOffer",
+      "priceCurrency": "USD",
+      "lowPrice": "0",
+      "highPrice": "0",
+      "offerCount": "1",
+      "availability": "https://schema.org/InStock"
+    }
+  })} />
+  <!-- FAQPage Schema -->
+  <script type="application/ld+json" set:html={JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "What is the warranty period for HT-CR60 Ceramic Hob?",
+        "acceptedAnswer": { "@type": "Answer", "Text": "All HouseTech products come with a comprehensive warranty. The HT-CR60 Ceramic Hob includes a 2-year manufacturer warranty covering defects in materials and workmanship." }
+      },
+      {
+        "@type": "Question",
+        "name": "Does HouseTech offer OEM/ODM customization for the HT-CR60?",
+        "acceptedAnswer": { "@type": "Answer", "Text": "Yes, HouseTech offers full OEM/ODM services for ceramic hobs including custom logo branding, size configurations, burner layouts, and packaging design to meet your market requirements." }
+      },
+      {
+        "@type": "Question",
+        "name": "What certifications does the HT-CR60 Ceramic Hob have?",
+        "acceptedAnswer": { "@type": "Answer", "Text": "The HT-CR60 is certified with CE, CB, ETL, and RoHS standards, meeting safety and environmental requirements for European, Asian, and North American markets." }
+      },
+      {
+        "@type": "Question",
+        "name": "What safety features does the HT-CR60 include?",
+        "acceptedAnswer": { "@type": "Answer", "Text": "The HT-CR60 includes child safety lock, residual heat indicator on each zone, automatic shut-off protection, and scratch-resistant vitroceramic surface." }
+      },
+      {
+        "@type": "Question",
+        "name": "What is the delivery time for HT-CR60 orders?",
+        "acceptedAnswer": { "@type": "Answer", "Text": "Standard delivery time for HT-CR60 orders is 30-45 days after sample approval and deposit payment. For customized OEM orders, please allow 45-60 days." }
+      }
+    ]
+  })} />
+  <Header activeNav="products" />
+
+  <!-- Page Hero -->
+  <section class="page-hero">
+    <div class="container">
+      <h1>{product.name}</h1>
+      <p>SKU: {product.sku}</p>
+      <nav class="breadcrumb">
+        <a href="/">Home</a>
+        <span class="separator">/</span>
+        <a href="/products">Products</a>
+        <span class="separator">/</span>
+        <a href="/products/ceramic-cooker">Ceramic Cookers</a>
+        <span class="separator">/</span>
+        <span>{product.name}</span>
+      </nav>
+    </div>
+  </section>
+
+  <!-- Product Detail -->
+  <section class="content-section">
+    <div class="container">
+      <div class="product-detail-grid">
+        <!-- Gallery -->
+        <div class="product-gallery">
+          <div class="product-gallery-main">
+            <img src="/images/products/ceramic-cooker/ht-cr60.jpg" alt={product.name} />
+          </div>
+          <div class="product-gallery-thumbs">
+            <div class="product-thumb active">
+              <img src="/images/products/ceramic-cooker/ht-cr60.jpg" alt={`${product.name} - Main View`} />
+            </div>
+          </div>
+        </div>
+
+        <!-- Product Info -->
+        <div class="product-info">
+          <h1>{product.name}</h1>
+          <p class="product-sku">SKU: {product.sku} | Category: {product.category}</p>
+          <p class="product-short-desc">{product.shortDesc}</p>
+          <p style="color: var(--color-text-light); line-height: 1.8; margin-bottom: var(--spacing-md);">Engineered by HouseTech, the HT-CR60 features a 60cm radiant ceramic hob with 4 cooking zones and halogen rapid-heat technology. As part of HouseTech's premium ceramic cooker lineup, this model works with all cookware types. Every HouseTech product undergoes rigorous testing for CE/CB certification.</p>
+
+          <!-- Specs Table -->
+          <table class="product-specs-table">
+            <tbody>
+              {Object.entries(product.specs).map(([key, value]) => (
+                <tr>
+                  <th>{key}</th>
+                  <td>{value}</td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+
+          <!-- CTA Area -->
+          <div class="product-cta-area">
+            <a href="/contact" class="btn btn-primary">Get Quote</a>
+            <a href="/download" class="btn btn-outline">Download Spec Sheet</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Features Section -->
+      <div style="margin-top: var(--spacing-3xl);">
+        <h2 style="font-family: var(--font-display); font-size: var(--font-size-2xl); color: var(--color-primary); margin-bottom: var(--spacing-xl);">
+          Key Features
+        </h2>
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: var(--spacing-lg);">
+          {product.features.map((feature) => (
+            <div style="display: flex; align-items: flex-start; gap: var(--spacing-sm);">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--color-accent)" stroke-width="2" style="flex-shrink: 0; margin-top: 2px;">
+                <polyline points="20 6 9 17 4 12"></polyline>
+              </svg>
+              <span style="color: var(--color-text);">{feature}</span>
+            </div>
+          ))}
+        </div>
+      </div>
+
+      <!-- Applications Section -->
+      <div style="margin-top: var(--spacing-3xl);">
+        <h2 style="font-family: var(--font-display); font-size: var(--font-size-2xl); color: var(--color-primary); margin-bottom: var(--spacing-xl);">
+          Applications
+        </h2>
+        <div style="display: flex; flex-wrap: wrap; gap: var(--spacing-sm);">
+          {product.applications.map((app) => (
+            <span style="padding: 0.5rem 1rem; background: var(--color-bg-alt); border: 1px solid var(--color-border); border-radius: var(--radius-full); font-size: var(--font-size-sm); color: var(--color-text);">
+              {app}
+            </span>
+          ))}
+        </div>
+      </div>
+
+      <!-- Why Choose HouseTech -->
+      <div style="margin-top: var(--spacing-3xl); text-align: center; background: var(--color-bg-alt); padding: var(--spacing-2xl); border-radius: var(--radius-lg);">
+        <h2 style="margin-bottom: var(--spacing-sm);">Why Choose HouseTech?</h2>
+        <p style="color: var(--color-text-light); margin-bottom: var(--spacing-lg); max-width: 600px; margin-left: auto; margin-right: auto;">HouseTech Group has been a trusted name in kitchen appliances for years. When you choose HouseTech, you get CE/CB certified products backed by comprehensive warranty and dedicated OEM/ODM support.</p>
+        <a href="/contact" class="btn btn-primary">Contact HouseTech for OEM/ODM Inquiries →</a>
+      </div>
+
+      <!-- Related Products -->
+      <div class="related-products">
+        <h2 style="font-family: var(--font-display); font-size: var(--font-size-2xl); color: var(--color-primary); margin-bottom: var(--spacing-xl);">
+          Related Products
+        </h2>
+        <div class="news-grid">
+          {relatedProducts.map((rel) => (
+            <a href={rel.slug} class="news-card">
+              <div class="news-card-body">
+                <h3>{rel.name}</h3>
+                <p>SKU: {rel.sku}</p>
+                <span class="news-card-read-more">View Details →</span>
+              </div>
+            </a>
+          ))}
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <Footer />
+</Layout>

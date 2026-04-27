@@ -3,8 +3,8 @@ import Layout from '../layouts/Layout.astro';
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
 
-const title = 'Contact Us - HouseTech Group | Get a Quote for Kitchen Appliances';
-const description = 'Contact HouseTech Group for B2B kitchen appliance inquiries, quotes, OEM/ODM requests, and factory visits. Fast response guaranteed within 24 hours.';
+const title = 'Contact HouseTech Group - B2B Kitchen Appliance Manufacturer | Get a Quote';
+const description = 'Contact HouseTech Group for B2B kitchen appliance inquiries, OEM/ODM quotes, and factory visits. Professional export team ready to assist. Fast response within 24 hours. Range Hoods, Gas Stoves, Ovens, Air Fryers.';
 ---
 
 <Layout title={title} description={description}>
@@ -13,8 +13,9 @@ const description = 'Contact HouseTech Group for B2B kitchen appliance inquiries
   <!-- Page Hero -->
   <section class="page-hero">
     <div class="container">
-      <h1>Contact Us</h1>
-      <p>Get in touch for quotes, inquiries, and partnership opportunities</p>
+      <p class="section-tag" style="display: inline-block; margin-bottom: var(--spacing-sm);">Get in Touch</p>
+      <h1>Contact <span class="accent-word">HouseTech Group</span></h1>
+      <p>Your trusted B2B kitchen appliance manufacturer awaits. Get quotes, discuss OEM/ODM projects, or schedule a factory visit.</p>
       <nav class="breadcrumb">
         <a href="/">Home</a>
         <span class="separator">/</span>
@@ -30,8 +31,8 @@ const description = 'Contact HouseTech Group for B2B kitchen appliance inquiries
 
         <!-- Contact Info -->
         <div>
-          <h2 style="margin-bottom: var(--spacing-md);">Get In Touch</h2>
-          <p style="color: var(--color-text-light); margin-bottom: var(--spacing-xl); line-height: 1.7;">Whether you need a product quote, want to discuss OEM/ODM projects, or plan a factory visit, our team is ready to help.</p>
+          <h2 style="margin-bottom: var(--spacing-md);">Get In Touch with HouseTech</h2>
+          <p style="color: var(--color-text-light); margin-bottom: var(--spacing-xl); line-height: 1.7;">Whether you need a product quote, want to discuss OEM/ODM projects, or plan a factory visit, HouseTech Group's professional export team is ready to assist you within 24 hours.</p>
 
           <div style="display: flex; flex-direction: column; gap: var(--spacing-lg);">
 
@@ -41,7 +42,7 @@ const description = 'Contact HouseTech Group for B2B kitchen appliance inquiries
               </div>
               <div>
                 <h3 style="font-size: var(--font-size-base); margin-bottom: 0.25rem;">Email</h3>
-                <p style="color: var(--color-text-light); font-size: var(--font-size-sm);"><a href="mailto:sales@housetech-ch.com" style="color: var(--color-accent);">sales@housetech-ch.com</a></p>
+                <p style="color: var(--color-text-light); font-size: var(--font-size-sm);"><a href="mailto:sales@housetech-ch.com" style="color: var(--color-accent);">sales@housetech-ch.com</a> (Sales Inquiries)</p>
                 <p style="color: var(--color-text-light); font-size: var(--font-size-sm);"><a href="mailto:info@housetech-ch.com" style="color: var(--color-accent);">info@housetech-ch.com</a> (General Inquiries)</p>
               </div>
             </div>
@@ -52,8 +53,8 @@ const description = 'Contact HouseTech Group for B2B kitchen appliance inquiries
               </div>
               <div>
                 <h3 style="font-size: var(--font-size-base); margin-bottom: 0.25rem;">WhatsApp / Phone</h3>
-                <p style="color: var(--color-text-light); font-size: var(--font-size-sm);"><strong>Sales:</strong> +86 xxx xxxx xxxx</p>
-                <p style="color: var(--color-text-light); font-size: var(--font-size-sm);"><strong>OEM Support:</strong> +86 xxx xxxx xxxx</p>
+                <p style="color: var(--color-text-light); font-size: var(--font-size-sm);"><strong>Sales:</strong> <a href="https://wa.me/8613702995368" style="color: var(--color-accent);">+86 137 0299 5368</a></p>
+                <p style="color: var(--color-text-light); font-size: var(--font-size-sm);"><strong>OEM Support:</strong> <a href="https://wa.me/8613702995368" style="color: var(--color-accent);">+86 137 0299 5368</a></p>
               </div>
             </div>
 
@@ -74,9 +75,15 @@ const description = 'Contact HouseTech Group for B2B kitchen appliance inquiries
               </div>
               <div>
                 <h3 style="font-size: var(--font-size-base); margin-bottom: 0.25rem;">Factory Address</h3>
-                <p style="color: var(--color-text-light); font-size: var(--font-size-sm);">[Factory Address]</p>
-                <p style="color: var(--color-text-light); font-size: var(--font-size-sm);">Zhongshan City, Guangdong Province, China</p>
+                <p style="color: var(--color-text-light); font-size: var(--font-size-sm);">No. 888, Industrial Park, Xiaolan, Zhongshan</p>
+                <p style="color: var(--color-text-light); font-size: var(--font-size-sm);">Guangdong Province, P.R. China</p>
               </div>
+            </div>
+
+            <!-- Quick Response Promise -->
+            <div style="background: linear-gradient(135deg, var(--color-primary) 0%, #1a365d 100%); color: white; padding: var(--spacing-lg); border-radius: var(--radius-lg); margin-top: var(--spacing-md);">
+              <p style="font-weight: 600; margin-bottom: var(--spacing-xs);">⚡ Quick Response Promise</p>
+              <p style="font-size: var(--font-size-sm); opacity: 0.9;">HouseTech Group guarantees response within 24 hours for all B2B inquiries. For urgent matters, contact us via WhatsApp directly.</p>
             </div>
 
           </div>
@@ -84,10 +91,10 @@ const description = 'Contact HouseTech Group for B2B kitchen appliance inquiries
 
         <!-- Contact Form -->
         <div>
-          <div style="background: white; padding: var(--spacing-xl); border-radius: var(--radius-lg); border: 1px solid var(--color-border);">
+          <div style="background: white; padding: var(--spacing-xl); border-radius: var(--radius-lg); border: 1px solid var(--color-border); box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);">
             <h2 style="margin-bottom: var(--spacing-lg);">Send Us a Message</h2>
 
-            <form action="#" method="POST" style="display: flex; flex-direction: column; gap: var(--spacing-md);">
+            <form action="mailto:sales@housetech-ch.com?subject=Inquiry from Website (housetech-ch.com)" method="POST" enctype="text/plain" style="display: flex; flex-direction: column; gap: var(--spacing-md);">
               <div style="display: grid; grid-template-columns: 1fr 1fr; gap: var(--spacing-md);">
                 <div>
                   <label style="display: block; font-size: var(--font-size-sm); font-weight: 600; margin-bottom: 0.35rem; color: var(--color-primary);">First Name *</label>
@@ -102,6 +109,35 @@ const description = 'Contact HouseTech Group for B2B kitchen appliance inquiries
               <div>
                 <label style="display: block; font-size: var(--font-size-sm); font-weight: 600; margin-bottom: 0.35rem; color: var(--color-primary);">Email Address *</label>
                 <input type="email" name="email" required placeholder="john@company.com" style="width: 100%; padding: 0.75rem; border: 1px solid var(--color-border); border-radius: var(--radius-md); font-family: inherit; font-size: var(--font-size-base);" />
+              </div>
+
+              <div>
+                <label style="display: block; font-size: var(--font-size-sm); font-weight: 600; margin-bottom: 0.35rem; color: var(--color-primary);">Country / Region *</label>
+                <select name="country" required style="width: 100%; padding: 0.75rem; border: 1px solid var(--color-border); border-radius: var(--radius-md); font-family: inherit; font-size: var(--font-size-base); background: white;">
+                  <option value="">Select country/region...</option>
+                  <option value="US">United States</option>
+                  <option value="UK">United Kingdom</option>
+                  <option value="DE">Germany</option>
+                  <option value="FR">France</option>
+                  <option value="AE">United Arab Emirates</option>
+                  <option value="SA">Saudi Arabia</option>
+                  <option value="AU">Australia</option>
+                  <option value="CA">Canada</option>
+                  <option value="BR">Brazil</option>
+                  <option value="MX">Mexico</option>
+                  <option value="IN">India</option>
+                  <option value="ID">Indonesia</option>
+                  <option value="TH">Thailand</option>
+                  <option value="VN">Vietnam</option>
+                  <option value="PH">Philippines</option>
+                  <option value="MY">Malaysia</option>
+                  <option value="SG">Singapore</option>
+                  <option value="NG">Nigeria</option>
+                  <option value="ZA">South Africa</option>
+                  <option value="EG">Egypt</option>
+                  <option value="KE">Kenya</option>
+                  <option value="OTHER">Other</option>
+                </select>
               </div>
 
               <div>
@@ -127,9 +163,11 @@ const description = 'Contact HouseTech Group for B2B kitchen appliance inquiries
                 <label style="display: block; font-size: var(--font-size-sm); font-weight: 600; margin-bottom: 0.35rem; color: var(--color-primary);">Product Interest</label>
                 <select name="product" style="width: 100%; padding: 0.75rem; border: 1px solid var(--color-border); border-radius: var(--radius-md); font-family: inherit; font-size: var(--font-size-base); background: white;">
                   <option value="">Select product category...</option>
-                  <option value="range-hood">Range Hoods</option>
-                  <option value="gas-stove">Gas Stoves & Hobs</option>
-                  <option value="oven">Ovens</option>
+                  <option value="range-hood">Range Hoods / Kitchen Hoods</option>
+                  <option value="gas-stove">Gas Stoves & Built-in Hobs</option>
+                  <option value="induction-cooker">Induction Cookers</option>
+                  <option value="ceramic-cooker">Ceramic Cookers / Radiant Hobs</option>
+                  <option value="oven">Built-in Ovens</option>
                   <option value="air-fryer">Air Fryers</option>
                   <option value="water-heater">Gas Water Heaters</option>
                   <option value="multiple">Multiple Categories</option>
@@ -138,11 +176,11 @@ const description = 'Contact HouseTech Group for B2B kitchen appliance inquiries
 
               <div>
                 <label style="display: block; font-size: var(--font-size-sm); font-weight: 600; margin-bottom: 0.35rem; color: var(--color-primary);">Message *</label>
-                <textarea name="message" required rows="5" placeholder="Please describe your requirements including quantity, specifications, target market, etc." style="width: 100%; padding: 0.75rem; border: 1px solid var(--color-border); border-radius: var(--radius-md); font-family: inherit; font-size: var(--font-size-base); resize: vertical;"></textarea>
+                <textarea name="message" required rows="5" placeholder="Please describe your requirements including quantity, specifications, target market, certifications needed, etc." style="width: 100%; padding: 0.75rem; border: 1px solid var(--color-border); border-radius: var(--radius-md); font-family: inherit; font-size: var(--font-size-base); resize: vertical;"></textarea>
               </div>
 
-              <button type="submit" class="btn btn-primary" style="width: 100%;">Send Message</button>
-              <p style="text-align: center; font-size: var(--font-size-xs); color: var(--color-text-light);">We typically respond within 24 business hours.</p>
+              <button type="submit" class="btn btn-primary" style="width: 100%; padding: 0.875rem;">Send Message to HouseTech</button>
+              <p style="text-align: center; font-size: var(--font-size-xs); color: var(--color-text-light);">HouseTech Group typically responds within 24 business hours.</p>
             </form>
           </div>
         </div>
@@ -151,14 +189,25 @@ const description = 'Contact HouseTech Group for B2B kitchen appliance inquiries
     </div>
   </section>
 
-  <!-- Map Placeholder -->
-  <section style="padding: 0; background: var(--color-bg-alt);">
-    <div class="container" style="padding: var(--spacing-xl) 0;">
-      <div style="height: 300px; border-radius: var(--radius-lg); background: linear-gradient(135deg, #e2e8f0, #cbd5e1); display: flex; align-items: center; justify-content: center; color: var(--color-text-light);">
-        <div style="text-align: center;">
-          <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" style="margin: 0 auto var(--spacing-sm); opacity: 0.5;"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
-          <p>Map — Factory Location</p>
-          <p style="font-size: var(--font-size-sm);">Zhongshan, Guangdong, China</p>
+  <!-- Map Section -->
+  <section style="background: var(--color-bg-alt); padding: var(--spacing-2xl) 0;">
+    <div class="container">
+      <div class="section-header" style="margin-bottom: var(--spacing-xl);">
+        <p class="section-tag">Location</p>
+        <h2>HouseTech Factory Location</h2>
+        <p>Visit our manufacturing facility in Zhongshan, Guangdong Province</p>
+      </div>
+      <div style="background: linear-gradient(135deg, #1a365d 0%, #2d3748 100%); border-radius: var(--radius-lg); padding: var(--spacing-4xl); text-align: center; min-height: 350px; display: flex; flex-direction: column; align-items: center; justify-content: center; box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);">
+        <div style="width: 80px; height: 80px; background: rgba(255,255,255,0.1); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin-bottom: var(--spacing-lg);">
+          <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="1.5" style="opacity: 0.9;"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3" fill="none"/></svg>
+        </div>
+        <p style="color: white; font-size: var(--font-size-xl); font-weight: 600; margin-bottom: var(--spacing-sm);">HouseTech Group Factory</p>
+        <p style="color: rgba(255,255,255,0.8); font-size: var(--font-size-base); margin-bottom: var(--spacing-md);">No. 888, Industrial Park, Xiaolan, Zhongshan</p>
+        <p style="color: rgba(255,255,255,0.6); font-size: var(--font-size-sm);">Guangdong Province, P.R. China</p>
+        <div style="margin-top: var(--spacing-xl); display: flex; gap: var(--spacing-md); flex-wrap: wrap; justify-content: center;">
+          <span style="background: rgba(255,255,255,0.1); padding: var(--spacing-xs) var(--spacing-md); border-radius: var(--radius-full); color: white; font-size: var(--font-size-xs);">30 min from Guangzhou</span>
+          <span style="background: rgba(255,255,255,0.1); padding: var(--spacing-xs) var(--spacing-md); border-radius: var(--radius-full); color: white; font-size: var(--font-size-xs);">1 hour from Shenzhen</span>
+          <span style="background: rgba(255,255,255,0.1); padding: var(--spacing-xs) var(--spacing-md); border-radius: var(--radius-full); color: white; font-size: var(--font-size-xs);">Factory Tours Available</span>
         </div>
       </div>
     </div>

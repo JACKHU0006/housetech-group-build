@@ -1,0 +1,151 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Header from '../../components/Header.astro';
+import Footer from '../../components/Footer.astro';
+
+const title = 'Ceramic Cookers & Radiant Hobs - HouseTech Group | Vitroceramic Cooktops, Electric Radiant Cookers';
+const description = 'Discover HouseTech Group\'s premium ceramic cooker collection: Vitroceramic Hobs, Radiant Cooktops, Electric Ceramic Cookers, Halogen Cookers. OEM/ODM available for global B2B partners.';
+
+const products = [
+  {
+    name: 'HT-CR60 60cm Radiant Ceramic Hob',
+    slug: 'ht-cr60-60cm-radiant',
+    sku: 'HT-CR60',
+    category: 'Ceramic Cookers',
+    shortDesc: '60cm radiant ceramic hob with vitroceramic surface, 4 cooking zones, halogen heating, touch controls. Modern design for contemporary kitchens.',
+    image: '/images/products/ceramic-cooker/ht-cr60.jpg',
+    specs: {
+      'Width': '60cm',
+      'Burners': '4',
+      'Power': '6000W',
+      'Control': 'Touch',
+      'Surface': 'Vitroceramic'
+    }
+  },
+  {
+    name: 'HT-CR90 90cm Ceramic Hob',
+    slug: 'ht-cr90-90cm-ceramic',
+    sku: 'HT-CR90',
+    category: 'Ceramic Cookers',
+    shortDesc: '90cm wide ceramic hob with 5 cooking zones and 9000W total power. Professional-grade halogen heating for large kitchen cooking needs.',
+    image: '/images/products/ceramic-cooker/ht-cr90.jpg',
+    specs: {
+      'Width': '90cm',
+      'Burners': '5',
+      'Power': '9000W',
+      'Control': 'Touch Slider',
+      'Surface': 'Vitroceramic'
+    }
+  },
+  {
+    name: 'HT-CR4Q 4-Burner Ceramic Hob',
+    slug: 'ht-cr4q-4-burner-ceramic',
+    sku: 'HT-CR4Q',
+    category: 'Ceramic Cookers',
+    shortDesc: '75cm 4-burner radiant ceramic hob with bridge zones. Halogen heating technology with European-inspired sleek design.',
+    image: '/images/products/ceramic-cooker/ht-cr4q.jpg',
+    specs: {
+      'Width': '75cm',
+      'Burners': '4 + 2 Bridge',
+      'Power': '7200W',
+      'Control': 'Touch Slider',
+      'Surface': 'Vitroceramic'
+    }
+  },
+  {
+    name: 'HT-CR2H Compact Ceramic Hob',
+    slug: 'ht-cr2h-dual-hob-ceramic',
+    sku: 'HT-CR2H',
+    category: 'Ceramic Cookers',
+    shortDesc: 'Compact 30cm ceramic hob with 2 cooking zones. Knob controls, portable design, perfect for small kitchens, RVs, and mobile homes.',
+    image: '/images/products/ceramic-cooker/ht-cr2h.jpg',
+    specs: {
+      'Width': '30cm',
+      'Burners': '2',
+      'Power': '3000W',
+      'Control': 'Knob',
+      'Surface': 'Ceramic Glass'
+    }
+  }
+];
+---
+
+<Layout title={title} description={description}>
+  <!-- BreadcrumbList Schema -->
+  <script type="application/ld+json" set:html={JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://housetech-ch.com/" },
+      { "@type": "ListItem", "position": 2, "name": "Products", "item": "https://housetech-ch.com/products/" },
+      { "@type": "ListItem", "position": 3, "name": "Ceramic Cookers", "item": "https://housetech-ch.com/products/ceramic-cooker/" }
+    ]
+  })} />
+  <Header activeNav="products" />
+
+  <!-- Page Hero -->
+  <section class="page-hero">
+    <div class="container">
+      <h1>Ceramic Cookers & Radiant Hobs</h1>
+      <p>Smooth-top Ceramic Hobs, Radiant Cooktops, Vitroceramic Cookers, Halogen Cookers, Electric Ceramic Cooktops, Built-in Ceramic Ranges</p>
+      <nav class="breadcrumb">
+        <a href="/">Home</a>
+        <span class="separator">/</span>
+        <a href="/products">Products</a>
+        <span class="separator">/</span>
+        <span>Ceramic Cookers</span>
+      </nav>
+    </div>
+  </section>
+
+  <!-- Category Introduction -->
+  <section class="content-section">
+    <div class="container">
+      <div style="max-width: 900px; margin: 0 auto;">
+        <h2 style="font-family: var(--font-display); font-size: var(--font-size-2xl); color: var(--color-primary); margin-bottom: var(--spacing-md);">
+          Premium Ceramic Cookers by HouseTech Group
+        </h2>
+        <p style="color: var(--color-text-light); line-height: 1.8; margin-bottom: var(--spacing-md);">
+          <strong>HouseTech Group</strong> is a leading ceramic cooker manufacturer offering a comprehensive range of smooth-top cooking solutions for global B2B partners. Our ceramic cooker collection includes <strong>Vitroceramic Hobs</strong>, <strong>Radiant Cooktops</strong>, <strong>Halogen Cookers</strong>, and <strong>Electric Ceramic Cookers</strong> designed for modern residential and commercial kitchens.
+        </p>
+        <p style="color: var(--color-text-light); line-height: 1.8; margin-bottom: var(--spacing-md);">
+          Ceramic cookers use radiant heating technology with heating elements beneath a smooth vitroceramic glass surface. Unlike induction cookers, ceramic hobs work with all types of cookware including ceramic, glass, copper, and aluminum — no special magnetic cookware required. <strong>HouseTech's</strong> ceramic cookers feature halogen rapid-heat technology for faster cooking response times.
+        </p>
+        <p style="color: var(--color-text-light); line-height: 1.8; margin-bottom: var(--spacing-lg);">
+          As an experienced <strong>OEM/ODM kitchen appliance factory</strong>, HouseTech provides custom manufacturing services for ceramic cookers including custom dimensions, burner configurations, control systems (touch or knob), power levels, and branding options. Our ceramic cookers are CE/CB certified and exported to 50+ countries worldwide. The HouseTech difference lies in our rigorous quality control and competitive pricing.
+        </p>
+      </div>
+
+      <!-- Products Grid -->
+      <div class="news-grid" style="margin-top: var(--spacing-2xl);">
+        {products.map((product) => (
+          <a href={`/products/ceramic-cooker/${product.slug}`} class="news-card">
+            <div class="news-card-image">
+              <img src={product.image} alt={product.name} loading="lazy" />
+              <span class="news-card-category">{product.category}</span>
+            </div>
+            <div class="news-card-body">
+              <h3>{product.name}</h3>
+              <p>{product.shortDesc}</p>
+              <div class="news-card-meta">
+                <span>SKU: {product.sku}</span>
+                <span class="news-card-read-more">View Details →</span>
+              </div>
+            </div>
+          </a>
+        ))}
+      </div>
+
+      <!-- OEM/ODM Section -->
+      <div style="margin-top: var(--spacing-3xl); text-align: center; background: var(--color-bg-alt); padding: var(--spacing-2xl); border-radius: var(--radius-lg);">
+        <h2 style="margin-bottom: var(--spacing-sm);">Need Custom Ceramic Cookers?</h2>
+        <p style="color: var(--color-text-light); margin-bottom: var(--spacing-lg); max-width: 600px; margin-left: auto; margin-right: auto;">
+          HouseTech Group offers full OEM/ODM services for ceramic cookers including custom dimensions, burner configurations, control systems, power levels, and branding options. Contact us to discuss your requirements.
+        </p>
+        <a href="/service" class="btn btn-primary">Learn About OEM/ODM Services →</a>
+      </div>
+    </div>
+  </section>
+
+  <Footer />
+</Layout>

@@ -1,0 +1,94 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Header from '../../components/Header.astro';
+import Footer from '../../components/Footer.astro';
+
+const title = 'European Distributor Partnership - HouseTech Group News';
+const description = 'HouseTech Group announces strategic partnership with European Distributor Network, expanding distribution reach across 15 European countries for premium OEM kitchen appliances.';
+---
+
+<Layout title={title} description={description}>
+  <Header activeNav="news" />
+  
+  <section class="page-hero">
+    <div class="container">
+      <nav class="breadcrumb">
+        <a href="/">Home</a> / <a href="/news">News</a> / <span>Business</span>
+      </nav>
+    </div>
+  </section>
+
+  <section class="content-section">
+    <div class="container">
+      <article class="content-area" style="max-width: 850px;">
+        
+        <header class="article-header">
+          <span class="article-category">Business</span>
+          <h1 class="article-title">Strategic Partnership with European Distributor Network Announced</h1>
+          <div class="article-meta-info">
+            <span>📅 July 2023</span>
+            <span>🏷️ Business</span>
+            <span>⏱️ 5 min read</span>
+          </div>
+        </header>
+
+        <figure class="article-image-figure">
+          <div style="width:100%;aspect-ratio:16/9;background:linear-gradient(135deg, #4f46e5, #3730a3);display:flex;align-items:center;justify-content:center;border-radius:var(--radius-lg);">
+            <svg width="120" height="120" viewBox="0 0 24 24" fill="none" stroke="rgba(255,255,255,0.3)" stroke-width="1">
+              <path d="M20.42 4.58a5.4 5.4 0 00-7.65 0l-.77.78-.77-.78a5.4 5.4 0 00-7.65 0C1.46 6.7 1.33 10.28 4 13l8 8 8-8c2.67-2.72 2.54-6.3.42-8.42z"/>
+            </svg>
+          </div>
+          <figcaption class="article-image-caption">European Distribution Partnership</figcaption>
+        </figure>
+
+        <div class="article-body">
+          <p>Amsterdam, Netherlands — HouseTech Group announces a comprehensive distribution partnership with EuroKitchen Partners (EKP), one of Europe's leading kitchen appliance distribution networks. This agreement grants EuroKitchen Partners exclusive distribution rights for HouseTech products across 15 European countries, representing a major expansion of HouseTech's European presence.</p>
+          
+          <p>EuroKitchen Partners operates a network of regional distributors and retail partners spanning Germany, France, the United Kingdom, Italy, Spain, Poland, the Netherlands, Belgium, Austria, Switzerland, Sweden, Norway, Denmark, Finland, and the Czech Republic. This established infrastructure enables rapid market penetration for HouseTech's product lines.</p>
+          
+          <h2>Partnership Benefits</h2>
+          <p>The partnership delivers mutual benefits for both organizations:</p>
+          
+          <ul>
+            <li><strong>For HouseTech:</strong> Instant access to established retail relationships, local market expertise, and logistics infrastructure across Europe.</li>
+            <li><strong>For EuroKitchen Partners:</strong> Access to high-quality, competitively priced OEM products with proven market acceptance.</li>
+            <li><strong>For Consumers:</strong> Wider availability of premium range hoods and kitchen appliances at accessible price points.</li>
+          </ul>
+
+          <blockquote>
+            "EuroKitchen Partners shares HouseTech's commitment to quality and customer satisfaction. Together, we can bring HouseTech's excellent products to European consumers while providing our retail partners with reliable supply and competitive advantages. This is a true strategic partnership built on shared values."
+            <cite>— HouseTech European Business Director</cite>
+          </blockquote>
+
+          <h2>Product Portfolio</h2>
+          <p>Initially, EuroKitchen Partners will distribute HouseTech's full range hood collection, including:</p>
+          
+          <p>Wall-mounted range hoods in various styles and finishes, island-mounted designs for kitchen islands, under-cabinet models for compact spaces, and integrated range hoods for custom kitchen designs. Gas cooking products will be introduced in subsequent phases based on market demand.</p>
+
+          <h2>Marketing and Support</h2>
+          <p>HouseTech and EuroKitchen Partners will jointly invest in marketing activities including trade show presence, digital marketing campaigns, and point-of-sale materials. EuroKitchen Partners' dedicated HouseTech team will provide local sales support, technical service, and warranty handling for all European markets.</p>
+          
+          <p>This partnership marks an exciting new chapter in HouseTech's European growth strategy, and we look forward to building a lasting and mutually beneficial relationship with EuroKitchen Partners.</p>
+        </div>
+
+        <nav class="article-nav">
+          <a href="/news/zero-defect-quality-achievement" class="article-nav-link">
+            <span class="article-nav-label">← Previous</span>
+            <span class="article-nav-title">Zero-Defect Achievement</span>
+          </a>
+          <a href="/news/ultra-quiet-range-hood-series" class="article-nav-link" style="margin-left:auto;text-align:right;">
+            <span class="article-nav-label">Next →</span>
+            <span class="article-nav-title">Ultra-Quiet Range Hood Series</span>
+          </a>
+        </nav>
+
+        <div style="text-align:center;margin-top:var(--spacing-xl);">
+          <a href="/news" class="btn btn-accent-outline">← Back to All News</a>
+        </div>
+
+      </article>
+    </div>
+  </section>
+
+  <Footer />
+</Layout>

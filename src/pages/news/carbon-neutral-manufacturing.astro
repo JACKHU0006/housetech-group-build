@@ -1,0 +1,96 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Header from '../../components/Header.astro';
+import Footer from '../../components/Footer.astro';
+
+const title = 'HouseTech Achieves Carbon Neutral Status - HouseTech Group News';
+const description = 'HouseTech Group announces carbon neutral certification for manufacturing operations, committing to sustainable production of range hoods and kitchen appliances with net-zero carbon emissions.';
+---
+
+<Layout title={title} description={description}>
+  <Header activeNav="news" />
+  
+  <section class="page-hero">
+    <div class="container">
+      <nav class="breadcrumb">
+        <a href="/">Home</a> / <a href="/news">News</a> / <span>Sustainability</span>
+      </nav>
+    </div>
+  </section>
+
+  <section class="content-section">
+    <div class="container">
+      <article class="content-area" style="max-width: 850px;">
+        
+        <header class="article-header">
+          <span class="article-category">Sustainability</span>
+          <h1 class="article-title">HouseTech Achieves Carbon Neutral Status in Manufacturing Operations</h1>
+          <div class="article-meta-info">
+            <span>📅 September 2024</span>
+            <span>🏷️ Sustainability</span>
+            <span>⏱️ 7 min read</span>
+          </div>
+        </header>
+
+        <figure class="article-image-figure">
+          <div style="width:100%;aspect-ratio:16/9;background:linear-gradient(135deg, #0891b2, #0e7490);display:flex;align-items:center;justify-content:center;border-radius:var(--radius-lg);">
+            <svg width="120" height="120" viewBox="0 0 24 24" fill="none" stroke="rgba(255,255,255,0.3)" stroke-width="1">
+              <path d="M12 22c4-4 8-7.5 8-12a8 8 0 10-16 0c0 4.5 4 8 8 12z"/>
+              <path d="M12 12V8M10 10l2 2 2-2"/>
+            </svg>
+          </div>
+          <figcaption class="article-image-caption">HouseTech's carbon neutral manufacturing facility</figcaption>
+        </figure>
+
+        <div class="article-body">
+          <p>Shenzhen, China — HouseTech Group proudly announces the achievement of carbon neutral certification for all manufacturing operations, verified by Bureau Veritas, a leading global certification body. This milestone makes HouseTech one of the first major OEM manufacturers in the kitchen appliance industry to achieve this distinction.</p>
+          
+          <p>The certification covers HouseTech's entire production process, from raw material procurement and component manufacturing to final assembly and packaging. The achievement reflects three years of dedicated effort and significant investment in sustainable manufacturing practices.</p>
+          
+          <h2>Carbon Reduction Initiatives</h2>
+          <p>HouseTech's journey to carbon neutrality involved comprehensive changes across all operations:</p>
+          
+          <ul>
+            <li><strong>100% Renewable Energy:</strong> The factory now operates entirely on solar power supplemented by wind energy contracts, generating 4.5 MW of clean electricity annually.</li>
+            <li><strong>Process Optimization:</strong> Manufacturing efficiency improvements reduced energy consumption per unit by 35% compared to 2020 baseline.</li>
+            <li><strong>Green Supply Chain:</strong> Partnerships with certified sustainable suppliers ensure raw materials meet environmental standards.</li>
+            <li><strong>Carbon Offset Projects:</strong> Investment in verified reforestation and renewable energy projects offsets remaining unavoidable emissions.</li>
+          </ul>
+
+          <blockquote>
+            "Achieving carbon neutral status is not just about certification—it's about demonstrating that premium kitchen appliance manufacturing and environmental responsibility can go hand in hand. Our OEM partners can now offer carbon-neutral products under their own brands, meeting growing consumer demand for sustainable choices."
+            <cite>— HouseTech Group CEO</cite>
+          </blockquote>
+
+          <h2>Benefits for OEM Partners</h2>
+          <p>HouseTech's carbon neutral certification provides significant marketing advantages for brand partners. Consumer research shows that sustainability credentials increasingly influence purchasing decisions, particularly in European and North American markets. HouseTech enables partners to:</p>
+          
+          <p>Products manufactured at HouseTech's carbon neutral facility can carry environmental certification labels, supporting premium positioning and regulatory compliance. The company provides detailed carbon footprint documentation for each product, enabling brands to make verified environmental claims.</p>
+
+          <h2>Continuous Improvement Commitment</h2>
+          <p>While celebrating this achievement, HouseTech recognizes that carbon neutrality is a journey, not a destination. The company has committed to annual third-party audits and continuous improvement targets. Future plans include achieving net-positive carbon status by 2030, further reducing emissions throughout the value chain.</p>
+          
+          <p>For OEM partners interested in sustainable manufacturing and carbon-neutral product options, HouseTech's sustainability team is available to discuss custom solutions that meet your brand's environmental goals.</p>
+        </div>
+
+        <nav class="article-nav">
+          <a href="/news/oil-filtration-technology" class="article-nav-link">
+            <span class="article-nav-label">← Previous</span>
+            <span class="article-nav-title">Oil-Filtration Technology</span>
+          </a>
+          <a href="/news/ifa-berlin-2024-success" class="article-nav-link" style="margin-left:auto;text-align:right;">
+            <span class="article-nav-label">Next →</span>
+            <span class="article-nav-title">IFA Berlin 2024 Success</span>
+          </a>
+        </nav>
+
+        <div style="text-align:center;margin-top:var(--spacing-xl);">
+          <a href="/news" class="btn btn-accent-outline">← Back to All News</a>
+        </div>
+
+      </article>
+    </div>
+  </section>
+
+  <Footer />
+</Layout>

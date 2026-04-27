@@ -1,0 +1,98 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Header from '../../components/Header.astro';
+import Footer from '../../components/Footer.astro';
+
+const title = 'HouseTech Expands into Southeast Asian Market - HouseTech Group News';
+const description = 'HouseTech Group announces strategic partnership to expand into Southeast Asian markets, bringing premium range hoods and kitchen appliances to Thailand, Vietnam, Malaysia, and Indonesia.';
+---
+
+<Layout title={title} description={description}>
+  <Header activeNav="news" />
+  
+  <section class="page-hero">
+    <div class="container">
+      <nav class="breadcrumb">
+        <a href="/">Home</a> / <a href="/news">News</a> / <span>Business</span>
+      </nav>
+    </div>
+  </section>
+
+  <section class="content-section">
+    <div class="container">
+      <article class="content-area" style="max-width: 850px;">
+        
+        <header class="article-header">
+          <span class="article-category">Business</span>
+          <h1 class="article-title">HouseTech Group Expands into Southeast Asian Market with Strategic Partnership</h1>
+          <div class="article-meta-info">
+            <span>📅 November 2024</span>
+            <span>🏷️ Business</span>
+            <span>⏱️ 5 min read</span>
+          </div>
+        </header>
+
+        <figure class="article-image-figure">
+          <div style="width:100%;aspect-ratio:16/9;background:linear-gradient(135deg, #059669, #047857);display:flex;align-items:center;justify-content:center;border-radius:var(--radius-lg);">
+            <svg width="120" height="120" viewBox="0 0 24 24" fill="none" stroke="rgba(255,255,255,0.3)" stroke-width="1">
+              <circle cx="12" cy="12" r="10"/>
+              <path d="M2 12h20M12 2a15.3 15.3 0 014 10 15.3 15.3 0 01-4 10 15.3 15.3 0 01-4-10 15.3 15.3 0 014-10z"/>
+            </svg>
+          </div>
+          <figcaption class="article-image-caption">HouseTech's Southeast Asian market expansion</figcaption>
+        </figure>
+
+        <div class="article-body">
+          <p>Singapore — HouseTech Group announces a major strategic expansion into Southeast Asian markets through an exclusive partnership with Pacific Kitchen Alliance (PKA), a leading regional distributor with established networks across Thailand, Vietnam, Malaysia, and Indonesia.</p>
+          
+          <p>This partnership marks a significant milestone in HouseTech's international growth strategy. As an OEM manufacturer of premium kitchen appliances, HouseTech has built strong relationships with European and North American brands. The Southeast Asian market represents the next frontier for expansion.</p>
+          
+          <h2>Market Opportunity</h2>
+          <p>Southeast Asia's kitchen appliance market is experiencing rapid growth, driven by rising urbanization, increasing household incomes, and a growing middle class seeking modern kitchen solutions. Key market dynamics include:</p>
+          
+          <ul>
+            <li><strong>Thailand:</strong> Strong demand for premium appliances in Bangkok's high-rise developments</li>
+            <li><strong>Vietnam:</strong> Fastest-growing kitchen appliance market in the region, with 15% annual growth</li>
+            <li><strong>Malaysia:</strong> Established market with preference for European-style kitchen designs</li>
+            <li><strong>Indonesia:</strong> Massive potential with 270 million population and growing consumer spending</li>
+          </ul>
+
+          <blockquote>
+            "Southeast Asia represents an enormous opportunity for HouseTech. Our partnership with PKA gives us instant access to established retail networks and deep market expertise. We're committed to providing the same high-quality range hoods and gas stoves that have made us a trusted OEM partner globally."
+            <cite>— HouseTech International Business Director</cite>
+          </blockquote>
+
+          <h2>Product Strategy</h2>
+          <p>HouseTech will supply a customized product lineup optimized for Southeast Asian preferences, including compact designs suitable for smaller urban apartments, corrosion-resistant models for tropical climates, and energy-efficient products meeting regional standards. The company offers flexible OEM/ODM services including logo customization and packaging localization for each market.</p>
+          
+          <p>Initial product rollout will include HouseTech's best-selling range hood series, available through PKA's network of specialty kitchen showrooms and major retail chains. Future phases will introduce gas stoves, air purifiers, and smart kitchen solutions.</p>
+
+          <h2>Partnership Benefits</h2>
+          <p>Pacific Kitchen Alliance chose HouseTech as their manufacturing partner due to the company's proven track record as an OEM factory serving global brands. Key advantages include:</p>
+          
+          <p>HouseTech's ISO 9001 certified manufacturing facility produces over 1 million units annually, ensuring stable supply for regional distribution. The company's comprehensive quality control system and competitive factory-direct pricing enable PKA to offer premium products at accessible price points.</p>
+          
+          <p>The partnership is projected to generate $25 million in combined revenue over the next three years, with HouseTech serving as the exclusive manufacturer for PKA's private-label kitchen appliance lines.</p>
+        </div>
+
+        <nav class="article-nav">
+          <a href="/news/red-dot-design-award-2024" class="article-nav-link">
+            <span class="article-nav-label">← Previous</span>
+            <span class="article-nav-title">Red Dot Design Award</span>
+          </a>
+          <a href="/news/oil-filtration-technology" class="article-nav-link" style="margin-left:auto;text-align:right;">
+            <span class="article-nav-label">Next →</span>
+            <span class="article-nav-title">Oil-Filtration Technology Debut</span>
+          </a>
+        </nav>
+
+        <div style="text-align:center;margin-top:var(--spacing-xl);">
+          <a href="/news" class="btn btn-accent-outline">← Back to All News</a>
+        </div>
+
+      </article>
+    </div>
+  </section>
+
+  <Footer />
+</Layout>

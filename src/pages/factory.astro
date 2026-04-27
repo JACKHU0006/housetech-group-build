@@ -3,7 +3,7 @@ import Layout from '../layouts/Layout.astro';
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
 
-const title = 'Factory - HouseTech Group | Modern Manufacturing Facility Tour';
+const title = 'Our Factory - HouseTech Group | Modern Manufacturing Facility Tour';
 const description = 'Tour our 30,000 sqm modern manufacturing facility with advanced production lines, QC labs, and ISO9001 certified processes for kitchen appliances.';
 ---
 
@@ -23,15 +23,186 @@ const description = 'Tour our 30,000 sqm modern manufacturing facility with adva
     </div>
   </section>
 
+  <!-- Factory Stats Banner -->
+  <section class="stats-banner">
+    <div class="container">
+      <div class="stats-grid">
+        <div class="stat-item">
+          <span class="stat-value">30,000m²</span>
+          <span class="stat-label">Factory Area</span>
+        </div>
+        <div class="stat-item">
+          <span class="stat-value">500+</span>
+          <span class="stat-label">Employees</span>
+        </div>
+        <div class="stat-item">
+          <span class="stat-value">1M+</span>
+          <span class="stat-label">Annual Capacity</span>
+        </div>
+        <div class="stat-item">
+          <span class="stat-value">12</span>
+          <span class="stat-label">Production Lines</span>
+        </div>
+        <div class="stat-item">
+          <span class="stat-value">5</span>
+          <span class="stat-label">QC Stations</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Factory Highlights -->
+  <section class="content-section">
+    <div class="container">
+      <div style="text-align: center; margin-bottom: var(--spacing-2xl);">
+        <span class="section-tag">Factory Highlights</span>
+        <h2 style="margin-top: var(--spacing-sm);">HouseTech Manufacturing Excellence</h2>
+      </div>
+      <div class="features-grid">
+        <div class="feature-card" style="text-align: center;">
+          <div class="feature-icon" style="margin: 0 auto var(--spacing-md); background: linear-gradient(135deg, #10b981, #059669);">
+            <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><polyline points="9 12 11 14 15 10"/></svg>
+          </div>
+          <h3>ISO9001 Certified Workshop</h3>
+          <p>HouseTech factory operates under strict ISO9001 quality management standards, ensuring consistent excellence across every production batch.</p>
+        </div>
+        <div class="feature-card" style="text-align: center;">
+          <div class="feature-icon" style="margin: 0 auto var(--spacing-md); background: linear-gradient(135deg, #3b82f6, #2563eb);">
+            <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8m-4-4v4"/></svg>
+          </div>
+          <h3>Automated Production Lines</h3>
+          <p>HouseTech leverages advanced automation technology with 12 state-of-the-art production lines for maximum efficiency and precision.</p>
+        </div>
+        <div class="feature-card" style="text-align: center;">
+          <div class="feature-icon" style="margin: 0 auto var(--spacing-md); background: linear-gradient(135deg, #8b5cf6, #7c3aed);">
+            <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M14.7 6.3a1 1 0 000 1.4l1.6 1.6a1 1 0 001.4 0l3.77-3.77a6 6 0 01-7.94 7.94l-6.91 6.91a2.12 2.12 0 01-3-3l6.91-6.91a6 6 0 017.94-7.94l-3.76 3.76z"/></svg>
+          </div>
+          <h3>R&D Laboratory</h3>
+          <p>HouseTech R&D center features 50+ engineers and cutting-edge labs for product innovation, acoustic testing, and combustion research.</p>
+        </div>
+        <div class="feature-card" style="text-align: center;">
+          <div class="feature-icon" style="margin: 0 auto var(--spacing-md); background: linear-gradient(135deg, #f59e0b, #d97706);">
+            <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M22 11.08V12a10 10 0 11-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+          </div>
+          <h3>Product Testing Center</h3>
+          <p>Every HouseTech product passes through 5 quality control stations before shipment, ensuring 99.5%+ pass rate on final inspections.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Factory Photo Gallery (Image Placeholders) -->
+  <section class="content-section" style="background: var(--color-bg-alt);">
+    <div class="container">
+      <div style="text-align: center; margin-bottom: var(--spacing-2xl);">
+        <span class="section-tag">Facility Tour</span>
+        <h2 style="margin-top: var(--spacing-sm);">Inside HouseTech Factory</h2>
+      </div>
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: var(--spacing-lg);">
+        <div>
+          <div style="position: relative; height: 220px; background: linear-gradient(135deg, #1e3a5f, #2d5a87); border-radius: var(--radius-lg); overflow: hidden;">
+            <svg width="100%" height="100%" viewBox="0 0 400 220" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice">
+              <defs><linearGradient id="fg1" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#1e3a5f"/><stop offset="100%" stop-color="#2d5a87"/></linearGradient></defs>
+              <rect width="400" height="220" fill="url(#fg1)"/>
+              <!-- Factory building -->
+              <rect x="80" y="80" width="240" height="100" rx="4" fill="rgba(255,255,255,0.08)" stroke="rgba(255,255,255,0.15)" stroke-width="1"/>
+              <rect x="110" y="105" width="45" height="50" rx="2" fill="rgba(255,255,255,0.12)"/>
+              <rect x="170" y="105" width="45" height="50" rx="2" fill="rgba(255,255,255,0.12)"/>
+              <rect x="230" y="105" width="45" height="50" rx="2" fill="rgba(255,255,255,0.12)"/>
+              <!-- Roof -->
+              <polygon points="60,85 200,50 340,85" fill="rgba(255,255,255,0.06)" stroke="rgba(255,255,255,0.12)" stroke-width="1"/>
+              <!-- HouseTech branding -->
+              <text x="200" y="200" text-anchor="middle" fill="rgba(255,255,255,0.5)" font-family="system-ui, sans-serif" font-size="13" font-weight="500">HouseTech Factory Exterior</text>
+            </svg>
+          </div>
+          <p style="text-align: center; margin-top: var(--spacing-sm); font-weight: 600;">Factory Overview</p>
+        </div>
+        <div>
+          <div style="position: relative; height: 220px; background: linear-gradient(135deg, #3b5b8c, #5a7fa8); border-radius: var(--radius-lg); overflow: hidden;">
+            <svg width="100%" height="100%" viewBox="0 0 400 220" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice">
+              <defs><linearGradient id="fg2" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#3b5b8c"/><stop offset="100%" stop-color="#5a7fa8"/></linearGradient></defs>
+              <rect width="400" height="220" fill="url(#fg2)"/>
+              <!-- Conveyor belt -->
+              <rect x="40" y="130" width="320" height="20" rx="10" fill="rgba(255,255,255,0.1)" stroke="rgba(255,255,255,0.15)" stroke-width="1"/>
+              <!-- Products on line -->
+              <rect x="80" y="108" width="40" height="22" rx="4" fill="rgba(255,255,255,0.15)"/>
+              <rect x="160" y="108" width="40" height="22" rx="4" fill="rgba(255,255,255,0.15)"/>
+              <rect x="240" y="108" width="40" height="22" rx="4" fill="rgba(255,255,255,0.15)"/>
+              <rect x="320" y="108" width="40" height="22" rx="4" fill="rgba(255,255,255,0.15)"/>
+              <!-- Robot arm -->
+              <circle cx="200" cy="75" r="18" fill="none" stroke="rgba(255,255,255,0.2)" stroke-width="2"/>
+              <line x1="200" y1="93" x2="200" y2="115" stroke="rgba(255,255,255,0.2)" stroke-width="2"/>
+              <!-- Gear icons -->
+              <circle cx="55" cy="65" r="14" fill="none" stroke="rgba(255,255,255,0.12)" stroke-width="2"/>
+              <circle cx="345" cy="65" r="14" fill="none" stroke="rgba(255,255,255,0.12)" stroke-width="2"/>
+              <text x="200" y="185" text-anchor="middle" fill="rgba(255,255,255,0.5)" font-family="system-ui, sans-serif" font-size="13" font-weight="500">Automated Production Line</text>
+            </svg>
+          </div>
+          <p style="text-align: center; margin-top: var(--spacing-sm); font-weight: 600;">Automated Production</p>
+        </div>
+        <div>
+          <div style="position: relative; height: 220px; background: linear-gradient(135deg, #2d6a4f, #40916c); border-radius: var(--radius-lg); overflow: hidden;">
+            <svg width="100%" height="100%" viewBox="0 0 400 220" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice">
+              <defs><linearGradient id="fg3" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#2d6a4f"/><stop offset="100%" stop-color="#40916c"/></linearGradient></defs>
+              <rect width="400" height="220" fill="url(#fg3)"/>
+              <!-- Shield / Quality badge -->
+              <path d="M200 35 L260 60 L260 120 Q200 160 200 165 Q200 160 140 120 L140 60 Z" fill="rgba(255,255,255,0.1)" stroke="rgba(255,255,255,0.2)" stroke-width="1.5"/>
+              <polyline points="175,105 195,125 230,90" fill="none" stroke="rgba(255,255,255,0.5)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+              <!-- Test equipment -->
+              <rect x="70" y="150" width="60" height="35" rx="4" fill="rgba(255,255,255,0.08)" stroke="rgba(255,255,255,0.12)" stroke-width="1"/>
+              <rect x="270" y="150" width="60" height="35" rx="4" fill="rgba(255,255,255,0.08)" stroke="rgba(255,255,255,0.12)" stroke-width="1"/>
+              <line x1="100" y1="150" x2="100" y2="130" stroke="rgba(255,255,255,0.15)" stroke-width="1.5"/>
+              <line x1="300" y1="150" x2="300" y2="130" stroke="rgba(255,255,255,0.15)" stroke-width="1.5"/>
+              <!-- Data chart -->
+              <polyline points="155,175 180,168 205,172 230,162 255,167" fill="none" stroke="rgba(255,255,255,0.25)" stroke-width="1.5"/>
+              <text x="200" y="208" text-anchor="middle" fill="rgba(255,255,255,0.5)" font-family="system-ui, sans-serif" font-size="13" font-weight="500">QC & Testing Center</text>
+            </svg>
+          </div>
+          <p style="text-align: center; margin-top: var(--spacing-sm); font-weight: 600;">QC & Testing Center</p>
+        </div>
+        <div>
+          <div style="position: relative; height: 220px; background: linear-gradient(135deg, #6b4423, #8b6914); border-radius: var(--radius-lg); overflow: hidden;">
+            <svg width="100%" height="100%" viewBox="0 0 400 220" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice">
+              <defs><linearGradient id="fg4" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#6b4423"/><stop offset="100%" stop-color="#8b6914"/></linearGradient></defs>
+              <rect width="400" height="220" fill="url(#fg4)"/>
+              <!-- Warehouse shelves -->
+              <rect x="50" y="50" width="120" height="12" rx="2" fill="rgba(255,255,255,0.12)"/>
+              <rect x="50" y="78" width="120" height="12" rx="2" fill="rgba(255,255,255,0.12)"/>
+              <rect x="50" y="106" width="120" height="12" rx="2" fill="rgba(255,255,255,0.12)"/>
+              <rect x="230" y="50" width="120" height="12" rx="2" fill="rgba(255,255,255,0.12)"/>
+              <rect x="230" y="78" width="120" height="12" rx="2" fill="rgba(255,255,255,0.12)"/>
+              <rect x="230" y="106" width="120" height="12" rx="2" fill="rgba(255,255,255,0.12)"/>
+              <!-- Shelf supports -->
+              <rect x="48" y="50" width="4" height="68" fill="rgba(255,255,255,0.08)"/>
+              <rect x="168" y="50" width="4" height="68" fill="rgba(255,255,255,0.08)"/>
+              <rect x="228" y="50" width="4" height="68" fill="rgba(255,255,255,0.08)"/>
+              <rect x="348" y="50" width="4" height="68" fill="rgba(255,255,255,0.08)"/>
+              <!-- Forklift icon -->
+              <rect x="170" y="145" width="30" height="20" rx="3" fill="rgba(255,255,255,0.1)"/>
+              <rect x="178" y="165" width="8" height="12" rx="1" fill="rgba(255,255,255,0.1)"/>
+              <rect x="198" y="165" width="8" height="12" rx="1" fill="rgba(255,255,255,0.1)"/>
+              <!-- Boxes -->
+              <rect x="250" y="145" width="24" height="20" rx="2" fill="rgba(255,255,255,0.1)"/>
+              <rect x="280" y="148" width="24" height="20" rx="2" fill="rgba(255,255,255,0.1)"/>
+              <text x="200" y="205" text-anchor="middle" fill="rgba(255,255,255,0.5)" font-family="system-ui, sans-serif" font-size="13" font-weight="500">Warehouse & Logistics Hub</text>
+            </svg>
+          </div>
+          <p style="text-align: center; margin-top: var(--spacing-sm); font-weight: 600;">Warehouse & Logistics</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <!-- Content -->
   <section class="content-section">
     <div class="container">
       <div class="content-area">
 
         <h2>Manufacturing Facility Overview</h2>
-        <p>Our factory spans over 30,000 square meters of modern production space, equipped with state-of-the-art manufacturing equipment and staffed by over 500 skilled workers and engineers. Every aspect of our facility is designed to ensure the highest quality standards in kitchen appliance production.</p>
+        <p>HouseTech Group operates a state-of-the-art factory spanning over 30,000 square meters of modern production space in Guangdong Province. Every aspect of our facility is designed to ensure the highest quality standards in kitchen appliance production. With over 500 skilled workers and engineers, HouseTech delivers consistent excellence across all product lines.</p>
 
         <h2>Production Lines</h2>
+        <p>HouseTech factory is equipped with 12 specialized production lines, each optimized for specific product categories:</p>
         <ul>
           <li><strong>Range Hood Line:</strong> Automated sheet metal processing, welding, coating, assembly, and testing stations with annual capacity of 300,000+ units.</li>
           <li><strong>Gas Stove/Hob Line:</strong> Precision die-casting, burner assembly, safety testing, and quality inspection systems.</li>
@@ -41,16 +212,16 @@ const description = 'Tour our 30,000 sqm modern manufacturing facility with adva
         </ul>
 
         <h2>Quality Control System</h2>
-        <p>Our ISO9001-certified quality management system ensures every product meets international standards:</p>
+        <p>HouseTech Group's ISO9001-certified quality management system ensures every product meets international standards through our 5-station quality control process:</p>
         <ul>
-          <li><strong>Incoming Material Inspection:</strong> All raw materials undergo strict quality checks before entering production.</li>
+          <li><strong>Incoming Material Inspection:</strong> All HouseTech raw materials undergo strict quality checks before entering production.</li>
           <li><strong>In-Process Quality Checks:</strong> Multi-stage inspections during assembly to catch issues early.</li>
           <li><strong>Final Product Testing:</strong> Comprehensive functionality, safety, and durability tests on every unit.</li>
-          <li><strong>Certification Testing:</strong> Products tested against CE, CB, ETL, SASO, and other international standards.</li>
+          <li><strong>Certification Testing:</strong> HouseTech products tested against CE, CB, ETL, SASO, and other international standards.</li>
         </ul>
 
         <h2>R&D Center</h2>
-        <p>Our dedicated R&D center features:</p>
+        <p>HouseTech Group's dedicated R&D center features:</p>
         <ul>
           <li>50+ engineers specializing in product design, electronics, and thermal dynamics</li>
           <li>Advanced CAD/CAM design capabilities and prototyping workshop</li>
@@ -59,22 +230,11 @@ const description = 'Tour our 30,000 sqm modern manufacturing facility with adva
           <li>New model development: 20+ new products launched annually</li>
         </ul>
 
-        <h2>Key Factory Stats</h2>
-        <ul>
-          <li>Total Area: 30,000+ square meters</li>
-          <li>Production Capacity: 1 million units per year</li>
-          <li>Number of Employees: 500+</li>
-          <li>Production Lines: 10+ specialized lines</li>
-          <li>Daily Output: 3,000+ units</li>
-          <li>QC Pass Rate: 99.5%+</li>
-        </ul>
-
         <h2>Schedule a Visit</h2>
-        <p>We warmly welcome clients and partners to visit our factory. See our production process firsthand, meet our team, and discuss your requirements face-to-face.</p>
+        <p>We warmly invite clients and partners to visit HouseTech Group's factory. See our production process firsthand, meet our team, and discuss your requirements face-to-face. HouseTech organizes factory tours for serious B2B partners by appointment.</p>
 
         <div style="margin-top: var(--spacing-xl); text-align: center;">
-          <a href="/contact" class="btn btn-primary">Schedule a Factory Visit →</a>
-          <a href="/download" class="btn btn-outline" style="margin-left: var(--spacing-sm); background-color: transparent; color: var(--color-accent); border-color: var(--color-accent);">Download Company Profile</a>
+          <a href="/contact" class="btn btn-primary">Schedule a Factory Visit</a>
         </div>
 
       </div>
@@ -83,3 +243,39 @@ const description = 'Tour our 30,000 sqm modern manufacturing facility with adva
 
   <Footer />
 </Layout>
+
+<style>
+  .stats-banner {
+    background: linear-gradient(135deg, var(--color-primary), var(--color-primary-light));
+    padding: var(--spacing-2xl) 0;
+    color: white;
+  }
+  .stats-grid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: var(--spacing-lg);
+    text-align: center;
+  }
+  @media (max-width: 768px) {
+    .stats-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+  .stat-item {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-xs);
+  }
+  .stat-value {
+    font-family: var(--font-display);
+    font-size: var(--font-size-3xl);
+    font-weight: 700;
+    line-height: 1;
+  }
+  .stat-label {
+    font-size: var(--font-size-sm);
+    opacity: 0.8;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+  }
+</style>

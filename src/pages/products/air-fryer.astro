@@ -1,0 +1,224 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Header from '../../components/Header.astro';
+import Footer from '../../components/Footer.astro';
+
+const title = 'Air Fryers - HouseTech Group | Digital Air Fryer, Electric Air Fryer, Healthy Cooking';
+const description = 'Discover HouseTech Group\'s premium air fryer collection: Digital Air Fryers, Electric Air Fryers, Large Air Fryers, Compact Air Fryers, Smart Air Fryers with Wi-Fi. OEM/ODM available for global B2B partners.';
+
+// Products data
+const products = [
+  {
+    name: 'HT-AF80 Digital Air Fryer',
+    slug: 'ht-af80-digital',
+    sku: 'HT-AF80',
+    category: 'Air Fryers',
+    shortDesc: '8L digital air fryer with 8 preset programs and easy-to-use digital display.',
+    image: '/images/products/air-fryer/ht-af80.jpg',
+    specs: {
+      'Capacity': '8L',
+      'Control': 'Digital Touch',
+      'Presets': '8 Programs',
+      'Temperature': '80-200°C',
+      'Timer': '60 Minutes',
+      'Power': '1800W',
+      'Dimensions': '33 x 33 x 38cm',
+      'Finish': 'Black'
+    },
+    features: [
+      'Large 8L capacity for family meals',
+      '8 preset cooking programs',
+      'Digital touch control with LED display',
+      'Temperature range 80-200°C',
+      '60-minute timer with auto shut-off',
+      'Rapid air circulation technology',
+      'Non-stick basket for easy cleaning',
+      'BPA-free materials'
+    ],
+    applications: [
+      'Family cooking',
+      'Healthy eating',
+      'Quick meals',
+      'Batch cooking'
+    ]
+  },
+  {
+    name: 'HT-AF55 Compact Air Fryer',
+    slug: 'ht-af55-compact',
+    sku: 'HT-AF55',
+    category: 'Air Fryers',
+    shortDesc: '5.5L compact air fryer with one-touch operation. Perfect for small households.',
+    image: '/images/products/air-fryer/ht-af55.jpg',
+    specs: {
+      'Capacity': '5.5L',
+      'Control': 'Knob Control',
+      'Presets': 'One-touch Operation',
+      'Temperature': '150-180°C',
+      'Timer': '30 Minutes',
+      'Power': '1500W',
+      'Dimensions': '29 x 29 x 32cm',
+      'Finish': 'Black / White'
+    },
+    features: [
+      'Compact 5.5L capacity',
+      'Simple one-touch knob operation',
+      'Perfect for couples or small families',
+      'Space-saving design',
+      'Rapid air technology',
+      'Easy-grip handle',
+      'Dishwasher-safe basket'
+    ],
+    applications: [
+      'Small households',
+      'Couples',
+      'Single person kitchens',
+      'Office pantries'
+    ]
+  },
+  {
+    name: 'HT-AF12L Large Capacity Air Fryer',
+    slug: 'ht-af12l-large',
+    sku: 'HT-AF12L',
+    category: 'Air Fryers',
+    shortDesc: '12L extra-large family size air fryer for big batches and whole meals.',
+    image: '/images/products/air-fryer/ht-af12l.jpg',
+    specs: {
+      'Capacity': '12L',
+      'Control': 'Digital Touch',
+      'Presets': '10 Programs',
+      'Temperature': '35-200°C',
+      'Timer': '60 Minutes',
+      'Power': '2100W',
+      'Dimensions': '38 x 38 x 42cm',
+      'Accessories': 'Rotisserie, Rack, Basket'
+    },
+    features: [
+      'Extra-large 12L capacity',
+      'Whole meals in one batch',
+      'Includes rotisserie and accessories',
+      '10 cooking presets',
+      'Wide temperature range 35-200°C',
+      'Digital display with easy controls',
+      'Stainless steel heating element',
+      'Transparent viewing window'
+    ],
+    applications: [
+      'Large families',
+      'Entertaining guests',
+      'Meal prep enthusiasts',
+      'Family gatherings'
+    ]
+  },
+  {
+    name: 'HT-AFS Smart Air Fryer',
+    slug: 'ht-afs-smart',
+    sku: 'HT-AFS',
+    category: 'Air Fryers',
+    shortDesc: 'Smart Wi-Fi enabled air fryer with app control. Remote monitoring and recipes.',
+    image: '/images/products/air-fryer/ht-afs.jpg',
+    specs: {
+      'Capacity': '6L',
+      'Control': 'App + Touch',
+      'Connectivity': 'Wi-Fi / Smart Home',
+      'Presets': '12 Programs',
+      'Temperature': '80-200°C',
+      'Timer': '24 Hours',
+      'Power': '1700W',
+      'App': 'iOS / Android Compatible'
+    },
+    features: [
+      'Wi-Fi connectivity for remote control',
+      'Compatible with smartphone app',
+      '12 smart cooking presets',
+      'Voice control compatible (Alexa/Google)',
+      '24-hour programmable timer',
+      'Recipe library in app',
+      'Push notification when cooking is done',
+      'Sleek modern design'
+    ],
+    applications: [
+      'Tech-savvy households',
+      'Smart home integration',
+      'Busy professionals',
+      'Cooking enthusiasts'
+    ]
+  }
+];
+---
+
+<Layout title={title} description={description}>
+  <!-- BreadcrumbList Schema -->
+  <script type="application/ld+json" set:html={JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://housetech-ch.com/" },
+      { "@type": "ListItem", "position": 2, "name": "Products", "item": "https://housetech-ch.com/products/" },
+      { "@type": "ListItem", "position": 3, "name": "Air Fryers", "item": "https://housetech-ch.com/products/air-fryer/" }
+    ]
+  })} />
+  <Header activeNav="products" />
+
+  <!-- Page Hero -->
+  <section class="page-hero">
+    <div class="container">
+      <h1>Air Fryers</h1>
+      <p>Healthy cooking appliances - Air Fryers, Digital Air Fryers, Electric Air Fryers, Oil Free Air Fryers, Large Air Fryers, Compact Air Fryers, Healthy Air Fryers, Multi-function Air Fryers, Smart Air Fryers</p>
+      <nav class="breadcrumb">
+        <a href="/">Home</a>
+        <span class="separator">/</span>
+        <a href="/products">Products</a>
+        <span class="separator">/</span>
+        <span>Air Fryers</span>
+      </nav>
+    </div>
+  </section>
+
+  <!-- Category Introduction -->
+  <section class="content-section">
+    <div class="container">
+      <div style="max-width: 900px; margin: 0 auto;">
+        <h2 style="font-family: var(--font-display); font-size: var(--font-size-2xl); color: var(--color-primary); margin-bottom: var(--spacing-md);">
+          Smart Air Fryers by HouseTech Group
+        </h2>
+        <p style="color: var(--color-text-light); line-height: 1.8; margin-bottom: var(--spacing-md);">
+          HouseTech Group is a leading air fryer manufacturer offering comprehensive healthy cooking solutions for global B2B partners. Our air fryer collection includes Digital Air Fryers, Compact Air Fryers, Large Capacity Air Fryers, and Smart Wi-Fi Air Fryers designed for modern households. As an experienced OEM/ODM kitchen appliance factory, we provide custom manufacturing services including capacity options, control systems, smart features, and branding.
+        </p>
+        <p style="color: var(--color-text-light); line-height: 1.8; margin-bottom: var(--spacing-lg);">
+          Our air fryers use rapid air circulation technology to cook food with little to no oil, reducing fat content by up to 80% compared to traditional frying. From compact 5.5L models for singles to extra-large 12L models for families, HouseTech has options for every household size. Smart Wi-Fi enabled models allow remote control via smartphone apps, making healthy cooking more convenient than ever. Each HouseTech air fryer is manufactured with BPA-free materials and undergoes strict quality testing.
+        </p>
+      </div>
+
+      <!-- Products Grid -->
+      <div class="news-grid" style="margin-top: var(--spacing-2xl);">
+        {products.map((product) => (
+          <a href={`/products/air-fryer/${product.slug}`} class="news-card">
+            <div class="news-card-image">
+              <img src={product.image} alt={product.name} loading="lazy" />
+              <span class="news-card-category">{product.category}</span>
+            </div>
+            <div class="news-card-body">
+              <h3>{product.name}</h3>
+              <p>{product.shortDesc}</p>
+              <div class="news-card-meta">
+                <span>SKU: {product.sku}</span>
+                <span class="news-card-read-more">View Details →</span>
+              </div>
+            </div>
+          </a>
+        ))}
+      </div>
+
+      <!-- OEM/ODM Section -->
+      <div style="margin-top: var(--spacing-3xl); text-align: center; background: var(--color-bg-alt); padding: var(--spacing-2xl); border-radius: var(--radius-lg);">
+        <h2 style="margin-bottom: var(--spacing-sm);">Need Custom Air Fryers?</h2>
+        <p style="color: var(--color-text-light); margin-bottom: var(--spacing-lg); max-width: 600px; margin-left: auto; margin-right: auto;">
+          HouseTech Group offers full OEM/ODM services for air fryers including custom capacities, control systems, smart features, and branding options. Contact us to discuss your requirements.
+        </p>
+        <a href="/service" class="btn btn-primary">Learn About OEM/ODM Services →</a>
+      </div>
+    </div>
+  </section>
+
+  <Footer />
+</Layout>

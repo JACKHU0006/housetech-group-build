@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450" width="800" height="450">
+  <defs><linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" style="stop-color:#059669"/><stop offset="100%" style="stop-color:#047857"/></linearGradient></defs>
+  <rect width="800" height="450" fill="url(#bg)" rx="12"/>
+  <g transform="translate(400, 200)">
+    <!-- SEA Region Map (simplified) -->
+    <path d="M-80 -60 Q-40 -80, 20 -70 Q80 -90, 120 -50 Q150 -20, 130 30 Q100 80, 40 90 Q-30 100, -70 60 Q-110 20, -80 -60Z" fill="rgba(255,255,255,0.1)" stroke="rgba(255,255,255,0.35)" stroke-width="2"/>
+    <!-- Country markers -->
+    <circle cx="-20" cy="-30" r="10" fill="#f7931e" opacity="0.8"><title>Thailand</title></circle>
+    <circle cx="30" cy="-20" r="8" fill="#f7931e" opacity="0.7"><title>Vietnam</title></circle>
+    <circle cx="55" cy="0" r="9" fill="#f7931e" opacity="0.75"><title>Malaysia</title></circle>
+    <circle cx="70" cy="30" r="8" fill="#f7931e" opacity="0.7"><title>Indonesia</title></circle>
+    <circle cx="-40" cy="10" r="7" fill="#f7931e" opacity="0.6"><title>Philippines</title></circle>
+    <circle cx="0" cy="25" r="6" fill="#f7931e" opacity="0.5"><title>Singapore</title></circle>
+    <!-- Expansion arrows -->
+    <path d="M-100 0 Q-130 -20, -140 -50 M-100 0 L-115 -10" stroke="rgba(255,255,255,0.4)" stroke-width="3" fill="none"/>
+    <path d="M100 40 Q130 60, 150 40 M100 40 L125 45" stroke="rgba(255,255,255,0.4)" stroke-width="3" fill="none"/>
+    <!-- Growth chart line -->
+    <polyline points="-120,80 -60,65 0,40 60,20 120,-10" fill="none" stroke="#4ade80" stroke-width="3" stroke-linecap="round"/>
+    <circle cx="120" cy="-10" r="5" fill="#4ade80"/>
+  </g>
+  <g transform="translate(400, 385)"><rect x="-145" y="-20" width="290" height="40" rx="20" fill="rgba(0,0,0,0.3)"/><text x="0" y="6" text-anchor="middle" font-family="'Inter',sans-serif" font-weight="700" font-size="14" fill="white">SOUTHEAST ASIA EXPANSION</text></g>
+  <text x="778" y="438" text-anchor="end" font-size="10" fill="white" opacity="0.4">HouseTech Group</text>
+</svg>

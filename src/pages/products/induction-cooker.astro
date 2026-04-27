@@ -1,0 +1,226 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Header from '../../components/Header.astro';
+import Footer from '../../components/Footer.astro';
+
+const title = 'Induction Cookers - HouseTech Group | Induction Cooktop, Ceramic Cooker, Electric Hob Manufacturer';
+const description = 'Discover HouseTech Group\'s premium induction cooker collection: Induction Cooktops, Ceramic Cookers, Electric Hobs, Portable Induction Cookers. OEM/ODM available for global B2B partners.';
+
+// Products data
+const products = [
+  {
+    name: 'HT-IC35 Induction Cooktop',
+    slug: 'ht-ic35-single',
+    sku: 'HT-IC35',
+    category: 'Induction Cookers',
+    shortDesc: '3500W portable single burner induction cooktop. High power for fast cooking.',
+    image: '/images/products/induction-cooker/ht-ic35.jpg',
+    specs: {
+      'Type': 'Induction Cooktop',
+      'Power': '3500W',
+      'Burners': '1',
+      'Control': 'Touch Control',
+      'Temperature': '60-240°C',
+      'Timer': '180 Minutes',
+      'Dimensions': '38 x 30 x 6cm',
+      'Surface': 'Crystal Glass'
+    },
+    features: [
+      'High power 3500W for fast cooking',
+      'Portable single burner design',
+      'Instant heat response',
+      'Energy efficient - no heat loss',
+      'Touch control with LED display',
+      'Multiple temperature settings',
+      'Auto pan detection',
+      'Overheat protection'
+    ],
+    applications: [
+      'Portable cooking',
+      'Dorm rooms',
+      'Office pantries',
+      'Temporary kitchens',
+      'Outdoor cooking (with adapter)'
+    ]
+  },
+  {
+    name: 'HT-IC21 Dual Induction Hob',
+    slug: 'ht-ic21-dual',
+    sku: 'HT-IC21',
+    category: 'Induction Cookers',
+    shortDesc: 'Built-in dual induction hob with two cooking zones. Space-efficient design.',
+    image: '/images/products/induction-cooker/ht-ic21.jpg',
+    specs: {
+      'Type': 'Induction Hob',
+      'Power': '3500W (total)',
+      'Burners': '2',
+      'Control': 'Touch Control',
+      'Dimensions': '60 x 52 x 6cm',
+      'Cut-out': '56 x 48cm',
+      'Surface': 'Black Glass',
+      'Zones': 'Bridge Zone Available'
+    },
+    features: [
+      'Two independent cooking zones',
+      'Bridge zone for large cookware',
+      'Built-in installation',
+      '9 power levels',
+      'Child safety lock',
+      'Timer function',
+      'Residual heat indicator',
+      'Easy-clean glass surface'
+    ],
+    applications: [
+      'Modern kitchens',
+      'Apartments',
+      'Home cooking',
+      'Compact cooking spaces'
+    ]
+  },
+  {
+    name: 'HT-CC30 Ceramic Cooker',
+    slug: 'ht-cc30-ceramic',
+    sku: 'HT-CC30',
+    category: 'Induction Cookers',
+    shortDesc: 'Ceramic infrared cooker with no EMF concern. Safe alternative to induction.',
+    image: '/images/products/induction-cooker/ht-cc30.jpg',
+    specs: {
+      'Type': 'Ceramic Infrared Cooker',
+      'Power': '2000W',
+      'Burners': '2',
+      'Control': 'Knob Control',
+      'Technology': 'Infrared Heating',
+      'Dimensions': '58 x 51 x 8cm',
+      'Surface': 'Ceramic Glass',
+      'Compatibility': 'All Cookware Types'
+    },
+    features: [
+      'Infrared heating - no EMF',
+      'Works with any cookware type',
+      'Safe for all cookware materials',
+      'Ceramic glass surface',
+      'Knob control for easy operation',
+      'Instant heat without induction',
+      'No magnetic field concerns',
+      'Elegant modern design'
+    ],
+    applications: [
+      'Users with EMF concerns',
+      'Traditional cookware users',
+      'Family kitchens',
+      'Health-conscious households'
+    ]
+  },
+  {
+    name: 'HT-IC4Q 4-Burner Induction Cooktop',
+    slug: 'ht-ic4q-4-burner',
+    sku: 'HT-IC4Q',
+    category: 'Induction Cookers',
+    shortDesc: 'Built-in 4-burner induction cooktop with bridge zones. Professional-grade.',
+    image: '/images/products/induction-cooker/ht-ic4q.jpg',
+    specs: {
+      'Type': 'Induction Cooktop',
+      'Power': '7200W (total)',
+      'Burners': '4',
+      'Control': 'Touch Control',
+      'Dimensions': '77 x 52 x 6cm',
+      'Cut-out': '74 x 49cm',
+      'Surface': 'Black Glass',
+      'Zones': '2 Bridge Zones'
+    },
+    features: [
+      'Professional-grade 4 burners',
+      '7200W total power',
+      '2 bridge zones for large cookware',
+      'Precise temperature control',
+      'Boost function for rapid heating',
+      'Auto pan detection',
+      'Child lock safety feature',
+      'Timer on each zone'
+    ],
+    applications: [
+      'Large families',
+      'Home chefs',
+      'Cooking enthusiasts',
+      'Professional-style kitchens'
+    ]
+  }
+];
+---
+
+<Layout title={title} description={description}>
+  <!-- BreadcrumbList Schema -->
+  <script type="application/ld+json" set:html={JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://housetech-ch.com/" },
+      { "@type": "ListItem", "position": 2, "name": "Products", "item": "https://housetech-ch.com/products/" },
+      { "@type": "ListItem", "position": 3, "name": "Induction Cookers", "item": "https://housetech-ch.com/products/induction-cooker/" }
+    ]
+  })} />
+  <Header activeNav="products" />
+
+  <!-- Page Hero -->
+  <section class="page-hero">
+    <div class="container">
+      <h1>Induction Cookers & Electric Cooktops</h1>
+      <p>Electric cooking solutions - Induction Cookers, Induction Cooktops, Ceramic Cookers, Infrared Cookers, Electric Hobs, Radiant Cooktops, Portable Induction Cookers, Countertop Cookers</p>
+      <nav class="breadcrumb">
+        <a href="/">Home</a>
+        <span class="separator">/</span>
+        <a href="/products">Products</a>
+        <span class="separator">/</span>
+        <span>Induction Cookers</span>
+      </nav>
+    </div>
+  </section>
+
+  <!-- Category Introduction -->
+  <section class="content-section">
+    <div class="container">
+      <div style="max-width: 900px; margin: 0 auto;">
+        <h2 style="font-family: var(--font-display); font-size: var(--font-size-2xl); color: var(--color-primary); margin-bottom: var(--spacing-md);">
+          Smart Induction Cookers by HouseTech Group
+        </h2>
+        <p style="color: var(--color-text-light); line-height: 1.8; margin-bottom: var(--spacing-md);">
+          HouseTech Group is a leading induction cooker manufacturer offering comprehensive electric cooking solutions for global B2B partners. Our induction cooker collection includes Induction Cooktops, Ceramic Cookers, Electric Hobs, and Portable Induction Cookers designed for modern kitchens. As an experienced OEM/ODM kitchen appliance factory, we provide custom manufacturing services including burner configurations, power levels, control systems, and branding.
+        </p>
+        <p style="color: var(--color-text-light); line-height: 1.8; margin-bottom: var(--spacing-lg);">
+          Our induction cookers use electromagnetic technology for instant heat and precise temperature control, making cooking faster and more efficient. For users preferring alternatives to induction, HouseTech's ceramic infrared cookers provide similar performance without electromagnetic fields, working with any cookware type. From compact portable single burners to professional 4-burner built-in cooktops, HouseTech has the perfect electric cooking solution. Every HouseTech induction cooker is tested to meet international safety standards.
+        </p>
+      </div>
+
+      <!-- Products Grid -->
+      <div class="news-grid" style="margin-top: var(--spacing-2xl);">
+        {products.map((product) => (
+          <a href={`/products/induction-cooker/${product.slug}`} class="news-card">
+            <div class="news-card-image">
+              <img src={product.image} alt={product.name} loading="lazy" />
+              <span class="news-card-category">{product.category}</span>
+            </div>
+            <div class="news-card-body">
+              <h3>{product.name}</h3>
+              <p>{product.shortDesc}</p>
+              <div class="news-card-meta">
+                <span>SKU: {product.sku}</span>
+                <span class="news-card-read-more">View Details →</span>
+              </div>
+            </div>
+          </a>
+        ))}
+      </div>
+
+      <!-- OEM/ODM Section -->
+      <div style="margin-top: var(--spacing-3xl); text-align: center; background: var(--color-bg-alt); padding: var(--spacing-2xl); border-radius: var(--radius-lg);">
+        <h2 style="margin-bottom: var(--spacing-sm);">Need Custom Induction Cookers?</h2>
+        <p style="color: var(--color-text-light); margin-bottom: var(--spacing-lg); max-width: 600px; margin-left: auto; margin-right: auto;">
+          HouseTech Group offers full OEM/ODM services for induction cookers including custom burner configurations, power levels, control systems, and branding options. Contact us to discuss your requirements.
+        </p>
+        <a href="/service" class="btn btn-primary">Learn About OEM/ODM Services →</a>
+      </div>
+    </div>
+  </section>
+
+  <Footer />
+</Layout>

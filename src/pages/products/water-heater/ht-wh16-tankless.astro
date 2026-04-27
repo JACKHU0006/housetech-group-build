@@ -1,0 +1,127 @@
+---
+import Layout from '../../../layouts/Layout.astro';
+import Header from '../../../components/Header.astro';
+import Footer from '../../../components/Footer.astro';
+
+const title = 'HT-WH16 Tankless Gas Water Heater - HouseTech Group | 16L Instant Hot Water, CO Alarm';
+const description = 'HouseTech HT-WH16 Tankless Gas Water Heater: 16L/min, instant hot water, constant temperature control, built-in CO alarm. Premium manufacturer.';
+
+const product = {
+  name: 'HT-WH16 Tankless Gas Water Heater',
+  sku: 'HT-WH16',
+  category: 'Water Heaters',
+  image: '/images/products/water-heater/ht-wh16.jpg',
+  shortDesc: '16L instant tankless gas water heater with constant temperature control and built-in CO safety alarm for family safety.',
+  specs: {
+    'Type': 'Tankless / Instant',
+    'Capacity': '16L/min',
+    'Control Type': 'Digital Display',
+    'Features': 'Constant Temperature, CO Alarm',
+    'Ignition': 'Electronic Ignition',
+    'Dimensions': '52 x 33 x 15cm',
+    'Gas Type': 'Natural Gas / LPG (configurable)',
+    'Water Pressure': '0.02-1.0MPa',
+    'Temperature Range': '35-65°C',
+    'Efficiency': 'Class A',
+    'Safety': 'CO Alarm, Overheat Protection',
+    'Gross Weight': '12kg'
+  },
+  features: [
+    'Instant hot water - no waiting, no tank',
+    'Constant temperature control',
+    'Built-in CO (carbon monoxide) alarm',
+    'Electronic ignition system',
+    'Energy efficient - only heats water when needed',
+    'Compact wall-mount design',
+    'Overheat protection',
+    'Anti-freeze function for cold climates',
+    'Digital display for temperature monitoring'
+  ],
+  applications: [
+    'Family bathrooms',
+    'Kitchen use',
+    'Shower systems',
+    'Multiple outlet simultaneous use',
+    'Apartments and homes'
+  ]
+};
+
+const relatedProducts = [
+  { name: 'HT-WH20 High Efficiency Gas Heater', slug: '/products/water-heater/ht-wh20-high-efficiency', sku: 'HT-WH20' },
+  { name: 'WH-EH50 Electric Storage Heater', slug: '/products/water-heater/wh-eh50-electric', sku: 'WH-EH50' },
+  { name: 'HT-WH12 Compact Gas Water Heater', slug: '/products/water-heater/ht-wh12-compact', sku: 'HT-WH12' }
+];
+---
+
+<Layout title={title} description={description}>
+  <!-- Product Schema -->
+  <script type="application/ld+json" set:html={JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": "Product",
+    "name": product.name,
+    "image": "https://housetech-ch.com/images/products/water-heater/ht-wh16.jpg",
+    "description": description,
+    "brand": { "@type": "Brand", "name": "HouseTech" },
+    "manufacturer": { "@type": "Organization", "name": "HouseTech Group" },
+    "sku": product.sku,
+    "category": "Water Heaters",
+    "offers": {
+      "@type": "AggregateOffer",
+      "priceCurrency": "USD",
+      "lowPrice": "0",
+      "highPrice": "0",
+      "offerCount": "1",
+      "availability": "https://schema.org/InStock"
+    }
+  })} />
+  <!-- FAQPage Schema -->
+  <script type="application/ld+json" set:html={JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "What is the warranty period for HT-WH16 Water Heater?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "Text": "All HouseTech products come with a comprehensive warranty. The HT-WH16 Tankless Water Heater includes a 2-year manufacturer warranty covering defects in materials and workmanship. Extended warranty options are available for B2B partners."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Does HouseTech offer OEM/ODM customization for the HT-WH16?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "Text": "Yes, HouseTech offers full OEM/ODM services for water heaters including custom logo branding, gas type configuration (Natural Gas/LPG), panel designs, and packaging options to meet regional market requirements."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What safety features does the HT-WH16 include?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "Text": "The HT-WH16 includes multiple safety features: built-in CO (carbon monoxide) alarm, overheat protection, anti-freeze function for cold climates, and electronic ignition system with multiple safety sensors."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What certifications does the HT-WH16 Water Heater have?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "Text": "The HT-WH16 is certified with CE, CB, ETL, and SASO standards, meeting safety and performance requirements for European, Asian, Middle Eastern, and North American markets."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What is the delivery time for HT-WH16 orders?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "Text": "Standard delivery time for HT-WH16 orders is 30-45 days after sample approval and deposit payment. For customized OEM orders, please allow 45-60 days. Express shipping options are available for urgent requirements."
+        }
+      }
+    ]
+  })} />
+  <Header activeNav="products" />
+  <section class="page-hero"><div class="container"><h1>{product.name}</h1><p>SKU: {product.sku}</p><nav class="breadcrumb"><a href="/">Home</a><span class="separator">/</span><a href="/products">Products</a><span class="separator">/</span><a href="/products/water-heater">Water Heaters</a><span class="separator">/</span><span>{product.name}</span></nav></div></section>
+  <section class="content-section"><div class="container"><div class="product-detail-grid"><div class="product-gallery"><div class="product-gallery-main"><img src={product.image} alt={product.name} /></div><div class="product-gallery-thumbs"><div class="product-thumb active"><img src={product.image} alt={product.name} /></div></div></div><div class="product-info"><h1>{product.name}</h1><p class="product-sku">SKU: {product.sku} | Category: {product.category}</p><p class="product-short-desc">{product.shortDesc}</p><p style="color: var(--color-text-light); line-height: 1.8; margin-bottom: var(--spacing-md);">Engineered by HouseTech, the HT-WH16 delivers instant tankless hot water with constant temperature control and built-in CO alarm. As part of HouseTech's water heater lineup, it offers safe, energy-efficient heating. Every HouseTech product is CE/CB certified.</p><table class="product-specs-table"><tbody>{Object.entries(product.specs).map(([key, value]) => (<tr><th>{key}</th><td>{value}</td></tr>))}</tbody></table><div class="product-cta-area"><a href="/contact" class="btn btn-primary">Get Quote</a><a href="/download" class="btn btn-outline">Download Spec Sheet</a></div></div></div><div style="margin-top: var(--spacing-3xl);"><h2 style="font-family: var(--font-display); font-size: var(--font-size-2xl); color: var(--color-primary); margin-bottom: var(--spacing-xl);">Key Features</h2><div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: var(--spacing-lg);">{product.features.map((feature) => (<div style="display: flex; align-items: flex-start; gap: var(--spacing-sm);"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--color-accent)" stroke-width="2" style="flex-shrink: 0; margin-top: 2px;"><polyline points="20 6 9 17 4 12"></polyline></svg><span style="color: var(--color-text);">{feature}</span></div>))}</div></div><div style="margin-top: var(--spacing-3xl);"><h2 style="font-family: var(--font-display); font-size: var(--font-size-2xl); color: var(--color-primary); margin-bottom: var(--spacing-xl);">Applications</h2><div style="display: flex; flex-wrap: wrap; gap: var(--spacing-sm);">{product.applications.map((app) => (<span style="padding: 0.5rem 1rem; background: var(--color-bg-alt); border: 1px solid var(--color-border); border-radius: var(--radius-full); font-size: var(--font-size-sm); color: var(--color-text);">{app}</span>))}</div></div><div style="margin-top: var(--spacing-3xl); text-align: center; background: var(--color-bg-alt); padding: var(--spacing-2xl); border-radius: var(--radius-lg);"><h2 style="margin-bottom: var(--spacing-sm);">Why Choose HouseTech?</h2><p style="color: var(--color-text-light); margin-bottom: var(--spacing-lg); max-width: 600px; margin-left: auto; margin-right: auto;">HouseTech Group has been a trusted name in kitchen appliances for years. When you choose HouseTech, you get CE/CB certified products backed by comprehensive warranty and dedicated OEM/ODM support.</p><a href="/contact" class="btn btn-primary">Contact HouseTech for OEM/ODM Inquiries →</a></div><div class="related-products"><h2 style="font-family: var(--font-display); font-size: var(--font-size-2xl); color: var(--color-primary); margin-bottom: var(--spacing-xl);">Related Products</h2><div class="news-grid">{relatedProducts.map((rel) => (<a href={rel.slug} class="news-card"><div class="news-card-body"><h3>{rel.name}</h3><p>SKU: {rel.sku}</p><span class="news-card-read-more">View Details →</span></div></a>))}</div></div></div></section><Footer />
+</Layout>

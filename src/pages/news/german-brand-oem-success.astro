@@ -1,0 +1,99 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Header from '../../components/Header.astro';
+import Footer from '../../components/Footer.astro';
+
+const title = 'German Brand OEM Success - HouseTech Group News';
+const description = 'HouseTech Group case study: How our OEM manufacturing helped a German brand successfully launch private label range hoods, achieving market leadership in European premium kitchen appliance segment.';
+---
+
+<Layout title={title} description={description}>
+  <Header activeNav="news" />
+  
+  <section class="page-hero">
+    <div class="container">
+      <nav class="breadcrumb">
+        <a href="/">Home</a> / <a href="/news">News</a> / <span>Case Study</span>
+      </nav>
+    </div>
+  </section>
+
+  <section class="content-section">
+    <div class="container">
+      <article class="content-area" style="max-width: 850px;">
+        
+        <header class="article-header">
+          <span class="article-category">Case Study</span>
+          <h1 class="article-title">How HouseTech Helped a German Brand Launch Their Private Label Range Hoods</h1>
+          <div class="article-meta-info">
+            <span>📅 October 2022</span>
+            <span>🏷️ Case Study</span>
+            <span>⏱️ 7 min read</span>
+          </div>
+        </header>
+
+        <figure class="article-image-figure">
+          <div style="width:100%;aspect-ratio:16/9;background:linear-gradient(135deg, #1e40af, #1e3a8a);display:flex;align-items:center;justify-content:center;border-radius:var(--radius-lg);">
+            <svg width="120" height="120" viewBox="0 0 24 24" fill="none" stroke="rgba(255,255,255,0.3)" stroke-width="1">
+              <path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/>
+              <polyline points="14 2 14 8 20 8"/>
+              <line x1="16" y1="13" x2="8" y2="13"/>
+              <line x1="16" y1="17" x2="8" y2="17"/>
+              <polyline points="10 9 9 9 8 9"/>
+            </svg>
+          </div>
+          <figcaption class="article-image-caption">German OEM Partnership Case Study</figcaption>
+        </figure>
+
+        <div class="article-body">
+          <p>Confidentiality is paramount in OEM partnerships, but with permission from our German partner, we can share this success story. When a leading German home appliance retailer approached HouseTech Group in 2020, they faced a strategic challenge: how to enter the range hood market with differentiated products without the massive investment required for proprietary manufacturing.</p>
+          
+          <p>The German brand had strong retail relationships across Central Europe but lacked in-house manufacturing capabilities for ventilation products. After evaluating multiple Asian manufacturers, they selected HouseTech based on quality credentials, engineering expertise, and cultural alignment with German business practices.</p>
+          
+          <h2>Partnership Structure</h2>
+          <p>HouseTech and the German partner established a comprehensive OEM arrangement:</p>
+          
+          <ul>
+            <li><strong>Joint Product Development:</strong> HouseTech engineers collaborated with German designers to create exclusive product lines unavailable elsewhere.</li>
+            <li><strong>Brand Customization:</strong> Complete customization of logos, packaging, manuals, and even control panel interfaces to reflect German brand identity.</li>
+            <li><strong>Quality Specifications:</strong> German quality standards were codified into HouseTech's manufacturing specifications, with enhanced inspection protocols.</li>
+            <li><strong>Logistics Partnership:</strong> Dedicated warehouse in Hamburg enabled rapid European distribution with minimal lead times.</li>
+          </ul>
+
+          <blockquote>
+            "Working with HouseTech transformed our range hood category from a peripheral offering to a profit center. Their understanding of European market requirements, combined with manufacturing flexibility, enabled us to launch products that compete directly with established premium brands—at price points that drive volume."
+            <cite>— German Partner CEO</cite>
+          </blockquote>
+
+          <h2>Results After Two Years</h2>
+          <p>Within 24 months of launch, the German partner's private label range hoods achieved remarkable market success:</p>
+          
+          <p>Market share in the German DIY channel increased from 0% to 12%, becoming the second-best-selling private label range hood brand. Customer satisfaction scores exceeded 4.5/5.0, outperforming some established premium brands. Category profitability improved by 35% compared to previous branded supplier arrangements.</p>
+
+          <h2>Key Success Factors</h2>
+          <p>The partnership succeeded due to several critical elements: clear communication channels between HouseTech and German design teams, rigorous quality protocols that satisfied German consumer expectations, flexible manufacturing that accommodated smaller initial orders, and mutual commitment to long-term partnership success.</p>
+          
+          <p>HouseTech is proud to have contributed to this success story and welcomes similar partnerships with brands seeking to build private label businesses in kitchen appliances.</p>
+        </div>
+
+        <nav class="article-nav">
+          <a href="/news/global-40-countries-journey" class="article-nav-link">
+            <span class="article-nav-label">← Previous</span>
+            <span class="article-nav-title">Global 40 Countries</span>
+          </a>
+          <a href="/news/18-month-product-development" class="article-nav-link" style="margin-left:auto;text-align:right;">
+            <span class="article-nav-label">Next →</span>
+            <span class="article-nav-title">18-Month Development Cycle</span>
+          </a>
+        </nav>
+
+        <div style="text-align:center;margin-top:var(--spacing-xl);">
+          <a href="/news" class="btn btn-accent-outline">← Back to All News</a>
+        </div>
+
+      </article>
+    </div>
+  </section>
+
+  <Footer />
+</Layout>

@@ -1,0 +1,220 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Header from '../../components/Header.astro';
+import Footer from '../../components/Footer.astro';
+
+const title = 'Gas Water Heaters - HouseTech Group | Instant Gas Heater, Tankless Water Heater Manufacturer';
+const description = 'Discover HouseTech Group\'s premium water heater collection: Instant Gas Water Heaters, Tankless Water Heaters, Storage Water Heaters, Electric Water Heaters. OEM/ODM available for global B2B partners.';
+
+// Products data
+const products = [
+  {
+    name: 'HT-WH16 Tankless Gas Water Heater',
+    slug: 'ht-wh16-tankless',
+    sku: 'HT-WH16',
+    category: 'Water Heaters',
+    shortDesc: '16L instant tankless gas water heater with constant temperature control and CO alarm.',
+    image: '/images/products/water-heater/ht-wh16.jpg',
+    specs: {
+      'Type': 'Tankless / Instant',
+      'Capacity': '16L/min',
+      'Control': 'Digital Display',
+      'Features': 'Constant Temp, CO Alarm',
+      'Ignition': 'Electronic Ignition',
+      'Dimensions': '52 x 33 x 15cm',
+      'Gas Type': 'Natural Gas / LPG'
+    },
+    features: [
+      'Instant hot water - no waiting',
+      'Constant temperature control',
+      'Built-in CO (carbon monoxide) alarm',
+      'Electronic ignition system',
+      'Energy efficient - only heats water when needed',
+      'Compact wall-mount design',
+      'Overheat protection',
+      'Anti-freeze function for cold climates'
+    ],
+    applications: [
+      'Family bathrooms',
+      'Kitchen use',
+      'Shower systems',
+      'Multiple outlet use'
+    ]
+  },
+  {
+    name: 'HT-WH20 High Efficiency Gas Heater',
+    slug: 'ht-wh20-high-efficiency',
+    sku: 'HT-WH20',
+    category: 'Water Heaters',
+    shortDesc: '20L high efficiency gas water heater with low NOx emissions technology.',
+    image: '/images/products/water-heater/ht-wh20.jpg',
+    specs: {
+      'Type': 'High Efficiency',
+      'Capacity': '20L/min',
+      'Control': 'Digital Touch',
+      'Emissions': 'Low NOx',
+      'Efficiency': 'Class A',
+      'Dimensions': '58 x 38 x 18cm',
+      'Gas Type': 'Natural Gas / LPG'
+    },
+    features: [
+      '20L/min high flow rate',
+      'Low NOx emission technology',
+      'Environmentally friendly',
+      'Digital temperature control',
+      'LED display for easy monitoring',
+      'Auto-diagnosis system',
+      'Quiet operation',
+      'Long-lasting heat exchanger'
+    ],
+    applications: [
+      'Large households',
+      'Commercial use',
+      'Multiple bathrooms',
+      'High water demand'
+    ]
+  },
+  {
+    name: 'WH-EH50 Electric Storage Heater',
+    slug: 'wh-eh50-electric',
+    sku: 'WH-EH50',
+    category: 'Water Heaters',
+    shortDesc: '50L electric storage water heater with programmable timer function.',
+    image: '/images/products/water-heater/wh-eh50.jpg',
+    specs: {
+      'Type': 'Storage Electric',
+      'Capacity': '50L',
+      'Control': 'Digital Timer',
+      'Heating': 'Electric Heating Element',
+      'Timer': '24-Hour Programmable',
+      'Dimensions': '45 x 45 x 65cm',
+      'Pressure': '0.8MPa'
+    },
+    features: [
+      '50L storage capacity',
+      '24-hour programmable timer',
+      'Dual heating modes (normal/eco)',
+      'Temperature display',
+      'Safety valve included',
+      'Enamel-coated tank for durability',
+      'Foam insulation for energy saving',
+      'Compact floor-standing design'
+    ],
+    applications: [
+      'Apartments',
+      'Remote locations without gas',
+      'Backup hot water',
+      'Off-grid living'
+    ]
+  },
+  {
+    name: 'HT-WH12 Compact Gas Water Heater',
+    slug: 'ht-wh12-compact',
+    sku: 'HT-WH12',
+    category: 'Water Heaters',
+    shortDesc: '12L compact instant gas water heater perfect for small apartments.',
+    image: '/images/products/water-heater/ht-wh12.jpg',
+    specs: {
+      'Type': 'Compact Instant',
+      'Capacity': '12L/min',
+      'Control': 'Knob Control',
+      'Dimensions': '45 x 28 x 12cm',
+      'Gas Type': 'LPG (Propane)',
+      'Ignition': 'Battery Ignition'
+    },
+    features: [
+      'Compact 12L size',
+      'Perfect for small spaces',
+      'LPG compatible - ideal for apartments',
+      'Simple knob control',
+      'Battery-powered ignition',
+      'Lightweight design',
+      'Easy wall mounting',
+      'Affordable solution'
+    ],
+    applications: [
+      'Small apartments',
+      'RVs and boats',
+      'Rental properties',
+      'Point-of-use heating'
+    ]
+  }
+];
+---
+
+<Layout title={title} description={description}>
+  <!-- BreadcrumbList Schema -->
+  <script type="application/ld+json" set:html={JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://housetech-ch.com/" },
+      { "@type": "ListItem", "position": 2, "name": "Products", "item": "https://housetech-ch.com/products/" },
+      { "@type": "ListItem", "position": 3, "name": "Water Heaters", "item": "https://housetech-ch.com/products/water-heater/" }
+    ]
+  })} />
+  <Header activeNav="products" />
+
+  <!-- Page Hero -->
+  <section class="page-hero">
+    <div class="container">
+      <h1>Gas Water Heaters</h1>
+      <p>Hot water solutions - Gas Heaters, Instant Gas Heaters, Gas Water Heaters, Electric Water Heaters, Instant Water Heaters, Storage Water Heaters, Tankless Water Heaters, Energy Saving Heaters</p>
+      <nav class="breadcrumb">
+        <a href="/">Home</a>
+        <span class="separator">/</span>
+        <a href="/products">Products</a>
+        <span class="separator">/</span>
+        <span>Gas Water Heaters</span>
+      </nav>
+    </div>
+  </section>
+
+  <!-- Category Introduction -->
+  <section class="content-section">
+    <div class="container">
+      <div style="max-width: 900px; margin: 0 auto;">
+        <h2 style="font-family: var(--font-display); font-size: var(--font-size-2xl); color: var(--color-primary); margin-bottom: var(--spacing-md);">
+          Premium Water Heaters by HouseTech Group
+        </h2>
+        <p style="color: var(--color-text-light); line-height: 1.8; margin-bottom: var(--spacing-md);">
+          HouseTech Group is a leading water heater manufacturer offering comprehensive hot water solutions for global B2B partners. Our water heater collection includes Tankless Gas Water Heaters, High Efficiency Gas Heaters, Electric Storage Heaters, and Compact Instant Heaters designed for residential and commercial applications. As an experienced OEM/ODM factory, we provide custom manufacturing services including capacity options, control systems, safety features, and branding.
+        </p>
+        <p style="color: var(--color-text-light); line-height: 1.8; margin-bottom: var(--spacing-lg);">
+          HouseTech's tankless gas water heaters provide endless hot water on demand, heating water only when needed for maximum energy efficiency. Features include constant temperature control, CO safety alarms, low NOx emissions, and digital displays. From compact 12L models for single apartments to powerful 20L units for large households, HouseTech has the perfect water heating solution for every application. Every HouseTech water heater is tested to meet international safety standards.
+        </p>
+      </div>
+
+      <!-- Products Grid -->
+      <div class="news-grid" style="margin-top: var(--spacing-2xl);">
+        {products.map((product) => (
+          <a href={`/products/water-heater/${product.slug}`} class="news-card">
+            <div class="news-card-image">
+              <img src={product.image} alt={product.name} loading="lazy" />
+              <span class="news-card-category">{product.category}</span>
+            </div>
+            <div class="news-card-body">
+              <h3>{product.name}</h3>
+              <p>{product.shortDesc}</p>
+              <div class="news-card-meta">
+                <span>SKU: {product.sku}</span>
+                <span class="news-card-read-more">View Details →</span>
+              </div>
+            </div>
+          </a>
+        ))}
+      </div>
+
+      <!-- OEM/ODM Section -->
+      <div style="margin-top: var(--spacing-3xl); text-align: center; background: var(--color-bg-alt); padding: var(--spacing-2xl); border-radius: var(--radius-lg);">
+        <h2 style="margin-bottom: var(--spacing-sm);">Need Custom Water Heaters?</h2>
+        <p style="color: var(--color-text-light); margin-bottom: var(--spacing-lg); max-width: 600px; margin-left: auto; margin-right: auto;">
+          HouseTech Group offers full OEM/ODM services for water heaters including custom capacities, heating technologies, control systems, and branding options. Contact us to discuss your requirements.
+        </p>
+        <a href="/service" class="btn btn-primary">Learn About OEM/ODM Services →</a>
+      </div>
+    </div>
+  </section>
+
+  <Footer />
+</Layout>

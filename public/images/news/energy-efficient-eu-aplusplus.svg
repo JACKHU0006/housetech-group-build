@@ -1,0 +1,131 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450" width="800" height="450">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0a2540"/>
+      <stop offset="100%" stop-color="#1a4a7a"/>
+    </linearGradient>
+    <linearGradient id="euBlue" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#003399"/>
+      <stop offset="100%" stop-color="#002266"/>
+    </linearGradient>
+    <linearGradient id="goldAccent" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#f7931e"/>
+      <stop offset="100%" stop-color="#ffd700"/>
+    </linearGradient>
+    <linearGradient id="greenGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#2ecc71"/>
+      <stop offset="100%" stop-color="#27ae60"/>
+    </linearGradient>
+    <filter id="shadow">
+      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#000" flood-opacity="0.3"/>
+    </filter>
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="4" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="800" height="450" fill="url(#bg)" rx="12"/>
+
+  <!-- EU flag stripes (subtle background) -->
+  <g opacity="0.06">
+    <rect x="600" y="0" width="200" height="64" fill="#003399"/>
+    <rect x="600" y="64" width="200" height="64" fill="#003399"/>
+    <rect x="600" y="128" width="200" height="64" fill="#003399"/>
+    <rect x="600" y="192" width="200" height="64" fill="#003399"/>
+    <rect x="600" y="256" width="200" height="64" fill="#003399"/>
+    <rect x="600" y="320" width="200" height="64" fill="#003399"/>
+    <rect x="600" y="384" width="200" height="66" fill="#003399"/>
+    <!-- Stars -->
+    <g fill="#ffd700" transform="translate(700, 32)">
+      <polygon points="0,-15 3,-5 14,-5 5,1 9,12 0,5 -9,12 -5,1 -14,-5 -3,-5" opacity="0.3"/>
+    </g>
+  </g>
+
+  <!-- Energy rating scale -->
+  <g transform="translate(80, 60)" filter="url(#shadow)">
+    <rect width="300" height="320" rx="8" fill="#0d2040" stroke="#2d6cb5" stroke-width="1.5" opacity="0.9"/>
+    <text x="150" y="30" text-anchor="middle" font-family="Arial" font-size="12" font-weight="700" fill="#f7931e" letter-spacing="2">ENERGY EFFICIENCY</text>
+
+    <!-- Rating bars A+++ to D -->
+    <g transform="translate(20, 50)">
+      <!-- A+++ -->
+      <rect x="0" y="0" width="260" height="38" rx="4" fill="#2ecc71" opacity="0.9"/>
+      <text x="15" y="25" font-family="Arial" font-size="18" font-weight="900" fill="white">A</text>
+      <text x="60" y="18" font-family="Arial" font-size="10" fill="white">+++</text>
+      <path d="M240,19 L250,9 L260,19 L250,29 Z" fill="white" opacity="0.3"/>
+
+      <!-- A++ -->
+      <rect x="0" y="45" width="260" height="38" rx="4" fill="#58d68d" opacity="0.8"/>
+      <text x="15" y="70" font-family="Arial" font-size="18" font-weight="900" fill="white">A</text>
+      <text x="60" y="63" font-family="Arial" font-size="10" fill="white">++</text>
+
+      <!-- A -->
+      <rect x="0" y="90" width="260" height="38" rx="4" fill="#f1c40f" opacity="0.7"/>
+      <text x="15" y="115" font-family="Arial" font-size="18" font-weight="900" fill="white">A</text>
+      <text x="60" y="108" font-family="Arial" font-size="10" fill="white">+</text>
+
+      <!-- B -->
+      <rect x="0" y="135" width="260" height="38" rx="4" fill="#e67e22" opacity="0.7"/>
+      <text x="15" y="160" font-family="Arial" font-size="18" font-weight="900" fill="white">B</text>
+
+      <!-- C -->
+      <rect x="0" y="180" width="260" height="38" rx="4" fill="#e74c3c" opacity="0.7"/>
+      <text x="15" y="205" font-family="Arial" font-size="18" font-weight="900" fill="white">C</text>
+
+      <!-- D -->
+      <rect x="0" y="225" width="260" height="38" rx="4" fill="#c0392b" opacity="0.7"/>
+      <text x="15" y="250" font-family="Arial" font-size="18" font-weight="900" fill="white">D</text>
+    </g>
+
+    <!-- Highlight indicator -->
+    <g transform="translate(15, 50)">
+      <rect x="0" y="0" width="270" height="38" rx="4" fill="none" stroke="#ffd700" stroke-width="2" filter="url(#glow)"/>
+    </g>
+  </g>
+
+  <!-- A+++ large badge -->
+  <g transform="translate(460, 60)" filter="url(#shadow)">
+    <!-- Badge circle -->
+    <circle cx="140" cy="140" r="130" fill="#0d2040" stroke="#ffd700" stroke-width="3" opacity="0.9"/>
+    <circle cx="140" cy="140" r="115" fill="none" stroke="#f7931e" stroke-width="1" opacity="0.5"/>
+    <circle cx="140" cy="140" r="100" fill="#0d3052" opacity="0.9"/>
+
+    <!-- A letter -->
+    <text x="140" y="110" text-anchor="middle" font-family="Arial Black, Arial" font-size="90" font-weight="900" fill="#ffd700" filter="url(#glow)">A</text>
+
+    <!-- +++ below -->
+    <text x="140" y="155" text-anchor="middle" font-family="Arial" font-size="36" font-weight="900" fill="#ffd700">+++</text>
+
+    <!-- EU star ring (simplified) -->
+    <g fill="#ffd700" opacity="0.4">
+      <circle cx="140" cy="25" r="4"/>
+      <circle cx="175" cy="40" r="4"/>
+      <circle cx="200" cy="80" r="4"/>
+      <circle cx="205" cy="125" r="4"/>
+      <circle cx="190" cy="168" r="4"/>
+      <circle cx="160" cy="200" r="4"/>
+      <circle cx="120" cy="200" r="4"/>
+      <circle cx="90" cy="168" r="4"/>
+      <circle cx="75" cy="125" r="4"/>
+      <circle cx="80" cy="80" r="4"/>
+      <circle cx="105" cy="40" r="4"/>
+    </g>
+  </g>
+
+  <!-- Energy arrow down -->
+  <g transform="translate(720, 60)" filter="url(#shadow)">
+    <rect width="60" height="180" rx="6" fill="#2ecc71" opacity="0.9"/>
+    <path d="M30,20 L55,60 L40,60 L40,160 L20,160 L20,60 L5,60 Z" fill="white" opacity="0.9"/>
+    <text x="30" y="195" text-anchor="middle" font-family="Arial" font-size="10" fill="#2ecc71" font-weight="700">SAVE</text>
+    <text x="30" y="208" text-anchor="middle" font-family="Arial" font-size="10" fill="#2ecc71">ENERGY</text>
+  </g>
+
+  <!-- EU text label -->
+  <text x="400" y="380" text-anchor="middle" font-family="Arial" font-size="20" font-weight="900" fill="#003399" letter-spacing="3">EUROPEAN UNION</text>
+  <text x="400" y="402" text-anchor="middle" font-family="Arial" font-size="13" fill="#ffd700" letter-spacing="2">CERTIFIED · A+++ RATING</text>
+
+  <!-- Brand watermark -->
+  <text x="790" y="438" text-anchor="end" font-family="Arial, sans-serif" font-size="10" fill="white" opacity="0.4">HouseTech Group</text>
+</svg>

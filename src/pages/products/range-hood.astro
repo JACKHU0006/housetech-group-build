@@ -1,0 +1,222 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Header from '../../components/Header.astro';
+import Footer from '../../components/Footer.astro';
+
+const title = 'Range Hoods - HouseTech Group | Kitchen Hood, Cooker Hood, Extractor Hood Manufacturer';
+const description = 'Discover HouseTech Group\'s premium range hood collection: Wall Mount Hoods, Island Hoods, Built-in Range Hoods, Chimney Hoods, Slim Hoods, Stainless Steel Hoods. OEM/ODM available for global B2B partners.';
+
+// Products data
+const products = [
+  {
+    name: 'HT-RH900 Wall Mount Range Hood',
+    slug: 'ht-rh900-wall-mount',
+    sku: 'HT-RH900',
+    category: 'Range Hoods',
+    shortDesc: '90cm wall mount range hood with 1100m³/h extraction, LED lights, and touch control.',
+    image: '/images/products/range-hood/ht-rh900.jpg',
+    specs: {
+      'Width': '90cm',
+      'Extraction Rate': '1100m³/h',
+      'Control': 'Touch Control',
+      'Lighting': 'LED Lights',
+      'Filter': 'Aluminum Mesh Filter',
+      'Noise Level': '58dB',
+      'Finish': 'Stainless Steel',
+      'Ventilation': 'Ducted/Ductless'
+    },
+    features: [
+      'Powerful 1100m³/h extraction rate for effective smoke removal',
+      'Sleek stainless steel finish with modern design',
+      'Touch control panel with 3-speed settings',
+      'Energy-efficient LED lighting',
+      'Easy-to-clean aluminum mesh filters',
+      'Silent motor technology at only 58dB',
+      'Suitable for both ducted and ductless installation'
+    ],
+    applications: [
+      'Residential kitchens',
+      'Apartment kitchens',
+      'Modern home renovations',
+      'Boutique restaurants'
+    ]
+  },
+  {
+    name: 'HT-RH600 Slim Range Hood',
+    slug: 'ht-rh600-slim',
+    sku: 'HT-RH600',
+    category: 'Range Hoods',
+    shortDesc: '60cm ultra-slim design range hood with 45dB whisper-quiet operation.',
+    image: '/images/products/range-hood/ht-rh600.jpg',
+    specs: {
+      'Width': '60cm',
+      'Extraction Rate': '600m³/h',
+      'Control': 'Button Control',
+      'Lighting': 'LED Lights',
+      'Depth': 'Ultra-slim 35cm',
+      'Noise Level': '45dB',
+      'Finish': 'Stainless Steel / Black Glass',
+      'Ventilation': 'Ducted/Ductless'
+    },
+    features: [
+      'Ultra-slim 35cm depth - perfect for compact kitchens',
+      'Whisper-quiet operation at only 45dB',
+      'Space-saving design without compromising performance',
+      'Elegant black glass panel option',
+      '3-speed push button control',
+      'Compact LED lighting',
+      'Washable aluminum filters'
+    ],
+    applications: [
+      'Small apartments',
+      'Studio kitchens',
+      'Compact urban apartments',
+      'Home offices with kitchenette'
+    ]
+  },
+  {
+    name: 'HT-RH1200 Island Range Hood',
+    slug: 'ht-rh1200-island',
+    sku: 'HT-RH1200',
+    category: 'Range Hoods',
+    shortDesc: '120cm commercial-grade T-shaped island hood for kitchen islands.',
+    image: '/images/products/range-hood/ht-rh1200.jpg',
+    specs: {
+      'Width': '120cm',
+      'Extraction Rate': '1200m³/h',
+      'Control': 'Touch Control',
+      'Lighting': 'LED Strip Lights',
+      'Type': 'T-shaped Island Hood',
+      'Noise Level': '62dB',
+      'Finish': 'Stainless Steel',
+      'Motor': 'Dual Motor Commercial Grade'
+    },
+    features: [
+      'Commercial-grade dual motor for maximum extraction',
+      '120cm width - ideal for large kitchen islands',
+      'T-shaped modern design aesthetic',
+      'Dual motor technology for powerful ventilation',
+      'Professional-grade performance',
+      'Sleek stainless steel construction',
+      'LED strip lighting for ambient illumination'
+    ],
+    applications: [
+      'Large open kitchens',
+      'Kitchen islands',
+      'Luxury homes',
+      'Show kitchens',
+      'Restaurant open kitchens'
+    ]
+  },
+  {
+    name: 'HT-RH380 Built-in Range Hood',
+    slug: 'ht-rh380-built-in',
+    sku: 'HT-RH380',
+    category: 'Range Hoods',
+    shortDesc: 'Integrated built-in range hood with hidden installation for seamless kitchen design.',
+    image: '/images/products/range-hood/ht-rh380.jpg',
+    specs: {
+      'Width': '72cm',
+      'Extraction Rate': '380m³/h',
+      'Control': 'Push Button',
+      'Lighting': 'LED Spots',
+      'Installation': 'Built-in / Hidden',
+      'Noise Level': '48dB',
+      'Finish': 'Stainless Steel',
+      'Depth': '28cm'
+    },
+    features: [
+      'Hidden installation - invisible when not in use',
+      'Seamless integration with kitchen cabinets',
+      'Compact 72cm width',
+      'Energy-efficient single motor',
+      'Low-noise operation at 48dB',
+      'Pop-up design activates when cooking',
+      'Easy maintenance with slide-out filter'
+    ],
+    applications: [
+      'Modern minimalist kitchens',
+      'Integrated kitchen designs',
+      'Custom cabinet installations',
+      'Hidden appliance layouts'
+    ]
+  }
+];
+---
+
+<Layout title={title} description={description}>
+  <!-- BreadcrumbList Schema -->
+  <script type="application/ld+json" set:html={JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://housetech-ch.com/" },
+      { "@type": "ListItem", "position": 2, "name": "Products", "item": "https://housetech-ch.com/products/" },
+      { "@type": "ListItem", "position": 3, "name": "Range Hoods", "item": "https://housetech-ch.com/products/range-hood/" }
+    ]
+  })} />
+  <Header activeNav="products" />
+
+  <!-- Page Hero -->
+  <section class="page-hero">
+    <div class="container">
+      <h1>Range Hoods</h1>
+      <p>Professional kitchen ventilation solutions - Wall Mount Hoods, Island Hoods, Built-in Hoods, Chimney Hoods, Slim Hoods, Stainless Steel Hoods, Powerful Range Hoods, Silent Range Hoods, Energy Saving Hoods, Ducted Hoods, Ductless Hoods, Kitchen Ventilation, Smoke Extractors, Oil Fume Extractors, Commercial Range Hoods, Household Range Hoods</p>
+      <nav class="breadcrumb">
+        <a href="/">Home</a>
+        <span class="separator">/</span>
+        <a href="/products">Products</a>
+        <span class="separator">/</span>
+        <span>Range Hoods</span>
+      </nav>
+    </div>
+  </section>
+
+  <!-- Category Introduction -->
+  <section class="content-section">
+    <div class="container">
+      <div style="max-width: 900px; margin: 0 auto;">
+        <h2 style="font-family: var(--font-display); font-size: var(--font-size-2xl); color: var(--color-primary); margin-bottom: var(--spacing-md);">
+          Premium Range Hoods by HouseTech Group
+        </h2>
+        <p style="color: var(--color-text-light); line-height: 1.8; margin-bottom: var(--spacing-md);">
+          HouseTech Group is a leading kitchen hood manufacturer offering comprehensive range hood solutions for global B2B partners. Our range hood collection includes Wall Mount Hoods, Island Hoods, Built-in Range Hoods, Chimney Hoods, Slim Hoods, and Stainless Steel Hoods designed for both residential and commercial applications. As an experienced OEM/ODM kitchen hood factory, we provide custom manufacturing services including logo branding, packaging design, and specification customization to meet your market requirements.
+        </p>
+        <p style="color: var(--color-text-light); line-height: 1.8; margin-bottom: var(--spacing-lg);">
+          HouseTech's extractor hoods feature powerful motors with extraction rates from 380m³/h to 1200m³/h, ensuring effective removal of smoke, grease, and cooking odors. Choose from ducted hoods for maximum ventilation efficiency or ductless hoods with charcoal filters for flexible installation. Many HouseTech models feature silent motor technology operating at just 45-62dB, making them ideal for open-plan living spaces where noise levels matter.
+        </p>
+      </div>
+
+      <!-- Products Grid -->
+      <div class="news-grid" style="margin-top: var(--spacing-2xl);">
+        {products.map((product) => (
+          <a href={`/products/range-hood/${product.slug}`} class="news-card">
+            <div class="news-card-image">
+              <img src={product.image} alt={product.name} loading="lazy" />
+              <span class="news-card-category">{product.category}</span>
+            </div>
+            <div class="news-card-body">
+              <h3>{product.name}</h3>
+              <p>{product.shortDesc}</p>
+              <div class="news-card-meta">
+                <span>SKU: {product.sku}</span>
+                <span class="news-card-read-more">View Details →</span>
+              </div>
+            </div>
+          </a>
+        ))}
+      </div>
+
+      <!-- OEM/ODM Section -->
+      <div style="margin-top: var(--spacing-3xl); text-align: center; background: var(--color-bg-alt); padding: var(--spacing-2xl); border-radius: var(--radius-lg);">
+        <h2 style="margin-bottom: var(--spacing-sm);">Need Custom Range Hoods?</h2>
+        <p style="color: var(--color-text-light); margin-bottom: var(--spacing-lg); max-width: 600px; margin-left: auto; margin-right: auto;">
+          HouseTech Group offers full OEM/ODM services for range hoods including custom dimensions, finishes, motor specifications, control systems, and branding options. Contact us to discuss your custom requirements.
+        </p>
+        <a href="/service" class="btn btn-primary">Learn About OEM/ODM Services →</a>
+      </div>
+    </div>
+  </section>
+
+  <Footer />
+</Layout>

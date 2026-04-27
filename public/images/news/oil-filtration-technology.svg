@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450" width="800" height="450">
+  <defs><linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" style="stop-color:#7c3aed"/><stop offset="100%" style="stop-color:#5b21b6"/></linearGradient></defs>
+  <rect width="800" height="450" fill="url(#bg)" rx="12"/>
+  <g transform="translate(400, 200)">
+    <!-- Filter housing -->
+    <rect x="-120" y="-80" width="240" height="160" rx="15" fill="rgba(255,255,255,0.1)" stroke="rgba(255,255,255,0.3)" stroke-width="3"/>
+    <!-- Filter layers -->
+    <ellipse cx="0" cy="-40" rx="90" ry="20" fill="none" stroke="rgba(255,255,255,0.3)" stroke-width="3"/>
+    <ellipse cx="0" cy="-10" rx="95" ry="22" fill="none" stroke="rgba(255,255,255,0.25)" stroke-width="3"/>
+    <ellipse cx="0" cy="20" rx="100" ry="24" fill="none" stroke="rgba(255,255,255,0.25)" stroke-width="3"/>
+    <ellipse cx="0" cy="50" rx="90" ry="18" fill="none" stroke="rgba(255,255,255,0.3)" stroke-width="3"/>
+    <!-- Oil droplets being filtered -->
+    <circle cx="-70" cy="-50" r="8" fill="rgba(250,204,21,0.4)"/><circle cx="60" cy="-30" r="6" fill="rgba(250,204,21,0.35)"/><circle cx="-40" cy="10" r="7" fill="rgba(250,204,21,0.3)"/><circle cx="50" cy="35" r="5" fill="rgba(250,204,21,0.25)"/>
+    <!-- Clean output arrows -->
+    <path d="M0 75 L0 110 M-15 95 L0 110 L15 95" stroke="rgba(74,222,128,0.6)" stroke-width="4" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+    <!-- Efficiency badge -->
+    <g transform="translate(130, -50)"><circle cx="0" cy="0" r="40" fill="rgba(74,222,128,0.2)" stroke="rgba(74,222,128,0.5)" stroke-width="2"/><text x="0" y="8" text-anchor="middle" font-family="'Inter',sans-serif" font-weight="800" font-size="20" fill="white">99.8%</text></g>
+  </g>
+  <g transform="translate(400, 385)"><rect x="-130" y="-20" width="260" height="40" rx="20" fill="rgba(0,0,0,0.3)"/><text x="0" y="6" text-anchor="middle" font-family="'Inter',sans-serif" font-weight="700" font-size="14" fill="white">OIL FILTRATION TECHNOLOGY</text></g>
+  <text x="778" y="438" text-anchor="end" font-size="10" fill="white" opacity="0.4">HouseTech Group</text>
+</svg>

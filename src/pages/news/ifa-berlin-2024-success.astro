@@ -1,0 +1,96 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Header from '../../components/Header.astro';
+import Footer from '../../components/Footer.astro';
+
+const title = 'Record-Breaking Sales at IFA Berlin 2024 - HouseTech Group News';
+const description = 'HouseTech Group reports exceptional sales performance at IFA Berlin 2024, with multiple strategic partnerships formed and orders exceeding projections by 200% for premium range hood and kitchen appliance lines.';
+---
+
+<Layout title={title} description={description}>
+  <Header activeNav="news" />
+  
+  <section class="page-hero">
+    <div class="container">
+      <nav class="breadcrumb">
+        <a href="/">Home</a> / <a href="/news">News</a> / <span>Event</span>
+      </nav>
+    </div>
+  </section>
+
+  <section class="content-section">
+    <div class="container">
+      <article class="content-area" style="max-width: 850px;">
+        
+        <header class="article-header">
+          <span class="article-category">Event</span>
+          <h1 class="article-title">Record-Breaking Sales at IFA Berlin 2024 - HouseTech Reports</h1>
+          <div class="article-meta-info">
+            <span>📅 August 2024</span>
+            <span>🏷️ Event</span>
+            <span>⏱️ 5 min read</span>
+          </div>
+        </header>
+
+        <figure class="article-image-figure">
+          <div style="width:100%;aspect-ratio:16/9;background:linear-gradient(135deg, #ea580c, #c2410c);display:flex;align-items:center;justify-content:center;border-radius:var(--radius-lg);">
+            <svg width="120" height="120" viewBox="0 0 24 24" fill="none" stroke="rgba(255,255,255,0.3)" stroke-width="1">
+              <rect x="2" y="7" width="20" height="14" rx="2"/>
+              <path d="M16 3v4M8 3v4M2 11h20"/>
+            </svg>
+          </div>
+          <figcaption class="article-image-caption">HouseTech's IFA Berlin 2024 exhibition booth</figcaption>
+        </figure>
+
+        <div class="article-body">
+          <p>Berlin, Germany — HouseTech Group concludes its most successful IFA Berlin exhibition to date, reporting record-breaking sales figures and establishing numerous strategic partnerships across European markets. The event, held September 6-10, 2024, attracted over 180,000 visitors from 130 countries.</p>
+          
+          <p>HouseTech's 300-square-meter exhibition space showcased the company's comprehensive range of OEM kitchen appliances, including the award-winning UltraSlim Pro range hood series, new smart kitchen solutions, and innovative gas stove designs. The booth drew a continuous stream of international visitors throughout the exhibition.</p>
+          
+          <h2>Key Results</h2>
+          <p>IFA Berlin 2024 proved exceptionally fruitful for HouseTech's international business development:</p>
+          
+          <ul>
+            <li><strong>€45 Million in Orders:</strong> Total committed orders exceeded projections by 200%, including both immediate delivery and forward orders for 2025.</li>
+            <li><strong>35 New Distributor Agreements:</strong> Partnerships established with distributors from Germany, France, Spain, Italy, Poland, and Scandinavia.</li>
+            <li><strong>500+ B2B Meetings:</strong> Product demonstrations conducted for brands, retailers, and buying groups from across Europe.</li>
+            <li><strong>10 Strategic OEM Contracts:</strong> New private-label manufacturing agreements signed with European brands.</li>
+          </ul>
+
+          <blockquote>
+            "IFA Berlin has always been a pivotal event for HouseTech's European strategy. This year's results exceeded our most optimistic projections. The response to our new product lines was overwhelming, and we secured partnerships that will drive growth for years to come."
+            <cite>— HouseTech European Business Director</cite>
+          </blockquote>
+
+          <h2>Product Highlights</h2>
+          <p>Several products generated particular excitement among visitors:</p>
+          
+          <p>The UltraSlim Pro range hood captured significant attention, with its ultra-thin design and advanced filtration technology earning praise from industry professionals. The new SmartConnect series, featuring IoT integration with European smart home standards, attracted interest from major retailers seeking differentiated product offerings.</p>
+
+          <h2>Looking Ahead</h2>
+          <p>HouseTech's sales and technical teams are now following up with all leads generated at IFA Berlin. The company has committed to increased production capacity to fulfill the surge in orders while maintaining the quality standards that have made HouseTech a trusted OEM partner.</p>
+          
+          <p>HouseTech extends sincere thanks to all visitors, partners, and colleagues who made IFA Berlin 2024 a tremendous success. The company looks forward to continuing partnerships and welcoming new friends to its growing global network.</p>
+        </div>
+
+        <nav class="article-nav">
+          <a href="/news/carbon-neutral-manufacturing" class="article-nav-link">
+            <span class="article-nav-label">← Previous</span>
+            <span class="article-nav-title">Carbon Neutral Achievement</span>
+          </a>
+          <a href="/news/etl-certification-north-america" class="article-nav-link" style="margin-left:auto;text-align:right;">
+            <span class="article-nav-label">Next →</span>
+            <span class="article-nav-title">ETL Certification</span>
+          </a>
+        </nav>
+
+        <div style="text-align:center;margin-top:var(--spacing-xl);">
+          <a href="/news" class="btn btn-accent-outline">← Back to All News</a>
+        </div>
+
+      </article>
+    </div>
+  </section>
+
+  <Footer />
+</Layout>

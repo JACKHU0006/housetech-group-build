@@ -1,0 +1,96 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Header from '../../components/Header.astro';
+import Footer from '../../components/Footer.astro';
+
+const title = 'HouseTech Wins 2024 Red Dot Design Award - HouseTech Group News';
+const description = 'HouseTech Group receives the prestigious 2024 Red Dot Design Award for its innovative range hood series, recognizing excellence in product design and innovation in kitchen appliances.';
+---
+
+<Layout title={title} description={description}>
+  <Header activeNav="news" />
+  
+  <section class="page-hero">
+    <div class="container">
+      <nav class="breadcrumb">
+        <a href="/">Home</a> / <a href="/news">News</a> / <span>Awards</span>
+      </nav>
+    </div>
+  </section>
+
+  <section class="content-section">
+    <div class="container">
+      <article class="content-area" style="max-width: 850px;">
+        
+        <header class="article-header">
+          <span class="article-category">Awards</span>
+          <h1 class="article-title">HouseTech Wins 2024 Red Dot Design Award for Innovative Range Hood Series</h1>
+          <div class="article-meta-info">
+            <span>📅 December 2024</span>
+            <span>🏷️ Awards</span>
+            <span>⏱️ 5 min read</span>
+          </div>
+        </header>
+
+        <figure class="article-image-figure">
+          <div style="width:100%;aspect-ratio:16/9;background:linear-gradient(135deg, #dc2626, #991b1b);display:flex;align-items:center;justify-content:center;border-radius:var(--radius-lg);">
+            <svg width="120" height="120" viewBox="0 0 24 24" fill="none" stroke="rgba(255,255,255,0.3)" stroke-width="1">
+              <circle cx="12" cy="8" r="6"/>
+              <path d="M15.477 12.89L17 22l-5-3-5 3 1.523-9.11"/>
+            </svg>
+          </div>
+          <figcaption class="article-image-caption">HouseTech's award-winning range hood design</figcaption>
+        </figure>
+
+        <div class="article-body">
+          <p>Germany — HouseTech Group is honored to announce that our UltraSlim Pro range hood series has been awarded the prestigious Red Dot Design Award in the Product Design category for 2024. This recognition underscores HouseTech's position as a premier manufacturer delivering both engineering excellence and aesthetic innovation in kitchen appliances.</p>
+          
+          <p>The Red Dot Design Award is internationally recognized as one of the most prestigious design competitions in the world. The jury of international experts evaluated thousands of entries, and HouseTech's range hood stood out for its exceptional combination of functionality, innovation, and visual appeal.</p>
+          
+          <h2>Award-Winning Design Philosophy</h2>
+          <p>HouseTech's design philosophy centers on the belief that kitchen appliances should be both beautiful and functional. The UltraSlim Pro series exemplifies this approach:</p>
+          
+          <ul>
+            <li><strong>Minimalist Profile:</strong> At just 18cm depth, the UltraSlim Pro is 40% thinner than conventional range hoods, ideal for modern kitchen designs.</li>
+            <li><strong>Touch-Free Operation:</strong> Revolutionary gesture controls allow users to adjust settings without touching the appliance—perfect for busy cooking environments.</li>
+            <li><strong>Whisper-Quiet Performance:</strong> Advanced motor technology delivers powerful extraction while maintaining noise levels below 40dB.</li>
+            <li><strong>Sustainable Materials:</strong> The housing uses 85% recycled stainless steel, aligning with HouseTech's commitment to environmental responsibility.</li>
+          </ul>
+
+          <blockquote>
+            "This Red Dot Award validates HouseTech's investment in design excellence. Our team has worked tirelessly to create products that our OEM partners can be proud to sell under their own brands."
+            <cite>— HouseTech Design Director</cite>
+          </blockquote>
+
+          <h2>Implications for B2B Partners</h2>
+          <p>HouseTech's Red Dot Award-winning designs offer significant advantages for brands seeking to differentiate in competitive markets. As an OEM/ODM manufacturer, HouseTech provides flexible options for private-label production using these award-winning designs, enabling partners to leverage prestigious awards in their marketing.</p>
+          
+          <p>The UltraSlim Pro series is now available for OEM orders, with customization options for logo placement, color variants, and feature configurations. HouseTech's factory-direct pricing ensures competitive margins for distributor partners worldwide.</p>
+
+          <h2>About the Red Dot Design Award</h2>
+          <p>The Red Dot Design Award, established in 1955, is one of the world's largest and most respected design competitions. Each year, thousands of products from around the world compete for the coveted Red Dot label, which has become an internationally recognized symbol of exceptional design quality.</p>
+          
+          <p>HouseTech is proud to join the ranks of world-class manufacturers who have received this honor, further solidifying our reputation as a trusted OEM partner for premium kitchen appliance brands.</p>
+        </div>
+
+        <nav class="article-nav">
+          <a href="/news/ces-2025-smart-kitchen-launch" class="article-nav-link">
+            <span class="article-nav-label">← Previous</span>
+            <span class="article-nav-title">CES 2025 Smart Kitchen Launch</span>
+          </a>
+          <a href="/news/southeast-asia-market-expansion" class="article-nav-link" style="margin-left:auto;text-align:right;">
+            <span class="article-nav-label">Next →</span>
+            <span class="article-nav-title">Southeast Asian Market Expansion</span>
+          </a>
+        </nav>
+
+        <div style="text-align:center;margin-top:var(--spacing-xl);">
+          <a href="/news" class="btn btn-accent-outline">← Back to All News</a>
+        </div>
+
+      </article>
+    </div>
+  </section>
+
+  <Footer />
+</Layout>

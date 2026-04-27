@@ -1,0 +1,96 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Header from '../../components/Header.astro';
+import Footer from '../../components/Footer.astro';
+
+const title = 'New R&D Center Opens - HouseTech Group News';
+const description = 'HouseTech Group opens new R&D center with 50 engineers driving smart appliance innovation, featuring advanced testing facilities and rapid prototyping capabilities for next-generation kitchen products.';
+---
+
+<Layout title={title} description={description}>
+  <Header activeNav="news" />
+  
+  <section class="page-hero">
+    <div class="container">
+      <nav class="breadcrumb">
+        <a href="/">Home</a> / <a href="/news">News</a> / <span>Innovation</span>
+      </nav>
+    </div>
+  </section>
+
+  <section class="content-section">
+    <div class="container">
+      <article class="content-area" style="max-width: 850px;">
+        
+        <header class="article-header">
+          <span class="article-category">Innovation</span>
+          <h1 class="article-title">New R&D Center Opens: 50 Engineers Driving Smart Appliance Innovation</h1>
+          <div class="article-meta-info">
+            <span>📅 October 2023</span>
+            <span>🏷️ Innovation</span>
+            <span>⏱️ 6 min read</span>
+          </div>
+        </header>
+
+        <figure class="article-image-figure">
+          <div style="width:100%;aspect-ratio:16/9;background:linear-gradient(135deg, #0ea5e9, #0284c7);display:flex;align-items:center;justify-content:center;border-radius:var(--radius-lg);">
+            <svg width="120" height="120" viewBox="0 0 24 24" fill="none" stroke="rgba(255,255,255,0.3)" stroke-width="1">
+              <path d="M9 3H5a2 2 0 00-2 2v4m6-6h10a2 2 0 012 2v4M9 3v11m0 0H5m4 0h10m0-11v11m0 0h-4m4 0l2-2m-2 2l-2-2"/>
+              <path d="M3 9l2-2m-2 2l2 2M21 15l-2 2m2-2l-2-2"/>
+            </svg>
+          </div>
+          <figcaption class="article-image-caption">HouseTech's new R&D Center laboratory</figcaption>
+        </figure>
+
+        <div class="article-body">
+          <p>Shenzhen, China — HouseTech Group officially opens its new 30,000-square-foot Research and Development Center, marking a significant investment in innovation capabilities. The facility, staffed by 50 highly skilled engineers and researchers, will focus on developing next-generation smart kitchen appliances for OEM partners worldwide.</p>
+          
+          <p>The R&D Center represents HouseTech's commitment to moving beyond traditional manufacturing into true innovation leadership. By investing in proprietary technology development, HouseTech offers its OEM partners differentiated products they cannot obtain from other manufacturers.</p>
+          
+          <h2>Capabilities and Expertise</h2>
+          <p>The R&D Center houses expertise across multiple disciplines:</p>
+          
+          <ul>
+            <li><strong>Smart Home Integration:</strong> Engineers specializing in IoT connectivity, app development, and voice assistant integration.</li>
+            <li><strong>Mechanical Engineering:</strong> Experts in motor design, airflow optimization, and structural engineering.</li>
+            <li><strong>Materials Science:</strong> Researchers developing advanced coatings, sustainable materials, and surface treatments.</li>
+            <li><strong>User Experience:</strong> Designers focused on intuitive interfaces and ergonomic product development.</li>
+          </ul>
+
+          <blockquote>
+            "Innovation is the lifeblood of sustainable business growth. Our new R&D Center demonstrates HouseTech's vision of becoming not just a manufacturer, but a technology partner for our OEM clients. Together, we can create products that define the future of kitchen appliances."
+            <cite>— HouseTech Chief Technology Officer</cite>
+          </blockquote>
+
+          <h2>Advanced Testing Facilities</h2>
+          <p>The Center includes comprehensive testing laboratories certified by UL, CSA, and CE testing organizations:</p>
+          
+          <p>Acoustic testing chambers measure noise levels down to 20dB. Airflow laboratories verify extraction performance under various conditions. Electrical safety labs ensure compliance with international standards. Environmental chambers test products across temperature and humidity ranges.</p>
+
+          <h2>Rapid Prototyping</h2>
+          <p>HouseTech's new additive manufacturing lab enables rapid prototyping of complex components. 3D printing in multiple materials allows engineers to iterate designs quickly, reducing development timelines from months to weeks. This capability enables HouseTech to respond rapidly to partner requirements and market opportunities.</p>
+          
+          <p>For OEM partners seeking differentiation through innovation, HouseTech's R&D Center offers co-development programs where brands can collaborate directly with our engineering teams to create truly unique products.</p>
+        </div>
+
+        <nav class="article-nav">
+          <a href="/news/factory-expansion-production-capacity" class="article-nav-link">
+            <span class="article-nav-label">← Previous</span>
+            <span class="article-nav-title">Factory Expansion</span>
+          </a>
+          <a href="/news/zero-defect-quality-achievement" class="article-nav-link" style="margin-left:auto;text-align:right;">
+            <span class="article-nav-label">Next →</span>
+            <span class="article-nav-title">Zero-Defect Achievement</span>
+          </a>
+        </nav>
+
+        <div style="text-align:center;margin-top:var(--spacing-xl);">
+          <a href="/news" class="btn btn-accent-outline">← Back to All News</a>
+        </div>
+
+      </article>
+    </div>
+  </section>
+
+  <Footer />
+</Layout>

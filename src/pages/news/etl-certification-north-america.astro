@@ -1,0 +1,96 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Header from '../../components/Header.astro';
+import Footer from '../../components/Footer.astro';
+
+const title = 'HouseTech Receives ETL Certification - HouseTech Group News';
+const description = 'HouseTech Group obtains ETL certification for North American market access, enabling expansion of premium range hoods and gas stoves to US and Canadian B2B partners through certified OEM manufacturing.';
+---
+
+<Layout title={title} description={description}>
+  <Header activeNav="news" />
+  
+  <section class="page-hero">
+    <div class="container">
+      <nav class="breadcrumb">
+        <a href="/">Home</a> / <a href="/news">News</a> / <span>Certification</span>
+      </nav>
+    </div>
+  </section>
+
+  <section class="content-section">
+    <div class="container">
+      <article class="content-area" style="max-width: 850px;">
+        
+        <header class="article-header">
+          <span class="article-category">Certification</span>
+          <h1 class="article-title">HouseTech Receives ETL Certification for North American Market</h1>
+          <div class="article-meta-info">
+            <span>📅 February 2024</span>
+            <span>🏷️ Certification</span>
+            <span>⏱️ 5 min read</span>
+          </div>
+        </header>
+
+        <figure class="article-image-figure">
+          <div style="width:100%;aspect-ratio:16/9;background:linear-gradient(135deg, #ea580c, #dc2626);display:flex;align-items:center;justify-content:center;border-radius:var(--radius-lg);">
+            <svg width="120" height="120" viewBox="0 0 24 24" fill="none" stroke="rgba(255,255,255,0.3)" stroke-width="1">
+              <path d="M22 11.08V12a10 10 0 11-5.93-9.14"/>
+              <polyline points="22 4 12 14.01 9 11.01"/>
+            </svg>
+          </div>
+          <figcaption class="article-image-caption">ETL Certification for North American Market</figcaption>
+        </figure>
+
+        <div class="article-body">
+          <p>North American markets represent a significant opportunity for HouseTech Group's OEM kitchen appliance business. With a combined population of over 370 million consumers and high standards for product quality and safety, entering this market requires rigorous certification. HouseTech is proud to announce the successful completion of ETL certification for its complete range hood and gas stove product lines.</p>
+          
+          <p>ETL certification, administered by Intertek, is one of the most widely recognized safety marks in North America. Products bearing the ETL Mark have been tested to applicable North American safety standards and are found to be in compliance with relevant requirements.</p>
+          
+          <h2>Certification Scope</h2>
+          <p>HouseTech's ETL certification covers the following product categories:</p>
+          
+          <ul>
+            <li><strong>Range Hoods:</strong> All wall-mounted, island-mounted, and under-cabinet models certified to UL 507 safety standards.</li>
+            <li><strong>Gas Ranges:</strong> Freestanding and slide-in gas ranges meeting ANSI Z21.1 requirements.</li>
+            <li><strong>Gas Cooktops:</strong> Built-in gas cooktops certified for residential use.</li>
+            <li><strong>Commercial Products:</strong> Select models certified for commercial kitchen applications.</li>
+          </ul>
+
+          <blockquote>
+            "ETL certification opens the door to one of the world's largest kitchen appliance markets. Our OEM partners can now confidently introduce HouseTech-manufactured products into North American retail channels, with full confidence in compliance and consumer safety."
+            <cite>— HouseTech Quality Assurance Director</cite>
+          </blockquote>
+
+          <h2>Market Access Benefits</h2>
+          <p>ETL certification provides HouseTech's B2B partners with several competitive advantages in the North American market:</p>
+          
+          <p>Major retailers including Home Depot, Lowe's, Best Buy, and independent appliance dealers require ETL or UL certification for all electrical products. This certification eliminates barriers to entry and enables partnerships with tier-one retail accounts. HouseTech's factory-direct pricing combined with certified quality provides attractive margins for distributors and brand partners.</p>
+
+          <h2>Quality Assurance Commitment</h2>
+          <p>Beyond initial certification, HouseTech maintains ongoing compliance through regular factory inspections and product testing. Intertek conducts quarterly audits of HouseTech's manufacturing facility to verify continued adherence to quality standards.</p>
+          
+          <p>For North American brands and distributors interested in OEM partnerships with HouseTech, our certification team can provide detailed documentation and compliance support for product customization and market entry strategies.</p>
+        </div>
+
+        <nav class="article-nav">
+          <a href="/news/ifa-berlin-2024-success" class="article-nav-link">
+            <span class="article-nav-label">← Previous</span>
+            <span class="article-nav-title">IFA Berlin 2024 Success</span>
+          </a>
+          <a href="/news/canton-fair-2024-phase2" class="article-nav-link" style="margin-left:auto;text-align:right;">
+            <span class="article-nav-label">Next →</span>
+            <span class="article-nav-title">Canton Fair 2024</span>
+          </a>
+        </nav>
+
+        <div style="text-align:center;margin-top:var(--spacing-xl);">
+          <a href="/news" class="btn btn-accent-outline">← Back to All News</a>
+        </div>
+
+      </article>
+    </div>
+  </section>
+
+  <Footer />
+</Layout>

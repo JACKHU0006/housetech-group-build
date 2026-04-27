@@ -1,0 +1,222 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Header from '../../components/Header.astro';
+import Footer from '../../components/Footer.astro';
+
+const title = 'Gas Stoves & Hobs - HouseTech Group | Built-in Hob, Gas Hob, Electric Hob Manufacturer';
+const description = 'Discover HouseTech Group\'s premium gas stove collection: Built-in Hobs, Gas Hobs, Electric Hobs, Ceramic Hobs, Induction Hobs, 2-5 Burner Hobs. OEM/ODM available for global B2B partners.';
+
+// Products data
+const products = [
+  {
+    name: 'HT-GH354 5-Burner Gas Hob',
+    slug: 'ht-gh354-5-burner',
+    sku: 'HT-GH354',
+    category: 'Gas Stoves & Hobs',
+    shortDesc: 'Premium 5-burner gas hob with brass burners, FFD safety, and cast iron grates.',
+    image: '/images/products/gas-stove/ht-gh354.jpg',
+    specs: {
+      'Burners': '5',
+      'Burner Type': 'Brass',
+      'Control': 'Knob Control with FFD',
+      'Grates': 'Cast Iron',
+      'Panel': 'Stainless Steel / Tempered Glass',
+      'Ignition': 'Auto Ignition',
+      'Safety': 'FFD (Flame Failure Device)',
+      'Dimensions': '86 x 51cm'
+    },
+    features: [
+      'Premium brass burners for even heat distribution',
+      'Flame Failure Device (FFD) for enhanced safety',
+      'Cast iron grates for stable cookware support',
+      'Auto ignition system',
+      'Multiple burner sizes for versatile cooking',
+      'Durable tempered glass or stainless steel panel options',
+      'Easy-to-clean surface'
+    ],
+    applications: [
+      'Family kitchens',
+      'Large cooking spaces',
+      'Home chefs',
+      'Professional cooking areas'
+    ]
+  },
+  {
+    name: 'HT-GH243 4-Burner Gas Stove',
+    slug: 'ht-gh243-4-burner',
+    sku: 'HT-GH243',
+    category: 'Gas Stoves & Hobs',
+    shortDesc: 'Elegant 4-burner gas stove with tempered glass panel and easy-clean design.',
+    image: '/images/products/gas-stove/ht-gh243.jpg',
+    specs: {
+      'Burners': '4',
+      'Burner Type': 'Steel',
+      'Control': 'Knob Control',
+      'Panel': 'Tempered Glass',
+      'Ignition': 'Auto Ignition',
+      'Safety': 'FFD',
+      'Dimensions': '60 x 51cm',
+      'Finish': 'Black Tempered Glass'
+    },
+    features: [
+      'Stylish black tempered glass finish',
+      '4 versatile burner configuration',
+      'Easy-clean surface design',
+      'FFD safety feature',
+      'Auto ignition',
+      'Compact 60cm width',
+      'Modern kitchen aesthetic'
+    ],
+    applications: [
+      'Modern kitchens',
+      'Apartment kitchens',
+      'Urban homes',
+      'Contemporary renovations'
+    ]
+  },
+  {
+    name: 'HT-EH32 Ceramic Electric Hob',
+    slug: 'ht-eh32-ceramic',
+    sku: 'HT-EH32',
+    category: 'Gas Stoves & Hobs',
+    shortDesc: 'Safe ceramic electric hob with infrared heating and child lock feature.',
+    image: '/images/products/gas-stove/ht-eh32.jpg',
+    specs: {
+      'Type': 'Ceramic Electric Hob',
+      'Cooking Zones': '3',
+      'Control': 'Touch Control',
+      'Heating': 'Infrared Heating',
+      'Safety': 'Child Lock, Residual Heat Indicator',
+      'Dimensions': '59 x 52cm',
+      'Finish': 'Black Ceramic Glass',
+      'Power Levels': '9'
+    },
+    features: [
+      'Infrared heating technology - no EMF concern',
+      'Child lock for family safety',
+      'Residual heat indicator',
+      'Easy-to-clean ceramic glass surface',
+      'Touch control panel',
+      '9 power levels for precise cooking',
+      'Modern minimalist design'
+    ],
+    applications: [
+      'Families with children',
+      'Modern apartments',
+      'Induction-incompatible areas',
+      'Electric-only households'
+    ]
+  },
+  {
+    name: 'HT-PGH2 Portable Gas Stove',
+    slug: 'ht-pgh2-portable',
+    sku: 'HT-PGH2',
+    category: 'Gas Stoves & Hobs',
+    shortDesc: 'Compact portable gas stove for outdoor use, camping, and temporary cooking setups.',
+    image: '/images/products/gas-stove/ht-pgh2.jpg',
+    specs: {
+      'Type': 'Portable Gas Stove',
+      'Burners': '2',
+      'Fuel': 'Butane/Propane',
+      'Control': 'Knob Control',
+      'Ignition': 'Piezo Ignition',
+      'Dimensions': '65 x 35cm',
+      'Weight': '3.5kg',
+      'Finish': 'Stainless Steel'
+    },
+    features: [
+      'Compact and portable design',
+      'Dual burner for versatile cooking',
+      'Butane/propane compatible',
+      'Piezo ignition system',
+      'Stainless steel body for durability',
+      'Perfect for outdoor cooking',
+      'Easy to transport and store'
+    ],
+    applications: [
+      'Outdoor cooking',
+      'Camping',
+      'Patios and balconies',
+      'Emergency backup cooking',
+      'Food trucks'
+    ]
+  }
+];
+---
+
+<Layout title={title} description={description}>
+  <!-- BreadcrumbList Schema -->
+  <script type="application/ld+json" set:html={JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://housetech-ch.com/" },
+      { "@type": "ListItem", "position": 2, "name": "Products", "item": "https://housetech-ch.com/products/" },
+      { "@type": "ListItem", "position": 3, "name": "Gas Stoves & Hobs", "item": "https://housetech-ch.com/products/gas-stove/" }
+    ]
+  })} />
+  <Header activeNav="products" />
+
+  <!-- Page Hero -->
+  <section class="page-hero">
+    <div class="container">
+      <h1>Gas Stoves & Hobs</h1>
+      <p>Professional cooking solutions - Gas Stoves, Built-in Hobs, Gas Hobs, Electric Hobs, Ceramic Hobs, Induction Hobs, 2-5 Burner Hobs, Countertop Stoves, Stainless Steel Hobs, High Efficiency Stoves, Safety Gas Stoves</p>
+      <nav class="breadcrumb">
+        <a href="/">Home</a>
+        <span class="separator">/</span>
+        <a href="/products">Products</a>
+        <span class="separator">/</span>
+        <span>Gas Stoves & Hobs</span>
+      </nav>
+    </div>
+  </section>
+
+  <!-- Category Introduction -->
+  <section class="content-section">
+    <div class="container">
+      <div style="max-width: 900px; margin: 0 auto;">
+        <h2 style="font-family: var(--font-display); font-size: var(--font-size-2xl); color: var(--color-primary); margin-bottom: var(--spacing-md);">
+          Premium Gas Stoves & Hobs by HouseTech Group
+        </h2>
+        <p style="color: var(--color-text-light); line-height: 1.8; margin-bottom: var(--spacing-md);">
+          HouseTech Group is a leading gas stove and hob manufacturer offering comprehensive cooking solutions for global B2B partners. Our hob collection includes Gas Stoves, Built-in Hobs, Gas Hobs, Electric Hobs, Ceramic Hobs, Induction Hobs, and Portable Gas Stoves designed for both residential and commercial applications. As an experienced OEM/ODM kitchen appliance factory, we provide custom manufacturing services including custom dimensions, finishes, burner configurations, and branding options.
+        </p>
+        <p style="color: var(--color-text-light); line-height: 1.8; margin-bottom: var(--spacing-lg);">
+          Our gas hobs feature premium brass burners for even heat distribution, Flame Failure Devices (FFD) for enhanced safety, and durable cast iron grates. Whether you need a compact 2-burner hob for a studio apartment or a professional 5-burner configuration for a large family kitchen, HouseTech has the perfect solution. HouseTech also offers ceramic electric hobs and portable stoves for diverse cooking needs. When you choose HouseTech, you benefit from our years of manufacturing expertise and global export experience.
+        </p>
+      </div>
+
+      <!-- Products Grid -->
+      <div class="news-grid" style="margin-top: var(--spacing-2xl);">
+        {products.map((product) => (
+          <a href={`/products/gas-stove/${product.slug}`} class="news-card">
+            <div class="news-card-image">
+              <img src={product.image} alt={product.name} loading="lazy" />
+              <span class="news-card-category">{product.category}</span>
+            </div>
+            <div class="news-card-body">
+              <h3>{product.name}</h3>
+              <p>{product.shortDesc}</p>
+              <div class="news-card-meta">
+                <span>SKU: {product.sku}</span>
+                <span class="news-card-read-more">View Details →</span>
+              </div>
+            </div>
+          </a>
+        ))}
+      </div>
+
+      <!-- OEM/ODM Section -->
+      <div style="margin-top: var(--spacing-3xl); text-align: center; background: var(--color-bg-alt); padding: var(--spacing-2xl); border-radius: var(--radius-lg);">
+        <h2 style="margin-bottom: var(--spacing-sm);">Need Custom Gas Hobs?</h2>
+        <p style="color: var(--color-text-light); margin-bottom: var(--spacing-lg); max-width: 600px; margin-left: auto; margin-right: auto;">
+          HouseTech Group offers full OEM/ODM services for gas stoves including custom burner configurations, panel materials, safety features, and branding options. Contact us to discuss your requirements.
+        </p>
+        <a href="/service" class="btn btn-primary">Learn About OEM/ODM Services →</a>
+      </div>
+    </div>
+  </section>
+
+  <Footer />
+</Layout>

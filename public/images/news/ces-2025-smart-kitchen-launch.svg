@@ -1,0 +1,115 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450" width="800" height="450">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#050a1a"/>
+      <stop offset="50%" stop-color="#0a1a3a"/>
+      <stop offset="100%" stop-color="#0a2540"/>
+    </linearGradient>
+    <linearGradient id="blueGlow" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#00d4ff"/>
+      <stop offset="100%" stop-color="#0099cc"/>
+    </linearGradient>
+    <linearGradient id="techOrange" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#f7931e"/>
+      <stop offset="100%" stop-color="#e07010"/>
+    </linearGradient>
+    <filter id="shadow">
+      <feDropShadow dx="0" dy="4" stdDeviation="10" flood-color="#00d4ff" flood-opacity="0.3"/>
+    </filter>
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="6" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <filter id="neonGlow">
+      <feGaussianBlur stdDeviation="3" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="800" height="450" fill="url(#bg)" rx="12"/>
+
+  <!-- Tech grid -->
+  <g opacity="0.08">
+    <line x1="0" y1="90" x2="800" y2="90" stroke="#00d4ff" stroke-width="0.5"/>
+    <line x1="0" y1="180" x2="800" y2="180" stroke="#00d4ff" stroke-width="0.5"/>
+    <line x1="0" y1="270" x2="800" y2="270" stroke="#00d4ff" stroke-width="0.5"/>
+    <line x1="0" y1="360" x2="800" y2="360" stroke="#00d4ff" stroke-width="0.5"/>
+    <line x1="160" y1="0" x2="160" y2="450" stroke="#00d4ff" stroke-width="0.5"/>
+    <line x1="320" y1="0" x2="320" y2="450" stroke="#00d4ff" stroke-width="0.5"/>
+    <line x1="480" y1="0" x2="480" y2="450" stroke="#00d4ff" stroke-width="0.5"/>
+    <line x1="640" y1="0" x2="640" y2="450" stroke="#00d4ff" stroke-width="0.5"/>
+  </g>
+
+  <!-- Glowing circuit lines -->
+  <g opacity="0.4" stroke="#00d4ff" stroke-width="1" fill="none">
+    <path d="M0,150 L100,150 L120,170 L200,170" filter="url(#neonGlow)"/>
+    <path d="M800,300 L700,300 L680,280 L600,280" filter="url(#neonGlow)"/>
+    <path d="M0,350 L80,350 L100,330 L180,330" filter="url(#neonGlow)"/>
+    <path d="M800,100 L720,100 L700,120 L620,120" filter="url(#neonGlow)"/>
+  </g>
+
+  <!-- CES 2025 badge top -->
+  <g transform="translate(280, 15)" filter="url(#shadow)">
+    <rect width="240" height="50" rx="8" fill="#00d4ff" opacity="0.15" stroke="#00d4ff" stroke-width="1.5"/>
+    <rect x="5" y="5" width="230" height="40" rx="6" fill="none" stroke="#00d4ff" stroke-width="0.5" opacity="0.5"/>
+    <text x="120" y="33" text-anchor="middle" font-family="Arial" font-size="22" font-weight="900" fill="#00d4ff" letter-spacing="3" filter="url(#neonGlow)">CES 2025</text>
+  </g>
+
+  <!-- Smart home hub icon -->
+  <g transform="translate(100, 150)" filter="url(#shadow)">
+    <circle cx="120" cy="100" r="100" fill="#0a1a3a" stroke="#00d4ff" stroke-width="2" opacity="0.8"/>
+    <!-- Central hub -->
+    <circle cx="120" cy="100" r="40" fill="#0d2040" stroke="url(#blueGlow)" stroke-width="2"/>
+    <circle cx="120" cy="100" r="25" fill="#00d4ff" opacity="0.2"/>
+    <circle cx="120" cy="100" r="12" fill="#00d4ff" opacity="0.8" filter="url(#glow)"/>
+    <!-- WiFi arcs -->
+    <path d="M80,70 Q120,50 160,70" fill="none" stroke="#00d4ff" stroke-width="2" stroke-linecap="round" opacity="0.8"/>
+    <path d="M65,55 Q120,30 175,55" fill="none" stroke="#00d4ff" stroke-width="1.5" stroke-linecap="round" opacity="0.5"/>
+    <path d="M50,40 Q120,10 190,40" fill="none" stroke="#00d4ff" stroke-width="1" stroke-linecap="round" opacity="0.3"/>
+    <path d="M80,130 Q120,150 160,130" fill="none" stroke="#00d4ff" stroke-width="2" stroke-linecap="round" opacity="0.8"/>
+    <path d="M65,145 Q120,165 175,145" fill="none" stroke="#00d4ff" stroke-width="1.5" stroke-linecap="round" opacity="0.5"/>
+    <!-- Connection dots -->
+    <circle cx="120" cy="30" r="4" fill="#00d4ff" filter="url(#glow)"/>
+    <circle cx="120" cy="170" r="4" fill="#00d4ff" filter="url(#glow)"/>
+    <circle cx="30" cy="100" r="4" fill="#f7931e" filter="url(#glow)"/>
+    <circle cx="210" cy="100" r="4" fill="#f7931e" filter="url(#glow)"/>
+    <!-- Kitchen icon in center -->
+    <rect x="105" y="90" width="30" height="20" rx="3" fill="#0a2540" stroke="#00d4ff" stroke-width="1"/>
+    <text x="120" y="105" text-anchor="middle" font-family="Arial" font-size="8" fill="#00d4ff">🏠</text>
+  </g>
+
+  <!-- Smart kitchen appliances outline -->
+  <g transform="translate(520, 80)" filter="url(#shadow)" opacity="0.9">
+    <!-- Range hood -->
+    <path d="M10,0 L160,0 L160,60 L10,60 Z" fill="#0a1a3a" stroke="#00d4ff" stroke-width="1.5"/>
+    <path d="M10,0 L0,10 L0,50 L10,60" fill="none" stroke="#00d4ff" stroke-width="1.5"/>
+    <path d="M30,20 L140,20 M30,40 L140,40" stroke="#00d4ff" stroke-width="0.5" opacity="0.5"/>
+    <text x="85" y="35" text-anchor="middle" font-family="Arial" font-size="9" fill="#00d4ff">SMART HOOD</text>
+
+    <!-- Stove -->
+    <rect x="20" y="80" width="130" height="70" rx="4" fill="#0a1a3a" stroke="#00d4ff" stroke-width="1.5"/>
+    <circle cx="55" cy="115" r="18" fill="none" stroke="#f7931e" stroke-width="1.5"/>
+    <circle cx="115" cy="115" r="18" fill="none" stroke="#f7931e" stroke-width="1.5"/>
+    <circle cx="55" cy="115" r="8" fill="#f7931e" opacity="0.3"/>
+    <circle cx="115" cy="115" r="8" fill="#f7931e" opacity="0.3"/>
+    <text x="85" y="165" text-anchor="middle" font-family="Arial" font-size="9" fill="#00d4ff">SMART STOVE</text>
+
+    <!-- Connection lines between -->
+    <line x1="85" y1="60" x2="85" y2="80" stroke="#00d4ff" stroke-width="1" stroke-dasharray="3,2"/>
+  </g>
+
+  <!-- "SMART KITCHEN" main text -->
+  <text x="400" y="340" text-anchor="middle" font-family="Arial Black, Arial" font-size="36" font-weight="900" fill="#00d4ff" letter-spacing="4" filter="url(#neonGlow)">SMART KITCHEN</text>
+  <text x="400" y="365" text-anchor="middle" font-family="Arial" font-size="14" fill="#f7931e" letter-spacing="3" font-weight="600">LAUNCH EVENT</text>
+
+  <!-- Futuristic lines bottom -->
+  <g opacity="0.3" stroke="#00d4ff" stroke-width="1" fill="none">
+    <path d="M0,400 Q200,390 400,400 Q600,410 800,400"/>
+    <path d="M0,410 Q200,400 400,410 Q600,420 800,410"/>
+    <path d="M0,420 Q200,410 400,420 Q600,430 800,420"/>
+  </g>
+
+  <!-- Brand watermark -->
+  <text x="790" y="438" text-anchor="end" font-family="Arial, sans-serif" font-size="10" fill="white" opacity="0.4">HouseTech Group</text>
+</svg>

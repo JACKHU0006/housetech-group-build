@@ -1,0 +1,103 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Header from '../../components/Header.astro';
+import Footer from '../../components/Footer.astro';
+
+const title = 'HouseTech Unveils Next-Gen Smart Kitchen Appliance Line at CES 2025 - HouseTech Group News';
+const description = 'HouseTech Group showcases revolutionary smart kitchen appliances at CES 2025, featuring IoT integration, AI-powered cooking assistance, and eco-friendly designs for global B2B partners.';
+---
+
+<Layout title={title} description={description}>
+  <Header activeNav="news" />
+  
+  <!-- Page Hero -->
+  <section class="page-hero">
+    <div class="container">
+      <nav class="breadcrumb">
+        <a href="/">Home</a> / <a href="/news">News</a> / <span>CES 2025</span>
+      </nav>
+    </div>
+  </section>
+
+  <!-- Article Content -->
+  <section class="content-section">
+    <div class="container">
+      <article class="content-area" style="max-width: 850px;">
+        
+        <!-- Article Header -->
+        <header class="article-header">
+          <span class="article-category">Product Launch</span>
+          <h1 class="article-title">HouseTech Unveils Next-Gen Smart Kitchen Appliance Line at CES 2025</h1>
+          <div class="article-meta-info">
+            <span>📅 January 2025</span>
+            <span>🏷️ Product Launch</span>
+            <span>⏱️ 6 min read</span>
+          </div>
+        </header>
+
+        <!-- Featured Image -->
+        <figure class="article-image-figure">
+          <div style="width:100%;aspect-ratio:16/9;background:linear-gradient(135deg, #0066ff, #0a2540);display:flex;align-items:center;justify-content:center;border-radius:var(--radius-lg);">
+            <svg width="120" height="120" viewBox="0 0 24 24" fill="none" stroke="rgba(255,255,255,0.3)" stroke-width="1">
+              <rect x="2" y="3" width="20" height="14" rx="2"/>
+              <path d="M8 21h8M12 17v4M7 8h2M7 11h4"/>
+            </svg>
+          </div>
+          <figcaption class="article-image-caption">HouseTech's smart kitchen appliance line at CES 2025</figcaption>
+        </figure>
+
+        <!-- Article Body -->
+        <div class="article-body">
+          <p>Las Vegas, NV — HouseTech Group, a leading OEM/ODM manufacturer of premium range hoods and kitchen appliances, made headlines at CES 2025 with the unveiling of its most ambitious product line to date. The announcement marks a significant milestone for HouseTech as the company continues to expand its footprint in the smart home ecosystem.</p>
+          
+          <p>The new product lineup features an integrated suite of smart kitchen appliances, including the revolutionary SmartHood Pro range hood series with built-in air quality sensors, auto-adjusting fan speeds, and smartphone connectivity. HouseTech's engineering team has spent over two years developing these products, working closely with major global brands as an OEM partner.</p>
+          
+          <h2>Key Innovations at CES 2025</h2>
+          <p>HouseTech's CES 2025 booth showcased several breakthrough technologies that position the company as an innovator in the kitchen appliance industry:</p>
+          
+          <ul>
+            <li><strong>AI-Powered Range Hoods:</strong> The flagship SmartHood Pro uses machine learning algorithms to automatically adjust extraction power based on cooking patterns and air quality readings.</li>
+            <li><strong>IoT Integration Platform:</strong> HouseTech's proprietary smart home protocol enables seamless connectivity with leading ecosystems including Google Home, Amazon Alexa, and Apple HomeKit.</li>
+            <li><strong>Energy Recovery System:</strong> New models feature heat recovery technology that reduces energy consumption by up to 35% compared to previous generations.</li>
+            <li><strong>Anti-Grease Nanocoating:</strong> Proprietary nano-coating technology makes cleaning effortless while extending product lifespan.</li>
+          </ul>
+
+          <blockquote>
+            "This CES launch represents HouseTech's commitment to bridging the gap between traditional manufacturing excellence and cutting-edge smart technology. We're proud to offer our B2B partners products that their customers will love."
+            <cite>— HouseTech Group CEO</cite>
+          </blockquote>
+
+          <h2>Global B2B Partnership Opportunities</h2>
+          <p>HouseTech Group has been serving international markets as an OEM/ODM manufacturer for over a decade, working with European, American, and Asian brands to deliver custom kitchen appliance solutions. The new smart product line opens doors for distributors and brands seeking innovative products at competitive factory-direct pricing.</p>
+          
+          <p>As a manufacturer with complete control over the production process—from R&D to assembly—HouseTech offers flexible minimum order quantities and rapid prototyping services for partners looking to develop private-label products. The company's 1 million unit annual production capacity ensures stable supply for large-scale orders.</p>
+
+          <h2>Looking Ahead</h2>
+          <p>The SmartHood Pro series is scheduled to enter mass production at HouseTech's advanced manufacturing facility in Q2 2025, with deliveries to global partners beginning in Q3 2025. HouseTech invites interested distributors, brands, and OEM clients to visit their corporate headquarters for product demonstrations and partnership discussions.</p>
+          
+          <p>For more information about HouseTech Group's smart kitchen appliance OEM/ODM services, please contact our international business team.</p>
+        </div>
+
+        <!-- Article Navigation -->
+        <nav class="article-nav">
+          <a href="/news/10-years-excellence-anniversary" class="article-nav-link">
+            <span class="article-nav-label">← Previous</span>
+            <span class="article-nav-title">Celebrating 10 Years of Excellence</span>
+          </a>
+          <a href="/news/red-dot-design-award-2024" class="article-nav-link" style="margin-left:auto;text-align:right;">
+            <span class="article-nav-label">Next →</span>
+            <span class="article-nav-title">HouseTech Wins Red Dot Design Award</span>
+          </a>
+        </nav>
+
+        <!-- Back to News -->
+        <div style="text-align:center;margin-top:var(--spacing-xl);">
+          <a href="/news" class="btn btn-accent-outline">← Back to All News</a>
+        </div>
+
+      </article>
+    </div>
+  </section>
+
+  <Footer />
+</Layout>

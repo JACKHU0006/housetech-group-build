@@ -1,0 +1,100 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450" width="800" height="450">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0a2540"/>
+      <stop offset="50%" stop-color="#0d3052"/>
+      <stop offset="100%" stop-color="#f7931e"/>
+    </linearGradient>
+    <linearGradient id="gold" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#f7931e"/>
+      <stop offset="50%" stop-color="#ffd700"/>
+      <stop offset="100%" stop-color="#f7931e"/>
+    </linearGradient>
+    <linearGradient id="goldV" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#ffd700"/>
+      <stop offset="100%" stop-color="#f7931e"/>
+    </linearGradient>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#000" flood-opacity="0.3"/>
+    </filter>
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="3" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <clipPath id="circleClip"><circle cx="400" cy="225" r="200"/></clipPath>
+  </defs>
+
+  <!-- Background -->
+  <rect width="800" height="450" fill="#0a2540" rx="12"/>
+  <rect width="800" height="450" fill="url(#bg)" opacity="0.15" rx="12"/>
+
+  <!-- Confetti background elements -->
+  <g opacity="0.3">
+    <rect x="50" y="30" width="8" height="8" fill="#ffd700" transform="rotate(45 54 34)" rx="1"/>
+    <rect x="150" y="80" width="6" height="6" fill="#f7931e" transform="rotate(30 153 83)" rx="1"/>
+    <rect x="700" y="50" width="10" height="10" fill="#ffd700" transform="rotate(60 705 55)" rx="1"/>
+    <rect x="680" y="120" width="7" height="7" fill="#fff" transform="rotate(20 683.5 123.5)" rx="1"/>
+    <rect x="30" y="200" width="6" height="6" fill="#f7931e" transform="rotate(15 33 203)" rx="1"/>
+    <rect x="760" y="200" width="8" height="8" fill="#ffd700" transform="rotate(40 764 204)" rx="1"/>
+    <rect x="100" y="350" width="7" height="7" fill="#fff" transform="rotate(55 103.5 353.5)" rx="1"/>
+    <rect x="720" y="380" width="6" height="6" fill="#f7931e" transform="rotate(25 723 383)" rx="1"/>
+    <circle cx="80" cy="130" r="4" fill="#ffd700" opacity="0.5"/>
+    <circle cx="730" cy="160" r="5" fill="#f7931e" opacity="0.4"/>
+    <circle cx="60" cy="300" r="3" fill="#fff" opacity="0.3"/>
+    <circle cx="750" cy="300" r="4" fill="#ffd700" opacity="0.4"/>
+  </g>
+
+  <!-- Ribbon left -->
+  <path d="M-10,450 L80,450 L60,400 L80,350 L-10,350 Z" fill="url(#gold)" opacity="0.7"/>
+  <!-- Ribbon right -->
+  <path d="M810,450 L720,450 L740,400 L720,350 L810,350 Z" fill="url(#gold)" opacity="0.7"/>
+
+  <!-- Central circle decoration -->
+  <circle cx="400" cy="225" r="160" fill="none" stroke="url(#gold)" stroke-width="2" opacity="0.3"/>
+  <circle cx="400" cy="225" r="140" fill="none" stroke="url(#gold)" stroke-width="1" opacity="0.2"/>
+
+  <!-- Trophy body -->
+  <g transform="translate(320, 140)" filter="url(#shadow)">
+    <!-- Cup base plate -->
+    <rect x="20" y="200" width="120" height="15" rx="4" fill="#ffd700"/>
+    <rect x="30" y="210" width="100" height="10" rx="2" fill="#e8a800"/>
+    <rect x="50" y="215" width="60" height="15" rx="2" fill="#ffd700"/>
+    <!-- Cup stem -->
+    <rect x="65" y="160" width="30" height="45" rx="3" fill="#ffd700"/>
+    <rect x="75" y="150" width="10" height="15" rx="2" fill="#e8a800"/>
+    <!-- Cup body -->
+    <path d="M10,50 Q5,120 35,155 Q65,170 80,170 Q95,170 125,155 Q155,120 150,50 Z" fill="url(#goldV)" stroke="#e8a800" stroke-width="1"/>
+    <!-- Cup shine -->
+    <path d="M25,60 Q22,100 40,140" fill="none" stroke="#fff" stroke-width="3" stroke-linecap="round" opacity="0.4"/>
+    <!-- Cup handles -->
+    <path d="M10,70 Q-20,80 -15,120 Q-10,145 15,140" fill="none" stroke="#ffd700" stroke-width="8" stroke-linecap="round"/>
+    <path d="M150,70 Q180,80 175,120 Q170,145 145,140" fill="none" stroke="#ffd700" stroke-width="8" stroke-linecap="round"/>
+    <!-- Star on cup -->
+    <polygon points="80,80 84,96 100,96 87,106 92,122 80,112 68,122 73,106 60,96 76,96" fill="#fff" opacity="0.9"/>
+  </g>
+
+  <!-- "10" large number -->
+  <g transform="translate(200, 60)" filter="url(#shadow)">
+    <text x="0" y="160" font-family="Arial Black, Arial" font-size="180" font-weight="900" fill="url(#gold)" opacity="0.9">10</text>
+  </g>
+
+  <!-- Stars around -->
+  <g transform="translate(400, 225)" opacity="0.8">
+    <polygon points="0,-130 3,-122 11,-122 5,-117 7,-109 0,-114 -7,-109 -5,-117 -11,-122 -3,-122" fill="#ffd700" transform="rotate(0)"/>
+    <polygon points="0,-130 3,-122 11,-122 5,-117 7,-109 0,-114 -7,-109 -5,-117 -11,-122 -3,-122" fill="#f7931e" transform="rotate(45) scale(0.7)"/>
+    <polygon points="0,-130 3,-122 11,-122 5,-117 7,-109 0,-114 -7,-109 -5,-117 -11,-122 -3,-122" fill="#ffd700" transform="rotate(90) scale(0.5)"/>
+    <polygon points="0,-130 3,-122 11,-122 5,-117 7,-109 0,-114 -7,-109 -5,-117 -11,-122 -3,-122" fill="#fff" transform="rotate(135) scale(0.8)"/>
+  </g>
+
+  <!-- More stars scattered -->
+  <polygon points="130,300 133,310 143,310 135,317 138,327 130,320 122,327 125,317 117,310 127,310" fill="#ffd700" opacity="0.7"/>
+  <polygon points="650,100 652,108 660,108 654,113 656,121 650,116 644,121 646,113 640,108 648,108" fill="#ffd700" opacity="0.7"/>
+  <polygon points="100,150 102,156 108,156 103,160 105,166 100,162 95,166 97,160 92,156 98,156" fill="#fff" opacity="0.5"/>
+  <polygon points="680,320 682,327 689,327 683,332 685,339 680,334 675,339 677,332 671,327 678,327" fill="#f7931e" opacity="0.6"/>
+
+  <!-- Bottom text -->
+  <text x="400" y="420" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" font-weight="700" fill="url(#gold)" letter-spacing="8">ANNIVERSARY</text>
+
+  <!-- Brand watermark -->
+  <text x="790" y="438" text-anchor="end" font-family="Arial, sans-serif" font-size="10" fill="white" opacity="0.4">HouseTech Group</text>
+</svg>

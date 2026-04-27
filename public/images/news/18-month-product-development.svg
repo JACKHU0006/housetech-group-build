@@ -1,0 +1,140 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450" width="800" height="450">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0a2540"/>
+      <stop offset="100%" stop-color="#0d3052"/>
+    </linearGradient>
+    <linearGradient id="blueAccent" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#1a4a7a"/>
+      <stop offset="100%" stop-color="#2d6cb5"/>
+    </linearGradient>
+    <linearGradient id="orangeAccent" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#f7931e"/>
+      <stop offset="100%" stop-color="#e07010"/>
+    </linearGradient>
+    <filter id="shadow">
+      <feDropShadow dx="0" dy="3" stdDeviation="6" flood-color="#000" flood-opacity="0.3"/>
+    </filter>
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="4" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <pattern id="grid" width="30" height="30" patternUnits="userSpaceOnUse">
+      <path d="M 30 0 L 0 0 0 30" fill="none" stroke="#1a4a7a" stroke-width="0.5" opacity="0.3"/>
+    </pattern>
+  </defs>
+
+  <!-- Background -->
+  <rect width="800" height="450" fill="url(#bg)" rx="12"/>
+  <rect width="800" height="450" fill="url(#grid)" rx="12"/>
+
+  <!-- Blueprint corner decorations -->
+  <path d="M0,60 L0,0 L60,0" fill="none" stroke="#f7931e" stroke-width="3" opacity="0.5"/>
+  <path d="M800,60 L800,0 L740,0" fill="none" stroke="#f7931e" stroke-width="3" opacity="0.5"/>
+  <path d="M0,390 L0,450 L60,450" fill="none" stroke="#f7931e" stroke-width="3" opacity="0.5"/>
+  <path d="M800,390 L800,450 L740,450" fill="none" stroke="#f7931e" stroke-width="3" opacity="0.5"/>
+
+  <!-- Timeline bar -->
+  <rect x="100" y="210" width="600" height="6" rx="3" fill="#1a4a7a"/>
+  <rect x="100" y="210" width="600" height="6" rx="3" fill="url(#orangeAccent)" opacity="0.6"/>
+
+  <!-- Timeline progress fill -->
+  <rect x="100" y="210" width="550" height="6" rx="3" fill="url(#orangeAccent)"/>
+
+  <!-- Timeline nodes -->
+  <g transform="translate(100, 213)">
+    <circle cx="0" cy="0" r="10" fill="#f7931e" filter="url(#shadow)"/>
+    <circle cx="0" cy="0" r="5" fill="#fff"/>
+    <text x="0" y="30" text-anchor="middle" font-family="Arial" font-size="10" fill="#f7931e" font-weight="700">START</text>
+  </g>
+  <g transform="translate(300, 213)">
+    <circle cx="0" cy="0" r="8" fill="#2d6cb5" filter="url(#shadow)"/>
+    <circle cx="0" cy="0" r="4" fill="#fff"/>
+    <text x="0" y="30" text-anchor="middle" font-family="Arial" font-size="10" fill="#5a9fd4">DESIGN</text>
+  </g>
+  <g transform="translate(500, 213)">
+    <circle cx="0" cy="0" r="8" fill="#2d6cb5" filter="url(#shadow)"/>
+    <circle cx="0" cy="0" r="4" fill="#fff"/>
+    <text x="0" y="30" text-anchor="middle" font-family="Arial" font-size="10" fill="#5a9fd4">TESTING</text>
+  </g>
+  <g transform="translate(700, 213)">
+    <circle cx="0" cy="0" r="12" fill="#f7931e" filter="url(#shadow)"/>
+    <circle cx="0" cy="0" r="6" fill="#fff"/>
+    <text x="0" y="32" text-anchor="middle" font-family="Arial" font-size="10" fill="#f7931e" font-weight="700">LAUNCH</text>
+  </g>
+
+  <!-- "18" large text -->
+  <text x="400" y="140" text-anchor="middle" font-family="Arial Black, Arial" font-size="100" font-weight="900" fill="#f7931e" opacity="0.15"/>
+  <text x="400" y="135" text-anchor="middle" font-family="Arial Black, Arial" font-size="96" font-weight="900" fill="none" stroke="#f7931e" stroke-width="1" opacity="0.2"/>
+
+  <!-- Blueprint paper / schematic -->
+  <g transform="translate(120, 60)" filter="url(#shadow)">
+    <rect width="260" height="180" rx="4" fill="#0d2040" stroke="#2d6cb5" stroke-width="1.5" opacity="0.9"/>
+    <rect x="0" y="0" width="260" height="25" rx="4" fill="#1a3a6a"/>
+    <text x="10" y="17" font-family="Arial" font-size="10" fill="#5a9fd4">TECHNICAL DRAWING — REV 3.0</text>
+    <!-- Schematic lines -->
+    <line x1="20" y1="50" x2="120" y2="50" stroke="#2d6cb5" stroke-width="1" stroke-dasharray="4,2"/>
+    <line x1="20" y1="70" x2="200" y2="70" stroke="#2d6cb5" stroke-width="1" stroke-dasharray="4,2"/>
+    <line x1="20" y1="90" x2="160" y2="90" stroke="#2d6cb5" stroke-width="1" stroke-dasharray="4,2"/>
+    <rect x="40" y="110" width="80" height="50" rx="3" fill="none" stroke="#f7931e" stroke-width="1.5"/>
+    <line x1="140" y1="110" x2="180" y2="110" stroke="#2d6cb5" stroke-width="1"/>
+    <line x1="140" y1="130" x2="220" y2="130" stroke="#2d6cb5" stroke-width="1"/>
+    <line x1="140" y1="150" x2="190" y2="150" stroke="#2d6cb5" stroke-width="1"/>
+    <circle cx="80" cy="135" r="15" fill="none" stroke="#f7931e" stroke-width="1.5"/>
+    <line x1="65" y1="135" x2="95" y2="135" stroke="#f7931e" stroke-width="1"/>
+    <line x1="80" y1="120" x2="80" y2="150" stroke="#f7931e" stroke-width="1"/>
+    <!-- Dimension annotations -->
+    <text x="20" y="170" font-family="Arial" font-size="8" fill="#5a9fd4">UNIT: mm</text>
+    <text x="200" y="170" font-family="Arial" font-size="8" fill="#5a9fd4">SCALE 1:10</text>
+  </g>
+
+  <!-- Light bulb / innovation icon -->
+  <g transform="translate(500, 60)" filter="url(#shadow)">
+    <circle cx="100" cy="100" r="80" fill="#0d3052" opacity="0.5"/>
+    <!-- Bulb -->
+    <ellipse cx="100" cy="90" rx="45" ry="50" fill="#ffd700" opacity="0.9"/>
+    <ellipse cx="100" cy="90" rx="30" ry="35" fill="#fff" opacity="0.3"/>
+    <!-- Filament glow -->
+    <ellipse cx="100" cy="90" rx="15" ry="20" fill="#fff" opacity="0.6" filter="url(#glow)"/>
+    <!-- Bulb base -->
+    <rect x="82" y="135" width="36" height="8" rx="2" fill="#aaa"/>
+    <rect x="85" y="143" width="30" height="6" rx="2" fill="#888"/>
+    <rect x="88" y="149" width="24" height="6" rx="2" fill="#666"/>
+    <!-- Glow rays -->
+    <g stroke="#ffd700" stroke-width="2" stroke-linecap="round" opacity="0.7">
+      <line x1="100" y1="25" x2="100" y2="10"/>
+      <line x1="55" y1="40" x2="45" y2="28"/>
+      <line x1="145" y1="40" x2="155" y2="28"/>
+      <line x1="35" y1="90" x2="18" y2="90"/>
+      <line x1="165" y1="90" x2="182" y2="90"/>
+    </g>
+  </g>
+
+  <!-- Gears -->
+  <g transform="translate(500, 320)" opacity="0.7">
+    <circle cx="50" cy="50" r="35" fill="none" stroke="#2d6cb5" stroke-width="8"/>
+    <circle cx="50" cy="50" r="15" fill="#2d6cb5"/>
+    <g stroke="#2d6cb5" stroke-width="8">
+      <line x1="50" y1="15" x2="50" y2="0"/>
+      <line x1="50" y1="100" x2="50" y2="85"/>
+      <line x1="15" y1="50" x2="0" y2="50"/>
+      <line x1="100" y1="50" x2="85" y2="50"/>
+      <line x1="25" y1="25" x2="14" y2="14"/>
+      <line x1="75" y1="75" x2="86" y2="86"/>
+      <line x1="75" y1="25" x2="86" y2="14"/>
+      <line x1="25" y1="75" x2="14" y2="86"/>
+    </g>
+    <circle cx="50" cy="50" r="12" fill="#0a2540"/>
+  </g>
+
+  <!-- "MONTHS" label -->
+  <text x="400" y="290" text-anchor="middle" font-family="Arial" font-size="28" font-weight="700" fill="url(#orangeAccent)" letter-spacing="4">18 MONTHS</text>
+  <text x="400" y="315" text-anchor="middle" font-family="Arial" font-size="14" fill="#5a9fd4" letter-spacing="2">PRODUCT DEVELOPMENT</text>
+
+  <!-- Bottom label -->
+  <rect x="300" y="380" width="200" height="35" rx="17" fill="#f7931e" opacity="0.9" filter="url(#shadow)"/>
+  <text x="400" y="404" text-anchor="middle" font-family="Arial" font-size="13" font-weight="700" fill="white" letter-spacing="1">R&amp;D EXCELLENCE</text>
+
+  <!-- Brand watermark -->
+  <text x="790" y="438" text-anchor="end" font-family="Arial, sans-serif" font-size="10" fill="white" opacity="0.4">HouseTech Group</text>
+</svg>

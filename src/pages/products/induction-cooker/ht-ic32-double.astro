@@ -1,0 +1,213 @@
+---
+import Layout from '../../../layouts/Layout.astro';
+import Header from '../../../components/Header.astro';
+import Footer from '../../../components/Footer.astro';
+
+const title = 'HT-IC32 Double Induction Cooker - HouseTech Group | 3500W Dual Zone, Built-in, Independent Temp Control';
+const description = 'HouseTech HT-IC32 Double Induction Cooker: 3500W total power, dual cooking zones, built-in design, independent temperature control. Efficient cooking for modern kitchens.';
+
+const product = {
+  name: 'HT-IC32 Double Induction Cooker',
+  sku: 'HT-IC32',
+  category: 'Induction Cookers',
+  price: 'Contact for Quote',
+  image: '/images/products/induction-cooker/ht-ic32.jpg',
+  shortDesc: '3500W double induction cooker with two independent cooking zones, built-in design, separate temperature control per zone. Professional-grade cooking efficiency for modern family kitchens.',
+  specs: {
+    'Type': 'Double Induction Cooker (Built-in)',
+    'Total Power': '3500W',
+    'Left Zone Power': '2000W',
+    'Right Zone Power': '1500W',
+    'Voltage': '220-240V / 50Hz',
+    'Number of Zones': '2',
+    'Left Zone Diameter': 'Φ210mm',
+    'Right Zone Diameter': 'Φ180mm',
+    'Control Type': 'Touch Control',
+    'Power Levels': '9 per Zone',
+    'Temperature Range': '60-240°C',
+    'Timer': '0-180 Minutes (Independent per Zone)',
+    'Panel Material': 'Black Crystal Glass (Microcrystalline)',
+    'Booster Function': 'Yes (Left Zone: 2500W)',
+    'Safety Features': 'Over-heat Protection, Residual Heat Indicator, Child Lock, Auto Shut-off',
+    'Fan Cooling': 'Yes (Dual Fan)',
+    'Cut-out Dimensions': '560 × 340 × 55mm',
+    'Color': 'Black',
+    'Gross Weight': '8.5kg',
+    'Product Dimensions': '730 × 420 × 65mm'
+  },
+  features: [
+    '3500W total power with two independent cooking zones',
+    'Left zone 2000W + Right zone 1500W for simultaneous cooking',
+    'Booster function on left zone reaches 2500W for rapid boiling',
+    'Independent temperature and timer control per zone',
+    'Sleek built-in design for seamless kitchen integration',
+    '9 power levels per zone for precise heat management',
+    'Black crystal glass panel — scratch-resistant and easy to clean',
+    'Dual fan cooling system for extended cooking sessions',
+    'Residual heat indicator warns when surface is still hot',
+    'Child lock prevents unintended operation'
+  ],
+  applications: [
+    'Modern family kitchens',
+    'Kitchen renovation projects',
+    'Apartment kitchen upgrades',
+    'Home chef cooking stations',
+    'Small restaurant kitchens'
+  ]
+};
+
+const relatedProducts = [
+  { name: 'HT-IC20 Portable Induction Cooker', slug: '/products/induction-cooker/ht-ic20-portable', sku: 'HT-IC20' },
+  { name: 'HT-IC35 Commercial Induction Cooker', slug: '/products/induction-cooker/ht-ic35-commercial', sku: 'HT-IC35' },
+  { name: 'HT-IC Integrated Induction Hob', slug: '/products/induction-cooker/ht-ic-integrated', sku: 'HT-IC' }
+];
+---
+
+<Layout title={title} description={description}>
+  <!-- Product Schema -->
+  <script type="application/ld+json" set:html={JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": "Product",
+    "name": product.name,
+    "image": "https://housetech-ch.com/images/products/induction-cooker/ht-ic32.jpg",
+    "description": description,
+    "brand": { "@type": "Brand", "name": "HouseTech" },
+    "manufacturer": { "@type": "Organization", "name": "HouseTech Group" },
+    "sku": product.sku,
+    "category": "Induction Cookers",
+    "offers": { "@type": "AggregateOffer", "priceCurrency": "USD", "lowPrice": "0", "highPrice": "0", "offerCount": "1", "availability": "https://schema.org/InStock" }
+  })} />
+  <!-- FAQPage Schema -->
+  <script type="application/ld+json" set:html={JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      { "@type": "Question", "name": "What is the warranty period for HT-IC32 Double Induction Cooker?", "acceptedAnswer": { "@type": "Answer", "Text": "All HouseTech products come with a comprehensive warranty. The HT-IC32 includes a 2-year manufacturer warranty covering defects in materials and workmanship." } },
+      { "@type": "Question", "name": "Does HouseTech offer OEM/ODM customization for the HT-IC32?", "acceptedAnswer": { "@type": "Answer", "Text": "Yes, HouseTech offers full OEM/ODM services including custom logo branding and packaging design." } },
+      { "@type": "Question", "name": "What certifications does the HT-IC32 have?", "acceptedAnswer": { "@type": "Answer", "Text": "The HT-IC32 is certified with CE, CB, ETL, and RoHS standards, meeting safety requirements for global markets." } },
+      { "@type": "Question", "name": "What safety features does the HT-IC32 include?", "acceptedAnswer": { "@type": "Answer", "Text": "The HT-IC32 includes overheat protection, residual heat indicator, child lock, auto shut-off, and booster function for rapid boiling." } },
+      { "@type": "Question", "name": "What is the delivery time for HT-IC32 orders?", "acceptedAnswer": { "@type": "Answer", "Text": "Standard delivery time is 30-45 days after sample approval and deposit payment. For customized OEM orders, please allow 45-60 days." } }
+    ]
+  })} />
+  <Header activeNav="products" />
+
+  <!-- Page Hero -->
+  <section class="page-hero">
+    <div class="container">
+      <h1>{product.name}</h1>
+      <p>SKU: {product.sku}</p>
+      <nav class="breadcrumb">
+        <a href="/">Home</a>
+        <span class="separator">/</span>
+        <a href="/products">Products</a>
+        <span class="separator">/</span>
+        <a href="/products/induction-cooker">Induction Cookers</a>
+        <span class="separator">/</span>
+        <span>{product.name}</span>
+      </nav>
+    </div>
+  </section>
+
+  <!-- Product Detail -->
+  <section class="content-section">
+    <div class="container">
+      <div class="product-detail-grid">
+        <!-- Gallery -->
+        <div class="product-gallery">
+          <div class="product-gallery-main">
+            <img src={product.image} alt={product.name} />
+          </div>
+          <div class="product-gallery-thumbs">
+            <div class="product-thumb active">
+              <img src={product.image} alt={`${product.name} - Main View`} />
+            </div>
+          </div>
+        </div>
+
+        <!-- Product Info -->
+        <div class="product-info">
+          <h1>{product.name}</h1>
+          <p class="product-sku">SKU: {product.sku} | Category: {product.category}</p>
+          <p class="product-short-desc">{product.shortDesc}</p>
+          <p style="color: var(--color-text-light); line-height: 1.8; margin-bottom: var(--spacing-md);">Engineered by HouseTech, the HT-IC32 features dual induction zones with 3500W total power. As part of HouseTech's built-in induction lineup, this model suits modern kitchens. Every HouseTech product is CE/CB certified.</p>
+
+          <!-- Specs Table -->
+          <table class="product-specs-table">
+            <tbody>
+              {Object.entries(product.specs).map(([key, value]) => (
+                <tr>
+                  <th>{key}</th>
+                  <td>{value}</td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+
+          <!-- CTA Area -->
+          <div class="product-cta-area">
+            <a href="/contact" class="btn btn-primary">Get Quote</a>
+            <a href="/download" class="btn btn-outline">Download Spec Sheet</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Features Section -->
+      <div style="margin-top: var(--spacing-3xl);">
+        <h2 style="font-family: var(--font-display); font-size: var(--font-size-2xl); color: var(--color-primary); margin-bottom: var(--spacing-xl);">
+          Key Features
+        </h2>
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: var(--spacing-lg);">
+          {product.features.map((feature) => (
+            <div style="display: flex; align-items: flex-start; gap: var(--spacing-sm);">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--color-accent)" stroke-width="2" style="flex-shrink: 0; margin-top: 2px;">
+                <polyline points="20 6 9 17 4 12"></polyline>
+              </svg>
+              <span style="color: var(--color-text);">{feature}</span>
+            </div>
+          ))}
+        </div>
+      </div>
+
+      <!-- Applications Section -->
+      <div style="margin-top: var(--spacing-3xl);">
+        <h2 style="font-family: var(--font-display); font-size: var(--font-size-2xl); color: var(--color-primary); margin-bottom: var(--spacing-xl);">
+          Applications
+        </h2>
+        <div style="display: flex; flex-wrap: wrap; gap: var(--spacing-sm);">
+          {product.applications.map((app) => (
+            <span style="padding: 0.5rem 1rem; background: var(--color-bg-alt); border: 1px solid var(--color-border); border-radius: var(--radius-full); font-size: var(--font-size-sm); color: var(--color-text);">
+              {app}
+            </span>
+          ))}
+        </div>
+      </div>
+
+      <!-- Why Choose HouseTech -->
+      <div style="margin-top: var(--spacing-3xl); text-align: center; background: var(--color-bg-alt); padding: var(--spacing-2xl); border-radius: var(--radius-lg);">
+        <h2 style="margin-bottom: var(--spacing-sm);">Why Choose HouseTech?</h2>
+        <p style="color: var(--color-text-light); margin-bottom: var(--spacing-lg); max-width: 600px; margin-left: auto; margin-right: auto;">HouseTech Group has been a trusted name in kitchen appliances for years. When you choose HouseTech, you get CE/CB certified products backed by comprehensive warranty and dedicated OEM/ODM support.</p>
+        <a href="/contact" class="btn btn-primary">Contact HouseTech for OEM/ODM Inquiries →</a>
+      </div>
+
+      <!-- Related Products -->
+      <div class="related-products">
+        <h2 style="font-family: var(--font-display); font-size: var(--font-size-2xl); color: var(--color-primary); margin-bottom: var(--spacing-xl);">
+          Related Products
+        </h2>
+        <div class="news-grid">
+          {relatedProducts.map((rel) => (
+            <a href={rel.slug} class="news-card">
+              <div class="news-card-body">
+                <h3>{rel.name}</h3>
+                <p>SKU: {rel.sku}</p>
+                <span class="news-card-read-more">View Details →</span>
+              </div>
+            </a>
+          ))}
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <Footer />
+</Layout>

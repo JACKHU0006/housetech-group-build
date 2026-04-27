@@ -1,0 +1,101 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450" width="800" height="450">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0a2540"/>
+      <stop offset="100%" stop-color="#0d3052"/>
+    </linearGradient>
+    <linearGradient id="germanGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#000000"/>
+      <stop offset="33%" stop-color="#dd0000"/>
+      <stop offset="66%" stop-color="#ffcc00"/>
+      <stop offset="100%" stop-color="#ffcc00"/>
+    </linearGradient>
+    <filter id="shadow">
+      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#000" flood-opacity="0.3"/>
+    </filter>
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="4" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="800" height="450" fill="url(#bg)" rx="12"/>
+
+  <!-- German flag ribbon -->
+  <g opacity="0.2" transform="translate(0, 10)">
+    <rect x="0" y="0" width="800" height="15" fill="#000"/>
+    <rect x="0" y="15" width="800" height="15" fill="#dd0000"/>
+    <rect x="0" y="30" width="800" height="15" fill="#ffcc00"/>
+  </g>
+
+  <!-- "Made in Germany" quality seal -->
+  <g transform="translate(400, 170)" filter="url(#shadow)">
+    <!-- Seal outer circle -->
+    <circle cx="0" cy="0" r="130" fill="#0d2040" stroke="#ffcc00" stroke-width="4"/>
+    <circle cx="0" cy="0" r="115" fill="none" stroke="#dd0000" stroke-width="1" opacity="0.5"/>
+    <circle cx="0" cy="0" r="100" fill="#0a2540" opacity="0.9"/>
+
+    <!-- German flag inside -->
+    <g transform="translate(-60, -90)">
+      <rect x="0" y="0" width="120" height="20" fill="#000"/>
+      <rect x="0" y="20" width="120" height="20" fill="#dd0000"/>
+      <rect x="0" y="40" width="120" height="20" fill="#ffcc00"/>
+    </g>
+
+    <!-- "MADE IN" arc top -->
+    <path id="gArc" d="M-85,0 A85,85 0 0,1 85,0" fill="none"/>
+    <text font-family="Arial" font-size="18" font-weight="700" fill="#ffcc00" letter-spacing="3">
+      <textPath href="#gArc" startOffset="50%" text-anchor="middle">MADE IN</textPath>
+    </text>
+
+    <!-- "GERMANY" arc bottom -->
+    <path id="gArc2" d="M85,0 A85,85 0 0,1 -85,0" fill="none"/>
+    <text font-family="Arial Black, Arial" font-size="26" font-weight="900" fill="#ffcc00" letter-spacing="2">
+      <textPath href="#gArc2" startOffset="50%" text-anchor="middle">GERMANY</textPath>
+    </path>
+
+    <!-- Quality star in center -->
+    <polygon points="0,-60 8,-40 30,-40 13,-27 20,-8 0,-20 -20,-8 -13,-27 -30,-40 -8,-40" fill="#ffcc00" filter="url(#glow)"/>
+
+    <!-- "QUALITY" text -->
+    <text x="0" y="30" text-anchor="middle" font-family="Arial" font-size="11" font-weight="700" fill="#ffcc00" letter-spacing="4">QUALITY</text>
+
+    <!-- Small stars decoration -->
+    <g fill="#ffcc00" opacity="0.4">
+      <circle cx="-80" cy="40" r="3"/>
+      <circle cx="80" cy="40" r="3"/>
+      <circle cx="-60" cy="60" r="2"/>
+      <circle cx="60" cy="60" r="2"/>
+    </g>
+  </g>
+
+  <!-- German flag pennants -->
+  <g transform="translate(80, 80)" opacity="0.7">
+    <rect x="0" y="0" width="3" height="80" fill="#666"/>
+    <polygon points="3,0 60,10 60,25 3,15" fill="#000"/>
+    <polygon points="3,15 60,25 60,40 3,30" fill="#dd0000"/>
+    <polygon points="3,30 60,40 60,55 3,45" fill="#ffcc00"/>
+  </g>
+  <g transform="translate(130, 90)" opacity="0.7">
+    <rect x="0" y="0" width="3" height="70" fill="#666"/>
+    <polygon points="3,0 50,8 50,21 3,13" fill="#000"/>
+    <polygon points="3,13 50,21 50,34 3,26" fill="#dd0000"/>
+    <polygon points="3,26 50,34 50,47 3,39" fill="#ffcc00"/>
+  </g>
+
+  <!-- "German Quality" text -->
+  <text x="400" y="380" text-anchor="middle" font-family="Arial" font-size="22" font-weight="900" fill="#ffcc00" letter-spacing="4">GERMAN QUALITY</text>
+  <text x="400" y="402" text-anchor="middle" font-family="Arial" font-size="13" fill="#dd0000" letter-spacing="3">OEM PARTNERSHIP SUCCESS</text>
+
+  <!-- German shield emblem -->
+  <g transform="translate(700, 80)" filter="url(#shadow)" opacity="0.8">
+    <path d="M0,-50 L40,-35 L40,20 Q40,50 0,65 Q-40,50 -40,20 L-40,-35 Z" fill="#0d2040" stroke="#ffcc00" stroke-width="2"/>
+    <text x="0" y="-5" text-anchor="middle" font-family="Arial" font-size="10" font-weight="700" fill="#ffcc00">DE</text>
+    <text x="0" y="12" text-anchor="middle" font-family="Arial" font-size="8" fill="#dd0000">EST.</text>
+    <text x="0" y="28" text-anchor="middle" font-family="Arial" font-size="8" fill="#dd0000">2024</text>
+  </g>
+
+  <!-- Brand watermark -->
+  <text x="790" y="438" text-anchor="end" font-family="Arial, sans-serif" font-size="10" fill="white" opacity="0.4">HouseTech Group</text>
+</svg>

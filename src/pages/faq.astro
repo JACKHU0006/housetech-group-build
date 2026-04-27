@@ -4,7 +4,7 @@ import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
 
 const title = 'FAQ - HouseTech Group | Frequently Asked Questions';
-const description = 'Find answers to common questions about HouseTech Group products, OEM/ODM services, MOQ, pricing, shipping, and more.';
+const description = 'Find answers to common questions about HouseTech Group products, OEM/ODM services, MOQ, pricing, shipping, certifications, and warranty for kitchen appliances.';
 ---
 
 <Layout title={title} description={description}>
@@ -28,93 +28,133 @@ const description = 'Find answers to common questions about HouseTech Group prod
     <div class="container">
       <div class="content-area">
 
-        <!-- FAQ Categories -->
-        <h2>General Questions</h2>
+        <!-- About HouseTech -->
+        <div style="margin-bottom: var(--spacing-2xl);">
+          <span class="section-tag">About HouseTech</span>
+          <h2 style="margin-top: var(--spacing-sm); margin-bottom: var(--spacing-lg);">Company & Background</h2>
 
-        <details style="margin-bottom: var(--spacing-md); border: 1px solid var(--color-border); border-radius: var(--radius-md); padding: var(--spacing-md); background: white;">
-          <summary style="font-weight: 600; font-size: var(--font-size-lg); cursor: pointer; color: var(--color-primary);">What is HouseTech Group?</summary>
-          <p style="margin-top: var(--spacing-sm); color: var(--color-text-light); line-height: 1.7;">HouseTech Group is a leading B2B manufacturer of kitchen appliances with over 15 years of experience. We produce Range Hoods, Gas Stoves/Hobs, Ovens, Air Fryers, and Gas Water Heaters for global markets, serving clients in more than 50 countries.</p>
-        </details>
+          <details style="margin-bottom: var(--spacing-md); border: 1px solid var(--color-border); border-radius: var(--radius-md); padding: var(--spacing-md); background: white;">
+            <summary style="font-weight: 600; font-size: var(--font-size-lg); cursor: pointer; color: var(--color-primary);">What is HouseTech Group?</summary>
+            <p style="margin-top: var(--spacing-sm); color: var(--color-text-light); line-height: 1.7;">HouseTech Group is a leading B2B manufacturer of kitchen appliances with over 15 years of experience. Headquartered in Zhongshan, Guangdong Province, HouseTech Group specializes in producing Range Hoods, Gas Stoves/Hobs, Ovens, Air Fryers, and Gas Water Heaters for global markets, serving clients in more than 50 countries across Europe, Middle East, Southeast Asia, and beyond.</p>
+          </details>
 
-        <details style="margin-bottom: var(--spacing-md); border: 1px solid var(--color-border); border-radius: var(--radius-md); padding: var(--spacing-md); background: white;">
-          <summary style="font-weight: 600; font-size: var(--font-size-lg); cursor: pointer; color: var(--color-primary);">Where is your factory located?</summary>
-          <p style="margin-top: var(--spacing-sm); color: var(--color-text-light); line-height: 1.7;">Our manufacturing facility is located in China, spanning over 30,000 square meters with modern production lines. We welcome factory visits from potential partners.</p>
-        </details>
+          <details style="margin-bottom: var(--spacing-md); border: 1px solid var(--color-border); border-radius: var(--radius-md); padding: var(--spacing-md); background: white;">
+            <summary style="font-weight: 600; font-size: var(--font-size-lg); cursor: pointer; color: var(--color-primary);">Where is your factory located?</summary>
+            <p style="margin-top: var(--spacing-sm); color: var(--color-text-light); line-height: 1.7;">HouseTech Group's manufacturing facility is located in Zhongshan City, Guangdong Province, China — one of China's most established manufacturing hubs. Our factory spans over 30,000 square meters with 12 modern production lines, 500+ employees, and full ISO9001 certification. We warmly welcome factory visits from serious B2B partners — please schedule in advance through our Contact page.</p>
+          </details>
 
-        <details style="margin-bottom: var(--spacing-md); border: 1px solid var(--color-border); border-radius: var(--radius-md); padding: var(--spacing-md); background: white;">
-          <summary style="font-weight: 600; font-size: var(--font-size-lg); cursor: pointer; color: var(--color-primary);">What certifications do your products have?</summary>
-          <p style="margin-top: var(--spacing-sm); color: var(--color-text-light); line-height: 1.7;">We hold multiple international certifications including ISO9001, CE, CB, ETL, SASO, and GCC. Additional certifications can be arranged for specific market requirements.</p>
-        </details>
+          <details style="margin-bottom: var(--spacing-md); border: 1px solid var(--color-border); border-radius: var(--radius-md); padding: var(--spacing-md); background: white;">
+            <summary style="font-weight: 600; font-size: var(--font-size-lg); cursor: pointer; color: var(--color-primary);">What certifications do your products have?</summary>
+            <p style="margin-top: var(--spacing-sm); color: var(--color-text-light); line-height: 1.7;">HouseTech Group holds comprehensive international certifications including ISO9001 (quality management), CE (Europe), CB scheme (international), ETL listing (North America), SASO/GCC (Middle East), and energy efficiency labels. We can also arrange additional certifications for specific target markets including INMETRO (Brazil), PSE (Japan), and more. Contact our sales team for market-specific certification availability.</p>
+          </details>
 
-        <h2>Orders & Pricing</h2>
+          <details style="margin-bottom: var(--spacing-md); border: 1px solid var(--color-border); border-radius: var(--radius-md); padding: var(--spacing-md); background: white;">
+            <summary style="font-weight: 600; font-size: var(--font-size-lg); cursor: pointer; color: var(--color-primary);">Can I visit your factory?</summary>
+            <p style="margin-top: var(--spacing-sm); color: var(--color-text-light); line-height: 1.7;">Yes! HouseTech Group welcomes B2B partners and clients to tour our factory. We organize personalized factory visits for serious buyers, allowing you to see our production lines, quality control stations, R&D center, and warehouse firsthand. Contact us to schedule your HouseTech factory visit — visits are typically arranged within 1-2 weeks of request.</p>
+          </details>
+        </div>
 
-        <details style="margin-bottom: var(--spacing-md); border: 1px solid var(--color-border); border-radius: var(--radius-md); padding: var(--spacing-md); background: white;">
-          <summary style="font-weight: 600; font-size: var(--font-size-lg); cursor: pointer; color: var(--color-primary);">What is the Minimum Order Quantity (MOQ)?</summary>
-          <p style="margin-top: var(--spacing-sm); color: var(--color-text-light); line-height: 1.7;">MOQ varies by product type and customization level. Standard product MOQ starts from as low as 100 units. Customized/OEM orders typically start at 300-500 units per model. Contact us for specific requirements.</p>
-        </details>
+        <!-- Products & Quality -->
+        <div style="margin-bottom: var(--spacing-2xl);">
+          <span class="section-tag">Products & Quality</span>
+          <h2 style="margin-top: var(--spacing-sm); margin-bottom: var(--spacing-lg);">Product Specifications & Warranty</h2>
 
-        <details style="margin-bottom: var(--spacing-md); border: 1px solid var(--color-border); border-radius: var(--radius-md); padding: var(--spacing-md); background: white;">
-          <summary style="font-weight: 600; font-size: var(--font-size-lg); cursor: pointer; color: var(--color-primary);">How can I get a price quote?</summary>
-          <p style="margin-top: var(--spacing-sm); color: var(--color-text-light); line-height: 1.7;">You can request a quote through our Contact Us page or by emailing sales@housetech-ch.com. Please include product models, quantities, destination country, and any customization requirements. We respond within 24 hours.</p>
-        </details>
+          <details style="margin-bottom: var(--spacing-md); border: 1px solid var(--color-border); border-radius: var(--radius-md); padding: var(--spacing-md); background: white;">
+            <summary style="font-weight: 600; font-size: var(--font-size-lg); cursor: pointer; color: var(--color-primary);">What product categories does HouseTech Group offer?</summary>
+            <p style="margin-top: var(--spacing-sm); color: var(--color-text-light); line-height: 1.7;">HouseTech Group manufactures five core product categories: Range Hoods (Wall Mount, Island, Built-in, Slim, and Commercial series), Gas Stoves and Hobs (Gas, Electric, Ceramic, and Induction), Built-in Ovens (Electric, Gas, and Steam), Air Fryers (stand-alone and built-in models), and Gas Water Heaters (instant and storage types). All products are available as standard models or customized for OEM/ODM partnerships.</p>
+          </details>
 
-        <details style="margin-bottom: var(--spacing-md); border: 1px solid var(--color-border); border-radius: var(--radius-md); padding: var(--spacing-md); background: white;">
-          <summary style="font-weight: 600; font-size: var(--font-size-lg); cursor: pointer; color: var(--color-primary);">What payment terms do you accept?</summary>
-          <p style="margin-top: var(--spacing-sm); color: var(--color-text-light); line-height: 1.7;">We accept T/T (Telegraphic Transfer), L/C (Letter of Credit) for large orders, and other negotiable terms based on order size and relationship. Typically: 30% deposit, 70% before shipment.</p>
-        </details>
+          <details style="margin-bottom: var(--spacing-md); border: 1px solid var(--color-border); border-radius: var(--radius-md); padding: var(--spacing-md); background: white;">
+            <summary style="font-weight: 600; font-size: var(--font-size-lg); cursor: pointer; color: var(--color-primary);">What materials and build quality can I expect?</summary>
+            <p style="margin-top: var(--spacing-sm); color: var(--color-text-light); line-height: 1.7;">HouseTech Group uses premium materials across all product lines: 430/201 stainless steel for range hoods, tempered glass panels, die-cast aluminum burners for gas stoves, and certified heating elements for ovens and water heaters. Every HouseTech product undergoes rigorous quality testing including a 99.5%+ pass rate on final QC inspection to ensure durability and long service life.</p>
+          </details>
 
-        <h2>OEM / ODM Services</h2>
+          <details style="margin-bottom: var(--spacing-md); border: 1px solid var(--color-border); border-radius: var(--radius-md); padding: var(--spacing-md); background: white;">
+            <summary style="font-weight: 600; font-size: var(--font-size-lg); cursor: pointer; color: var(--color-primary);">What warranty does HouseTech offer?</summary>
+            <p style="margin-top: var(--spacing-sm); color: var(--color-text-light); line-height: 1.7;">HouseTech Group offers 1-3 year warranty depending on the product category and agreement terms. Standard warranty is 1 year for electronics and 2 years for structural components. Extended warranty options are available for OEM/ODM partners. Spare parts are available throughout the warranty period and beyond (3+ year guarantee). Detailed warranty terms are specified in each purchase contract and align with international consumer protection standards.</p>
+          </details>
+        </div>
 
-        <details style="margin-bottom: var(--spacing-md); border: 1px solid var(--color-border); border-radius: var(--radius-md); padding: var(--spacing-md); background: white;">
-          <summary style="font-weight: 600; font-size: var(--font-size-lg); cursor: pointer; color: var(--color-primary);">Do you offer OEM/ODM services?</summary>
-          <p style="margin-top: var(--spacing-sm); color: var(--color-text-light); line-height: 1.7;">Yes! We offer comprehensive OEM and ODM services including custom branding, logo placement, packaging design, product specification modifications, and new product development. Our R&D team has 50+ engineers ready to support your projects.</p>
-        </details>
+        <!-- OEM/ODM Services -->
+        <div style="margin-bottom: var(--spacing-2xl);">
+          <span class="section-tag">OEM / ODM</span>
+          <h2 style="margin-top: var(--spacing-sm); margin-bottom: var(--spacing-lg);">Customization & Manufacturing</h2>
 
-        <details style="margin-bottom: var(--spacing-md); border: 1px solid var(--color-border); border-radius: var(--radius-md); padding: var(--spacing-md); background: white;">
-          <summary style="font-weight: 600; font-size: var(--font-size-lg); cursor: pointer; color: var(--color-primary);">How long is the lead time?</summary>
-          <p style="margin-top: var(--spacing-sm); color: var(--color-text-light); line-height: 1.7;">Standard products: 15-25 days after order confirmation. Custom/OEM orders: 30-45 days depending on complexity. We always strive to meet urgent deadlines when possible.</p>
-        </details>
+          <details style="margin-bottom: var(--spacing-md); border: 1px solid var(--color-border); border-radius: var(--radius-md); padding: var(--spacing-md); background: white;">
+            <summary style="font-weight: 600; font-size: var(--font-size-lg); cursor: pointer; color: var(--color-primary);">What is the Minimum Order Quantity (MOQ)?</summary>
+            <p style="margin-top: var(--spacing-sm); color: var(--color-text-light); line-height: 1.7;">HouseTech Group offers flexible MOQ terms. Standard product orders (no customization) start from as low as 100 units per model. OEM/ODM customized orders typically start at 300-500 units per model depending on the level of customization. For white-label programs with existing HouseTech designs, MOQ can be as low as 50-100 units. Contact our sales team for specific MOQ requirements for your target products.</p>
+          </details>
 
-        <details style="margin-bottom: var(--spacing-md); border: 1px solid var(--color-border); border-radius: var(--radius-md); padding: var(--spacing-md); background: white;">
-          <summary style="font-weight: 600; font-size: var(--font-size-lg); cursor: pointer; color: var(--color-primary);">Can I get samples before placing a bulk order?</summary>
-          <p style="margin-top: var(--spacing-sm); color: var(--color-text-light); line-height: 1.7;">Yes, we provide samples for evaluation. Sample fees apply and are refundable when the bulk order reaches a certain quantity. Sample delivery time is 5-10 days by express courier.</p>
-        </details>
+          <details style="margin-bottom: var(--spacing-md); border: 1px solid var(--color-border); border-radius: var(--radius-md); padding: var(--spacing-md); background: white;">
+            <summary style="font-weight: 600; font-size: var(--font-size-lg); cursor: pointer; color: var(--color-primary);">What customization options are available?</summary>
+            <p style="margin-top: var(--spacing-sm); color: var(--color-text-light); line-height: 1.7;">HouseTech Group offers extensive customization options including: custom logo and branding, color and finish modifications, packaging design (retail, bulk, gift box), product specification adjustments (size, power, voltage), gas type compatibility (LPG, natural gas), control panel design (mechanical, touch, digital), voltage adaptation (110V, 220V, 240V), language localization on controls and manuals, and safety feature additions per regional requirements. Our 50+ R&D engineers can develop entirely new products based on your specifications.</p>
+          </details>
 
-        <h2>Shipping & Logistics</h2>
+          <details style="margin-bottom: var(--spacing-md); border: 1px solid var(--color-border); border-radius: var(--radius-md); padding: var(--spacing-md); background: white;">
+            <summary style="font-weight: 600; font-size: var(--font-size-lg); cursor: pointer; color: var(--color-primary);">Can I get samples before placing a bulk order?</summary>
+            <p style="margin-top: var(--spacing-sm); color: var(--color-text-light); line-height: 1.7;">Absolutely. HouseTech Group provides product samples for evaluation and market testing. Sample fees apply and are fully refundable against bulk orders exceeding a certain threshold. Sample delivery typically takes 5-10 days by express courier (DHL, FedEx, UPS). For customized OEM samples, the lead time is 10-15 days. Contact HouseTech sales to request samples of any product in our current catalog.</p>
+          </details>
+        </div>
 
-        <details style="margin-bottom: var(--spacing-md); border: 1px solid var(--color-border); border-radius: var(--radius-md); padding: var(--spacing-md); background: white;">
-          <summary style="font-weight: 600; font-size: var(--font-size-lg); cursor: pointer; color: var(--color-primary);">How long does shipping take?</summary>
-          <p style="margin-top: var(--spacing-sm); color: var(--color-text-light); line-height: 1.7;">Shipping time depends on the destination and method:</p>
-          <ul style="margin-top: 0.5rem;">
-            <li>Sea freight to major ports: 15-40 days</li>
-            <li>Air freight: 3-7 days</li>
-            <li>Railway (Europe): 18-25 days</li>
-            <li>We ship FOB, CIF, EXW — you choose what works best for you.</li>
-          </ul>
-        </details>
+        <!-- Pricing & Payment -->
+        <div style="margin-bottom: var(--spacing-2xl);">
+          <span class="section-tag">Pricing & Payment</span>
+          <h2 style="margin-top: var(--spacing-sm); margin-bottom: var(--spacing-lg);">Costs & Transaction Terms</h2>
 
-        <details style="margin-bottom: var(--spacing-md); border: 1px solid var(--color-border); border-radius: var(--radius-md); padding: var(--spacing-md); background: white;">
-          <summary style="font-weight: 600; font-size: var(--font-size-lg); cursor: pointer; color: var(--color-primary);">Do you handle export documentation?</summary>
-          <p style="margin-top: var(--spacing-sm); color: var(--color-text-light); line-height: 1.7;">Yes, we handle all export documentation including commercial invoice, packing list, certificate of origin (CO), bill of lading, and any special documentation required by your country's customs authorities.</p>
-        </details>
+          <details style="margin-bottom: var(--spacing-md); border: 1px solid var(--color-border); border-radius: var(--radius-md); padding: var(--spacing-md); background: white;">
+            <summary style="font-weight: 600; font-size: var(--font-size-lg); cursor: pointer; color: var(--color-primary);">How can I get a price quote?</summary>
+            <p style="margin-top: var(--spacing-sm); color: var(--color-text-light); line-height: 1.7;">Request a HouseTech price quote through our Contact Us page or by emailing sales@housetech-ch.com. Please include: product models and quantities, destination country and port, any customization requirements (logo, color, packaging), required certifications for your market, and preferred shipping terms (FOB, CIF, DDP). HouseTech sales team responds with a detailed quotation within 24 hours of receiving your inquiry.</p>
+          </details>
 
-        <h2>After-Sales & Warranty</h2>
+          <details style="margin-bottom: var(--spacing-md); border: 1px solid var(--color-border); border-radius: var(--radius-md); padding: var(--spacing-md); background: white;">
+            <summary style="font-weight: 600; font-size: var(--font-size-lg); cursor: pointer; color: var(--color-primary);">What payment terms do you accept?</summary>
+            <p style="margin-top: var(--spacing-sm); color: var(--color-text-light); line-height: 1.7;">HouseTech Group accepts multiple payment methods: T/T (Telegraphic Transfer) — standard 30% deposit, 70% balance before shipment; L/C (Letter of Credit) — available for orders exceeding $30,000 USD; PayPal and credit cards — available for sample orders; Western Union — for small orders. For established OEM/ODM partners with long-term contracts, HouseTech offers flexible payment terms including open account arrangements.</p>
+          </details>
+        </div>
 
-        <details style="margin-bottom: var(--spacing-md); border: 1px solid var(--color-border); border-radius: var(--radius-md); padding: var(--spacing-md); background: white;">
-          <summary style="font-weight: 600; font-size: var(--font-size-lg); cursor: pointer; color: var(--color-primary);">What warranty do you offer?</summary>
-          <p style="margin-top: var(--spacing-sm); color: var(--color-text-light); line-height: 1.7;">We offer 1-3 year warranty depending on the product category and agreement terms. Spare parts are available throughout the warranty period and beyond. Detailed warranty terms are specified in each purchase contract.</p>
-        </details>
+        <!-- Shipping & Delivery -->
+        <div style="margin-bottom: var(--spacing-2xl);">
+          <span class="section-tag">Shipping</span>
+          <h2 style="margin-top: var(--spacing-sm); margin-bottom: var(--spacing-lg);">Lead Time & Logistics</h2>
 
-        <details style="margin-bottom: var(--spacing-md); border: 1px solid var(--color-border); border-radius: var(--radius-md); padding: var(--spacing-md); background: white;">
-          <summary style="font-weight: 600; font-size: var(--font-size-lg); cursor: pointer; color: var(--color-primary);">How do you handle quality issues?</summary>
-          <p style="margin-top: var(--spacing-sm); color: var(--color-text-light); line-height: 1.7;">If you receive defective products, please contact us within 7 days of receipt with photos and details. We will investigate promptly and arrange replacement, repair, or credit depending on the situation. Customer satisfaction is our priority.</p>
-        </details>
+          <details style="margin-bottom: var(--spacing-md); border: 1px solid var(--color-border); border-radius: var(--radius-md); padding: var(--spacing-md); background: white;">
+            <summary style="font-weight: 600; font-size: var(--font-size-lg); cursor: pointer; color: var(--color-primary);">What are your production lead times?</summary>
+            <p style="margin-top: var(--spacing-sm); color: var(--color-text-light); line-height: 1.7;">HouseTech production lead times vary by order type: Standard products (no customization): 15-25 days after order confirmation. Custom/OEM products: 30-45 days depending on customization complexity. Bulk orders (container quantities): 25-35 days for standard, 40-60 days for customized. Rush orders may be accommodated with a priority fee. HouseTech always strives to meet urgent deadlines — contact us as early as possible for time-sensitive projects.</p>
+          </details>
+
+          <details style="margin-bottom: var(--spacing-md); border: 1px solid var(--color-border); border-radius: var(--radius-md); padding: var(--spacing-md); background: white;">
+            <summary style="font-weight: 600; font-size: var(--font-size-lg); cursor: pointer; color: var(--color-primary);">How long does shipping take?</summary>
+            <p style="margin-top: var(--spacing-sm); color: var(--color-text-light); line-height: 1.7;">Estimated shipping transit times from China to major destinations: Sea freight to North America (West Coast): 18-25 days; Sea freight to North America (East Coast) / Europe: 28-40 days; Sea freight to Middle East: 20-30 days; Sea freight to Southeast Asia: 7-14 days; Air freight (all destinations): 3-7 days; Railway (China to Europe): 18-25 days. HouseTech arranges shipping via FOB, CIF, EXW, or DDP — you choose the terms that work best for your business.</p>
+          </details>
+        </div>
+
+        <!-- Order Process -->
+        <div style="margin-bottom: var(--spacing-2xl);">
+          <span class="section-tag">Ordering</span>
+          <h2 style="margin-top: var(--spacing-sm); margin-bottom: var(--spacing-lg);">How to Place Orders</h2>
+
+          <details style="margin-bottom: var(--spacing-md); border: 1px solid var(--color-border); border-radius: var(--radius-md); padding: var(--spacing-md); background: white;">
+            <summary style="font-weight: 600; font-size: var(--font-size-lg); cursor: pointer; color: var(--color-primary);">How do I place an order with HouseTech Group?</summary>
+            <p style="margin-top: var(--spacing-sm); color: var(--color-text-light); line-height: 1.7;">The HouseTech order process is simple: 1) Submit an inquiry via email or our Contact page with your requirements; 2) Receive a detailed quotation from HouseTech sales team within 24 hours; 3) Review and confirm the quote and specifications; 4) HouseTech issues a Proforma Invoice (PI); 5) Pay 30% deposit via T/T or L/C; 6) HouseTech begins production; 7) QC inspection and your final approval; 8) Pay remaining 70% balance; 9) HouseTech ships the order and sends tracking documents.</p>
+          </details>
+        </div>
+
+        <!-- After-Sales -->
+        <div style="margin-bottom: var(--spacing-2xl);">
+          <span class="section-tag">After-Sales</span>
+          <h2 style="margin-top: var(--spacing-sm); margin-bottom: var(--spacing-lg);">Warranty & Support</h2>
+
+          <details style="margin-bottom: var(--spacing-md); border: 1px solid var(--color-border); border-radius: var(--radius-md); padding: var(--spacing-md); background: white;">
+            <summary style="font-weight: 600; font-size: var(--font-size-lg); cursor: pointer; color: var(--color-primary);">How do you handle quality issues?</summary>
+            <p style="margin-top: var(--spacing-sm); color: var(--color-text-light); line-height: 1.7;">HouseTech Group has a dedicated quality resolution process: if you receive defective products, contact HouseTech within 7 days of receipt with photos and detailed description. Our QC team investigates promptly — typically within 48 hours. Based on the investigation, HouseTech arranges replacement units, repair credit, or partial/full refund as appropriate. Customer satisfaction is HouseTech's top priority, and we maintain a strict quality standard to minimize such occurrences.</p>
+          </details>
+        </div>
 
         <!-- CTA -->
         <div style="margin-top: var(--spacing-2xl); text-align: center; background: linear-gradient(135deg, var(--color-primary), var(--color-primary-light)); padding: var(--spacing-xl); border-radius: var(--radius-lg);">
           <h3 style="color: white; margin-bottom: var(--spacing-sm);">Still Have Questions?</h3>
-          <p style="opacity: 0.85; margin-bottom: var(--spacing-md);">Our team is here to help!</p>
-          <a href="/contact" class="btn btn-white">Contact Us →</a>
+          <p style="opacity: 0.85; margin-bottom: var(--spacing-md);">The HouseTech team is here to help with any additional inquiries about products, OEM/ODM services, pricing, or partnership opportunities.</p>
+          <a href="/contact" class="btn btn-white">Contact HouseTech →</a>
         </div>
 
       </div>

@@ -1,0 +1,98 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Header from '../../components/Header.astro';
+import Footer from '../../components/Footer.astro';
+
+const title = 'HouseTech Exhibits at Canton Fair 2024 Phase 2 - HouseTech Group News';
+const description = 'HouseTech Group announces participation in Canton Fair 2024 Phase 2, showcasing latest range hood and kitchen appliance innovations to global buyers at the worlds largest trade exhibition.';
+---
+
+<Layout title={title} description={description}>
+  <Header activeNav="news" />
+  
+  <section class="page-hero">
+    <div class="container">
+      <nav class="breadcrumb">
+        <a href="/">Home</a> / <a href="/news">News</a> / <span>Event</span>
+      </nav>
+    </div>
+  </section>
+
+  <section class="content-section">
+    <div class="container">
+      <article class="content-area" style="max-width: 850px;">
+        
+        <header class="article-header">
+          <span class="article-category">Event</span>
+          <h1 class="article-title">HouseTech to Exhibit at Canton Fair 2024 - Phase 2</h1>
+          <div class="article-meta-info">
+            <span>📅 January 2024</span>
+            <span>🏷️ Event</span>
+            <span>⏱️ 4 min read</span>
+          </div>
+        </header>
+
+        <figure class="article-image-figure">
+          <div style="width:100%;aspect-ratio:16/9;background:linear-gradient(135deg, #059669, #10b981);display:flex;align-items:center;justify-content:center;border-radius:var(--radius-lg);">
+            <svg width="120" height="120" viewBox="0 0 24 24" fill="none" stroke="rgba(255,255,255,0.3)" stroke-width="1">
+              <path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/>
+              <circle cx="9" cy="7" r="4"/>
+              <path d="M23 21v-2a4 4 0 00-3-3.87"/>
+              <path d="M16 3.13a4 4 0 010 7.75"/>
+            </svg>
+          </div>
+          <figcaption class="article-image-caption">Canton Fair 2024 Exhibition</figcaption>
+        </figure>
+
+        <div class="article-body">
+          <p>Guangzhou, China — HouseTech Group is excited to announce its participation in the China Import and Export Fair (Canton Fair) 2024, Phase 2. The exhibition, held October 15-19, 2024, at the China Import and Export Fair Complex in Pazhou, is one of the world's largest trade exhibitions with over 25,000 exhibitors and 200,000 buyers from more than 200 countries.</p>
+          
+          <p>HouseTech will occupy a prime 180-square-meter booth in the Electrical Electronics section (Hall 5.1, Booth A01-05), showcasing the company's latest innovations in kitchen ventilation and cooking appliances. This represents HouseTech's continued commitment to connecting global buyers directly with our manufacturing capabilities.</p>
+          
+          <h2>Exhibition Highlights</h2>
+          <p>Visitors to HouseTech's booth can expect to see:</p>
+          
+          <ul>
+            <li><strong>SmartHood Series:</strong> IoT-enabled range hoods with app control and voice assistant integration.</li>
+            <li><strong>UltraSlim Collection:</strong> Award-winning ultra-thin range hoods designed for modern kitchens.</li>
+            <li><strong>Commercial Solutions:</strong> Heavy-duty range hoods for restaurants and professional kitchens.</li>
+            <li><strong>Gas Cooking:</strong> Latest gas stove and cooktop designs with European aesthetics.</li>
+          </ul>
+
+          <blockquote>
+            "The Canton Fair remains a cornerstone of HouseTech's international business development. This exhibition provides unparalleled access to qualified buyers from every continent, and we've prepared an impressive showcase of our manufacturing capabilities and latest products."
+            <cite>— HouseTech International Sales Director</cite>
+          </blockquote>
+
+          <h2>Pre-Arranged Meetings</h2>
+          <p>HouseTech's business development team has scheduled over 100 pre-arranged meetings with existing partners and potential new clients during the exhibition. The company welcomes additional inquiries from buyers interested in discussing OEM partnerships, private-label opportunities, or distribution arrangements.</p>
+          
+          <p>To schedule a meeting at our booth or request invitations for VIP buyer programs, please contact HouseTech's international trade team in advance.</p>
+
+          <h2>Virtual Exhibition</h2>
+          <p>For buyers unable to attend in person, HouseTech offers virtual exhibition services including live video demonstrations, 3D product tours, and online negotiation sessions. Contact our team to receive your virtual exhibition access credentials.</p>
+          
+          <p>We look forward to welcoming friends old and new at the Canton Fair!</p>
+        </div>
+
+        <nav class="article-nav">
+          <a href="/news/etl-certification-north-america" class="article-nav-link">
+            <span class="article-nav-label">← Previous</span>
+            <span class="article-nav-title">ETL Certification</span>
+          </a>
+          <a href="/news/factory-expansion-production-capacity" class="article-nav-link" style="margin-left:auto;text-align:right;">
+            <span class="article-nav-label">Next →</span>
+            <span class="article-nav-title">Factory Expansion</span>
+          </a>
+        </nav>
+
+        <div style="text-align:center;margin-top:var(--spacing-xl);">
+          <a href="/news" class="btn btn-accent-outline">← Back to All News</a>
+        </div>
+
+      </article>
+    </div>
+  </section>
+
+  <Footer />
+</Layout>

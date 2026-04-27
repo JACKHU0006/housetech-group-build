@@ -1,0 +1,223 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Header from '../../components/Header.astro';
+import Footer from '../../components/Footer.astro';
+
+const title = 'Complete Kitchen Sets - HouseTech Group | Kitchen Appliance Packages, OEM Kitchen Sets';
+const description = 'Discover HouseTech Group\'s complete kitchen appliance sets: Starter Sets, Premium Sets, Commercial Sets, Hotel Apartment Sets. Complete solutions for home builders, hotels, and restaurants.';
+
+// Products data
+const products = [
+  {
+    name: 'Starter Kitchen Set',
+    slug: 'starter-set',
+    sku: 'HT-KS100',
+    category: 'Kitchen Sets',
+    shortDesc: 'Essential kitchen package: Range Hood + Gas Hob + Built-in Oven. Perfect for new homeowners.',
+    image: '/images/products/kitchen-set/starter.jpg',
+    specs: {
+      'Package Includes': '3 Products',
+      'Range Hood': 'HT-RH600 (60cm, 600m³/h)',
+      'Gas Hob': 'HT-GH243 (4-burner, tempered glass)',
+      'Built-in Oven': 'HT-OV45 (45L, compact)',
+      'Style': 'Modern / Minimalist',
+      'Finish': 'Black Glass',
+      'Warranty': '2 Years'
+    },
+    features: [
+      'Everything needed for a functional kitchen',
+      'Perfectly matched appliances in design',
+      'Cost-effective starter package',
+      'Modern black glass aesthetic',
+      'Standard 60cm width for easy replacement',
+      'Includes all necessary installation parts',
+      'Unified brand design',
+      '2-year comprehensive warranty'
+    ],
+    applications: [
+      'New homeowners',
+      'First-time apartment buyers',
+      'Rental property upgrades',
+      'Student apartments'
+    ]
+  },
+  {
+    name: 'Premium Kitchen Set',
+    slug: 'premium-set',
+    sku: 'HT-KS200',
+    category: 'Kitchen Sets',
+    shortDesc: 'Full-featured premium package with smart features across all appliances.',
+    image: '/images/products/kitchen-set/premium.jpg',
+    specs: {
+      'Package Includes': '5 Products',
+      'Range Hood': 'HT-RH900 (90cm, 1100m³/h, touch)',
+      'Gas Hob': 'HT-GH354 (5-burner, brass burners)',
+      'Oven': 'HT-OV80 (80L, pyrolytic)',
+      'Air Fryer': 'HT-AF80 (8L, digital)',
+      'Water Heater': 'HT-WH16 (16L, tankless)',
+      'Features': 'Smart Control, Wi-Fi Ready'
+    },
+    features: [
+      'Premium appliances from each category',
+      'Smart-ready features across all products',
+      'Professional-grade performance',
+      'Elegant stainless steel and glass design',
+      'Pyrolytic self-cleaning oven included',
+      'High-power extraction hood',
+      '5-burner professional gas hob',
+      'Complete hot water and cooking solution'
+    ],
+    applications: [
+      'Luxury homes',
+      'High-end apartments',
+      'Home renovation projects',
+      'Discerning homeowners'
+    ]
+  },
+  {
+    name: 'Commercial Kitchen Set',
+    slug: 'commercial-set',
+    sku: 'HT-KS300',
+    category: 'Kitchen Sets',
+    shortDesc: 'Heavy-duty commercial package for restaurant and hospitality use.',
+    image: '/images/products/kitchen-set/commercial.jpg',
+    specs: {
+      'Package Includes': '6 Products',
+      'Range Hood': 'HT-RH1200 (120cm, commercial)',
+      'Gas Hob': 'HT-GH354 (x2, dual setup)',
+      'Oven': 'HT-OV100 (100L, professional)',
+      'Induction': 'HT-IC4Q (4-burner)',
+      'Water Heater': 'HT-WH20 (20L, high efficiency)',
+      'Capacity': 'Restaurant-Grade'
+    },
+    features: [
+      'Commercial-grade appliances',
+      'Heavy-duty for intensive use',
+      'High-capacity hot water system',
+      'Professional cooking setup',
+      'Multiple gas hob configuration',
+      'Large 100L commercial oven',
+      '120cm professional range hood',
+      'Designed for restaurant environments'
+    ],
+    applications: [
+      'Restaurant kitchens',
+      'Hotel kitchens',
+      'Catering facilities',
+      'Commercial cooking operations',
+      'Food courts'
+    ]
+  },
+  {
+    name: 'Hotel Apartment Kitchen Set',
+    slug: 'hotel-set',
+    sku: 'HT-KS400',
+    category: 'Kitchen Sets',
+    shortDesc: 'Compact, stylish, and durable set designed for hotel apartments and serviced apartments.',
+    image: '/images/products/kitchen-set/hotel.jpg',
+    specs: {
+      'Package Includes': '4 Products',
+      'Range Hood': 'HT-RH380 (built-in, hidden)',
+      'Gas Hob': 'HT-GH243 (2-burner option available)',
+      'Oven': 'HT-OV45 (compact, 45L)',
+      'Water Heater': 'HT-WH12 (compact, 12L)',
+      'Design': 'Space-Saving',
+      'Style': 'Sleek / Modern'
+    },
+    features: [
+      'Compact design for limited spaces',
+      'Built-in appliances for seamless look',
+      'Durable construction for high turnover',
+      'Easy maintenance for hospitality',
+      'Elegant modern appearance',
+      'Energy-efficient operation',
+      'Perfect for studio apartments',
+      'Trusted by hotel chains'
+    ],
+    applications: [
+      'Hotel apartments',
+      'Serviced apartments',
+      'Airbnb properties',
+      'Student accommodation',
+      'Extended-stay hotels'
+    ]
+  }
+];
+---
+
+<Layout title={title} description={description}>
+  <!-- BreadcrumbList Schema -->
+  <script type="application/ld+json" set:html={JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://housetech-ch.com/" },
+      { "@type": "ListItem", "position": 2, "name": "Products", "item": "https://housetech-ch.com/products/" },
+      { "@type": "ListItem", "position": 3, "name": "Kitchen Sets", "item": "https://housetech-ch.com/products/kitchen-set/" }
+    ]
+  })} />
+  <Header activeNav="products" />
+
+  <!-- Page Hero -->
+  <section class="page-hero">
+    <div class="container">
+      <h1>Complete Kitchen Sets</h1>
+      <p>Complete kitchen appliance solutions - Kitchen Appliance Packages, Built-in Kitchen Solutions, OEM Kitchen Sets, Hotel Kitchen Equipment, Restaurant Kitchen Packages, Home Builder Kitchen Sets, Real Estate Kitchen Appliances</p>
+      <nav class="breadcrumb">
+        <a href="/">Home</a>
+        <span class="separator">/</span>
+        <a href="/products">Products</a>
+        <span class="separator">/</span>
+        <span>Kitchen Sets</span>
+      </nav>
+    </div>
+  </section>
+
+  <!-- Category Introduction -->
+  <section class="content-section">
+    <div class="container">
+      <div style="max-width: 900px; margin: 0 auto;">
+        <h2 style="font-family: var(--font-display); font-size: var(--font-size-2xl); color: var(--color-primary); margin-bottom: var(--spacing-md);">
+          Complete Kitchen Solutions by HouseTech Group
+        </h2>
+        <p style="color: var(--color-text-light); line-height: 1.8; margin-bottom: var(--spacing-md);">
+          HouseTech Group offers comprehensive kitchen appliance packages designed for home builders, real estate developers, hotels, restaurants, and hospitality businesses. Our complete kitchen sets include perfectly matched appliances that work together seamlessly, simplifying procurement and ensuring consistent design across your properties. As an experienced OEM/ODM partner, we can customize packages to meet your specific requirements.
+        </p>
+        <p style="color: var(--color-text-light); line-height: 1.8; margin-bottom: var(--spacing-lg);">
+          Choose from HouseTech's curated packages: <strong>Starter Set</strong> for new homeowners and apartments, <strong>Premium Set</strong> for luxury homes with smart features, <strong>Commercial Set</strong> for restaurants and hotels requiring heavy-duty equipment, and <strong>Hotel Apartment Set</strong> for compact, durable, and stylish hospitality solutions. Each package includes coordinated appliances with matching aesthetics, comprehensive warranties, and full installation support. When you choose HouseTech, you benefit from our years of manufacturing expertise.
+        </p>
+      </div>
+
+      <!-- Products Grid -->
+      <div class="news-grid" style="margin-top: var(--spacing-2xl);">
+        {products.map((product) => (
+          <a href={`/products/kitchen-set/${product.slug}`} class="news-card">
+            <div class="news-card-image">
+              <img src={product.image} alt={product.name} loading="lazy" />
+              <span class="news-card-category">{product.category}</span>
+            </div>
+            <div class="news-card-body">
+              <h3>{product.name}</h3>
+              <p>{product.shortDesc}</p>
+              <div class="news-card-meta">
+                <span>SKU: {product.sku}</span>
+                <span class="news-card-read-more">View Details →</span>
+              </div>
+            </div>
+          </a>
+        ))}
+      </div>
+
+      <!-- OEM/ODM Section -->
+      <div style="margin-top: var(--spacing-3xl); text-align: center; background: var(--color-bg-alt); padding: var(--spacing-2xl); border-radius: var(--radius-lg);">
+        <h2 style="margin-bottom: var(--spacing-sm);">Need Custom Kitchen Packages?</h2>
+        <p style="color: var(--color-text-light); margin-bottom: var(--spacing-lg); max-width: 600px; margin-left: auto; margin-right: auto;">
+          HouseTech Group offers full OEM/ODM services for kitchen sets including custom appliance combinations, quantities, branding, and packaging for volume orders. Contact us to discuss your project requirements.
+        </p>
+        <a href="/service" class="btn btn-primary">Learn About OEM/ODM Services →</a>
+      </div>
+    </div>
+  </section>
+
+  <Footer />
+</Layout>

@@ -1,0 +1,216 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Header from '../../components/Header.astro';
+import Footer from '../../components/Footer.astro';
+
+const title = 'Built-in Ovens - HouseTech Group | Electric Oven, Convection Oven, Steam Oven Manufacturer';
+const description = 'Discover HouseTech Group\'s premium oven collection: Built-in Ovens, Electric Ovens, Gas Ovens, Convection Ovens, Steam Ovens, Multi-function Ovens. OEM/ODM available for global B2B partners.';
+
+// Products data
+const products = [
+  {
+    name: 'HT-OV80 Built-in Electric Oven',
+    slug: 'ht-ov80-built-in',
+    sku: 'HT-OV80',
+    category: 'Ovens',
+    shortDesc: '80L large capacity built-in electric oven with 8 functions and pyrolytic self-cleaning.',
+    image: '/images/products/oven/ht-ov80.jpg',
+    specs: {
+      'Capacity': '80L',
+      'Functions': '8',
+      'Control': 'Digital Touch',
+      'Cleaning': 'Pyrolytic Self-cleaning',
+      'Timer': 'Digital Timer',
+      'Dimensions': '59.5 x 59.5 x 56cm',
+      'Finish': 'Black Glass / Stainless Steel'
+    },
+    features: [
+      'Large 80L capacity for family cooking',
+      '8 cooking functions: top/bottom heat, grill, convection, etc.',
+      'Pyrolytic self-cleaning - eliminates manual scrubbing',
+      'Digital touch control panel',
+      'Triple-glazed cool-touch door',
+      'Rotisserie function included',
+      'Energy efficient Class A'
+    ],
+    applications: [
+      'Family kitchens',
+      'Modern apartments',
+      'Luxury homes',
+      'Home baking enthusiasts'
+    ]
+  },
+  {
+    name: 'HT-OV65 Convection Steam Oven',
+    slug: 'ht-ov65-convection-steam',
+    sku: 'HT-OV65',
+    category: 'Ovens',
+    shortDesc: '65L convection steam oven combining hot air circulation with steam cooking.',
+    image: '/images/products/oven/ht-ov65.jpg',
+    specs: {
+      'Capacity': '65L',
+      'Type': 'Convection + Steam',
+      'Steam': 'Built-in Water Tank',
+      'Control': 'Digital Touch',
+      'Functions': '10+',
+      'Dimensions': '59.5 x 59.5 x 54cm',
+      'Finish': 'Black Glass'
+    },
+    features: [
+      'Combines convection and steam cooking',
+      'Retains nutrients and moisture in food',
+      '10+ cooking programs',
+      'Built-in water tank for steam generation',
+      'Easy-to-clean enamel cavity',
+      'Touch control with LCD display',
+      'Perfect for healthy cooking'
+    ],
+    applications: [
+      'Health-conscious families',
+      'Professional chefs',
+      'Bakery owners',
+      'Restaurant kitchens'
+    ]
+  },
+  {
+    name: 'HT-OV45 Compact Built-in Oven',
+    slug: 'ht-ov45-compact',
+    sku: 'HT-OV45',
+    category: 'Ovens',
+    shortDesc: '45L compact built-in oven perfect for small kitchens and apartment installations.',
+    image: '/images/products/oven/ht-ov45.jpg',
+    specs: {
+      'Capacity': '45L',
+      'Functions': '5',
+      'Control': 'Knob + Timer',
+      'Dimensions': '59.5 x 45 x 54cm',
+      'Finish': 'Stainless Steel / Black Glass',
+      'Installation': 'Standard 45cm Cabinet'
+    },
+    features: [
+      'Compact 45cm width - fits standard cabinets',
+      'Perfect for small kitchens and apartments',
+      '5 basic cooking functions',
+      'Mechanical knob control with timer',
+      'Easy installation',
+      'Affordable without compromising quality',
+      'Enamel interior for easy cleaning'
+    ],
+    applications: [
+      'Small apartments',
+      'Studio kitchens',
+      'Compact urban homes',
+      'Secondary kitchens'
+    ]
+  },
+  {
+    name: 'HT-OV100 Professional Gas Oven',
+    slug: 'ht-ov100-professional',
+    sku: 'HT-OV100',
+    category: 'Ovens',
+    shortDesc: 'Commercial-grade 100L gas oven with rotisserie for professional restaurants.',
+    image: '/images/products/oven/ht-ov100.jpg',
+    specs: {
+      'Capacity': '100L',
+      'Type': 'Professional Gas Oven',
+      'Control': 'Knob Control',
+      'Features': 'Rotisserie, Thermostat',
+      'Dimensions': '90 x 60 x 60cm',
+      'Finish': 'Stainless Steel',
+      'Gas Type': 'Natural Gas / LPG'
+    },
+    features: [
+      'Large 100L capacity for commercial use',
+      'Professional gas heating system',
+      'Rotisserie function for roasting',
+      'Precise thermostat control',
+      'Stainless steel construction',
+      'Natural gas or LPG compatible',
+      'Heavy-duty design for intensive use'
+    ],
+    applications: [
+      'Restaurant kitchens',
+      'Commercial bakeries',
+      'Hotel kitchens',
+      'Catering businesses'
+    ]
+  }
+];
+---
+
+<Layout title={title} description={description}>
+  <!-- BreadcrumbList Schema -->
+  <script type="application/ld+json" set:html={JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://housetech-ch.com/" },
+      { "@type": "ListItem", "position": 2, "name": "Products", "item": "https://housetech-ch.com/products/" },
+      { "@type": "ListItem", "position": 3, "name": "Ovens", "item": "https://housetech-ch.com/products/oven/" }
+    ]
+  })} />
+  <Header activeNav="products" />
+
+  <!-- Page Hero -->
+  <section class="page-hero">
+    <div class="container">
+      <h1>Ovens</h1>
+      <p>Professional baking solutions - Built-in Ovens, Electric Ovens, Gas Ovens, Convection Ovens, Steam Ovens, Multi-function Ovens, Stainless Steel Ovens, Large Capacity Ovens, Home Baking Ovens, Kitchen Ovens</p>
+      <nav class="breadcrumb">
+        <a href="/">Home</a>
+        <span class="separator">/</span>
+        <a href="/products">Products</a>
+        <span class="separator">/</span>
+        <span>Ovens</span>
+      </nav>
+    </div>
+  </section>
+
+  <!-- Category Introduction -->
+  <section class="content-section">
+    <div class="container">
+      <div style="max-width: 900px; margin: 0 auto;">
+        <h2 style="font-family: var(--font-display); font-size: var(--font-size-2xl); color: var(--color-primary); margin-bottom: var(--spacing-md);">
+          Premium Built-in Ovens by HouseTech Group
+        </h2>
+        <p style="color: var(--color-text-light); line-height: 1.8; margin-bottom: var(--spacing-md);">
+          HouseTech Group is a leading oven manufacturer offering comprehensive baking solutions for global B2B partners. Our oven collection includes Built-in Ovens, Electric Ovens, Gas Ovens, Convection Ovens, Steam Ovens, and Multi-function Ovens designed for both residential and commercial applications. As an experienced OEM/ODM kitchen appliance factory, we provide custom manufacturing services including capacity options, control systems, cleaning features, and branding.
+        </p>
+        <p style="color: var(--color-text-light); line-height: 1.8; margin-bottom: var(--spacing-lg);">
+          HouseTech's built-in ovens range from compact 45L models perfect for apartments to professional 100L capacity ovens for commercial kitchens. Features include pyrolytic self-cleaning, steam cooking, convection baking, rotisserie functions, and digital touch controls. Whether you need a simple mechanical oven or a fully-loaded smart oven with multiple cooking functions, HouseTech has the perfect solution. Every HouseTech oven is tested to meet international safety standards.
+        </p>
+      </div>
+
+      <!-- Products Grid -->
+      <div class="news-grid" style="margin-top: var(--spacing-2xl);">
+        {products.map((product) => (
+          <a href={`/products/oven/${product.slug}`} class="news-card">
+            <div class="news-card-image">
+              <img src={product.image} alt={product.name} loading="lazy" />
+              <span class="news-card-category">{product.category}</span>
+            </div>
+            <div class="news-card-body">
+              <h3>{product.name}</h3>
+              <p>{product.shortDesc}</p>
+              <div class="news-card-meta">
+                <span>SKU: {product.sku}</span>
+                <span class="news-card-read-more">View Details →</span>
+              </div>
+            </div>
+          </a>
+        ))}
+      </div>
+
+      <!-- OEM/ODM Section -->
+      <div style="margin-top: var(--spacing-3xl); text-align: center; background: var(--color-bg-alt); padding: var(--spacing-2xl); border-radius: var(--radius-lg);">
+        <h2 style="margin-bottom: var(--spacing-sm);">Need Custom Ovens?</h2>
+        <p style="color: var(--color-text-light); margin-bottom: var(--spacing-lg); max-width: 600px; margin-left: auto; margin-right: auto;">
+          HouseTech Group offers full OEM/ODM services for ovens including custom capacities, cooking functions, control systems, and branding options. Contact us to discuss your requirements.
+        </p>
+        <a href="/service" class="btn btn-primary">Learn About OEM/ODM Services →</a>
+      </div>
+    </div>
+  </section>
+
+  <Footer />
+</Layout>

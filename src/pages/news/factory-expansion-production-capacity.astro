@@ -1,0 +1,96 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Header from '../../components/Header.astro';
+import Footer from '../../components/Footer.astro';
+
+const title = 'Factory Expansion Completed - HouseTech Group News';
+const description = 'HouseTech Group completes major factory expansion, doubling annual production capacity to 1 million units and enhancing manufacturing capabilities for OEM range hoods and kitchen appliances worldwide.';
+---
+
+<Layout title={title} description={description}>
+  <Header activeNav="news" />
+  
+  <section class="page-hero">
+    <div class="container">
+      <nav class="breadcrumb">
+        <a href="/">Home</a> / <a href="/news">News</a> / <span>Company Update</span>
+      </nav>
+    </div>
+  </section>
+
+  <section class="content-section">
+    <div class="container">
+      <article class="content-area" style="max-width: 850px;">
+        
+        <header class="article-header">
+          <span class="article-category">Company Update</span>
+          <h1 class="article-title">Factory Expansion Completed — Production Capacity Doubled to 1M Units/Year</h1>
+          <div class="article-meta-info">
+            <span>📅 November 2023</span>
+            <span>🏷️ Company Update</span>
+            <span>⏱️ 6 min read</span>
+          </div>
+        </header>
+
+        <figure class="article-image-figure">
+          <div style="width:100%;aspect-ratio:16/9;background:linear-gradient(135deg, #7c3aed, #5b21b6);display:flex;align-items:center;justify-content:center;border-radius:var(--radius-lg);">
+            <svg width="120" height="120" viewBox="0 0 24 24" fill="none" stroke="rgba(255,255,255,0.3)" stroke-width="1">
+              <rect x="4" y="4" width="16" height="16" rx="2"/>
+              <path d="M4 12h16M8 8v8M12 8v8M16 8v8"/>
+            </svg>
+          </div>
+          <figcaption class="article-image-caption">HouseTech's expanded manufacturing facility</figcaption>
+        </figure>
+
+        <div class="article-body">
+          <p>After 18 months of construction, equipment installation, and staff training, HouseTech Group is proud to announce the completion of its factory expansion project. The expanded facility, located in Guangdong Province, China, represents a $50 million investment in manufacturing excellence and positions HouseTech as one of the largest OEM kitchen appliance manufacturers in Asia.</p>
+          
+          <p>The expansion increases HouseTech's annual production capacity from 500,000 to 1,000,000 units, with the ability to scale further as demand grows. This capacity increase directly addresses the growing order volumes from HouseTech's global OEM and ODM partnerships.</p>
+          
+          <h2>Facility Highlights</h2>
+          <p>The expanded manufacturing complex includes:</p>
+          
+          <ul>
+            <li><strong>200,000 sq ft Production Area:</strong> State-of-the-art assembly lines with automated welding, painting, and quality inspection systems.</li>
+            <li><strong>Smart Warehouse:</strong> Automated storage and retrieval system (AS/RS) capable of housing 50,000 pallet positions.</li>
+            <li><strong>R&D Center:</strong> Dedicated 30,000 sq ft innovation hub with prototyping equipment and testing laboratories.</li>
+            <li><strong>Training Center:</strong> Facility for ongoing employee development and customer training programs.</li>
+          </ul>
+
+          <blockquote>
+            "This expansion reflects HouseTech's confidence in the future of the kitchen appliance industry and our commitment to serving our partners with world-class manufacturing capabilities. The new facility allows us to take on larger orders while maintaining the quality standards our OEM partners expect."
+            <cite>— HouseTech Group CEO</cite>
+          </blockquote>
+
+          <h2>Benefits for OEM Partners</h2>
+          <p>The expanded capacity enables HouseTech to offer enhanced services to existing and new partners:</p>
+          
+          <p>Minimum order quantities can now be reduced for smaller brands entering the market, while large retailers receive guaranteed production slots for peak seasons. Lead times have been shortened by 30% thanks to improved production planning systems and additional workforce.</p>
+
+          <h2>Sustainability Features</h2>
+          <p>The new facility incorporates the latest environmental technologies, including solar panel arrays generating 2 MW of clean energy, rainwater harvesting systems, and advanced waste recycling programs. These investments support HouseTech's commitment to carbon-neutral manufacturing.</p>
+          
+          <p>HouseTech welcomes visits from OEM partners and prospective clients who wish to tour the expanded facility and witness our manufacturing capabilities firsthand.</p>
+        </div>
+
+        <nav class="article-nav">
+          <a href="/news/canton-fair-2024-phase2" class="article-nav-link">
+            <span class="article-nav-label">← Previous</span>
+            <span class="article-nav-title">Canton Fair 2024</span>
+          </a>
+          <a href="/news/new-rd-center-opening" class="article-nav-link" style="margin-left:auto;text-align:right;">
+            <span class="article-nav-label">Next →</span>
+            <span class="article-nav-title">New R&D Center Opening</span>
+          </a>
+        </nav>
+
+        <div style="text-align:center;margin-top:var(--spacing-xl);">
+          <a href="/news" class="btn btn-accent-outline">← Back to All News</a>
+        </div>
+
+      </article>
+    </div>
+  </section>
+
+  <Footer />
+</Layout>

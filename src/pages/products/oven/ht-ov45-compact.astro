@@ -1,0 +1,85 @@
+---
+import Layout from '../../../layouts/Layout.astro';
+import Header from '../../../components/Header.astro';
+import Footer from '../../../components/Footer.astro';
+
+const title = 'HT-OV45 Compact Built-in Oven - HouseTech Group | 45L Small Oven, Apartment Oven';
+const description = 'HouseTech HT-OV45 Compact Built-in Oven: 45L, perfect for small kitchens. Standard 45cm cabinet fit.';
+
+const product = {
+  name: 'HT-OV45 Compact Built-in Oven',
+  sku: 'HT-OV45',
+  category: 'Ovens',
+  image: '/images/products/oven/ht-ov45.jpg',
+  shortDesc: '45L compact built-in oven perfect for small kitchens and standard 45cm cabinet installations.',
+  specs: {
+    'Capacity': '45L',
+    'Functions': '5 (Top Heat, Bottom Heat, Top+Bottom, Grill, Light)',
+    'Control Type': 'Knob Control with Timer',
+    'Dimensions': '59.5 x 45 x 54cm',
+    'Cut-out Size': '56 x 55 x 58cm (Standard 45cm)',
+    'Finish': 'Stainless Steel / Black Glass',
+    'Installation': 'Standard 45cm Cabinet',
+    'Timer': '120 Minutes with Auto Shut-off',
+    'Door': 'Double-glazed',
+    'Voltage': '220-240V / 50Hz',
+    'Power': '2000W',
+    'Gross Weight': '28kg'
+  },
+  features: [
+    'Compact 45cm width - fits standard cabinets',
+    'Perfect for small kitchens and apartments',
+    '5 basic cooking functions',
+    'Mechanical knob control with timer',
+    'Easy installation',
+    'Affordable without compromising quality',
+    'Enamel interior for easy cleaning',
+    'Interior lighting',
+    'Accessories included: baking tray and rack'
+  ],
+  applications: [
+    'Small apartments',
+    'Studio kitchens',
+    'Compact urban homes',
+    'Secondary kitchens',
+    'Rental properties'
+  ]
+};
+
+const relatedProducts = [
+  { name: 'HT-OV80 Built-in Electric Oven', slug: '/products/oven/ht-ov80-built-in', sku: 'HT-OV80' },
+  { name: 'HT-OV65 Convection Steam Oven', slug: '/products/oven/ht-ov65-convection-steam', sku: 'HT-OV65' },
+  { name: 'HT-OV100 Professional Gas Oven', slug: '/products/oven/ht-ov100-professional', sku: 'HT-OV100' }
+];
+---
+
+<Layout title={title} description={description}>
+  <!-- Product Schema -->
+  <script type="application/ld+json" set:html={JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": "Product",
+    "name": product.name,
+    "image": "https://housetech-ch.com/images/products/oven/ht-ov45.jpg",
+    "description": description,
+    "brand": { "@type": "Brand", "name": "HouseTech" },
+    "manufacturer": { "@type": "Organization", "name": "HouseTech Group" },
+    "sku": product.sku,
+    "category": "Ovens",
+    "offers": { "@type": "AggregateOffer", "priceCurrency": "USD", "lowPrice": "0", "highPrice": "0", "offerCount": "1", "availability": "https://schema.org/InStock" }
+  })} />
+  <!-- FAQPage Schema -->
+  <script type="application/ld+json" set:html={JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      { "@type": "Question", "name": "What is the warranty period for HT-OV45 Built-in Oven?", "acceptedAnswer": { "@type": "Answer", "Text": "All HouseTech products come with a comprehensive warranty. The HT-OV45 includes a 2-year manufacturer warranty covering defects in materials and workmanship." } },
+      { "@type": "Question", "name": "Does HouseTech offer OEM/ODM customization for the HT-OV45?", "acceptedAnswer": { "@type": "Answer", "Text": "Yes, HouseTech offers full OEM/ODM services including custom logo branding, finish options, and packaging design." } },
+      { "@type": "Question", "name": "What certifications does the HT-OV45 have?", "acceptedAnswer": { "@type": "Answer", "Text": "The HT-OV45 is certified with CE, CB, ETL, and RoHS standards, meeting safety requirements for global markets." } },
+      { "@type": "Question", "name": "What cabinet size does the HT-OV45 fit?", "acceptedAnswer": { "@type": "Answer", "Text": "The HT-OV45 is designed for standard 45cm cabinet installations with dimensions of 59.5 x 45 x 54cm." } },
+      { "@type": "Question", "name": "What is the delivery time for HT-OV45 orders?", "acceptedAnswer": { "@type": "Answer", "Text": "Standard delivery time is 30-45 days after sample approval and deposit payment. For customized OEM orders, please allow 45-60 days." } }
+    ]
+  })} />
+  <Header activeNav="products" />
+  <section class="page-hero"><div class="container"><h1>{product.name}</h1><p>SKU: {product.sku}</p><nav class="breadcrumb"><a href="/">Home</a><span class="separator">/</span><a href="/products">Products</a><span class="separator">/</span><a href="/products/oven">Ovens</a><span class="separator">/</span><span>{product.name}</span></nav></div></section>
+  <section class="content-section"><div class="container"><div class="product-detail-grid"><div class="product-gallery"><div class="product-gallery-main"><img src={product.image} alt={product.name} /></div><div class="product-gallery-thumbs"><div class="product-thumb active"><img src={product.image} alt={product.name} /></div></div></div><div class="product-info"><h1>{product.name}</h1><p class="product-sku">SKU: {product.sku} | Category: {product.category}</p><p class="product-short-desc">{product.shortDesc}</p><p style="color: var(--color-text-light); line-height: 1.8; margin-bottom: var(--spacing-md);">Engineered by HouseTech, the HT-OV45 is a compact 45L built-in oven perfect for small kitchens and apartments. As part of HouseTech's versatile oven lineup, it offers 5 cooking functions. Every HouseTech product is CE/CB certified.</p><table class="product-specs-table"><tbody>{Object.entries(product.specs).map(([key, value]) => (<tr><th>{key}</th><td>{value}</td></tr>))}</tbody></table><div class="product-cta-area"><a href="/contact" class="btn btn-primary">Get Quote</a><a href="/download" class="btn btn-outline">Download Spec Sheet</a></div></div></div><div style="margin-top: var(--spacing-3xl);"><h2 style="font-family: var(--font-display); font-size: var(--font-size-2xl); color: var(--color-primary); margin-bottom: var(--spacing-xl);">Key Features</h2><div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: var(--spacing-lg);">{product.features.map((feature) => (<div style="display: flex; align-items: flex-start; gap: var(--spacing-sm);"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--color-accent)" stroke-width="2" style="flex-shrink: 0; margin-top: 2px;"><polyline points="20 6 9 17 4 12"></polyline></svg><span style="color: var(--color-text);">{feature}</span></div>))}</div></div><div style="margin-top: var(--spacing-3xl);"><h2 style="font-family: var(--font-display); font-size: var(--font-size-2xl); color: var(--color-primary); margin-bottom: var(--spacing-xl);">Applications</h2><div style="display: flex; flex-wrap: wrap; gap: var(--spacing-sm);">{product.applications.map((app) => (<span style="padding: 0.5rem 1rem; background: var(--color-bg-alt); border: 1px solid var(--color-border); border-radius: var(--radius-full); font-size: var(--font-size-sm); color: var(--color-text);">{app}</span>))}</div></div><div style="margin-top: var(--spacing-3xl); text-align: center; background: var(--color-bg-alt); padding: var(--spacing-2xl); border-radius: var(--radius-lg);"><h2 style="margin-bottom: var(--spacing-sm);">Why Choose HouseTech?</h2><p style="color: var(--color-text-light); margin-bottom: var(--spacing-lg); max-width: 600px; margin-left: auto; margin-right: auto;">HouseTech Group has been a trusted name in kitchen appliances for years. When you choose HouseTech, you get CE/CB certified products backed by comprehensive warranty and dedicated OEM/ODM support.</p><a href="/contact" class="btn btn-primary">Contact HouseTech for OEM/ODM Inquiries →</a></div><div class="related-products"><h2 style="font-family: var(--font-display); font-size: var(--font-size-2xl); color: var(--color-primary); margin-bottom: var(--spacing-xl);">Related Products</h2><div class="news-grid">{relatedProducts.map((rel) => (<a href={rel.slug} class="news-card"><div class="news-card-body"><h3>{rel.name}</h3><p>SKU: {rel.sku}</p><span class="news-card-read-more">View Details →</span></div></a>))}</div></div></div></section><Footer />
+</Layout>

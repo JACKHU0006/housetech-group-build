@@ -1,0 +1,56 @@
+---
+import Layout from '../../../layouts/Layout.astro';
+import Header from '../../../components/Header.astro';
+import Footer from '../../../components/Footer.astro';
+
+const title = 'Commercial Kitchen Set - HouseTech Group | Restaurant & Hotel Heavy-Duty Kitchen Package';
+const description = 'HouseTech Commercial Kitchen Set: Heavy-duty package for restaurant and hospitality. Includes HT-RH1200 Hood, dual HT-GH354 Hobs, HT-OV100 Oven, HT-IC4Q Induction, HT-WH20 Heater.';
+
+const product = {
+  name: 'Commercial Kitchen Set',
+  sku: 'HT-KS300',
+  category: 'Kitchen Sets',
+  image: '/images/products/kitchen-set/commercial.jpg',
+  shortDesc: 'Heavy-duty commercial package for restaurant and hospitality use. Professional-grade equipment for intensive cooking operations.',
+  specs: {
+    'Package Includes': '6 Products',
+    'Range Hood': 'HT-RH1200 (120cm, commercial dual motor)',
+    'Gas Hobs': 'HT-GH354 (x2, dual setup configuration)',
+    'Oven': 'HT-OV100 (100L, professional gas)',
+    'Induction': 'HT-IC4Q (4-burner, 7200W)',
+    'Water Heater': 'HT-WH20 (20L, high efficiency)',
+    'Capacity': 'Restaurant-Grade',
+    'Warranty': '2 Years Commercial'
+  },
+  features: [
+    'Commercial-grade appliances',
+    'Heavy-duty for intensive use',
+    'High-capacity hot water system',
+    'Professional cooking setup',
+    'Multiple gas hob configuration',
+    'Large 100L commercial oven',
+    '120cm professional range hood',
+    'Designed for restaurant environments'
+  ],
+  applications: [
+    'Restaurant kitchens',
+    'Hotel kitchens',
+    'Catering facilities',
+    'Commercial cooking operations',
+    'Food courts',
+    'Institutional kitchens'
+  ]
+};
+
+const relatedProducts = [
+  { name: 'Starter Kitchen Set', slug: '/products/kitchen-set/starter-set', sku: 'HT-KS100' },
+  { name: 'Premium Kitchen Set', slug: '/products/kitchen-set/premium-set', sku: 'HT-KS200' },
+  { name: 'Hotel Apartment Kitchen Set', slug: '/products/kitchen-set/hotel-set', sku: 'HT-KS400' }
+];
+---
+
+<Layout title={title} description={description}>
+  <Header activeNav="products" />
+  <section class="page-hero"><div class="container"><h1>{product.name}</h1><p>SKU: {product.sku}</p><nav class="breadcrumb"><a href="/">Home</a><span class="separator">/</span><a href="/products">Products</a><span class="separator">/</span><a href="/products/kitchen-set">Kitchen Sets</a><span class="separator">/</span><span>{product.name}</span></nav></div></section>
+  <section class="content-section"><div class="container"><div class="product-detail-grid"><div class="product-gallery"><div class="product-gallery-main"><img src={product.image} alt={product.name} /></div><div class="product-gallery-thumbs"><div class="product-thumb active"><img src={product.image} alt={product.name} /></div></div></div><div class="product-info"><h1>{product.name}</h1><p class="product-sku">SKU: {product.sku} | Category: {product.category}</p><p class="product-short-desc">{product.shortDesc}</p><p style="color: var(--color-text-light); line-height: 1.8; margin-bottom: var(--spacing-md);">Curated by HouseTech, this Commercial Kitchen Set includes 6 heavy-duty restaurant-grade appliances. As part of HouseTech's professional kitchen solutions, it is designed for intensive daily use. Every HouseTech product is built to the highest quality standards.</p><table class="product-specs-table"><tbody>{Object.entries(product.specs).map(([key, value]) => (<tr><th>{key}</th><td>{value}</td></tr>))}</tbody></table><div class="product-cta-area"><a href="/contact" class="btn btn-primary">Get Quote</a><a href="/download" class="btn btn-outline">Download Spec Sheet</a></div></div></div><div style="margin-top: var(--spacing-3xl);"><h2 style="font-family: var(--font-display); font-size: var(--font-size-2xl); color: var(--color-primary); margin-bottom: var(--spacing-xl);">Key Features</h2><div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: var(--spacing-lg);">{product.features.map((feature) => (<div style="display: flex; align-items: flex-start; gap: var(--spacing-sm);"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--color-accent)" stroke-width="2" style="flex-shrink: 0; margin-top: 2px;"><polyline points="20 6 9 17 4 12"></polyline></svg><span style="color: var(--color-text);">{feature}</span></div>))}</div></div><div style="margin-top: var(--spacing-3xl);"><h2 style="font-family: var(--font-display); font-size: var(--font-size-2xl); color: var(--color-primary); margin-bottom: var(--spacing-xl);">Applications</h2><div style="display: flex; flex-wrap: wrap; gap: var(--spacing-sm);">{product.applications.map((app) => (<span style="padding: 0.5rem 1rem; background: var(--color-bg-alt); border: 1px solid var(--color-border); border-radius: var(--radius-full); font-size: var(--font-size-sm); color: var(--color-text);">{app}</span>))}</div></div><div style="margin-top: var(--spacing-3xl); text-align: center; background: var(--color-bg-alt); padding: var(--spacing-2xl); border-radius: var(--radius-lg);"><h2 style="margin-bottom: var(--spacing-sm);">Why Choose HouseTech?</h2><p style="color: var(--color-text-light); margin-bottom: var(--spacing-lg); max-width: 600px; margin-left: auto; margin-right: auto;">HouseTech Group has been a trusted name in kitchen appliances for years. When you choose HouseTech, you get CE/CB certified products backed by comprehensive warranty and dedicated OEM/ODM support.</p><a href="/contact" class="btn btn-primary">Contact HouseTech for OEM/ODM Inquiries →</a></div><div class="related-products"><h2 style="font-family: var(--font-display); font-size: var(--font-size-2xl); color: var(--color-primary); margin-bottom: var(--spacing-xl);">Other Kitchen Sets</h2><div class="news-grid">{relatedProducts.map((rel) => (<a href={rel.slug} class="news-card"><div class="news-card-body"><h3>{rel.name}</h3><p>SKU: {rel.sku}</p><span class="news-card-read-more">View Details →</span></div></a>))}</div></div></div></section><Footer />
+</Layout>
