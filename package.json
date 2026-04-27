@@ -1,1 +1,8 @@
-{"name":"housetech-group","version":"1.0.0","scripts":{"build":"echo done"}}
+{
+    "private":  true,
+    "name":  "housetech-group",
+    "version":  "1.0.0",
+    "scripts":  {
+                    "build":  "mkdir -p dist \u0026\u0026 cp -r * dist/"
+                }
+}
