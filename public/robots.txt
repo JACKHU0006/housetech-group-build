@@ -1,8 +1,60 @@
 # Robots.txt for housetech-ch.com
 # HouseTech Group - Professional Kitchen Appliance Manufacturer
+# Last updated: 2026-04-27
 
+# Default rules for all user agents
 User-agent: *
 Allow: /
+Allow: /images/
+Allow: /styles/
+Allow: /products/
+Allow: /about/
+Allow: /factory/
+Allow: /team/
+Allow: /service/
+Allow: /careers/
+Allow: /faq/
+Allow: /news/
+Allow: /contact/
+Allow: /support/
+Allow: /privacy/
 
-# Sitemap
+# Disallow crawling of private/admin areas
+Disallow: /admin/
+Disallow: /api/
+Disallow: /.env
+Disallow: /.git/
+Disallow: /node_modules/
+Disallow: /*.env*
+Disallow: /*backup*
+Disallow: /*cache*
+
+# Crawl delay for general bots (in seconds)
+Crawl-delay: 1
+
+# AI-specific crawlers - Allow for AI search engines
+User-agent: GPTBot
+Allow: /
+
+User-agent: CCBot
+Allow: /
+
+User-agent: anthropic-ai
+Allow: /
+
+User-agent: Claude-Web
+Allow: /
+
+User-agent: Perplexity
+Allow: /
+
+User-agent: Bytespider
+Allow: /
+
+# Sitemap location
 Sitemap: https://housetech-ch.com/sitemap.xml
+Sitemap: https://housetech-ch.com/sitemap-products.xml
+Sitemap: https://housetech-ch.com/sitemap-news.xml
+
+# Host preference
+Host: https://housetech-ch.com

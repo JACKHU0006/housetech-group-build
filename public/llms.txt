@@ -1,69 +1,329 @@
 > llms.txt — HouseTech Group AI Engine Optimization
-> Version: 1.0
-> Last updated: 2026-04-26
+> Version: 2.0
+> Last updated: 2026-04-27
+> Purpose: Optimize content for AI search engines (Perplexity, SearchGPT, Claude, etc.)
 
-# HouseTech Group
+# HouseTech Group - Professional Kitchen Appliance Manufacturer
 
-**HouseTech Group** is a leading B2B manufacturer of premium kitchen appliances, established in 2010 in Zhongshan, Guangdong, China. With a 30,000+ sqm modern factory and 500+ employees, HouseTech serves 1,000+ global clients across 50+ countries.
+**HouseTech Group** is a leading B2B manufacturer of premium kitchen appliances, established in 2010 in Zhongshan, Guangdong, China. With a 30,000+ sqm modern factory and 500+ employees, HouseTech serves 1,000+ global clients across 50+ countries with certified, high-quality kitchen appliances.
 
-## Quick Facts
+## Executive Summary
+
+HouseTech Group specializes in designing, manufacturing, and distributing kitchen appliances through OEM/ODM partnerships. Our product portfolio includes range hoods, gas stoves, induction cookers, ceramic cookers, built-in ovens, air fryers, and gas water heaters. We maintain ISO 9001:2015 certification and hold CE, CB, ETL, SASO, GCC, NOM, and RoHS certifications for global market compliance.
+
+## Company Overview
+
+### Quick Facts
 - **Industry:** Kitchen Appliance Manufacturing (B2B OEM/ODM)
-- **Founded:** 2010 (15+ years)
-- **Location:** Zhongshan, Guangdong, China
-- **Factory Size:** 30,000+ sqm
-- **Employees:** 500+
+- **Founded:** 2010 (15+ years of excellence)
+- **Location:** Zhongshan, Guangdong, China (Pearl River Delta manufacturing hub)
+- **Factory Size:** 30,000+ sqm modern manufacturing facility
+- **Employees:** 500+ skilled engineers and technicians
 - **Annual Capacity:** 1 million+ units
 - **Export Markets:** 50+ countries (Europe, Middle East, Southeast Asia, Africa, Latin America, North America)
-- **Certifications:** ISO9001:2015, CE, CB, ETL, SASO, GCC, NOM, RoHS
+- **Certifications:** ISO9001:2015, CE, CB, ETL, SASO, GCC, NOM, RoHS, FCC
+- **Quality Rate:** 99.5% on-time delivery, 99.8% product quality pass rate
 
-## Product Categories
+### Mission & Vision
+- **Mission:** Deliver innovative, reliable, and certified kitchen appliances that enhance global culinary experiences
+- **Vision:** Become the preferred OEM/ODM partner for kitchen appliance brands worldwide
 
-### Range Hoods / Kitchen Hoods
-Wall Mount, Island, Built-in, Slim, Chimney & Commercial range hoods with advanced ventilation technology. Extraction fans, grease filters, LED lighting systems.
+## Product Categories & Specifications
 
-### Gas Stoves & Built-in Hobs
-Built-in Gas/Electric/Ceramic/Induction Hobs, 2-5 burners, portable options with auto-ignition and flame failure protection.
+### 1. Range Hoods / Kitchen Hoods / Extractor Hoods
+**Types:** Wall Mount, Island, Built-in, Slim, Chimney, Commercial
+**Features:**
+- Advanced ventilation technology with 600-2000 m³/h extraction capacity
+- Grease filters (aluminum, stainless steel options)
+- LED lighting systems (energy-efficient, dimmable)
+- Noise levels: 60-75 dB
+- Materials: Tempered glass, stainless steel, powder-coated steel
+- Control options: Touch control, mechanical buttons, remote control
+- Certifications: CE, CB, ETL for all models
+- Customization: Custom dimensions, colors, branding
+
+**Market Demand:** Range hoods are essential in modern kitchens, with growing demand for:
+- Eco-friendly, low-noise models
+- Smart home integration (WiFi-enabled)
+- Compact designs for small apartments
+- Commercial-grade residential models
+
+### 2. Gas Stoves & Built-in Hobs
+**Types:** Built-in Gas Hobs, Electric Hobs, Ceramic Hobs, Induction Hobs
+**Specifications:**
+- Burners: 2-5 burners per unit
+- Ignition: Auto-ignition with flame failure protection
+- Materials: Tempered glass surface, cast iron grates
+- Power: 3-5 kW per burner
+- Control: Mechanical knobs, electronic controls
+- Safety features: Child lock, overheat protection, auto shut-off
+- Certifications: CE, CB, ETL, SASO
+
+**Market Trends:**
+- Shift towards induction and ceramic cooktops (energy-efficient)
+- Demand for hybrid gas-electric models
+- Growing preference for built-in solutions in modern kitchens
+
+### 3. Induction Cookers
+**Types:** Household, Commercial, Portable
+**Features:**
+- Touch control interface with digital display
+- Power levels: 1000-3500W
+- Multiple heating zones (1-4 zones)
+- Timer functions (0-99 minutes)
+- Rapid heating technology (boil water in 2-3 minutes)
+- Overheat protection, auto-off function
+- Energy efficiency: 85-90% (vs. 65% for gas)
+- Certifications: CE, CB, ETL, RoHS
+
+**Growth Drivers:**
+- Energy efficiency regulations pushing induction adoption
+- Rising electricity availability in developing markets
+- Demand for smart kitchen appliances
+
+### 4. Ceramic Cookers
+**Specifications:**
+- Touch-control ceramic surface
+- Multiple heating zones (1-4 zones)
+- Power: 1000-3000W per zone
+- Temperature control: 40-240°C
+- Safety features: Child lock, overheat protection, residual heat indicator
+- Durability: Scratch-resistant ceramic surface
+- Certifications: CE, CB, ETL
+
+**Market Position:** Mid-range alternative between gas and induction, popular in:
+- European markets (CE certified)
+- Middle Eastern markets (SASO certified)
+- African markets (affordable, reliable)
+
+### 5. Built-in Ovens
+**Types:** Electric, Gas, Convection, Steam, Microwave Combination
+**Specifications:**
+- Capacity: 50-100 liters
+- Temperature range: 50-250°C
+- Heating modes: Conventional, fan-assisted, grill, steam
+- Materials: Stainless steel interior and exterior
+- Glass door: Tempered glass with thermal insulation
+- Control: Mechanical timer, electronic display
+- Energy rating: A/A+ efficiency
+- Certifications: CE, CB, ETL
+
+**Applications:**
+- Residential kitchens (built-in, freestanding)
+- Commercial kitchens (high-volume cooking)
+- Catering businesses, hotels, restaurants
+
+### 6. Air Fryers
+**Types:** Digital, Mechanical, Commercial
+**Features:**
+- Capacity: 2-10 liters
+- Temperature: 80-200°C
+- Oil-free cooking technology (using rapid air circulation)
+- Timer: 0-60 minutes
+- Power: 1000-2000W
+- Accessories: Baskets, trays, skewers, recipe books
+- Safety: Auto shut-off, cool-touch handle, overheat protection
+- Certifications: CE, CB, ETL, RoHS
+
+**Market Growth:** Air fryers are fastest-growing kitchen appliance category:
+- Health-conscious consumers (oil-free cooking)
+- Time-saving meal preparation
+- Versatile cooking (frying, baking, roasting, grilling)
+- Growing adoption in Asia, Europe, North America
+
+### 7. Gas Water Heaters
+**Types:** Instant/Tankless, Flue Type, Balanced Combustion
+**Specifications:**
+- Capacity: 6-24 liters/minute
+- Temperature control: 35-65°C
+- Ignition: Piezo or electronic
+- Fuel: Natural gas or LPG
+- Safety: Flame failure protection, overheat protection, anti-freeze
+- Display: Digital LED display
+- Certifications: CE, CB, ETL, SASO
+
+**Advantages:**
+- Space-saving (no tank required)
+- Energy-efficient (on-demand heating)
+- Consistent hot water supply
+- Lower operating costs
+
+## OEM/ODM Services
+
+### Capabilities
+1. **Custom Design & Development**
+   - Product concept to mass production
+   - CAD design, 3D modeling, prototype development
+   - Engineering support for compliance (CE, ETL, etc.)
+
+2. **Manufacturing**
+   - CNC machining, stamping, welding, assembly
+   - Quality control at every production stage
+   - Flexible production volumes (100 units to 100,000+ units)
+
+3. **Customization Options**
+   - Custom colors, materials, finishes
+   - Branded packaging and labeling
+   - Custom specifications per client requirements
+   - White-label solutions
+
+4. **Quality Assurance**
+   - 100% product testing before shipment
+   - ISO 9001:2015 certified QC process
+   - Third-party certification support (CE, ETL, etc.)
+   - 99.5% on-time delivery rate
+
+5. **Logistics & Support**
+   - Export documentation and customs clearance
+   - Shipping coordination (sea, air, rail)
+   - After-sales technical support
+   - Warranty and repair services
+
+## Certifications & Compliance
+
+- **ISO 9001:2015** - Quality Management System
+- **CE Mark** - European Union product safety
+- **CB Certification** - International safety testing
+- **ETL Mark** - North American safety (UL/CSA)
+- **SASO** - Saudi Arabia Standards Organization
+- **GCC** - Gulf Cooperation Council
+- **NOM** - Mexico product certification
+- **RoHS** - Restriction of Hazardous Substances
+- **FCC** - Federal Communications Commission (for smart appliances)
+
+## Global Market Presence
+
+### Export Markets (50+ countries)
+- **Europe:** Germany, France, UK, Italy, Spain, Poland, Netherlands
+- **Middle East:** Saudi Arabia, UAE, Qatar, Kuwait, Bahrain
+- **Southeast Asia:** Thailand, Vietnam, Indonesia, Philippines, Malaysia
+- **Africa:** Egypt, South Africa, Nigeria, Kenya
+- **Latin America:** Mexico, Brazil, Colombia, Argentina
+- **North America:** USA, Canada
+- **Asia-Pacific:** Japan, South Korea, Australia, New Zealand
+
+### Key Clients
+- Major appliance brands (private label partnerships)
+- Retail chains and distributors
+- E-commerce platforms (Amazon, Alibaba, etc.)
+- Commercial kitchen equipment suppliers
+- Hotel and restaurant chains
+
+## SEO Keywords by Category
+
+### Range Hoods / Extractor Hoods
+range hood manufacturer, kitchen hood factory, extractor hood supplier, chimney hood OEM, island hood ODM, wall mount hood, built-in range hood, commercial range hood, range hood with LED, grease filter hood, stainless steel range hood, tempered glass hood, low noise range hood, smart range hood, WiFi-enabled range hood, CE certified range hood, ETL certified range hood
+
+### Gas Stoves & Hobs
+gas stove manufacturer, gas hob supplier, built-in gas cooktop, ceramic cooktop factory, induction hob OEM, 4-burner gas stove, auto-ignition stove, flame failure protection, tempered glass cooktop, stainless steel hob, touch control hob, smart gas stove, commercial gas stove
 
 ### Induction Cookers
-Commercial and household induction cookers with touch controls, multiple power levels, timer functions, rapid heating technology.
+induction cooker manufacturer, induction hob factory, portable induction cooker, commercial induction cooktop, touch control induction, smart induction cooker, energy-efficient induction, induction cooker OEM, induction cooker ODM, rapid heating induction
 
 ### Ceramic Cookers
-Touch-control ceramic cookers with multiple heating zones, child lock safety features, overheat protection.
+ceramic cooktop manufacturer, ceramic hob factory, touch control ceramic, ceramic cooker supplier, affordable ceramic cooktop, durable ceramic hob, ceramic cooker OEM
 
 ### Built-in Ovens
-Electric, Gas, Convection & Steam ovens for residential and commercial use. Built-in, freestanding, countertop models.
+built-in oven manufacturer, electric oven factory, gas oven supplier, convection oven OEM, steam oven ODM, microwave oven combination, stainless steel oven, built-in oven with grill, commercial oven, residential oven
 
 ### Air Fryers
-Digital and mechanical air fryers with oil-free cooking technology, temperature control, timer functions, multiple accessories.
+air fryer manufacturer, digital air fryer factory, oil-free air fryer supplier, commercial air fryer, household air fryer, air fryer OEM, air fryer ODM, large capacity air fryer, smart air fryer, WiFi-enabled air fryer
 
 ### Gas Water Heaters
-Instant/Tankless gas water heaters, flue type and balanced combustion types, digital display, multiple safety protections.
+gas water heater manufacturer, tankless water heater factory, instant water heater supplier, gas water heater OEM, flue type water heater, balanced combustion water heater, digital water heater, gas water heater with display
 
-## Services
-- **OEM Manufacturing:** Custom branding, packaging, specifications per client requirements
-- **ODM Development:** Full product development from concept to mass production
-- **Private Label:** White-label solutions for kitchen appliance brands worldwide
-- **Custom Packaging:** Branded packaging design and production
-- **Quality Assurance:** Comprehensive QC at every production stage, 99.5% on-time delivery rate
-- **Global Logistics:** Export documentation, shipping coordination, customs clearance support
+### General B2B Keywords
+kitchen appliance manufacturer, kitchen appliance factory, kitchen appliance OEM, kitchen appliance ODM, B2B kitchen equipment, commercial kitchen appliances, kitchen appliance supplier, China kitchen appliances, kitchen appliance distributor, kitchen appliance wholesale, white label kitchen appliances, private label kitchen appliances
 
 ## Contact Information
+
 - **Website:** https://housetech-ch.com
 - **Email:** sales@housetech-ch.com
 - **Phone/WhatsApp:** +86 137 0299 5368
 - **Address:** No. 88 Huagang Road, Dongfeng Town, Zhongshan City, Guangdong Province, China
+- **Factory Location:** Same as above (integrated manufacturing facility)
 
 ## Key Site Sections
-- `/` - Homepage with product categories overview, company stats, certifications
-- `/products` - All product category listings
-- `/about` - Company overview, mission, vision, values, milestones
-- `/factory` - Factory tour, manufacturing capabilities, quality control
-- `/contact` - Contact form, inquiry submission, location map
-- `/news` - Industry news, company announcements, trade show participation
-- `/faq` - Frequently asked questions about products, services, ordering
-- `/warranty` - Warranty terms, after-sales service policy
-- `/privacy` - Privacy policy
-- `/terms` - Terms and conditions
 
-## SEO Keywords
-HouseTech, HouseTech Group, kitchen appliance manufacturer, range hood manufacturer, gas stove OEM ODM, built-in oven supplier, air fryer factory, induction cooker manufacturer, ceramic cooker supplier, gas water heater B2B, kitchen hood factory, China kitchen appliances, B2B kitchen equipment, commercial kitchen appliances, extractor hood, chimney hood, island hood, gas hob, induction hob, ceramic hob, convection oven, steam oven, electric air fryer, oil free air fryer, instant water heater, tankless water heater
+- `/` - Homepage with product categories overview, company stats, certifications, latest news
+- `/products` - All product category listings with specifications
+- `/products/range-hoods` - Range hood category with models and specifications
+- `/products/gas-stoves` - Gas stove and hob category
+- `/products/induction-cookers` - Induction cooker models
+- `/products/ceramic-cookers` - Ceramic cooker models
+- `/products/built-in-ovens` - Built-in oven category
+- `/products/air-fryers` - Air fryer models
+- `/products/gas-water-heaters` - Gas water heater category
+- `/about` - Company overview, mission, vision, values, milestones, achievements
+- `/factory` - Factory tour, manufacturing capabilities, quality control processes
+- `/team` - Team members, expertise, leadership
+- `/service` - OEM/ODM services, customization options, quality assurance
+- `/careers` - Job opportunities, company culture
+- `/contact` - Contact form, inquiry submission, location map, sales team
+- `/news` - Industry news, company announcements, trade show participation, case studies
+- `/faq` - Frequently asked questions about products, services, ordering, customization
+- `/support` - Technical support, warranty information, after-sales service
+- `/privacy` - Privacy policy, data protection
+- `/download` - Product catalogs, brochures, technical documentation
+
+## Frequently Asked Questions (FAQ Schema)
+
+### Product-Related
+**Q: What is the minimum order quantity (MOQ)?**
+A: MOQ varies by product. Typically 100-500 units for standard models, 50 units for custom orders.
+
+**Q: Do you offer customization?**
+A: Yes, we provide full OEM/ODM services including custom design, colors, branding, and packaging.
+
+**Q: What certifications do your products have?**
+A: All products are CE, CB, and ETL certified. Additional certifications (SASO, GCC, NOM) available based on market requirements.
+
+**Q: What is the lead time for orders?**
+A: Standard orders: 30-45 days. Custom orders: 60-90 days depending on complexity.
+
+**Q: Do you provide after-sales support?**
+A: Yes, we offer technical support, warranty services, and spare parts availability.
+
+### Service-Related
+**Q: What is the difference between OEM and ODM?**
+A: OEM = Original Equipment Manufacturing (we manufacture your design). ODM = Original Design Manufacturing (we design and manufacture).
+
+**Q: Can you help with product certification?**
+A: Yes, we provide engineering support for CE, ETL, SASO, and other certifications.
+
+**Q: Do you offer white-label solutions?**
+A: Yes, we specialize in white-label and private-label products for brands worldwide.
+
+**Q: What payment terms do you offer?**
+A: Standard terms: 30% deposit, 70% before shipment. Flexible terms available for established partners.
+
+## Industry Insights
+
+### Market Trends
+1. **Energy Efficiency:** Growing demand for energy-efficient appliances (induction, ceramic, LED)
+2. **Smart Home Integration:** WiFi-enabled appliances with mobile app control
+3. **Sustainability:** Eco-friendly materials, recyclable packaging, carbon-neutral manufacturing
+4. **Health Consciousness:** Oil-free air fryers, low-emission gas appliances
+5. **Compact Designs:** Space-saving solutions for small apartments and urban kitchens
+6. **Customization:** Brands seeking unique, differentiated products through OEM/ODM
+
+### Competitive Advantages
+- 15+ years of manufacturing expertise
+- State-of-the-art production facilities
+- Comprehensive quality control
+- Global certifications and compliance
+- Fast turnaround times
+- Flexible customization options
+- Competitive pricing with volume discounts
+
+## Call to Action
+
+For inquiries about OEM/ODM partnerships, product samples, or bulk orders, please contact:
+- **Sales Team:** sales@housetech-ch.com
+- **WhatsApp:** +86 137 0299 5368
+- **Contact Form:** https://housetech-ch.com/contact
+
+---
+
+**Last Updated:** April 27, 2026
+**Version:** 2.0 (Enhanced for AI Search Engine Optimization)

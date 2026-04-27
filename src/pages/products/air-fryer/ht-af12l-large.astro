@@ -2,6 +2,8 @@
 import Layout from '../../../layouts/Layout.astro';
 import Header from '../../../components/Header.astro';
 import Footer from '../../../components/Footer.astro';
+import Breadcrumb from '../../../components/Breadcrumb.astro';
+import Schema from '../../../components/Schema.astro';
 
 const title = 'HT-AF12L Large Capacity Air Fryer - HouseTech Group | 12L Air Fryer, 2000W, Digital Touch Control';
 const description = 'HouseTech HT-AF12L Large Capacity Air Fryer: 12L capacity, 2000W powerful heating, digital touch control with 10 preset programs, ideal for commercial and large family use.';
@@ -63,57 +65,41 @@ const relatedProducts = [
 
 <Layout title={title} description={description}>
   <!-- Product Schema -->
-  <script type="application/ld+json" set:html={JSON.stringify({
-    "@context": "https://schema.org",
-    "@type": "Product",
-    "name": product.name,
-    "image": "https://housetech-ch.com/images/products/air-fryer/ht-af12l.jpg",
-    "description": description,
-    "brand": { "@type": "Brand", "name": "HouseTech" },
-    "manufacturer": { "@type": "Organization", "name": "HouseTech Group" },
-    "sku": product.sku,
-    "category": "Air Fryers",
-    "offers": {
-      "@type": "AggregateOffer",
-      "priceCurrency": "USD",
-      "lowPrice": "0",
-      "highPrice": "0",
-      "offerCount": "1",
-      "availability": "https://schema.org/InStock"
-    }
-  })} />
-  <!-- FAQPage Schema -->
-  <script type="application/ld+json" set:html={JSON.stringify({
-    "@context": "https://schema.org",
-    "@type": "FAQPage",
-    "mainEntity": [
+  <Schema type="product" data={{
+    name: product.name,
+    description: description,
+    image: [`https://housetech-ch.com${product.image}`],
+    brand: "HouseTech",
+    model: product.sku,
+    certifications: ["CE", "CB", "ETL", "GS", "RoHS"],
+    availability: "https://schema.org/InStock"
+  }} />
+  
+  <!-- FAQ Schema -->
+  <Schema type="faq" data={{
+    items: [
       {
-        "@type": "Question",
-        "name": "What is the warranty period for HT-AF12L Air Fryer?",
-        "acceptedAnswer": { "@type": "Answer", "Text": "All HouseTech products come with a comprehensive warranty. The HT-AF12L Air Fryer includes a 2-year manufacturer warranty covering defects in materials and workmanship. Extended warranty options are available for B2B partners." }
+        question: "What is the warranty period for HT-AF12L Air Fryer?",
+        answer: "All HouseTech products come with a comprehensive warranty. The HT-AF12L Air Fryer includes a 2-year manufacturer warranty covering defects in materials and workmanship. Extended warranty options are available for B2B partners."
       },
       {
-        "@type": "Question",
-        "name": "Does HouseTech offer OEM/ODM customization for the HT-AF12L?",
-        "acceptedAnswer": { "@type": "Answer", "Text": "Yes, HouseTech offers full OEM/ODM services for air fryers including custom logo branding, color options (Black/Stainless Steel), packaging design, and preset program customization to meet your market requirements." }
+        question: "Does HouseTech offer OEM/ODM customization for the HT-AF12L?",
+        answer: "Yes, HouseTech offers full OEM/ODM services for air fryers including custom logo branding, color options (Black/Stainless Steel), packaging design, and preset program customization to meet your market requirements."
       },
       {
-        "@type": "Question",
-        "name": "What certifications does the HT-AF12L Air Fryer have?",
-        "acceptedAnswer": { "@type": "Answer", "Text": "The HT-AF12L is certified with CE, CB, ETL, GS, and RoHS standards, meeting safety and environmental requirements for European, Asian, and North American markets." }
+        question: "What certifications does the HT-AF12L Air Fryer have?",
+        answer: "The HT-AF12L is certified with CE, CB, ETL, GS, and RoHS standards, meeting safety and environmental requirements for European, Asian, and North American markets."
       },
       {
-        "@type": "Question",
-        "name": "What is the minimum order quantity (MOQ) for HT-AF12L?",
-        "acceptedAnswer": { "@type": "Answer", "Text": "HouseTech offers flexible MOQ starting from 50 units per model for OEM orders. For standard catalog products, smaller quantities may be available. Contact us for specific MOQ details." }
+        question: "What is the minimum order quantity (MOQ) for HT-AF12L?",
+        answer: "HouseTech offers flexible MOQ starting from 50 units per model for OEM orders. For standard catalog products, smaller quantities may be available. Contact us for specific MOQ details."
       },
       {
-        "@type": "Question",
-        "name": "What is the delivery time for HT-AF12L orders?",
-        "acceptedAnswer": { "@type": "Answer", "Text": "Standard delivery time for HT-AF12L orders is 30-45 days after sample approval and deposit payment. For customized OEM orders, please allow 45-60 days. Express shipping options are available." }
+        question: "What is the delivery time for HT-AF12L orders?",
+        answer: "Standard delivery time for HT-AF12L orders is 30-45 days after sample approval and deposit payment. For customized OEM orders, please allow 45-60 days. Express shipping options are available."
       }
     ]
-  })} />
+  }} />
   <Header activeNav="products" />
 
   <!-- Page Hero -->
@@ -121,15 +107,12 @@ const relatedProducts = [
     <div class="container">
       <h1>{product.name}</h1>
       <p>SKU: {product.sku}</p>
-      <nav class="breadcrumb">
-        <a href="/">Home</a>
-        <span class="separator">/</span>
-        <a href="/products">Products</a>
-        <span class="separator">/</span>
-        <a href="/products/air-fryer">Air Fryers</a>
-        <span class="separator">/</span>
-        <span>{product.name}</span>
-      </nav>
+      <Breadcrumb items={[
+        { label: 'Home', href: '/' },
+        { label: 'Products', href: '/products' },
+        { label: 'Air Fryers', href: '/products/air-fryer' },
+        { label: product.name, current: true }
+      ]} />
     </div>
   </section>
 

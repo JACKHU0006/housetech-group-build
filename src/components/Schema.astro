@@ -1,0 +1,101 @@
+---
+interface ProductSchemaProps {
+  name: string;
+  description: string;
+  image: string[];
+  brand: string;
+  model: string;
+  certifications: string[];
+  price?: string;
+  currency?: string;
+  availability?: string;
+}
+
+interface FAQItem {
+  question: string;
+  answer: string;
+}
+
+interface FAQSchemaProps {
+  items: FAQItem[];
+}
+
+interface OrganizationSchemaProps {
+  name: string;
+  url: string;
+  logo: string;
+}
+
+type Props = 
+  | { type: 'product'; data: ProductSchemaProps }
+  | { type: 'faq'; data: FAQSchemaProps }
+  | { type: 'organization'; data: OrganizationSchemaProps };
+
+const { type, data } = Astro.props;
+
+let schemaData: any;
+
+if (type === 'product') {
+  const productData = data as ProductSchemaProps;
+  schemaData = {
+    "@context": "https://schema.org",
+    "@type": "Product",
+    "name": productData.name,
+    "description": productData.description,
+    "image": productData.image,
+    "brand": {
+      "@type": "Brand",
+      "name": productData.brand
+    },
+    "model": productData.model,
+    "manufacturer": {
+      "@type": "Organization",
+      "name": "HouseTech Group",
+      "url": "https://housetech-ch.com"
+    },
+    "additionalProperty": productData.certifications.map(cert => ({
+      "@type": "PropertyValue",
+      "name": "Certification",
+      "value": cert
+    })),
+    ...(productData.price && {
+      "offers": {
+        "@type": "Offer",
+        "price": productData.price,
+        "priceCurrency": productData.currency || "USD",
+        "availability": productData.availability || "https://schema.org/InStock",
+        "seller": {
+          "@type": "Organization",
+          "name": "HouseTech Group",
+          "url": "https://housetech-ch.com"
+        }
+      }
+    })
+  };
+} else if (type === 'faq') {
+  const faqData = data as FAQSchemaProps;
+  schemaData = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": faqData.items.map(item => ({
+      "@type": "Question",
+      "name": item.question,
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": item.answer
+      }
+    }))
+  };
+} else if (type === 'organization') {
+  const orgData = data as OrganizationSchemaProps;
+  schemaData = {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": orgData.name,
+    "url": orgData.url,
+    "logo": orgData.logo
+  };
+}
+---
+
+<script type="application/ld+json" set:html={JSON.stringify(schemaData)} />

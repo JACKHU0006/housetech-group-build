@@ -1,0 +1,102 @@
+---
+interface BreadcrumbItem {
+  label: string;
+  href: string;
+  current?: boolean;
+}
+
+interface Props {
+  items: BreadcrumbItem[];
+}
+
+const { items } = Astro.props;
+
+// Generate breadcrumb schema
+const breadcrumbSchema = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": items.map((item, index) => ({
+    "@type": "ListItem",
+    "position": index + 1,
+    "name": item.label,
+    "item": item.href ? `https://housetech-ch.com${item.href}` : undefined
+  }))
+};
+---
+
+<nav aria-label="Breadcrumb" class="breadcrumb-nav">
+  <ol class="breadcrumb-list">
+    {items.map((item, index) => (
+      <li class="breadcrumb-item">
+        {index > 0 && <span class="breadcrumb-separator">/</span>}
+        {item.current ? (
+          <span class="breadcrumb-current" aria-current="page">
+            {item.label}
+          </span>
+        ) : (
+          <a href={item.href} class="breadcrumb-link">
+            {item.label}
+          </a>
+        )}
+      </li>
+    ))}
+  </ol>
+  
+  <script type="application/ld+json" set:html={JSON.stringify(breadcrumbSchema)} />
+</nav>
+
+<style>
+  .breadcrumb-nav {
+    margin: 1rem 0;
+    padding: 0;
+  }
+
+  .breadcrumb-list {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    font-size: 0.875rem;
+    color: #666;
+  }
+
+  .breadcrumb-item {
+    display: flex;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+  }
+
+  .breadcrumb-separator {
+    margin: 0 0.5rem;
+    color: #999;
+  }
+
+  .breadcrumb-link {
+    color: #0066cc;
+    text-decoration: none;
+    transition: color 0.2s ease;
+  }
+
+  .breadcrumb-link:hover {
+    color: #0052a3;
+    text-decoration: underline;
+  }
+
+  .breadcrumb-current {
+    color: #333;
+    font-weight: 500;
+  }
+
+  @media (max-width: 640px) {
+    .breadcrumb-list {
+      font-size: 0.75rem;
+    }
+
+    .breadcrumb-separator {
+      margin: 0 0.25rem;
+    }
+  }
+</style>
