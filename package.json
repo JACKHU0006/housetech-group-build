@@ -1,8 +1,1 @@
-{
-  "name": "housetech-group",
-  "version": "1.0.0",
-  "private": true,
-  "scripts": {
-    "build": "node -e \"const fs=require('fs');const p=require('path');function cp(s,d){if(!fs.existsSync(d))fs.mkdirSync(d,{recursive:true});for(const e of fs.readdirSync(s)){const sp=p.join(s,e),dp=p.join(d,e);fs.statSync(sp).isDirectory()?cp(sp,dp):fs.copyFileSync(sp,dp)}};cp('public','dist')\""
-  }
-}
+{"name":"housetech-group","version":"1.0.0","private":true,"scripts":{"build":"node build.js"}}
