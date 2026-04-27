@@ -1,8 +1,1 @@
-{
-    "private":  true,
-    "name":  "housetech-group",
-    "version":  "1.0.0",
-    "scripts":  {
-                    "build":  "mkdir -p dist \u0026\u0026 cp -r * dist/"
-                }
-}
+{"name":"housetech-group","version":"1.0.0","type":"module","scripts":{"dev":"astro dev","build":"astro build","preview":"astro preview"},"dependencies":{"astro":"^4.0.0"}}
