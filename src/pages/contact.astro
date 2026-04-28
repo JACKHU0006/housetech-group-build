@@ -2,12 +2,34 @@
 import Layout from '../layouts/Layout.astro';
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
+import Schema from '../components/Schema.astro';
 
 const title = 'Contact HouseTech Group - B2B Kitchen Appliance Manufacturer | Get a Quote';
 const description = 'Contact HouseTech Group for B2B kitchen appliance inquiries, OEM/ODM quotes, and factory visits. Professional export team ready to assist. Fast response within 24 hours. Range Hoods, Gas Stoves, Ovens, Air Fryers.';
 ---
 
 <Layout title={title} description={description}>
+  <Schema type="LocalBusiness" data={{
+    name: 'HouseTech Group',
+    description: 'B2B kitchen appliance manufacturer specializing in Range Hoods, Gas Stoves, Ovens, and Air Fryers',
+    url: 'https://www.housetech-ch.com',
+    telephone: '+86 137 0299 5368',
+    email: 'sales@housetech-ch.com',
+    address: {
+      streetAddress: 'No. 888, Industrial Park, Xiaolan',
+      addressLocality: 'Zhongshan',
+      addressRegion: 'Guangdong',
+      postalCode: '528415',
+      addressCountry: 'CN'
+    },
+    openingHoursSpecification: {
+      dayOfWeek: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'],
+      opens: '08:30',
+      closes: '18:00'
+    },
+    priceRange: '$$',
+    areaServed: ['US', 'UK', 'DE', 'FR', 'AE', 'SA', 'AU', 'CA', 'BR', 'MX', 'IN', 'ID', 'TH', 'VN', 'PH', 'MY', 'SG', 'NG', 'ZA', 'EG', 'KE']
+  }} />
   <Header activeNav="contact" />
 
   <!-- Page Hero -->

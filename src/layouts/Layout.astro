@@ -1,5 +1,6 @@
 ---
 import '../styles/global.css';
+import CookieConsent from '../components/CookieConsent.astro';
 
 interface Props {
   title: string;
@@ -117,6 +118,7 @@ const logoUrl = '/logo-full.svg';
 </head>
 <body>
   <slot />
+  <CookieConsent />
 
   <!-- No-JS fallback message -->
   <noscript>
