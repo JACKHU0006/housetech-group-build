@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
+
+  <!-- Air Fryer Images -->
+  <url>
+    <loc>https://housetech-ch.com/products/air-fryer/ht-af12l-large</loc>
+    <image:image>
+      <image:loc>https://housetech-ch.com/images/products/air-fryer/ht-af12l-large-1.jpg</image:loc>
+      <image:title>HT-AF12L Large Air Fryer</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://housetech-ch.com/images/products/air-fryer/ht-af12l-large-2.jpg</image:loc>
+      <image:title>HT-AF12L Large Air Fryer - Side View</image:title>
+    </image:image>
+  </url>
+
+  <url>
+    <loc>https://housetech-ch.com/products/air-fryer/ht-af55-compact</loc>
+    <image:image>
+      <image:loc>https://housetech-ch.com/images/products/air-fryer/ht-af55-compact-1.jpg</image:loc>
+      <image:title>HT-AF55 Compact Air Fryer</image:title>
+    </image:image>
+  </url>
+
+  <url>
+    <loc>https://housetech-ch.com/products/air-fryer/ht-af80-digital</loc>
+    <image:image>
+      <image:loc>https://housetech-ch.com/images/products/air-fryer/ht-af80-digital-1.jpg</image:loc>
+      <image:title>HT-AF80 Digital Air Fryer</image:title>
+    </image:image>
+  </url>
+
+  <url>
+    <loc>https://housetech-ch.com/products/air-fryer/ht-afs-smart</loc>
+    <image:image>
+      <image:loc>https://housetech-ch.com/images/products/air-fryer/ht-afs-smart-1.jpg</image:loc>
+      <image:title>HT-AFS Smart WiFi Air Fryer</image:title>
+    </image:image>
+  </url>
+
+  <!-- Water Heater Images -->
+  <url>
+    <loc>https://housetech-ch.com/products/water-heater/ht-wh12-compact</loc>
+    <image:image>
+      <image:loc>https://housetech-ch.com/images/products/water-heater/ht-wh12-compact-1.jpg</image:loc>
+      <image:title>HT-WH12 Compact Water Heater</image:title>
+    </image:image>
+  </url>
+
+  <url>
+    <loc>https://housetech-ch.com/products/water-heater/ht-wh100-solar</loc>
+    <image:image>
+      <image:loc>https://housetech-ch.com/images/products/water-heater/ht-wh100-solar-1.jpg</image:loc>
+      <image:title>HT-WH100 Solar Water Heater</image:title>
+    </image:image>
+  </url>
+
+  <!-- Product Category Images -->
+  <url>
+    <loc>https://housetech-ch.com/products</loc>
+    <image:image>
+      <image:loc>https://housetech-ch.com/images/products/hero-banner.jpg</image:loc>
+      <image:title>HouseTech Group Products</image:title>
+    </image:image>
+  </url>
+
+  <url>
+    <loc>https://housetech-ch.com/products/air-fryer</loc>
+    <image:image>
+      <image:loc>https://housetech-ch.com/images/products/air-fryer/category-hero.jpg</image:loc>
+      <image:title>Air Fryer Category</image:title>
+    </image:image>
+  </url>
+
+  <url>
+    <loc>https://housetech-ch.com/products/water-heater</loc>
+    <image:image>
+      <image:loc>https://housetech-ch.com/images/products/water-heater/category-hero.jpg</image:loc>
+      <image:title>Water Heater Category</image:title>
+    </image:image>
+  </url>
+
+</urlset>
