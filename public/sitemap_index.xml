@@ -16,4 +16,8 @@
     <loc>https://www.housetech-ch.com/sitemap-news-article.xml</loc>
     <lastmod>2026-04-29</lastmod>
   </sitemap>
+  <sitemap>
+    <loc>https://www.housetech-ch.com/sitemap-images.xml</loc>
+    <lastmod>2026-04-29</lastmod>
+  </sitemap>
 </sitemapindex>
