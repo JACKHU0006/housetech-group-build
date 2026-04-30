@@ -1,51 +1,23 @@
-# Robots.txt for housetech-ch.com
-# HouseTech Group - Professional Kitchen Appliance Manufacturer
-# Last updated: 2026-04-29
-# Default rules for all user agents
 User-agent: *
 Allow: /
-Allow: /images/
-Allow: /styles/
-Allow: /products/
-Allow: /about/
-Allow: /factory/
-Allow: /team/
-Allow: /service/
-Allow: /careers/
-Allow: /faq/
-Allow: /news/
-Allow: /contact/
-Allow: /support/
-Allow: /privacy/
-# Disallow crawling of private/admin areas
+
+# Block admin & login pages
 Disallow: /admin/
-Disallow: /api/
-Disallow: /.env
-Disallow: /.git/
-Disallow: /node_modules/
-Disallow: /*.env*
-Disallow: /*backup*
-Disallow: /*cache*
-# Crawl delay for general bots (in seconds)
-Crawl-delay: 1
-# AI-specific crawlers - Allow for AI search engines
-User-agent: GPTBot
-Allow: /
-User-agent: CCBot
-Allow: /
-User-agent: anthropic-ai
-Allow: /
-User-agent: Claude-Web
-Allow: /
-User-agent: Perplexity
-Allow: /
-User-agent: Bytespider
-Allow: /
-# Sitemap locations
-# Primary sitemap index (includes all sitemaps)
-Sitemap: https://housetech-ch.com/sitemap_index.xml
-# Individual sitemaps
-Sitemap: https://housetech-ch.com/sitemap.xml
-Sitemap: https://housetech-ch.com/sitemap-images.xml
-# Host preference
-Host: https://housetech-ch.com
+Disallow: /login/
+Disallow: /wp-admin/
+Disallow: /wp-login.php
+
+# Block search, pagination, tag & archive pages
+Disallow: /search/
+Disallow: /*?page=
+Disallow: /*/page/
+Disallow: /tag/
+Disallow: /archive/
+
+# Block temporary & cache directories
+Disallow: /cgi-bin/
+Disallow: /temp/
+Disallow: /cache/
+
+# Sitemap Index
+Sitemap: https://www.housetech-ch.com/sitemap_index.xml
