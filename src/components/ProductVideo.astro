@@ -1,0 +1,374 @@
+---
+interface VideoItem {
+  title: string;
+  thumbnail: string;
+  videoUrl: string;
+  description?: string;
+}
+
+interface Props {
+  videos?: VideoItem[];
+}
+
+const { videos = [] } = Astro.props;
+
+const defaultVideos: VideoItem[] = [
+  {
+    title: 'HouseTech Factory Tour',
+    thumbnail: '/images/products/factory-tour.jpg',
+    videoUrl: 'https://www.youtube.com/embed/your-video-id-1',
+    description: 'Take a virtual tour of our 30,000 sqm manufacturing facility'
+  },
+  {
+    title: 'Product Quality Inspection',
+    thumbnail: '/images/products/quality-check.jpg',
+    videoUrl: 'https://www.youtube.com/embed/your-video-id-2',
+    description: 'See our rigorous quality control process in action'
+  },
+  {
+    title: 'Installation Guide',
+    thumbnail: '/images/products/installation.jpg',
+    videoUrl: 'https://www.youtube.com/embed/your-video-id-3',
+    description: 'Step-by-step installation tutorial'
+  }
+];
+
+const displayVideos = videos.length > 0 ? videos : defaultVideos;
+---
+
+<section class="video-section" aria-labelledby="video-section-title">
+  <div class="video-header">
+    <h2 id="video-section-title" class="video-title">
+      <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true">
+        <polygon points="23 7 16 12 23 17 23 7"/>
+        <rect x="1" y="5" width="15" height="14" rx="2" ry="2"/>
+      </svg>
+      Product Videos & Tutorials
+    </h2>
+    <p class="video-subtitle">Learn more about our products and manufacturing process</p>
+  </div>
+
+  <div class="video-grid">
+    {displayVideos.map((video, index) => (
+      <div class="video-card" data-video-index={index}>
+        <div class="video-thumbnail" role="button" tabindex="0" aria-label={`Play video: ${video.title}`}>
+          <img 
+            src={video.thumbnail} 
+            alt={video.title}
+            loading="lazy"
+            width="400"
+            height="225"
+          />
+          <div class="video-overlay">
+            <div class="play-button" aria-hidden="true">
+              <svg width="48" height="48" viewBox="0 0 24 24" fill="white">
+                <polygon points="5 3 19 12 5 21 5 3"/>
+              </svg>
+            </div>
+          </div>
+          <div class="video-duration">2:45</div>
+        </div>
+        <div class="video-info">
+          <h3 class="video-card-title">{video.title}</h3>
+          {video.description && (
+            <p class="video-card-description">{video.description}</p>
+          )}
+        </div>
+      </div>
+    ))}
+  </div>
+
+  <!-- Video Modal -->
+  <div class="video-modal" id="videoModal" role="dialog" aria-modal="true" aria-labelledby="modalVideoTitle" hidden>
+    <div class="modal-backdrop"></div>
+    <div class="modal-container">
+      <button class="modal-close" aria-label="Close video" type="button">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <line x1="18" y1="6" x2="6" y2="18"/>
+          <line x1="6" y1="6" x2="18" y2="18"/>
+        </svg>
+      </button>
+      <div class="modal-content">
+        <iframe 
+          id="modalVideoIframe"
+          width="100%" 
+          height="100%" 
+          src="" 
+          title="Product Video"
+          frameborder="0" 
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+          allowfullscreen
+        ></iframe>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  .video-section {
+    margin-top: var(--spacing-3xl);
+    padding: var(--spacing-3xl) var(--spacing-xl);
+    background: white;
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-xl);
+  }
+
+  .video-header {
+    text-align: center;
+    margin-bottom: var(--spacing-2xl);
+  }
+
+  .video-title {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: var(--spacing-sm);
+    font-family: var(--font-display);
+    font-size: var(--font-size-2xl);
+    font-weight: 700;
+    color: var(--color-primary);
+    margin-bottom: var(--spacing-sm);
+  }
+
+  .video-title svg {
+    color: var(--color-accent);
+  }
+
+  .video-subtitle {
+    color: var(--color-text-light);
+    font-size: var(--font-size-lg);
+  }
+
+  .video-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: var(--spacing-lg);
+  }
+
+  .video-card {
+    border-radius: var(--radius-lg);
+    overflow: hidden;
+    border: 1px solid var(--color-border);
+    transition: all var(--transition-normal);
+    background: white;
+  }
+
+  .video-card:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-lg);
+    border-color: var(--color-accent);
+  }
+
+  .video-thumbnail {
+    position: relative;
+    aspect-ratio: 16/9;
+    cursor: pointer;
+    overflow: hidden;
+  }
+
+  .video-thumbnail img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform var(--transition-slow);
+  }
+
+  .video-card:hover .video-thumbnail img {
+    transform: scale(1.05);
+  }
+
+  .video-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+      to top,
+      rgba(0, 0, 0, 0.7) 0%,
+      rgba(0, 0, 0, 0.3) 50%,
+      transparent 100%
+    );
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0.9;
+    transition: opacity var(--transition-fast);
+  }
+
+  .video-card:hover .video-overlay {
+    opacity: 1;
+  }
+
+  .play-button {
+    width: 72px;
+    height: 72px;
+    border-radius: 50%;
+    background: var(--color-accent);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 20px rgba(247, 147, 30, 0.4);
+    transition: all var(--transition-fast);
+    padding-left: 4px;
+  }
+
+  .video-card:hover .play-button {
+    transform: scale(1.1);
+    box-shadow: 0 6px 30px rgba(247, 147, 30, 0.5);
+  }
+
+  .video-duration {
+    position: absolute;
+    bottom: var(--spacing-sm);
+    right: var(--spacing-sm);
+    background: rgba(0, 0, 0, 0.8);
+    color: white;
+    padding: 4px 8px;
+    border-radius: var(--radius-sm);
+    font-size: var(--font-size-xs);
+    font-weight: 600;
+  }
+
+  .video-info {
+    padding: var(--spacing-lg);
+  }
+
+  .video-card-title {
+    font-size: var(--font-size-lg);
+    font-weight: 600;
+    color: var(--color-primary);
+    margin-bottom: var(--spacing-xs);
+  }
+
+  .video-card-description {
+    font-size: var(--font-size-sm);
+    color: var(--color-text-light);
+    line-height: 1.6;
+  }
+
+  /* Video Modal */
+  .video-modal {
+    position: fixed;
+    inset: 0;
+    z-index: 9999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .video-modal[hidden] {
+    display: none;
+  }
+
+  .modal-backdrop {
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.9);
+  }
+
+  .modal-container {
+    position: relative;
+    width: 90vw;
+    max-width: 1000px;
+    aspect-ratio: 16/9;
+    background: black;
+    border-radius: var(--radius-lg);
+    overflow: hidden;
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+  }
+
+  .modal-close {
+    position: absolute;
+    top: var(--spacing-md);
+    right: var(--spacing-md);
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.1);
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    border: none;
+    z-index: 10;
+    transition: background var(--transition-fast);
+  }
+
+  .modal-close:hover {
+    background: rgba(255, 255, 255, 0.2);
+  }
+
+  .modal-content {
+    width: 100%;
+    height: 100%;
+  }
+
+  .modal-content iframe {
+    width: 100%;
+    height: 100%;
+  }
+
+  @media (max-width: 768px) {
+    .video-grid {
+      grid-template-columns: 1fr;
+    }
+
+    .video-section {
+      padding: var(--spacing-xl) var(--spacing-md);
+    }
+
+    .modal-container {
+      width: 95vw;
+    }
+  }
+</style>
+
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const videoCards = document.querySelectorAll('.video-card');
+    const modal = document.getElementById('videoModal');
+    const modalIframe = document.getElementById('modalVideoIframe') as HTMLIFrameElement;
+    const modalClose = document.querySelector('.modal-close');
+    const modalBackdrop = document.querySelector('.modal-backdrop');
+
+    const videos = [
+      'https://www.youtube.com/embed/your-video-id-1',
+      'https://www.youtube.com/embed/your-video-id-2',
+      'https://www.youtube.com/embed/your-video-id-3'
+    ];
+
+    function openModal(index: number) {
+      if (modal && modalIframe) {
+        modalIframe.src = videos[index] + '?autoplay=1';
+        modal.removeAttribute('hidden');
+        document.body.style.overflow = 'hidden';
+      }
+    }
+
+    function closeModal() {
+      if (modal && modalIframe) {
+        modalIframe.src = '';
+        modal.setAttribute('hidden', '');
+        document.body.style.overflow = '';
+      }
+    }
+
+    videoCards.forEach((card, index) => {
+      card.addEventListener('click', () => openModal(index));
+      card.addEventListener('keydown', (e) => {
+        if ((e as KeyboardEvent).key === 'Enter' || (e as KeyboardEvent).key === ' ') {
+          e.preventDefault();
+          openModal(index);
+        }
+      });
+    });
+
+    modalClose?.addEventListener('click', closeModal);
+    modalBackdrop?.addEventListener('click', closeModal);
+
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape' && !modal?.hasAttribute('hidden')) {
+        closeModal();
+      }
+    });
+  });
+</script>

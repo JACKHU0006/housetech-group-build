@@ -1,0 +1,220 @@
+---
+---
+
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const isTouchDevice = 'ontouchstart' in window || navigator.maxTouchPoints > 0;
+
+    if (isTouchDevice) {
+      document.body.classList.add('touch-device');
+    }
+
+    const touchElements = document.querySelectorAll('button, a, [role="button"]');
+
+    touchElements.forEach(element => {
+      element.addEventListener('touchstart', function() {
+        this.classList.add('touch-active');
+      }, { passive: true });
+
+      element.addEventListener('touchend', function() {
+        setTimeout(() => {
+          this.classList.remove('touch-active');
+        }, 150);
+      }, { passive: true });
+    });
+
+    let touchStartX = 0;
+    let touchStartY = 0;
+
+    document.addEventListener('touchstart', (e) => {
+      touchStartX = e.touches[0].clientX;
+      touchStartY = e.touches[0].clientY;
+    }, { passive: true });
+
+    document.addEventListener('touchend', (e) => {
+      const touchEndX = e.changedTouches[0].clientX;
+      const touchEndY = e.changedTouches[0].clientY;
+      const deltaX = touchEndX - touchStartX;
+      const deltaY = touchEndY - touchStartY;
+
+      if (Math.abs(deltaX) < 10 && Math.abs(deltaY) < 10) {
+        return;
+      }
+    }, { passive: true });
+
+    const formInputs = document.querySelectorAll('input, textarea, select');
+
+    formInputs.forEach(input => {
+      input.addEventListener('focus', function() {
+        const label = this.previousElementSibling;
+        if (label && label.tagName === 'LABEL') {
+          label.style.color = 'var(--color-accent)';
+        }
+      });
+
+      input.addEventListener('blur', function() {
+        const label = this.previousElementSibling;
+        if (label && label.tagName === 'LABEL') {
+          label.style.color = '';
+        }
+      });
+    });
+
+    const heroSection = document.querySelector('.hero');
+    if (heroSection) {
+      heroSection.addEventListener('touchmove', (e) => {
+        if (window.scrollY === 0) {
+          const deltaY = e.touches[0].clientY;
+          if (deltaY > 50) {
+            e.preventDefault();
+          }
+        }
+      }, { passive: false });
+    }
+
+    const mobileNav = document.querySelector('.nav');
+    const navOverlay = document.createElement('div');
+    navOverlay.className = 'nav-overlay';
+    navOverlay.style.cssText = `
+      position: fixed;
+      inset: 0;
+      background: rgba(0, 0, 0, 0.5);
+      opacity: 0;
+      visibility: hidden;
+      transition: all 0.3s ease;
+      z-index: 998;
+    `;
+    document.body.appendChild(navOverlay);
+
+    const updateNavOverlay = () => {
+      if (mobileNav?.classList.contains('open')) {
+        navOverlay.style.opacity = '1';
+        navOverlay.style.visibility = 'visible';
+      } else {
+        navOverlay.style.opacity = '0';
+        navOverlay.style.visibility = 'hidden';
+      }
+    };
+
+    navOverlay.addEventListener('click', () => {
+      mobileNav?.classList.remove('open');
+      document.getElementById('mobileToggle')?.classList.remove('open');
+      document.getElementById('mobileToggle')?.setAttribute('aria-expanded', 'false');
+      updateNavOverlay();
+    });
+
+    const mobileToggle = document.getElementById('mobileToggle');
+    if (mobileToggle) {
+      mobileToggle.addEventListener('click', updateNavOverlay);
+    }
+
+    const lazyImages = document.querySelectorAll('img[loading="lazy"]');
+
+    if ('IntersectionObserver' in window) {
+      const imageObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            const img = entry.target as HTMLImageElement;
+            if (img.dataset.src) {
+              img.src = img.dataset.src;
+              img.removeAttribute('data-src');
+            }
+            imageObserver.unobserve(img);
+          }
+        });
+      });
+
+      lazyImages.forEach(img => imageObserver.observe(img));
+    }
+
+    const tables = document.querySelectorAll('table');
+    tables.forEach(table => {
+      const wrapper = document.createElement('div');
+      wrapper.style.cssText = `
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+        max-width: 100%;
+      `;
+      table.parentNode?.insertBefore(wrapper, table);
+      wrapper.appendChild(table);
+    });
+
+    const whatsappButtons = document.querySelectorAll('a[href*="wa.me"]');
+    whatsappButtons.forEach(button => {
+      button.setAttribute('target', '_blank');
+      button.setAttribute('rel', 'noopener noreferrer');
+    });
+
+    const links = document.querySelectorAll('a');
+    links.forEach(link => {
+      const href = link.getAttribute('href');
+      if (href && !href.startsWith('#') && !href.startsWith('mailto:') && !href.startsWith('tel:')) {
+        link.setAttribute('rel', 'noopener noreferrer');
+      }
+    });
+
+    if ('ontouchstart' in window) {
+      document.documentElement.style.setProperty('--hover-size', '44px');
+      document.documentElement.style.setProperty('--touch-target', '48px');
+    } else {
+      document.documentElement.style.setProperty('--hover-size', 'auto');
+      document.documentElement.style.setProperty('--touch-target', 'auto');
+    }
+  });
+</script>
+
+<style>
+  .touch-active {
+    opacity: 0.7;
+    transform: scale(0.98);
+  }
+
+  a.touch-active,
+  button.touch-active {
+    background-color: rgba(247, 147, 30, 0.1);
+  }
+
+  input:focus,
+  textarea:focus,
+  select:focus {
+    border-color: var(--color-accent) !important;
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(247, 147, 30, 0.1);
+  }
+
+  img {
+    touch-action: pan-y;
+  }
+
+  .touch-device {
+    -webkit-tap-highlight-color: rgba(247, 147, 30, 0.2);
+  }
+
+  .touch-device * {
+    -webkit-touch-callout: none;
+  }
+
+  .touch-device a[href]:after,
+  .touch-device button:after {
+    content: '';
+  }
+
+  @media (max-width: 768px) {
+    a,
+    button {
+      min-height: var(--touch-target, 44px);
+      min-width: var(--touch-target, 44px);
+    }
+
+    .nav-overlay {
+      display: block !important;
+    }
+  }
+
+  @media (hover: hover) {
+    .touch-active {
+      opacity: 1;
+      transform: scale(1);
+    }
+  }
+</style>

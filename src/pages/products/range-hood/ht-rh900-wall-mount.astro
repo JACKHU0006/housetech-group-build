@@ -2,6 +2,7 @@
 import Layout from '../../../layouts/Layout.astro';
 import Header from '../../../components/Header.astro';
 import Footer from '../../../components/Footer.astro';
+import Testimonials from '../../../components/Testimonials.astro';
 
 const title = 'HT-RH900 Wall Mount Range Hood - HouseTech Group | 90cm Range Hood, 1100m³/h Extraction';
 const description = 'HouseTech HT-RH900 Wall Mount Range Hood: 90cm width, 1100m³/h extraction rate, LED lights, touch control. Premium stainless steel kitchen hood manufacturer.';
@@ -222,6 +223,9 @@ const relatedProducts = [
         <p style="color: var(--color-text-light); margin-bottom: var(--spacing-lg); max-width: 600px; margin-left: auto; margin-right: auto;">HouseTech Group has been a trusted name in kitchen appliances for years. When you choose HouseTech, you get CE/CB certified products backed by comprehensive warranty and dedicated OEM/ODM support.</p>
         <a href="/contact" class="btn btn-primary">Contact HouseTech for OEM/ODM Inquiries →</a>
       </div>
+
+      <!-- Customer Testimonials -->
+      <Testimonials product={product.name} />
 
       <!-- Related Products -->
       <div class="related-products">

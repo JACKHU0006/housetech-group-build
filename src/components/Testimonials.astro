@@ -1,0 +1,333 @@
+---
+interface Testimonial {
+  name: string;
+  company: string;
+  country: string;
+  rating: number;
+  comment: string;
+  product: string;
+  date: string;
+}
+
+interface Props {
+  product?: string;
+}
+
+const { product } = Astro.props;
+
+const testimonials: Testimonial[] = [
+  {
+    name: "Michael Schneider",
+    company: "EuroKitchen AG",
+    country: "Germany",
+    rating: 5,
+    comment: "HouseTech's range hoods have exceeded our expectations. The build quality is exceptional, and the OEM customization options allowed us to create a truly premium product line for our German market. Their professional team made the entire process seamless from concept to delivery.",
+    product: "HT-RH900 Wall Mount Range Hood",
+    date: "2024-08-15"
+  },
+  {
+    name: "Sarah Johnson",
+    company: "Pacific Appliances Ltd",
+    country: "Australia",
+    rating: 5,
+    comment: "We've been working with HouseTech for over 3 years now. Their ETL-certified products meet all Australian standards, and the quality consistency is remarkable. The technical support and communication throughout our orders is outstanding.",
+    product: "HT-GH243 4-Burner Gas Stove",
+    date: "2024-07-22"
+  },
+  {
+    name: "Ahmed Al-Rashid",
+    company: "Gulf Trading Co.",
+    country: "United Arab Emirates",
+    rating: 5,
+    comment: "HouseTech's SASO-certified water heaters have been a bestseller in our portfolio. The energy efficiency ratings exceed regional requirements, and our customers love the modern design. The 2-year warranty gives us confidence to offer excellent after-sales support.",
+    product: "HT-WH80 Instant Gas Water Heater",
+    date: "2024-09-10"
+  },
+  {
+    name: "Carlos Martinez",
+    company: "LatinHome Distributors",
+    country: "Mexico",
+    rating: 5,
+    comment: "Our partnership with HouseTech has been transformative for our business. The OEM/ODM services allowed us to launch our own brand of kitchen appliances with professional quality at competitive factory pricing. Highly recommended B2B partner.",
+    product: "Kitchen Appliance Sets",
+    date: "2024-06-18"
+  },
+  {
+    name: "Emma Thompson",
+    company: "Britannia Home Solutions",
+    country: "United Kingdom",
+    rating: 5,
+    comment: "The CE-certified built-in ovens from HouseTech are top quality. The thermal efficiency and cooking performance rival established European brands at much better pricing. HouseTech's R&D team was responsive to our specific market requirements.",
+    product: "HT-OV65 Convection Steam Oven",
+    date: "2024-10-05"
+  },
+  {
+    name: "James Chen",
+    company: "Asia Pacific Trading",
+    country: "Singapore",
+    rating: 5,
+    comment: "HouseTech's induction cookers have become our best-selling product line. The sleek designs appeal to modern Singaporean homes, and the energy efficiency ratings help our customers save on electricity bills. Great OEM partner for custom branding projects.",
+    product: "HT-IC4Q 4-Burner Induction Cooker",
+    date: "2024-08-28"
+  }
+];
+
+const filteredTestimonials = product 
+  ? testimonials.filter(t => t.product.toLowerCase().includes(product.toLowerCase())) 
+  : testimonials;
+---
+
+<section class="testimonials-section" aria-labelledby="testimonials-title">
+  <div class="testimonials-header">
+    <h2 id="testimonials-title" class="testimonials-title">
+      <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true">
+        <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+      </svg>
+      Customer Reviews & Testimonials
+    </h2>
+    <p class="testimonials-subtitle">Trusted by B2B partners worldwide</p>
+  </div>
+  
+  <div class="testimonials-grid">
+    {filteredTestimonials.slice(0, 6).map((testimonial) => (
+      <article class="testimonial-card" itemscope itemtype="https://schema.org/Review">
+        <div class="testimonial-header">
+          <div class="testimonial-rating" itemprop="reviewRating" itemscope itemtype="https://schema.org/Rating">
+            {[...Array(5)].map((_, i) => (
+              <svg 
+                width="18" 
+                height="18" 
+                viewBox="0 0 24 24" 
+                fill={i < testimonial.rating ? "currentColor" : "none"} 
+                stroke="currentColor" 
+                stroke-width="1.5"
+                class={i < testimonial.rating ? "star-filled" : "star-empty"}
+                aria-hidden="true"
+              >
+                <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+              </svg>
+            ))}
+            <meta itemprop="ratingValue" content={testimonial.rating.toString()} />
+          </div>
+          <time class="testimonial-date" datetime={testimonial.date}>
+            {new Date(testimonial.date).toLocaleDateString('en-US', { year: 'numeric', month: 'long' })}
+          </time>
+        </div>
+        
+        <blockquote class="testimonial-content" itemprop="reviewBody">
+          <p>"{testimonial.comment}"</p>
+        </blockquote>
+        
+        <div class="testimonial-author" itemprop="author" itemscope itemtype="https://schema.org/Person">
+          <div class="testimonial-avatar" aria-hidden="true">
+            {testimonial.name.split(' ').map(n => n[0]).join('')}
+          </div>
+          <div class="testimonial-info">
+            <strong class="testimonial-name" itemprop="name">{testimonial.name}</strong>
+            <span class="testimonial-company" itemprop="worksFor" itemscope itemtype="https://schema.org/Organization">
+              <span itemprop="name">{testimonial.company}</span>
+            </span>
+            <span class="testimonial-country">{testimonial.country}</span>
+          </div>
+        </div>
+        
+        <div class="testimonial-product" itemprop="itemReviewed" itemscope itemtype="https://schema.org/Product">
+          <span class="product-label">Product:</span>
+          <span itemprop="name">{testimonial.product}</span>
+        </div>
+      </article>
+    ))}
+  </div>
+  
+  <div class="testimonials-cta">
+    <p>Join 1,000+ global B2B partners who trust HouseTech Group</p>
+    <a href="/contact" class="btn btn-primary">Become a Partner →</a>
+  </div>
+</section>
+
+<style>
+  .testimonials-section {
+    margin-top: var(--spacing-3xl);
+    padding: var(--spacing-3xl) var(--spacing-xl);
+    background: linear-gradient(135deg, #f8fafc 0%, #f1f5f9 100%);
+    border-radius: var(--radius-xl);
+  }
+
+  .testimonials-header {
+    text-align: center;
+    margin-bottom: var(--spacing-2xl);
+  }
+
+  .testimonials-title {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: var(--spacing-sm);
+    font-family: var(--font-display);
+    font-size: var(--font-size-2xl);
+    font-weight: 700;
+    color: var(--color-primary);
+    margin-bottom: var(--spacing-sm);
+  }
+
+  .testimonials-title svg {
+    color: #fbbf24;
+  }
+
+  .testimonials-subtitle {
+    color: var(--color-text-light);
+    font-size: var(--font-size-lg);
+  }
+
+  .testimonials-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+    gap: var(--spacing-lg);
+    margin-bottom: var(--spacing-2xl);
+  }
+
+  .testimonial-card {
+    background: white;
+    padding: var(--spacing-xl);
+    border-radius: var(--radius-lg);
+    border: 1px solid var(--color-border);
+    transition: all var(--transition-normal);
+    position: relative;
+  }
+
+  .testimonial-card::before {
+    content: '"';
+    position: absolute;
+    top: var(--spacing-md);
+    right: var(--spacing-lg);
+    font-size: 4rem;
+    font-family: Georgia, serif;
+    color: var(--color-accent);
+    opacity: 0.1;
+    line-height: 1;
+  }
+
+  .testimonial-card:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-lg);
+    border-color: var(--color-accent);
+  }
+
+  .testimonial-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: var(--spacing-md);
+  }
+
+  .testimonial-rating {
+    display: flex;
+    gap: 2px;
+  }
+
+  .testimonial-rating svg {
+    color: #fbbf24;
+  }
+
+  .star-empty {
+    color: #d1d5db;
+  }
+
+  .testimonial-date {
+    font-size: var(--font-size-xs);
+    color: var(--color-text-muted);
+  }
+
+  .testimonial-content {
+    margin-bottom: var(--spacing-lg);
+  }
+
+  .testimonial-content p {
+    color: var(--color-text);
+    line-height: 1.7;
+    font-size: var(--font-size-sm);
+    font-style: italic;
+  }
+
+  .testimonial-author {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-md);
+    margin-bottom: var(--spacing-md);
+    padding-bottom: var(--spacing-md);
+    border-bottom: 1px solid var(--color-border-light);
+  }
+
+  .testimonial-avatar {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, var(--color-primary), var(--color-primary-light));
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    font-size: var(--font-size-sm);
+    flex-shrink: 0;
+  }
+
+  .testimonial-info {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+  }
+
+  .testimonial-name {
+    font-size: var(--font-size-base);
+    color: var(--color-primary);
+    font-weight: 600;
+  }
+
+  .testimonial-company {
+    font-size: var(--font-size-sm);
+    color: var(--color-text-light);
+  }
+
+  .testimonial-country {
+    font-size: var(--font-size-xs);
+    color: var(--color-accent);
+    font-weight: 500;
+  }
+
+  .testimonial-product {
+    font-size: var(--font-size-xs);
+    color: var(--color-text-muted);
+    background: var(--color-bg-alt);
+    padding: var(--spacing-xs) var(--spacing-sm);
+    border-radius: var(--radius-sm);
+    display: inline-block;
+  }
+
+  .product-label {
+    font-weight: 600;
+    margin-right: 4px;
+  }
+
+  .testimonials-cta {
+    text-align: center;
+    padding-top: var(--spacing-xl);
+    border-top: 1px solid var(--color-border);
+  }
+
+  .testimonials-cta p {
+    color: var(--color-text-light);
+    margin-bottom: var(--spacing-md);
+    font-size: var(--font-size-lg);
+  }
+
+  @media (max-width: 768px) {
+    .testimonials-grid {
+      grid-template-columns: 1fr;
+    }
+
+    .testimonials-section {
+      padding: var(--spacing-xl) var(--spacing-md);
+    }
+  }
+</style>

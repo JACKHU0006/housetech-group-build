@@ -26,10 +26,33 @@ interface OrganizationSchemaProps {
   logo: string;
 }
 
+interface LocalBusinessSchemaProps {
+  name: string;
+  description: string;
+  url: string;
+  telephone: string;
+  email: string;
+  address: {
+    streetAddress: string;
+    addressLocality: string;
+    addressRegion: string;
+    postalCode?: string;
+    addressCountry: string;
+  };
+  openingHoursSpecification?: {
+    dayOfWeek: string[];
+    opens: string;
+    closes: string;
+  };
+  priceRange?: string;
+  areaServed?: string[];
+}
+
 type Props = 
   | { type: 'product'; data: ProductSchemaProps }
   | { type: 'faq'; data: FAQSchemaProps }
-  | { type: 'organization'; data: OrganizationSchemaProps };
+  | { type: 'organization'; data: OrganizationSchemaProps }
+  | { type: 'localBusiness'; data: LocalBusinessSchemaProps };
 
 const { type, data } = Astro.props;
 
@@ -94,6 +117,35 @@ if (type === 'product') {
     "name": orgData.name,
     "url": orgData.url,
     "logo": orgData.logo
+  };
+} else if (type === 'localBusiness') {
+  const localData = data as LocalBusinessSchemaProps;
+  schemaData = {
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    "name": localData.name,
+    "description": localData.description,
+    "url": localData.url,
+    "telephone": localData.telephone,
+    "email": localData.email,
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": localData.address.streetAddress,
+      "addressLocality": localData.address.addressLocality,
+      "addressRegion": localData.address.addressRegion,
+      ...(localData.address.postalCode && { "postalCode": localData.address.postalCode }),
+      "addressCountry": localData.address.addressCountry
+    },
+    ...(localData.openingHoursSpecification && {
+      "openingHoursSpecification": {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": localData.openingHoursSpecification.dayOfWeek,
+        "opens": localData.openingHoursSpecification.opens,
+        "closes": localData.openingHoursSpecification.closes
+      }
+    }),
+    ...(localData.priceRange && { "priceRange": localData.priceRange }),
+    ...(localData.areaServed && { "areaServed": localData.areaServed })
   };
 }
 ---

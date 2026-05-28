@@ -116,26 +116,26 @@ const description = 'Contact HouseTech Group for B2B kitchen appliance inquiries
           <div style="background: white; padding: var(--spacing-xl); border-radius: var(--radius-lg); border: 1px solid var(--color-border); box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);">
             <h2 style="margin-bottom: var(--spacing-lg);">Send Us a Message</h2>
 
-            <form action="mailto:sales@housetech-ch.com?subject=Inquiry from Website (housetech-ch.com)" method="POST" enctype="text/plain" style="display: flex; flex-direction: column; gap: var(--spacing-md);">
+            <form id="contactForm" style="display: flex; flex-direction: column; gap: var(--spacing-md);">
               <div style="display: grid; grid-template-columns: 1fr 1fr; gap: var(--spacing-md);">
                 <div>
-                  <label style="display: block; font-size: var(--font-size-sm); font-weight: 600; margin-bottom: 0.35rem; color: var(--color-primary);">First Name *</label>
-                  <input type="text" name="firstName" required placeholder="John" style="width: 100%; padding: 0.75rem; border: 1px solid var(--color-border); border-radius: var(--radius-md); font-family: inherit; font-size: var(--font-size-base);" />
+                  <label for="firstName" style="display: block; font-size: var(--font-size-sm); font-weight: 600; margin-bottom: 0.35rem; color: var(--color-primary);">First Name *</label>
+                  <input type="text" id="firstName" name="firstName" required placeholder="John" style="width: 100%; padding: 0.75rem; border: 1px solid var(--color-border); border-radius: var(--radius-md); font-family: inherit; font-size: var(--font-size-base);" />
                 </div>
                 <div>
-                  <label style="display: block; font-size: var(--font-size-sm); font-weight: 600; margin-bottom: 0.35rem; color: var(--color-primary);">Last Name *</label>
-                  <input type="text" name="lastName" required placeholder="Smith" style="width: 100%; padding: 0.75rem; border: 1px solid var(--color-border); border-radius: var(--radius-md); font-family: inherit; font-size: var(--font-size-base);" />
+                  <label for="lastName" style="display: block; font-size: var(--font-size-sm); font-weight: 600; margin-bottom: 0.35rem; color: var(--color-primary);">Last Name *</label>
+                  <input type="text" id="lastName" name="lastName" required placeholder="Smith" style="width: 100%; padding: 0.75rem; border: 1px solid var(--color-border); border-radius: var(--radius-md); font-family: inherit; font-size: var(--font-size-base);" />
                 </div>
               </div>
 
               <div>
-                <label style="display: block; font-size: var(--font-size-sm); font-weight: 600; margin-bottom: 0.35rem; color: var(--color-primary);">Email Address *</label>
-                <input type="email" name="email" required placeholder="john@company.com" style="width: 100%; padding: 0.75rem; border: 1px solid var(--color-border); border-radius: var(--radius-md); font-family: inherit; font-size: var(--font-size-base);" />
+                <label for="email" style="display: block; font-size: var(--font-size-sm); font-weight: 600; margin-bottom: 0.35rem; color: var(--color-primary);">Email Address *</label>
+                <input type="email" id="email" name="email" required placeholder="john@company.com" style="width: 100%; padding: 0.75rem; border: 1px solid var(--color-border); border-radius: var(--radius-md); font-family: inherit; font-size: var(--font-size-base);" />
               </div>
 
               <div>
-                <label style="display: block; font-size: var(--font-size-sm); font-weight: 600; margin-bottom: 0.35rem; color: var(--color-primary);">Country / Region *</label>
-                <select name="country" required style="width: 100%; padding: 0.75rem; border: 1px solid var(--color-border); border-radius: var(--radius-md); font-family: inherit; font-size: var(--font-size-base); background: white;">
+                <label for="country" style="display: block; font-size: var(--font-size-sm); font-weight: 600; margin-bottom: 0.35rem; color: var(--color-primary);">Country / Region *</label>
+                <select id="country" name="country" required style="width: 100%; padding: 0.75rem; border: 1px solid var(--color-border); border-radius: var(--radius-md); font-family: inherit; font-size: var(--font-size-base); background: white;">
                   <option value="">Select country/region...</option>
                   <option value="US">United States</option>
                   <option value="UK">United Kingdom</option>
@@ -163,8 +163,8 @@ const description = 'Contact HouseTech Group for B2B kitchen appliance inquiries
               </div>
 
               <div>
-                <label style="display: block; font-size: var(--font-size-sm); font-weight: 600; margin-bottom: 0.35rem; color: var(--color-primary);">Company Name</label>
-                <input type="text" name="company" placeholder="Your Company Ltd." style="width: 100%; padding: 0.75rem; border: 1px solid var(--color-border); border-radius: var(--radius-md); font-family: inherit; font-size: var(--font-size-base);" />
+                <label for="company" style="display: block; font-size: var(--font-size-sm); font-weight: 600; margin-bottom: 0.35rem; color: var(--color-primary);">Company Name</label>
+                <input type="text" id="company" name="company" placeholder="Your Company Ltd." style="width: 100%; padding: 0.75rem; border: 1px solid var(--color-border); border-radius: var(--radius-md); font-family: inherit; font-size: var(--font-size-base);" />
               </div>
 
               <div>
@@ -182,8 +182,8 @@ const description = 'Contact HouseTech Group for B2B kitchen appliance inquiries
               </div>
 
               <div>
-                <label style="display: block; font-size: var(--font-size-sm); font-weight: 600; margin-bottom: 0.35rem; color: var(--color-primary);">Product Interest</label>
-                <select name="product" style="width: 100%; padding: 0.75rem; border: 1px solid var(--color-border); border-radius: var(--radius-md); font-family: inherit; font-size: var(--font-size-base); background: white;">
+                <label for="product" style="display: block; font-size: var(--font-size-sm); font-weight: 600; margin-bottom: 0.35rem; color: var(--color-primary);">Product Interest</label>
+                <select id="product" name="product" style="width: 100%; padding: 0.75rem; border: 1px solid var(--color-border); border-radius: var(--radius-md); font-family: inherit; font-size: var(--font-size-base); background: white;">
                   <option value="">Select product category...</option>
                   <option value="range-hood">Range Hoods / Kitchen Hoods</option>
                   <option value="gas-stove">Gas Stoves & Built-in Hobs</option>
@@ -197,11 +197,13 @@ const description = 'Contact HouseTech Group for B2B kitchen appliance inquiries
               </div>
 
               <div>
-                <label style="display: block; font-size: var(--font-size-sm); font-weight: 600; margin-bottom: 0.35rem; color: var(--color-primary);">Message *</label>
-                <textarea name="message" required rows="5" placeholder="Please describe your requirements including quantity, specifications, target market, certifications needed, etc." style="width: 100%; padding: 0.75rem; border: 1px solid var(--color-border); border-radius: var(--radius-md); font-family: inherit; font-size: var(--font-size-base); resize: vertical;"></textarea>
+                <label for="message" style="display: block; font-size: var(--font-size-sm); font-weight: 600; margin-bottom: 0.35rem; color: var(--color-primary);">Message *</label>
+                <textarea id="message" name="message" required rows="5" placeholder="Please describe your requirements including quantity, specifications, target market, certifications needed, etc." style="width: 100%; padding: 0.75rem; border: 1px solid var(--color-border); border-radius: var(--radius-md); font-family: inherit; font-size: var(--font-size-base); resize: vertical;"></textarea>
               </div>
 
-              <button type="submit" class="btn btn-primary" style="width: 100%; padding: 0.875rem;">Send Message to HouseTech</button>
+              <div id="formStatus" style="display: none; padding: var(--spacing-md); border-radius: var(--radius-md); margin-bottom: var(--spacing-sm);"></div>
+
+              <button type="submit" id="submitBtn" class="btn btn-primary" style="width: 100%; padding: 0.875rem;">Send Message to HouseTech</button>
               <p style="text-align: center; font-size: var(--font-size-xs); color: var(--color-text-light);">HouseTech Group typically responds within 24 business hours.</p>
             </form>
           </div>
@@ -236,4 +238,48 @@ const description = 'Contact HouseTech Group for B2B kitchen appliance inquiries
   </section>
 
   <Footer />
+
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const form = document.getElementById('contactForm') as HTMLFormElement;
+      const formStatus = document.getElementById('formStatus');
+      const submitBtn = document.getElementById('submitBtn') as HTMLButtonElement;
+
+      if (form && formStatus && submitBtn) {
+        form.addEventListener('submit', async (e) => {
+          e.preventDefault();
+
+          submitBtn.disabled = true;
+          submitBtn.textContent = 'Sending...';
+
+          const formData = new FormData(form);
+          const data = Object.fromEntries(formData.entries());
+
+          console.log('Form submitted:', data);
+
+          if (typeof gtag !== 'undefined') {
+            gtag('event', 'generate_lead', {
+              event_category: 'engagement',
+              event_label: data.product as string || 'general',
+              value: 1
+            });
+          }
+
+          const mailtoLink = `mailto:sales@housetech-ch.com?subject=Inquiry from ${data.firstName} ${data.lastName} - ${data.company || 'N/A'}&body=Name: ${data.firstName} ${data.lastName}%0ACompany: ${data.company || 'N/A'}%0ACountry: ${data.country}%0AEmail: ${data.email}%0AProduct Interest: ${data.product || 'N/A'}%0A%0AMessage:%0A${data.message}`;
+
+          window.location.href = mailtoLink;
+
+          formStatus.style.display = 'block';
+          formStatus.style.background = '#dcfce7';
+          formStatus.style.color = '#166534';
+          formStatus.innerHTML = '<strong>✓ Message prepared!</strong> Your email client should open. If not, please email us directly at <a href="mailto:sales@housetech-ch.com" style="color: #166534; text-decoration: underline;">sales@housetech-ch.com</a>';
+
+          submitBtn.textContent = 'Send Message to HouseTech';
+          submitBtn.disabled = false;
+
+          form.reset();
+        });
+      }
+    });
+  </script>
 </Layout>
