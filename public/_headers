@@ -4,22 +4,41 @@
 */
 
 # Security Headers (global)
-/*  X-Frame-Options: DENY  X-Content-Type-Options: nosniff  Referrer-Policy: strict-origin-when-cross-origin  Permissions-Policy: camera=(), microphone=(), geolocation=()  Strict-Transport-Security: max-age=31536000; includeSubDomains  Content-Security-Policy: default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; img-src 'self' data: https:; font-src 'self' data:; connect-src 'self' https://www.google-analytics.com; frame-ancestors 'none'
+/*
+  X-Frame-Options: DENY
+  X-Content-Type-Options: nosniff
+  Referrer-Policy: strict-origin-when-cross-origin
+  Permissions-Policy: camera=(), microphone=(), geolocation=()
+  Strict-Transport-Security: max-age=31536000; includeSubDomains
+  Content-Security-Policy: default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; img-src 'self' data: https:; font-src 'self' data:; connect-src 'self' https://www.google-analytics.com; frame-ancestors 'none'
+*/
 
 # Cache static assets
-/public/*  Cache-Control: public, max-age=31536000, immutable
+/public/*
+  Cache-Control: public, max-age=31536000, immutable
 
-/*.js  Cache-Control: public, max-age=31536000, immutable
+/*.js
+  Cache-Control: public, max-age=31536000, immutable
 
-/*.css  Cache-Control: public, max-age=31536000, immutable
+/*.css
+  Cache-Control: public, max-age=31536000, immutable
 
-/*.jpg  Cache-Control: public, max-age=31536000, immutable
+/*.jpg
+  Cache-Control: public, max-age=31536000, immutable
 
-/*.png  Cache-Control: public, max-age=31536000, immutable
+/*.png
+  Cache-Control: public, max-age=31536000, immutable
 
-/*.svg  Cache-Control: public, max-age=31536000, immutable
+/*.svg
+  Cache-Control: public, max-age=31536000, immutable
 
-/*.woff2  Cache-Control: public, max-age=31536000, immutable
+/*.woff2
+  Cache-Control: public, max-age=31536000, immutable
 
 # HTML pages - short cache
-/*.html  Cache-Control: public, max-age=0, must-revalidate
+/*.html
+  Cache-Control: public, max-age=0, must-revalidate
+
+# Allow IndexNow key file access without restrictions
+/*.txt
+  Cache-Control: public, max-age=86400
