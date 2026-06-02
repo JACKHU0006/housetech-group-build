@@ -13,10 +13,19 @@
     "deploy": "echo 'Deploy completed - Cloudflare will auto-deploy from dist/'",
     "indexnow": "node indexnow.js",
     "indexnow:verify": "node indexnow.js verify",
-    "indexnow:submit": "node indexnow.js"
+    "indexnow:submit": "node indexnow.js",
+    "news": "node tools/news-auto-generator.js",
+    "news:dry": "node tools/news-auto-generator.js --dry-run",
+    "news:update-list": "node tools/news-list-updater.js",
+    "news:product": "node tools/news-auto-generator.js --type=product-launch",
+    "news:tech": "node tools/news-auto-generator.js --type=technology-innovation",
+    "news:event": "node tools/news-auto-generator.js --type=market-event",
+    "news:partner": "node tools/news-auto-generator.js --type=partnership",
+    "news:award": "node tools/news-auto-generator.js --type=award-certification",
+    "news:sustain": "node tools/news-auto-generator.js --type=sustainability"
   },
   "dependencies": {
-    "astro": "^4.16.0"
+    "astro": "^4.16.19"
   },
   "devDependencies": {
     "terser": "^5.48.0"
