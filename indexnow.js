@@ -323,14 +323,20 @@ async function main() {
   
   const args = process.argv.slice(2);
   const command = args[0];
+  const isForce = args.includes('--force') || args.includes('force');
   
-  if (args.length === 0) {
-    // Verify key first, then submit all URLs
-    const keyOk = await verifyKeyFile();
-    if (!keyOk) {
-      console.log('\n⚠️  Cannot submit without valid key file!');
-      console.log('   Please deploy the site first, or run "npm run indexnow:verify" to check.\n');
-      process.exit(1);
+  if (args.length === 0 || (isForce && args.length === 1)) {
+    // Verify key first, then submit all URLs (or force submit)
+    if (!isForce) {
+      const keyOk = await verifyKeyFile();
+      if (!keyOk) {
+        console.log('\n⚠️  Cannot submit without valid key file!');
+        console.log('   Please deploy the site first, or run "npm run indexnow:verify" to check.\n');
+        console.log('💡 Tip: Use "npm run indexnow -- --force" to bypass verification.\n');
+        process.exit(1);
+      }
+    } else {
+      console.log('⚡ Force mode: Skipping key file verification...\n');
     }
     await submitAllUrls();
   } else if (command === 'verify') {
@@ -341,18 +347,26 @@ async function main() {
     console.log('  node indexnow.js <url>               Submit a single URL');
     console.log('  node indexnow.js <url1> <url2>      Submit multiple URLs');
     console.log('  node indexnow.js verify              Verify key file accessibility');
+    console.log('  node indexnow.js --force             Force submit without verification');
     console.log('  node indexnow.js help                Show this help');
     console.log('\nCommands (npm run):');
     console.log('  npm run indexnow                     Submit all URLs');
+    console.log('  npm run indexnow -- --force          Force submit without verification');
     console.log('  npm run indexnow:verify             Verify key file');
   } else {
     // Submit specific URLs
-    const keyOk = await verifyKeyFile();
-    if (!keyOk) {
-      console.log('\n⚠️  Cannot submit without valid key file!');
-      process.exit(1);
+    if (!isForce) {
+      const keyOk = await verifyKeyFile();
+      if (!keyOk) {
+        console.log('\n⚠️  Cannot submit without valid key file!');
+        console.log('💡 Tip: Use "node indexnow.js <url> --force" to bypass verification.\n');
+        process.exit(1);
+      }
+    } else {
+      console.log('⚡ Force mode: Skipping key file verification...\n');
     }
-    await submitSpecificUrls(args);
+    const filteredArgs = args.filter(a => a !== '--force' && a !== 'force');
+    await submitSpecificUrls(filteredArgs);
   }
 }
 
