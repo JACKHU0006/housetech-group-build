@@ -5,6 +5,110 @@ import Footer from '../components/Footer.astro';
 
 const title = 'FAQ - HouseTech Group | Frequently Asked Questions';
 const description = 'Find answers to common questions about HouseTech Group products, OEM/ODM services, MOQ, pricing, shipping, certifications, and warranty for kitchen appliances.';
+
+// FAQ structured data for SEO and featured snippets
+const faqStructuredData = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What is HouseTech Group?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "HouseTech Group is a leading B2B manufacturer of kitchen appliances with over 15 years of experience. Headquartered in Zhongshan, Guangdong Province, HouseTech Group specializes in producing Range Hoods, Gas Stoves/Hobs, Ovens, Air Fryers, and Gas Water Heaters for global markets, serving clients in more than 50 countries across Europe, Middle East, Southeast Asia, and beyond."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Where is HouseTech Group's factory located?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "HouseTech Group's manufacturing facility is located in Zhongshan City, Guangdong Province, China — one of China's most established manufacturing hubs. Our factory spans over 30,000 square meters with 12 modern production lines, 500+ employees, and full ISO9001 certification."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What certifications do HouseTech products have?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "HouseTech Group holds comprehensive international certifications including ISO9001 (quality management), CE (Europe), CB scheme (international), ETL listing (North America), SASO/GCC (Middle East), and energy efficiency labels. We can also arrange additional certifications for specific target markets."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is the Minimum Order Quantity (MOQ) for HouseTech products?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "HouseTech Group offers flexible MOQ terms. Standard product orders start from as low as 100 units per model. OEM/ODM customized orders typically start at 300-500 units per model. For white-label programs with existing HouseTech designs, MOQ can be as low as 50-100 units."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What customization options does HouseTech offer for OEM/ODM?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "HouseTech Group offers extensive customization options including: custom logo and branding, color and finish modifications, packaging design, product specification adjustments, gas type compatibility, control panel design, voltage adaptation, and safety feature additions per regional requirements."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What payment terms does HouseTech accept?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "HouseTech Group accepts multiple payment methods: T/T (Telegraphic Transfer) — standard 30% deposit, 70% balance before shipment; L/C (Letter of Credit) — available for orders exceeding $30,000 USD; PayPal and credit cards — available for sample orders; Western Union — for small orders."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is HouseTech's production lead time?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "HouseTech production lead times: Standard products: 15-25 days. Custom/OEM products: 30-45 days. Bulk orders: 25-35 days for standard, 40-60 days for customized. Rush orders may be accommodated with a priority fee."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How long does shipping take from HouseTech's factory?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Estimated shipping transit times: Sea freight to North America (West Coast): 18-25 days; Europe: 28-40 days; Middle East: 20-30 days; Southeast Asia: 7-14 days; Air freight (all destinations): 3-7 days; Railway to Europe: 18-25 days."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Does HouseTech offer product samples?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes, HouseTech Group provides product samples for evaluation. Sample fees apply and are refundable against bulk orders. Sample delivery: 5-10 days by express courier. For customized OEM samples: 10-15 days."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What warranty does HouseTech offer?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "HouseTech Group offers 1-3 year warranty depending on product category and agreement. Standard warranty: 1 year for electronics, 2 years for structural components. Extended warranty available for OEM/ODM partners. Spare parts available throughout warranty period and beyond."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can I visit HouseTech's factory?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes! HouseTech Group welcomes B2B partners to tour our factory. We organize personalized factory visits for serious buyers. Contact us to schedule — visits typically arranged within 1-2 weeks of request."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How does HouseTech handle quality issues?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "HouseTech Group has a dedicated quality resolution process: contact us within 7 days with photos and description, our QC team investigates within 48 hours, and we arrange replacement units, repair credit, or refund as appropriate."
+      }
+    }
+  ]
+};
 ---
 
 <Layout title={title} description={description}>
@@ -150,6 +254,42 @@ const description = 'Find answers to common questions about HouseTech Group prod
           </details>
         </div>
 
+        <!-- Product Selection Guide -->
+        <div style="margin-bottom: var(--spacing-2xl);">
+          <span class="section-tag">Product Selection</span>
+          <h2 style="margin-top: var(--spacing-sm); margin-bottom: var(--spacing-lg);">How to Choose the Right Kitchen Appliances</h2>
+
+          <details style="margin-bottom: var(--spacing-md); border: 1px solid var(--color-border); border-radius: var(--radius-md); padding: var(--spacing-md); background: white;">
+            <summary style="font-weight: 600; font-size: var(--font-size-lg); cursor: pointer; color: var(--color-primary);">How do I choose the right range hood for my market?</summary>
+            <p style="margin-top: var(--spacing-sm); color: var(--color-text-light); line-height: 1.7;">Choosing the right range hood depends on your market's cooking habits and kitchen design. For Asian markets with high-heat wok cooking, choose powerful wall mount or ceiling mount hoods (airflow 800+ m³/h). For European markets, slim built-in or telescopic hoods suit modern minimalist kitchens. For commercial kitchens, opt for canopy hoods or island hoods with heavy-duty filters. HouseTech offers various extraction capacities from 400 m³/h to 1200 m³/h to meet different requirements.</p>
+          </details>
+
+          <details style="margin-bottom: var(--spacing-md); border: 1px solid var(--color-border); border-radius: var(--radius-md); padding: var(--spacing-md); background: white;">
+            <summary style="font-weight: 600; font-size: var(--font-size-lg); cursor: pointer; color: var(--color-primary);">What is the difference between gas, ceramic, and induction cookers?</summary>
+            <p style="margin-top: var(--spacing-sm); color: var(--color-text-light); line-height: 1.7;"><strong>Gas Stoves:</strong> Use natural gas or LPG, provide instant heat control, preferred in many Asian and European markets. <strong>Ceramic Cookers:</strong> Use radiant heating elements beneath a smooth glass surface, easy to clean, medium heat control. <strong>Induction Cookers:</strong> Use electromagnetic technology, most energy-efficient (90%+ efficiency), safest option with automatic shut-off when no cookware is detected. Each type has specific certification requirements depending on your target market regulations.</p>
+          </details>
+
+          <details style="margin-bottom: var(--spacing-md); border: 1px solid var(--color-border); border-radius: var(--radius-md); padding: var(--spacing-md); background: white;">
+            <summary style="font-weight: 600; font-size: var(--font-size-lg); cursor: pointer; color: var(--color-primary);">How do I select the right voltage for my country?</summary>
+            <p style="margin-top: var(--spacing-sm); color: var(--color-text-light); line-height: 1.7;">Voltage requirements vary by region: 110V/60Hz is standard in North America, Japan, and some Latin American countries. 220V/50Hz is used in Europe, Asia (including China), Africa, and Middle East. HouseTech products can be customized for either voltage. For dual-voltage products (110V/220V), we use universal motors and heating elements that work in both systems. Always specify your target market's voltage requirements when requesting a quote to ensure compliance.</p>
+          </details>
+
+          <details style="margin-bottom: var(--spacing-md); border: 1px solid var(--color-border); border-radius: var(--radius-md); padding: var(--spacing-md); background: white;">
+            <summary style="font-weight: 600; font-size: var(--font-size-lg); cursor: pointer; color: var(--color-primary);">What certifications do I need for my specific market?</summary>
+            <p style="margin-top: var(--spacing-sm); color: var(--color-text-light); line-height: 1.7;">Market-specific certifications: <strong>Europe:</strong> CE marking (mandatory), includes LVD, EMC, ErP directives. <strong>North America:</strong> ETL or UL listing required for electrical safety. <strong>Middle East:</strong> SASO certification for Saudi Arabia, GCC certification for UAE, Bahrain, etc. <strong>South America:</strong> INMETRO (Brazil), IRAM (Argentina). <strong>Asia:</strong> PSE (Japan), KC mark (Korea). HouseTech can advise on and arrange necessary certifications. Contact our sales team with your target market for specific certification guidance.</p>
+          </details>
+
+          <details style="margin-bottom: var(--spacing-md); border: 1px solid var(--color-border); border-radius: var(--radius-md); padding: var(--spacing-md); background: white;">
+            <summary style="font-weight: 600; font-size: var(--font-size-lg); cursor: pointer; color: var(--color-primary);">What is the difference between built-in and freestanding ovens?</summary>
+            <p style="margin-top: var(--spacing-sm); color: var(--color-text-light); line-height: 1.7;"><strong>Built-in Ovens:</strong> Installed into kitchen cabinetry for a seamless look, typically 60cm or 90cm wide, popular in modern European-style kitchens. <strong>Freestanding Ranges:</strong> Stand-alone units with cooktop and oven combined, often preferred in American and Asian markets. HouseTech offers both types with various capacities from 45L to 100L. Built-in models require precise cabinet measurements, while freestanding units offer easier installation flexibility.</p>
+          </details>
+
+          <details style="margin-bottom: var(--spacing-md); border: 1px solid var(--color-border); border-radius: var(--radius-md); padding: var(--spacing-md); background: white;">
+            <summary style="font-weight: 600; font-size: var(--font-size-lg); cursor: pointer; color: var(--color-primary);">How do I choose between instant and storage water heaters?</summary>
+            <p style="margin-top: var(--spacing-sm); color: var(--color-text-light); line-height: 1.7;"><strong>Instant (Tankless) Water Heaters:</strong> Heat water on-demand, no storage tank required, compact size, energy-efficient as no standby heat loss, ideal for point-of-use installation. <strong>Storage Water Heaters:</strong> Store and pre-heat water in a tank (10L-100L), provide continuous hot water supply, better for multiple usage points simultaneously. Choose instant for small apartments or single-bathroom installations; choose storage for larger homes or commercial applications with higher hot water demand.</p>
+          </details>
+        </div>
+
         <!-- CTA -->
         <div style="margin-top: var(--spacing-2xl); text-align: center; background: linear-gradient(135deg, var(--color-primary), var(--color-primary-light)); padding: var(--spacing-xl); border-radius: var(--radius-lg);">
           <h3 style="color: white; margin-bottom: var(--spacing-sm);">Still Have Questions?</h3>
@@ -162,4 +302,7 @@ const description = 'Find answers to common questions about HouseTech Group prod
   </section>
 
   <Footer />
+
+  <!-- FAQPage Schema for SEO and Featured Snippets -->
+  <script type="application/ld+json" set:html={JSON.stringify(faqStructuredData)} />
 </Layout>

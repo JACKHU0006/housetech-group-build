@@ -13,7 +13,10 @@ const { title, description } = Astro.props;
 
 const canonicalURL = new URL(Astro.url.pathname, Astro.site);
 const siteName = 'HouseTech Group';
-const logoUrl = '/logo-full.svg';
+const logoUrl = '/logo-housetech.png';
+
+// Google Analytics 4 Configuration
+const GA_MEASUREMENT_ID = import.meta.env.PUBLIC_GA_MEASUREMENT_ID || 'G-XXXXXXXXXX';
 ---
 
 <!DOCTYPE html>
@@ -65,22 +68,101 @@ const logoUrl = '/logo-full.svg';
   <link rel="dns-prefetch" href="//fonts.googleapis.com" />
   <link rel="dns-prefetch" href="//fonts.gstatic.com" />
   <link rel="dns-prefetch" href="//www.google-analytics.com" />
-  
+  <link rel="dns-prefetch" href="//www.googletagmanager.com" />
+
   <!-- Preconnect to important third-party origins -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  
+
   <!-- Fonts - Premium Business Typography with display=swap for performance -->
   <link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Playfair+Display:wght@600;700&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'" />
   <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Playfair+Display:wght@600;700&display=swap" /></noscript>
-  
-  <!-- Google Analytics - Replace with your actual GA4 measurement ID -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
-  <script>
+
+  <!-- Google Analytics 4 -->
+  <script async src={`https://www.googletagmanager.com/gtag/js?id=${GA_MEASUREMENT_ID}`}></script>
+  <script define:vars={{ GA_MEASUREMENT_ID }}>
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
     gtag('js', new Date());
-    gtag('config', 'G-XXXXXXXXXX');
+    gtag('config', GA_MEASUREMENT_ID, {
+      send_page_view: true,
+      page_path: window.location.pathname,
+      cookie_flags: 'SameSite=None;Secure',
+    });
+
+    // Performance monitoring with Core Web Vitals
+    if ('PerformanceObserver' in window) {
+      // Measure LCP (Largest Contentful Paint)
+      new PerformanceObserver((entryList) => {
+        const entries = entryList.getEntries();
+        const lastEntry = entries[entries.length - 1];
+        gtag('event', 'web_vitals', {
+          event_category: 'Performance',
+          event_label: 'LCP',
+          value: Math.round(lastEntry.startTime),
+          non_interaction: true,
+        });
+      }).observe({ entryTypes: ['largest-contentful-paint'] });
+
+      // Measure FID (First Input Delay)
+      new PerformanceObserver((entryList) => {
+        const entries = entryList.getEntries();
+        entries.forEach((entry) => {
+          if (entry.processingStart - entry.startTime !== 0) {
+            gtag('event', 'web_vitals', {
+              event_category: 'Performance',
+              event_label: 'FID',
+              value: Math.round(entry.processingStart - entry.startTime),
+              non_interaction: true,
+            });
+          }
+        });
+      }).observe({ entryTypes: ['first-input'] });
+
+      // Measure CLS (Cumulative Layout Shift)
+      new PerformanceObserver((entryList) => {
+        const entries = entryList.getEntries();
+        entries.forEach((entry) => {
+          if (!entry.hadRecentInput) {
+            gtag('event', 'web_vitals', {
+              event_category: 'Performance',
+              event_label: 'CLS',
+              value: Math.round(entry.value * 1000),
+              non_interaction: true,
+            });
+          }
+        });
+      }).observe({ entryTypes: ['layout-shift'] });
+
+      // Measure TTFB (Time to First Byte)
+      new PerformanceObserver((entryList) => {
+        const entries = entryList.getEntries();
+        entries.forEach((entry) => {
+          if (entry.responseStart > 0) {
+            gtag('event', 'web_vitals', {
+              event_category: 'Performance',
+              event_label: 'TTFB',
+              value: Math.round(entry.responseStart),
+              non_interaction: true,
+            });
+          }
+        });
+      }).observe({ entryTypes: ['navigation'] });
+
+      // Measure FCP (First Contentful Paint)
+      new PerformanceObserver((entryList) => {
+        const entries = entryList.getEntries();
+        const fcpEntry = entries.find(entry => entry.name === 'first-contentful-paint');
+        if (fcpEntry) {
+          gtag('event', 'web_vitals', {
+            event_category: 'Performance',
+            event_label: 'FCP',
+            value: Math.round(fcpEntry.startTime),
+            non_interaction: true,
+          });
+        }
+      }).observe({ entryTypes: ['paint'] });
+    }
   </script>
 
   <!-- Schema.org Structured Data -->
@@ -133,7 +215,16 @@ const logoUrl = '/logo-full.svg';
     }
   })} />
 
-  <!-- FAQ Schema placeholder (per page) -->
+  <!-- Web Vitals Schema -->
+  <script type="application/ld+json" set:html={JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "name": title,
+    "description": description,
+    "url": canonicalURL.href,
+    "datePublished": new Date().toISOString(),
+    "dateModified": new Date().toISOString(),
+  })} />
 </head>
 <body>
   <slot />

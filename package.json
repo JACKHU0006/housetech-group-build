@@ -22,12 +22,29 @@
     "news:event": "node tools/news-auto-generator.js --type=market-event",
     "news:partner": "node tools/news-auto-generator.js --type=partnership",
     "news:award": "node tools/news-auto-generator.js --type=award-certification",
-    "news:sustain": "node tools/news-auto-generator.js --type=sustainability"
+    "news:sustain": "node tools/news-auto-generator.js --type=sustainability",
+    "test": "playwright test",
+    "test:ui": "playwright test --ui",
+    "test:headed": "playwright test --headed",
+    "test:report": "playwright show-report",
+    "lint": "eslint src --ext .js,.jsx,.ts,.tsx,.astro",
+    "lint:fix": "eslint src --ext .js,.jsx,.ts,.tsx,.astro --fix",
+    "typecheck": "astro check",
+    "pagespeed": "npx lighthouse https://www.housetech-ch.com --output=json --output-path=./lighthouse-report.json",
+    "perf": "npx performance-observer"
   },
   "dependencies": {
     "astro": "^4.16.19"
   },
   "devDependencies": {
-    "terser": "^5.48.0"
+    "@astrojs/check": "^0.9.4",
+    "@astrojs/sitemap": "^3.2.1",
+    "@playwright/test": "^1.48.2",
+    "@types/node": "^22.10.2",
+    "eslint": "^8.57.1",
+    "eslint-plugin-astro": "^0.31.0",
+    "lighthouse": "^12.2.2",
+    "terser": "^5.48.0",
+    "typescript": "^5.7.2"
   }
 }

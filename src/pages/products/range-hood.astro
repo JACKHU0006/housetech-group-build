@@ -6,6 +6,34 @@ import Footer from '../../components/Footer.astro';
 const title = 'Range Hoods - HouseTech Group | Kitchen Hood, Cooker Hood, Extractor Hood Manufacturer';
 const description = 'Discover HouseTech Group\'s premium range hood collection: Wall Mount Hoods, Island Hoods, Built-in Range Hoods, Chimney Hoods, Slim Hoods, Stainless Steel Hoods. OEM/ODM available for global B2B partners.';
 
+// FAQ data for SEO and featured snippets
+const faqData = [
+  {
+    question: 'What extraction rate do I need for my kitchen?',
+    answer: 'For Asian kitchens with high-heat wok cooking, choose range hoods with 800-1200m³/h extraction. For standard Western cooking, 400-600m³/h is sufficient. Commercial kitchens require 1000+m³/h. HouseTech offers models from 380m³/h to 1200m³/h.'
+  },
+  {
+    question: 'What is the difference between ducted and ductless range hoods?',
+    answer: 'Ducted (vented) hoods vent smoke outside through ductwork - most efficient for heavy cooking. Ductless (recirculating) hoods use charcoal filters to clean air and return it to the kitchen - ideal when external venting isn\'t possible. HouseTech offers both types.'
+  },
+  {
+    question: 'How noisy are HouseTech range hoods?',
+    answer: 'HouseTech range hoods operate between 45-62dB depending on the model. Our ultra-quiet models (45-50dB) are perfect for open-plan kitchens and noise-sensitive environments. Most models feature multi-speed motors so you can adjust ventilation levels.'
+  },
+  {
+    question: 'What width range hood do I need?',
+    answer: 'Your range hood should be at least as wide as your cooktop or hob. Standard widths: 60cm (24") for compact cooktops, 90cm (36") for standard cooktops, 120cm (48") for professional or wide cooktops. HouseTech offers all standard widths.'
+  },
+  {
+    question: 'What certifications do HouseTech range hoods have?',
+    answer: 'HouseTech range hoods hold CE (Europe), ETL (North America), CB scheme, SASO/GCC (Middle East), and other international certifications. We can arrange additional certifications for specific markets including PSE (Japan) and KC (Korea).'
+  },
+  {
+    question: 'Can HouseTech customize range hoods for my brand?',
+    answer: 'Yes, HouseTech offers full OEM/ODM customization including: custom logo and branding, color and finish (stainless steel, black glass, white), dimensions and specifications, control panel design, packaging design, and voltage adaptation (110V/220V).'
+  }
+];
+
 // Products data
 const products = [
   {
@@ -155,6 +183,21 @@ const products = [
       { "@type": "ListItem", "position": 3, "name": "Range Hoods", "item": "https://housetech-ch.com/products/range-hood/" }
     ]
   })} />
+
+  <!-- FAQPage Schema for SEO -->
+  <script type="application/ld+json" set:html={JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": faqData.map((faq, index) => ({
+      "@type": "Question",
+      "name": faq.question,
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": faq.answer
+      }
+    }))
+  })} />
+
   <Header activeNav="products" />
 
   <!-- Page Hero -->
@@ -205,6 +248,38 @@ const products = [
             </div>
           </a>
         ))}
+      </div>
+
+      <!-- FAQ Section for SEO and Voice Search -->
+      <div style="margin-top: var(--spacing-3xl); max-width: 900px; margin-left: auto; margin-right: auto;">
+        <div style="text-align: center; margin-bottom: var(--spacing-xl);">
+          <span class="section-tag">Common Questions</span>
+          <h2 style="margin-top: var(--spacing-sm);">Frequently Asked Questions About Range Hoods</h2>
+          <p style="color: var(--color-text-light); max-width: 600px; margin: var(--spacing-sm) auto 0;">
+            Everything you need to know about choosing the right range hood for your kitchen
+          </p>
+        </div>
+
+        <div style="display: flex; flex-direction: column; gap: var(--spacing-md);">
+          {faqData.map((faq) => (
+            <details style="border: 1px solid var(--color-border); border-radius: var(--radius-md); padding: var(--spacing-lg); background: white; box-shadow: 0 1px 3px rgba(0,0,0,0.1);">
+              <summary style="font-weight: 600; font-size: var(--font-size-lg); cursor: pointer; color: var(--color-primary); padding: var(--spacing-xs) 0;">
+                {faq.question}
+              </summary>
+              <p style="margin-top: var(--spacing-md); color: var(--color-text-light); line-height: 1.7; padding-top: var(--spacing-sm); border-top: 1px solid var(--color-border);">
+                {faq.answer}
+              </p>
+            </details>
+          ))}
+        </div>
+
+        <div style="margin-top: var(--spacing-xl); text-align: center; background: var(--color-bg-alt); padding: var(--spacing-xl); border-radius: var(--radius-lg);">
+          <h3 style="margin-bottom: var(--spacing-sm);">Need More Information?</h3>
+          <p style="color: var(--color-text-light); margin-bottom: var(--spacing-md);">
+            Contact HouseTech Group's expert team for personalized advice on choosing the right range hood for your specific requirements.
+          </p>
+          <a href="/contact" class="btn btn-primary">Contact Us →</a>
+        </div>
       </div>
 
       <!-- OEM/ODM Section -->
