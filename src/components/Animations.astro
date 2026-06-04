@@ -3,6 +3,37 @@
 
 <script>
   document.addEventListener('DOMContentLoaded', () => {
+    // ========================
+    // 按钮涟漪效果 (Button Ripple Effect)
+    // ========================
+    const buttons = document.querySelectorAll('.btn');
+    buttons.forEach(button => {
+      button.addEventListener('click', function(e) {
+        const rect = this.getBoundingClientRect();
+        const x = e.clientX - rect.left;
+        const y = e.clientY - rect.top;
+
+        // 创建涟漪元素
+        const ripple = document.createElement('span');
+        ripple.className = 'ripple-effect';
+        ripple.style.left = x + 'px';
+        ripple.style.top = y + 'px';
+
+        // 如果按钮已有涟漪，先移除
+        const existingRipple = this.querySelector('.ripple-effect');
+        if (existingRipple) {
+          existingRipple.remove();
+        }
+
+        this.appendChild(ripple);
+
+        // 动画结束后移除
+        setTimeout(() => {
+          ripple.remove();
+        }, 600);
+      });
+    });
+
     const observerOptions = {
       root: null,
       rootMargin: '0px',
@@ -126,6 +157,34 @@
 </script>
 
 <style>
+  /* ========================
+     按钮涟漪效果样式
+     ======================== */
+  .ripple-effect {
+    position: absolute;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.5);
+    pointer-events: none;
+    transform: scale(0);
+    animation: ripple-animation 0.6s ease-out;
+    width: 100px;
+    height: 100px;
+    margin-left: -50px;
+    margin-top: -50px;
+  }
+
+  @keyframes ripple-animation {
+    to {
+      transform: scale(4);
+      opacity: 0;
+    }
+  }
+
+  .btn {
+    position: relative;
+    overflow: hidden;
+  }
+
   .animate-on-scroll {
     opacity: 0;
     transform: translateY(30px);
