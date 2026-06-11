@@ -2,6 +2,7 @@
 import Layout from '../../../layouts/Layout.astro';
 import Header from '../../../components/Header.astro';
 import Footer from '../../../components/Footer.astro';
+import Schema from '../../../components/Schema.astro';
 
 const title = 'HT-GH243 4-Burner Gas Stove - HouseTech Group | Tempered Glass Panel, Easy Clean Design';
 const description = 'HouseTech HT-GH243 4-Burner Gas Stove: Stylish tempered glass panel, 4 versatile burners, FFD safety. Modern kitchen hob manufacturer for global B2B.';
@@ -55,31 +56,52 @@ const relatedProducts = [
 ---
 
 <Layout title={title} description={description}>
-  <!-- Product Schema -->
-  <script type="application/ld+json" set:html={JSON.stringify({
-    "@context": "https://schema.org",
-    "@type": "Product",
-    "name": product.name,
-    "image": "https://housetech-ch.com/images/products/gas-stove/ht-gh243.jpg",
-    "description": description,
-    "brand": { "@type": "Brand", "name": "HouseTech" },
-    "manufacturer": { "@type": "Organization", "name": "HouseTech Group" },
-    "sku": product.sku,
-    "category": "Gas Stoves & Hobs",
-    "offers": { "@type": "AggregateOffer", "priceCurrency": "USD", "lowPrice": "0", "highPrice": "0", "offerCount": "1", "availability": "https://schema.org/InStock" }
-  })} />
+  <!-- Product Schema with ImageObject -->
+  <Schema type="product" data={{
+    name: product.name,
+    description: description,
+    image: [`https://www.housetech-ch.com${product.image}`],
+    brand: 'HouseTech',
+    model: product.sku,
+    certifications: ['CE', 'CB', 'ETL', 'RoHS', 'ISO9001'],
+    price: 'Contact for Quote',
+    currency: 'USD'
+  }} />
+  <!-- Image Gallery Schema -->
+  <Schema type="imageGallery" data={{
+    images: [{
+      url: `https://www.housetech-ch.com${product.image}`,
+      caption: `${product.name} - ${product.shortDesc}`,
+      width: 800,
+      height: 600
+    }],
+    mainEntityOfPage: `https://www.housetech-ch.com/products/gas-stove/ht-gh243-4-burner`
+  }} />
   <!-- FAQPage Schema -->
-  <script type="application/ld+json" set:html={JSON.stringify({
-    "@context": "https://schema.org",
-    "@type": "FAQPage",
-    "mainEntity": [
-      { "@type": "Question", "name": "What is the warranty period for HT-GH243 Gas Stove?", "acceptedAnswer": { "@type": "Answer", "Text": "All HouseTech products come with a comprehensive warranty. The HT-GH243 includes a 2-year manufacturer warranty covering defects in materials and workmanship." } },
-      { "@type": "Question", "name": "Does HouseTech offer OEM/ODM customization for the HT-GH243?", "acceptedAnswer": { "@type": "Answer", "Text": "Yes, HouseTech offers full OEM/ODM services including custom logo branding, panel finishes, and packaging design to meet your market requirements." } },
-      { "@type": "Question", "name": "What safety features does the HT-GH243 include?", "acceptedAnswer": { "@type": "Answer", "Text": "The HT-GH243 includes Flame Failure Device (FFD) that automatically cuts gas supply if flame is extinguished, and auto ignition system." } },
-      { "@type": "Question", "name": "What certifications does the HT-GH243 have?", "acceptedAnswer": { "@type": "Answer", "Text": "The HT-GH243 is certified with CE, CB, ETL, and RoHS standards, meeting safety requirements for European, Asian, and North American markets." } },
-      { "@type": "Question", "name": "What is the delivery time for HT-GH243 orders?", "acceptedAnswer": { "@type": "Answer", "Text": "Standard delivery time is 30-45 days after sample approval and deposit payment. For customized OEM orders, please allow 45-60 days." } }
+  <Schema type="faq" data={{
+    items: [
+      {
+        question: 'What is the warranty period for HT-GH243 Gas Stove?',
+        answer: 'All HouseTech products come with a comprehensive warranty. The HT-GH243 includes a 2-year manufacturer warranty covering defects in materials and workmanship.'
+      },
+      {
+        question: 'Does HouseTech offer OEM/ODM customization for the HT-GH243?',
+        answer: 'Yes, HouseTech offers full OEM/ODM services including custom logo branding, panel finishes, and packaging design to meet your market requirements.'
+      },
+      {
+        question: 'What safety features does the HT-GH243 include?',
+        answer: 'The HT-GH243 includes Flame Failure Device (FFD) that automatically cuts gas supply if flame is extinguished, and auto ignition system.'
+      },
+      {
+        question: 'What certifications does the HT-GH243 have?',
+        answer: 'The HT-GH243 is certified with CE, CB, ETL, and RoHS standards, meeting safety requirements for European, Asian, and North American markets.'
+      },
+      {
+        question: 'What is the delivery time for HT-GH243 orders?',
+        answer: 'Standard delivery time is 30-45 days after sample approval and deposit payment. For customized OEM orders, please allow 45-60 days.'
+      }
     ]
-  })} />
+  }} />
   <Header activeNav="products" />
 
   <!-- Page Hero -->

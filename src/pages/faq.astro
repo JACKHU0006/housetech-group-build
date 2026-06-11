@@ -2,116 +2,76 @@
 import Layout from '../layouts/Layout.astro';
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
+import Schema from '../components/Schema.astro';
 
 const title = 'FAQ - HouseTech Group | Frequently Asked Questions';
 const description = 'Find answers to common questions about HouseTech Group products, OEM/ODM services, MOQ, pricing, shipping, certifications, and warranty for kitchen appliances.';
 
-// FAQ structured data for SEO and featured snippets
-const faqStructuredData = {
-  "@context": "https://schema.org",
-  "@type": "FAQPage",
-  "mainEntity": [
-    {
-      "@type": "Question",
-      "name": "What is HouseTech Group?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "HouseTech Group is a leading B2B manufacturer of kitchen appliances with over 15 years of experience. Headquartered in Zhongshan, Guangdong Province, HouseTech Group specializes in producing Range Hoods, Gas Stoves/Hobs, Ovens, Air Fryers, and Gas Water Heaters for global markets, serving clients in more than 50 countries across Europe, Middle East, Southeast Asia, and beyond."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "Where is HouseTech Group's factory located?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "HouseTech Group's manufacturing facility is located in Zhongshan City, Guangdong Province, China — one of China's most established manufacturing hubs. Our factory spans over 30,000 square meters with 12 modern production lines, 500+ employees, and full ISO9001 certification."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "What certifications do HouseTech products have?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "HouseTech Group holds comprehensive international certifications including ISO9001 (quality management), CE (Europe), CB scheme (international), ETL listing (North America), SASO/GCC (Middle East), and energy efficiency labels. We can also arrange additional certifications for specific target markets."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "What is the Minimum Order Quantity (MOQ) for HouseTech products?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "HouseTech Group offers flexible MOQ terms. Standard product orders start from as low as 100 units per model. OEM/ODM customized orders typically start at 300-500 units per model. For white-label programs with existing HouseTech designs, MOQ can be as low as 50-100 units."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "What customization options does HouseTech offer for OEM/ODM?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "HouseTech Group offers extensive customization options including: custom logo and branding, color and finish modifications, packaging design, product specification adjustments, gas type compatibility, control panel design, voltage adaptation, and safety feature additions per regional requirements."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "What payment terms does HouseTech accept?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "HouseTech Group accepts multiple payment methods: T/T (Telegraphic Transfer) — standard 30% deposit, 70% balance before shipment; L/C (Letter of Credit) — available for orders exceeding $30,000 USD; PayPal and credit cards — available for sample orders; Western Union — for small orders."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "What is HouseTech's production lead time?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "HouseTech production lead times: Standard products: 15-25 days. Custom/OEM products: 30-45 days. Bulk orders: 25-35 days for standard, 40-60 days for customized. Rush orders may be accommodated with a priority fee."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "How long does shipping take from HouseTech's factory?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Estimated shipping transit times: Sea freight to North America (West Coast): 18-25 days; Europe: 28-40 days; Middle East: 20-30 days; Southeast Asia: 7-14 days; Air freight (all destinations): 3-7 days; Railway to Europe: 18-25 days."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "Does HouseTech offer product samples?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Yes, HouseTech Group provides product samples for evaluation. Sample fees apply and are refundable against bulk orders. Sample delivery: 5-10 days by express courier. For customized OEM samples: 10-15 days."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "What warranty does HouseTech offer?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "HouseTech Group offers 1-3 year warranty depending on product category and agreement. Standard warranty: 1 year for electronics, 2 years for structural components. Extended warranty available for OEM/ODM partners. Spare parts available throughout warranty period and beyond."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "Can I visit HouseTech's factory?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Yes! HouseTech Group welcomes B2B partners to tour our factory. We organize personalized factory visits for serious buyers. Contact us to schedule — visits typically arranged within 1-2 weeks of request."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "How does HouseTech handle quality issues?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "HouseTech Group has a dedicated quality resolution process: contact us within 7 days with photos and description, our QC team investigates within 48 hours, and we arrange replacement units, repair credit, or refund as appropriate."
-      }
-    }
-  ]
-};
+const faqItems = [
+  {
+    question: 'What is HouseTech Group?',
+    answer: 'HouseTech Group is a leading B2B manufacturer of kitchen appliances with over 15 years of experience. Headquartered in Zhongshan, Guangdong Province, HouseTech Group specializes in producing Range Hoods, Gas Stoves/Hobs, Ovens, Air Fryers, and Gas Water Heaters for global markets, serving clients in more than 50 countries across Europe, Middle East, Southeast Asia, and beyond.'
+  },
+  {
+    question: 'Where is HouseTech Group\'s factory located?',
+    answer: 'HouseTech Group\'s manufacturing facility is located in Zhongshan City, Guangdong Province, China — one of China\'s most established manufacturing hubs. Our factory spans over 30,000 square meters with 12 modern production lines, 500+ employees, and full ISO9001 certification.'
+  },
+  {
+    question: 'What certifications do HouseTech products have?',
+    answer: 'HouseTech Group holds comprehensive international certifications including ISO9001 (quality management), CE (Europe), CB scheme (international), ETL listing (North America), SASO/GCC (Middle East), and energy efficiency labels. We can also arrange additional certifications for specific target markets.'
+  },
+  {
+    question: 'What is the Minimum Order Quantity (MOQ) for HouseTech products?',
+    answer: 'HouseTech Group offers flexible MOQ terms. Standard product orders start from as low as 100 units per model. OEM/ODM customized orders typically start at 300-500 units per model. For white-label programs with existing HouseTech designs, MOQ can be as low as 50-100 units.'
+  },
+  {
+    question: 'What customization options does HouseTech offer for OEM/ODM?',
+    answer: 'HouseTech Group offers extensive customization options including: custom logo and branding, color and finish modifications, packaging design, product specification adjustments, gas type compatibility, control panel design, voltage adaptation, and safety feature additions per regional requirements.'
+  },
+  {
+    question: 'What payment terms does HouseTech accept?',
+    answer: 'HouseTech Group accepts multiple payment methods: T/T (Telegraphic Transfer) — standard 30% deposit, 70% balance before shipment; L/C (Letter of Credit) — available for orders exceeding $30,000 USD; PayPal and credit cards — available for sample orders; Western Union — for small orders.'
+  },
+  {
+    question: 'What is HouseTech\'s production lead time?',
+    answer: 'HouseTech production lead times: Standard products: 15-25 days. Custom/OEM products: 30-45 days. Bulk orders: 25-35 days for standard, 40-60 days for customized. Rush orders may be accommodated with a priority fee.'
+  },
+  {
+    question: 'How long does shipping take from HouseTech\'s factory?',
+    answer: 'Estimated shipping transit times: Sea freight to North America (West Coast): 18-25 days; Europe: 28-40 days; Middle East: 20-30 days; Southeast Asia: 7-14 days; Air freight (all destinations): 3-7 days; Railway to Europe: 18-25 days.'
+  },
+  {
+    question: 'Does HouseTech offer product samples?',
+    answer: 'Yes, HouseTech Group provides product samples for evaluation. Sample fees apply and are refundable against bulk orders. Sample delivery: 5-10 days by express courier. For customized OEM samples: 10-15 days.'
+  },
+  {
+    question: 'What warranty does HouseTech offer?',
+    answer: 'HouseTech Group offers 1-3 year warranty depending on product category and agreement. Standard warranty: 1 year for electronics, 2 years for structural components. Extended warranty available for OEM/ODM partners. Spare parts available throughout warranty period and beyond.'
+  },
+  {
+    question: 'Can I visit HouseTech\'s factory?',
+    answer: 'Yes! HouseTech Group welcomes B2B partners to tour our factory. We organize personalized factory visits for serious buyers. Contact us to schedule — visits typically arranged within 1-2 weeks of request.'
+  },
+  {
+    question: 'How does HouseTech handle quality issues?',
+    answer: 'HouseTech Group has a dedicated quality resolution process: contact us within 7 days with photos and description, our QC team investigates within 48 hours, and we arrange replacement units, repair credit, or refund as appropriate.'
+  }
+];
 ---
 
 <Layout title={title} description={description}>
+  <Schema type="speakable" data={{
+    xpath: [
+      "/html/body//h1",
+      "/html/body//h2",
+      "/html/body//summary"
+    ],
+    cssSelector: [
+      "h1",
+      "h2",
+      "summary"
+    ]
+  }} />
   <Header activeNav="faq" />
 
   <!-- Page Hero -->
@@ -304,5 +264,5 @@ const faqStructuredData = {
   <Footer />
 
   <!-- FAQPage Schema for SEO and Featured Snippets -->
-  <script type="application/ld+json" set:html={JSON.stringify(faqStructuredData)} />
+  <Schema type="faq" data={{ items: faqItems }} />
 </Layout>

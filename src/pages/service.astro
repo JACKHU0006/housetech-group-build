@@ -2,12 +2,42 @@
 import Layout from '../layouts/Layout.astro';
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
+import Schema from '../components/Schema.astro';
 
 const title = 'Service - HouseTech Group | OEM/ODM, After-Sales, Technical Support';
 const description = 'Comprehensive services from HouseTech Group: OEM/ODM customization, after-sales support, technical assistance, and global logistics for kitchen appliance B2B partners.';
 ---
 
 <Layout title={title} description={description}>
+  <Schema type="service" data={{
+    name: 'OEM/ODM Customization Services',
+    description: 'HouseTech Group provides comprehensive OEM and ODM services for kitchen appliance brands worldwide. Services include custom logo branding, color and finish options, specification adjustments, packaging design, and full product development support.',
+    provider: {
+      name: 'HouseTech Group',
+      url: 'https://www.housetech-ch.com'
+    },
+    serviceType: 'Manufacturing Services',
+    areaServed: ['Worldwide', 'Europe', 'Middle East', 'North America', 'Southeast Asia', 'Oceania'],
+    availableChannel: ['Online', 'Email', 'Phone', 'Factory Visit'],
+    priceRange: '$$$',
+    termsOfService: 'https://www.housetech-ch.com/privacy',
+    serviceOutput: 'Custom kitchen appliances including Range Hoods, Gas Stoves, Ovens, Air Fryers, and Water Heaters'
+  }} />
+  <Schema type="course" data={{
+    name: 'HouseTech Product Training Program',
+    description: 'Comprehensive training courses for HouseTech kitchen appliances including installation, maintenance, and troubleshooting. Learn from expert technicians with step-by-step video tutorials.',
+    provider: {
+      name: 'HouseTech Group',
+      url: 'https://www.housetech-ch.com'
+    },
+    courseCode: 'HT-Training-001',
+    educationalLevel: 'Professional',
+    numberOfLessons: 12,
+    duration: '8 hours',
+    instructor: {
+      name: 'HouseTech Technical Team'
+    }
+  }} />
   <Header activeNav="service" />
 
   <!-- Page Hero -->

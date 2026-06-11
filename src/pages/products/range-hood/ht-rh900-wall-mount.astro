@@ -3,6 +3,7 @@ import Layout from '../../../layouts/Layout.astro';
 import Header from '../../../components/Header.astro';
 import Footer from '../../../components/Footer.astro';
 import Testimonials from '../../../components/Testimonials.astro';
+import Schema from '../../../components/Schema.astro';
 
 const title = 'HT-RH900 Wall Mount Range Hood - HouseTech Group | 90cm Range Hood, 1100m³/h Extraction';
 const description = 'HouseTech HT-RH900 Wall Mount Range Hood: 90cm width, 1100m³/h extraction rate, LED lights, touch control. Premium stainless steel kitchen hood manufacturer.';
@@ -13,7 +14,7 @@ const product = {
   sku: 'HT-RH900',
   category: 'Range Hoods',
   price: 'Contact for Quote',
-  image: '/images/products/range-hood/ht-rh900.jpg',
+  images: ['/images/products/range-hood/ht-rh900.jpg'],
   shortDesc: '90cm wall mount range hood with powerful 1100m³/h extraction rate, LED lights, and touch control panel. Sleek stainless steel finish suitable for modern kitchens.',
   specs: {
     'Width': '90cm',
@@ -57,73 +58,52 @@ const relatedProducts = [
 ---
 
 <Layout title={title} description={description}>
-  <!-- Product Schema -->
-  <script type="application/ld+json" set:html={JSON.stringify({
-    "@context": "https://schema.org",
-    "@type": "Product",
-    "name": product.name,
-    "image": "https://housetech-ch.com/images/products/range-hood/ht-rh900.jpg",
-    "description": description,
-    "brand": { "@type": "Brand", "name": "HouseTech" },
-    "manufacturer": { "@type": "Organization", "name": "HouseTech Group" },
-    "sku": product.sku,
-    "category": "Range Hoods",
-    "offers": {
-      "@type": "AggregateOffer",
-      "priceCurrency": "USD",
-      "lowPrice": "0",
-      "highPrice": "0",
-      "offerCount": "1",
-      "availability": "https://schema.org/InStock"
-    }
-  })} />
+  <!-- Product Schema with ImageObject -->
+  <Schema type="product" data={{
+    name: product.name,
+    description: description,
+    image: product.images.map(img => `https://www.housetech-ch.com${img}`),
+    brand: 'HouseTech',
+    model: product.sku,
+    certifications: ['CE', 'CB', 'ETL', 'ISO9001'],
+    price: 'Contact for Quote',
+    currency: 'USD'
+  }} />
+  <!-- Image Gallery Schema -->
+  <Schema type="imageGallery" data={{
+    images: product.images.map(img => ({
+      url: `https://www.housetech-ch.com${img}`,
+      caption: `${product.name} - Professional Kitchen Range Hood`,
+      width: 800,
+      height: 600
+    })),
+    mainEntityOfPage: `https://www.housetech-ch.com/products/range-hood/ht-rh900-wall-mount`
+  }} />
   <!-- FAQPage Schema -->
-  <script type="application/ld+json" set:html={JSON.stringify({
-    "@context": "https://schema.org",
-    "@type": "FAQPage",
-    "mainEntity": [
+  <Schema type="faq" data={{
+    items: [
       {
-        "@type": "Question",
-        "name": "What is the warranty period for HT-RH900 Range Hood?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "Text": "All HouseTech products come with a comprehensive warranty. The HT-RH900 Range Hood includes a 2-year manufacturer warranty covering defects in materials and workmanship. Extended warranty options are available for B2B partners."
-        }
+        question: 'What is the warranty period for HT-RH900 Range Hood?',
+        answer: 'All HouseTech products come with a comprehensive warranty. The HT-RH900 Range Hood includes a 2-year manufacturer warranty covering defects in materials and workmanship. Extended warranty options are available for B2B partners.'
       },
       {
-        "@type": "Question",
-        "name": "Does HouseTech offer OEM/ODM customization for the HT-RH900?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "Text": "Yes, HouseTech offers full OEM/ODM services including custom logo branding, color variations, packaging design, and specification modifications to meet your market requirements. Contact our sales team for customization details and minimum order quantities."
-        }
+        question: 'Does HouseTech offer OEM/ODM customization for the HT-RH900?',
+        answer: 'Yes, HouseTech offers full OEM/ODM services including custom logo branding, color variations, packaging design, and specification modifications to meet your market requirements. Contact our sales team for customization details and minimum order quantities.'
       },
       {
-        "@type": "Question",
-        "name": "What certifications does the HT-RH900 Range Hood have?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "Text": "The HT-RH900 Range Hood is certified with CE, CB, and ETL standards, meeting safety and performance requirements for European, Asian, and North American markets. Additional certifications like SASO and GCC are available upon request."
-        }
+        question: 'What certifications does the HT-RH900 Range Hood have?',
+        answer: 'The HT-RH900 Range Hood is certified with CE, CB, and ETL standards, meeting safety and performance requirements for European, Asian, and North American markets. Additional certifications like SASO and GCC are available upon request.'
       },
       {
-        "@type": "Question",
-        "name": "What is the minimum order quantity (MOQ) for HT-RH900?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "Text": "HouseTech offers flexible MOQ starting from 50 units per model for OEM orders. For standard catalog products, smaller quantities may be available. Contact us for specific MOQ details based on your requirements."
-        }
+        question: 'What is the minimum order quantity (MOQ) for HT-RH900?',
+        answer: 'HouseTech offers flexible MOQ starting from 50 units per model for OEM orders. For standard catalog products, smaller quantities may be available. Contact us for specific MOQ details based on your requirements.'
       },
       {
-        "@type": "Question",
-        "name": "What is the delivery time for HT-RH900 orders?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "Text": "Standard delivery time for HT-RH900 orders is 30-45 days after sample approval and deposit payment. For customized OEM orders, please allow 45-60 days depending on specification requirements. Express shipping options are available."
-        }
+        question: 'What is the delivery time for HT-RH900 orders?',
+        answer: 'Standard delivery time for HT-RH900 orders is 30-45 days after sample approval and deposit payment. For customized OEM orders, please allow 45-60 days depending on specification requirements. Express shipping options are available.'
       }
     ]
-  })} />
+  }} />
   <Header activeNav="products" />
 
   <!-- Page Hero -->

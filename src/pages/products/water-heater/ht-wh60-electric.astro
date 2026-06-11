@@ -2,6 +2,7 @@
 import Layout from '../../../layouts/Layout.astro';
 import Header from '../../../components/Header.astro';
 import Footer from '../../../components/Footer.astro';
+import Schema from '../../../components/Schema.astro';
 
 const title = 'HT-WH60 Electric Water Heater - HouseTech Group | 60L Storage Water Heater, 2000W, IPX4';
 const description = 'HouseTech HT-WH60 Electric Water Heater: 60L storage capacity, 2000W heating element, IPX4 waterproof rating, digital temperature display. Reliable hot water solution for family bathrooms.';
@@ -64,31 +65,52 @@ const relatedProducts = [
 ---
 
 <Layout title={title} description={description}>
-  <!-- Product Schema -->
-  <script type="application/ld+json" set:html={JSON.stringify({
-    "@context": "https://schema.org",
-    "@type": "Product",
-    "name": product.name,
-    "image": "https://housetech-ch.com/images/products/water-heater/ht-wh60.jpg",
-    "description": description,
-    "brand": { "@type": "Brand", "name": "HouseTech" },
-    "manufacturer": { "@type": "Organization", "name": "HouseTech Group" },
-    "sku": product.sku,
-    "category": "Water Heaters",
-    "offers": { "@type": "AggregateOffer", "priceCurrency": "USD", "lowPrice": "0", "highPrice": "0", "offerCount": "1", "availability": "https://schema.org/InStock" }
-  })} />
+  <!-- Product Schema with ImageObject -->
+  <Schema type="product" data={{
+    name: product.name,
+    description: description,
+    image: [`https://www.housetech-ch.com${product.image}`],
+    brand: 'HouseTech',
+    model: product.sku,
+    certifications: ['CE', 'CB', 'ETL', 'SASO', 'ISO9001'],
+    price: 'Contact for Quote',
+    currency: 'USD'
+  }} />
+  <!-- Image Gallery Schema -->
+  <Schema type="imageGallery" data={{
+    images: [{
+      url: `https://www.housetech-ch.com${product.image}`,
+      caption: `${product.name} - ${product.shortDesc}`,
+      width: 800,
+      height: 600
+    }],
+    mainEntityOfPage: `https://www.housetech-ch.com/products/water-heater/ht-wh60-electric`
+  }} />
   <!-- FAQPage Schema -->
-  <script type="application/ld+json" set:html={JSON.stringify({
-    "@context": "https://schema.org",
-    "@type": "FAQPage",
-    "mainEntity": [
-      { "@type": "Question", "name": "What is the warranty period for HT-WH60 Electric Water Heater?", "acceptedAnswer": { "@type": "Answer", "Text": "All HouseTech products come with a comprehensive warranty. The HT-WH60 includes a 2-year manufacturer warranty covering defects in materials and workmanship." } },
-      { "@type": "Question", "name": "Does HouseTech offer OEM/ODM customization for the HT-WH60?", "acceptedAnswer": { "@type": "Answer", "Text": "Yes, HouseTech offers full OEM/ODM services including custom logo branding, capacity options, and packaging design." } },
-      { "@type": "Question", "name": "What certifications does the HT-WH60 have?", "acceptedAnswer": { "@type": "Answer", "Text": "The HT-WH60 is certified with CE, CB, ETL, and SASO standards, meeting safety requirements for European, Asian, Middle Eastern, and North American markets." } },
-      { "@type": "Question", "name": "What safety features does the HT-WH60 include?", "acceptedAnswer": { "@type": "Answer", "Text": "The HT-WH60 includes IPX4 waterproof rating, over-temperature protection, dry-heating protection, safety valve, and magnesium anode rod for anti-corrosion." } },
-      { "@type": "Question", "name": "What is the delivery time for HT-WH60 orders?", "acceptedAnswer": { "@type": "Answer", "Text": "Standard delivery time is 30-45 days after sample approval and deposit payment. For customized OEM orders, please allow 45-60 days." } }
+  <Schema type="faq" data={{
+    items: [
+      {
+        question: 'What is the warranty period for HT-WH60 Electric Water Heater?',
+        answer: 'All HouseTech products come with a comprehensive warranty. The HT-WH60 includes a 2-year manufacturer warranty covering defects in materials and workmanship.'
+      },
+      {
+        question: 'Does HouseTech offer OEM/ODM customization for the HT-WH60?',
+        answer: 'Yes, HouseTech offers full OEM/ODM services including custom logo branding, capacity options, and packaging design.'
+      },
+      {
+        question: 'What certifications does the HT-WH60 have?',
+        answer: 'The HT-WH60 is certified with CE, CB, ETL, and SASO standards, meeting safety requirements for European, Asian, Middle Eastern, and North American markets.'
+      },
+      {
+        question: 'What safety features does the HT-WH60 include?',
+        answer: 'The HT-WH60 includes IPX4 waterproof rating, over-temperature protection, dry-heating protection, safety valve, and magnesium anode rod for anti-corrosion.'
+      },
+      {
+        question: 'What is the delivery time for HT-WH60 orders?',
+        answer: 'Standard delivery time is 30-45 days after sample approval and deposit payment. For customized OEM orders, please allow 45-60 days.'
+      }
     ]
-  })} />
+  }} />
   <Header activeNav="products" />
 
   <!-- Page Hero -->

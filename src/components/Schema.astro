@@ -48,11 +48,66 @@ interface LocalBusinessSchemaProps {
   areaServed?: string[];
 }
 
+interface ImageObjectProps {
+  url: string;
+  caption: string;
+  width?: number;
+  height?: number;
+  license?: string;
+}
+
+interface ImageGalleryProps {
+  images: ImageObjectProps[];
+  mainEntityOfPage?: string;
+}
+
+interface ServiceSchemaProps {
+  name: string;
+  description: string;
+  provider: {
+    name: string;
+    url: string;
+  };
+  serviceType: string;
+  areaServed?: string[];
+  availableChannel?: string[];
+  priceRange?: string;
+  termsOfService?: string;
+  serviceOutput?: string;
+}
+
+interface SpeakableSchemaProps {
+  xpath: string[];
+  cssSelector?: string[];
+}
+
+interface CourseSchemaProps {
+  name: string;
+  description: string;
+  provider: {
+    name: string;
+    url: string;
+  };
+  courseCode?: string;
+  educationalLevel?: string;
+  numberOfLessons?: number;
+  duration?: string;
+  instructor?: {
+    name: string;
+  };
+  videoUrl?: string;
+}
+
 type Props = 
   | { type: 'product'; data: ProductSchemaProps }
   | { type: 'faq'; data: FAQSchemaProps }
   | { type: 'organization'; data: OrganizationSchemaProps }
-  | { type: 'localBusiness'; data: LocalBusinessSchemaProps };
+  | { type: 'localBusiness'; data: LocalBusinessSchemaProps }
+  | { type: 'image'; data: ImageObjectProps }
+  | { type: 'imageGallery'; data: ImageGalleryProps }
+  | { type: 'service'; data: ServiceSchemaProps }
+  | { type: 'speakable'; data: SpeakableSchemaProps }
+  | { type: 'course'; data: CourseSchemaProps };
 
 const { type, data } = Astro.props;
 
@@ -65,7 +120,11 @@ if (type === 'product') {
     "@type": "Product",
     "name": productData.name,
     "description": productData.description,
-    "image": productData.image,
+    "image": productData.image.map(img => ({
+      "@type": "ImageObject",
+      "url": img,
+      "caption": productData.name
+    })),
     "brand": {
       "@type": "Brand",
       "name": productData.brand
@@ -146,6 +205,87 @@ if (type === 'product') {
     }),
     ...(localData.priceRange && { "priceRange": localData.priceRange }),
     ...(localData.areaServed && { "areaServed": localData.areaServed })
+  };
+} else if (type === 'image') {
+  const imageData = data as ImageObjectProps;
+  schemaData = {
+    "@context": "https://schema.org",
+    "@type": "ImageObject",
+    "contentUrl": imageData.url,
+    "caption": imageData.caption,
+    ...(imageData.width && { "width": imageData.width }),
+    ...(imageData.height && { "height": imageData.height }),
+    ...(imageData.license && { "license": imageData.license })
+  };
+} else if (type === 'imageGallery') {
+  const galleryData = data as ImageGalleryProps;
+  schemaData = {
+    "@context": "https://schema.org",
+    "@type": "ImageGallery",
+    "image": galleryData.images.map(img => ({
+      "@type": "ImageObject",
+      "contentUrl": img.url,
+      "caption": img.caption,
+      ...(img.width && { "width": img.width }),
+      ...(img.height && { "height": img.height })
+    })),
+    ...(galleryData.mainEntityOfPage && { "mainEntityOfPage": galleryData.mainEntityOfPage })
+  };
+} else if (type === 'service') {
+  const serviceData = data as ServiceSchemaProps;
+  schemaData = {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    "name": serviceData.name,
+    "description": serviceData.description,
+    "provider": {
+      "@type": "Organization",
+      "name": serviceData.provider.name,
+      "url": serviceData.provider.url
+    },
+    "serviceType": serviceData.serviceType,
+    ...(serviceData.areaServed && { "areaServed": serviceData.areaServed }),
+    ...(serviceData.availableChannel && { "availableChannel": serviceData.availableChannel }),
+    ...(serviceData.priceRange && { "priceRange": serviceData.priceRange }),
+    ...(serviceData.termsOfService && { "termsOfService": serviceData.termsOfService }),
+    ...(serviceData.serviceOutput && { "serviceOutput": serviceData.serviceOutput })
+  };
+} else if (type === 'speakable') {
+  const speakableData = data as SpeakableSchemaProps;
+  schemaData = {
+    "@context": "https://schema.org",
+    "@type": "SpeakableSpecification",
+    "xpath": speakableData.xpath,
+    ...(speakableData.cssSelector && { "cssSelector": speakableData.cssSelector })
+  };
+} else if (type === 'course') {
+  const courseData = data as CourseSchemaProps;
+  schemaData = {
+    "@context": "https://schema.org",
+    "@type": "Course",
+    "name": courseData.name,
+    "description": courseData.description,
+    "provider": {
+      "@type": "Organization",
+      "name": courseData.provider.name,
+      "url": courseData.provider.url
+    },
+    ...(courseData.courseCode && { "courseCode": courseData.courseCode }),
+    ...(courseData.educationalLevel && { "educationalLevel": courseData.educationalLevel }),
+    ...(courseData.numberOfLessons && { "numberOfLessons": courseData.numberOfLessons }),
+    ...(courseData.duration && { "duration": courseData.duration }),
+    ...(courseData.instructor && { 
+      "instructor": {
+        "@type": "Person",
+        "name": courseData.instructor.name
+      }
+    }),
+    ...(courseData.videoUrl && { 
+      "hasPart": {
+        "@type": "VideoObject",
+        "contentUrl": courseData.videoUrl
+      }
+    })
   };
 }
 ---
