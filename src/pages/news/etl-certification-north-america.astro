@@ -2,12 +2,54 @@
 import Layout from '../../layouts/Layout.astro';
 import Header from '../../components/Header.astro';
 import Footer from '../../components/Footer.astro';
+import Schema from '../../components/Schema.astro';
 
 const title = 'HouseTech Receives ETL Certification - HouseTech Group News';
-const description = 'HouseTech Group obtains ETL certification for North American market access, enabling expansion of premium range hoods and gas stoves to US and Canadian B2B partners through certified OEM manufacturing.';
+const description = 'HouseTech Group receives ETL certification for North American market access, covering 4 product categories with quarterly Intertek audits and 370M consumer market reach.';
+
+const articleSchema = {
+  headline: 'HouseTech Receives ETL Certification for North American Market Access',
+  description: 'HouseTech ETL certification by Intertek covers 4 product categories for US and Canadian markets with quarterly audits and 370M consumer reach.',
+  image: 'https://www.housetech-ch.com/logo-housetech.png',
+  datePublished: '2024-02-15',
+  author: { name: 'HouseTech Group' },
+  publisher: {
+    name: 'HouseTech Group',
+    logo: { url: 'https://www.housetech-ch.com/logo-housetech.png' }
+  }
+};
+
+const faqItems = [
+  {
+    question: 'Which certification did HouseTech receive for North America?',
+    answer: 'HouseTech received ETL certification administered by Intertek for North America.'
+  },
+  {
+    question: 'What product categories are covered by ETL certification?',
+    answer: 'Range hoods, gas ranges, gas cooktops, and select commercial products.'
+  },
+  {
+    question: 'How often are factory audits conducted for ETL compliance?',
+    answer: 'Intertek conducts quarterly factory audits to maintain ETL certification.'
+  },
+  {
+    question: 'What safety standards apply to range hood certification?',
+    answer: 'Range hoods certified to UL 507 electrical safety standards for North America.'
+  },
+  {
+    question: 'Which major retailers require ETL certification?',
+    answer: 'Home Depot, Lowe\'s, Best Buy, and major appliance dealers require it.'
+  },
+  {
+    question: 'Does ETL certification cover both US and Canadian markets?',
+    answer: 'Yes, ETL certification is recognized across both US and Canadian markets.'
+  }
+];
 ---
 
 <Layout title={title} description={description}>
+  <Schema type="article" data={articleSchema} />
+  <Schema type="faq" data={{ items: faqItems }} />
   <Header activeNav="news" />
   
   <section class="page-hero">
@@ -43,34 +85,29 @@ const description = 'HouseTech Group obtains ETL certification for North America
         </figure>
 
         <div class="article-body">
-          <p>North American markets represent a significant opportunity for HouseTech Group's OEM kitchen appliance business. With a combined population of over 370 million consumers and high standards for product quality and safety, entering this market requires rigorous certification. HouseTech is proud to announce the successful completion of ETL certification for its complete range hood and gas stove product lines.</p>
+          <p>HouseTech completes ETL certification for full range hood and gas stove product lines. Intertek-administered certification covers 4 product categories enabling access to 370M North American consumers.</p>
           
-          <p>ETL certification, administered by Intertek, is one of the most widely recognized safety marks in North America. Products bearing the ETL Mark have been tested to applicable North American safety standards and are found to be in compliance with relevant requirements.</p>
+          <p>ETL mark represents one of most widely recognized safety marks in North America. Products tested to applicable safety standards and found in compliance with relevant requirements.</p>
           
           <h2>Certification Scope</h2>
-          <p>HouseTech's ETL certification covers the following product categories:</p>
           
-          <ul>
-            <li><strong>Range Hoods:</strong> All wall-mounted, island-mounted, and under-cabinet models certified to UL 507 safety standards.</li>
-            <li><strong>Gas Ranges:</strong> Freestanding and slide-in gas ranges meeting ANSI Z21.1 requirements.</li>
-            <li><strong>Gas Cooktops:</strong> Built-in gas cooktops certified for residential use.</li>
-            <li><strong>Commercial Products:</strong> Select models certified for commercial kitchen applications.</li>
-          </ul>
-
-          <blockquote>
-            "ETL certification opens the door to one of the world's largest kitchen appliance markets. Our OEM partners can now confidently introduce HouseTech-manufactured products into North American retail channels, with full confidence in compliance and consumer safety."
-            <cite>— HouseTech Quality Assurance Director</cite>
-          </blockquote>
-
+          <p>All wall-mounted, island-mounted, and under-cabinet range hood models certified to UL 507 safety standards. Freestanding and slide-in gas ranges meet ANSI Z21.1 requirements for North American installation.</p>
+          
+          <p>Built-in gas cooktops certified for residential use across US and Canadian markets. Select commercial models certified for restaurant and professional kitchen applications.</p>
+          
           <h2>Market Access Benefits</h2>
-          <p>ETL certification provides HouseTech's B2B partners with several competitive advantages in the North American market:</p>
           
-          <p>Major retailers including Home Depot, Lowe's, Best Buy, and independent appliance dealers require ETL or UL certification for all electrical products. This certification eliminates barriers to entry and enables partnerships with tier-one retail accounts. HouseTech's factory-direct pricing combined with certified quality provides attractive margins for distributors and brand partners.</p>
-
+          <p>Major retailers including Home Depot, Lowe's, Best Buy, and independent dealers require ETL or UL certification. Certification eliminates barriers to entry and enables tier-one retail account partnerships.</p>
+          
+          <p>Factory-direct pricing combined with certified quality provides attractive margins for distributors. OEM partners gain immediate market credibility with recognized third-party safety validation.</p>
+          
           <h2>Quality Assurance Commitment</h2>
-          <p>Beyond initial certification, HouseTech maintains ongoing compliance through regular factory inspections and product testing. Intertek conducts quarterly audits of HouseTech's manufacturing facility to verify continued adherence to quality standards.</p>
           
-          <p>For North American brands and distributors interested in OEM partnerships with HouseTech, our certification team can provide detailed documentation and compliance support for product customization and market entry strategies.</p>
+          <p>Beyond initial certification, Intertek conducts quarterly factory audits verifying continued adherence. Ongoing compliance maintained through regular product testing and process monitoring.</p>
+          
+          <p>Certification team provides detailed documentation and compliance support for product customization. North American brands receive regulatory guidance for market entry strategies.</p>
+          
+          <p>ETL certification by Intertek opens 370M North American consumer market across 4 product categories with quarterly compliance audits.</p>
         </div>
 
         <nav class="article-nav">

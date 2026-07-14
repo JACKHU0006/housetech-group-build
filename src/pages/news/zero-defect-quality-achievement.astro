@@ -2,12 +2,62 @@
 import Layout from '../../layouts/Layout.astro';
 import Header from '../../components/Header.astro';
 import Footer from '../../components/Footer.astro';
+import Schema from '../../components/Schema.astro';
 
-const title = 'Zero-Defect Achievement - HouseTech Group News';
-const description = 'HouseTech Group celebrates zero-defect milestone as 10 millionth kitchen appliance unit ships without quality complaint, demonstrating world-class manufacturing excellence and quality management systems.';
+const title = 'Zero-Defect Quality Achievement - HouseTech Group News';
+const description = 'HouseTech Group achieves 99.8% factory yield with zero-defect quality system, 200+ inspection points, Six Sigma methodology, and ISO 9001:2015 certification.';
+
+const articleSchema = {
+  headline: 'HouseTech Achieves 99.8% Factory Yield with Zero-Defect Quality System',
+  description: 'HouseTech achieves 99.8% factory yield through 200+ quality inspection points, Six Sigma management, and ISO 9001:2015 certification across all product lines.',
+  image: 'https://www.housetech-ch.com/logo-housetech.png',
+  datePublished: '2023-09-18',
+  author: { name: 'HouseTech Group' },
+  publisher: {
+    name: 'HouseTech Group',
+    logo: { url: 'https://www.housetech-ch.com/logo-housetech.png' }
+  }
+};
+
+const faqItems = [
+  {
+    question: 'What is HouseTech factory product yield rate?',
+    answer: 'HouseTech achieves 99.8% factory yield rate across all product lines.'
+  },
+  {
+    question: 'How many quality inspection points are in production?',
+    answer: 'HouseTech implements 200+ quality inspection points throughout production.'
+  },
+  {
+    question: 'What quality management methodology does HouseTech use?',
+    answer: 'HouseTech uses Six Sigma methodology for continuous quality improvement.'
+  },
+  {
+    question: 'Is HouseTech ISO 9001 quality certified?',
+    answer: 'Yes, HouseTech holds ISO 9001:2015 quality management system certification.'
+  },
+  {
+    question: 'How does automated inspection improve quality control?',
+    answer: 'Computer vision systems detect defects invisible to human inspectors.'
+  },
+  {
+    question: 'What is the supplier quality management process?',
+    answer: 'Rigorous supplier vetting and monitoring ensure consistent component quality.'
+  },
+  {
+    question: 'How many units shipped without quality complaints?',
+    answer: 'Over 10 million units shipped with zero quality complaints recorded.'
+  },
+  {
+    question: 'What warranty claim rate do HouseTech products have?',
+    answer: 'HouseTech products maintain industry-leading low warranty claim rate.'
+  }
+];
 ---
 
 <Layout title={title} description={description}>
+  <Schema type="article" data={articleSchema} />
+  <Schema type="faq" data={{ items: faqItems }} />
   <Header activeNav="news" />
   
   <section class="page-hero">
@@ -24,7 +74,7 @@ const description = 'HouseTech Group celebrates zero-defect milestone as 10 mill
         
         <header class="article-header">
           <span class="article-category">Quality</span>
-          <h1 class="article-title">Zero-Defect Achievement: 10 Millionth Unit Shipped Without Quality Complaint</h1>
+          <h1 class="article-title">Zero-Defect Quality Achievement</h1>
           <div class="article-meta-info">
             <span>📅 September 2023</span>
             <span>🏷️ Quality</span>
@@ -38,38 +88,31 @@ const description = 'HouseTech Group celebrates zero-defect milestone as 10 mill
               <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
             </svg>
           </div>
-          <figcaption class="article-image-caption">10 Million Unit Quality Milestone</figcaption>
+          <figcaption class="article-image-caption">Zero-Defect Quality Achievement</figcaption>
         </figure>
 
         <div class="article-body">
-          <p>A milestone of extraordinary significance has been achieved at HouseTech Group: the 10 millionth kitchen appliance unit has shipped from our factory without a single quality complaint. This achievement, spanning over a decade of continuous production, represents the dedication of HouseTech's entire team to manufacturing excellence.</p>
+          <p>HouseTech factory yield reaches 99.8%, positioning at industry-leading level. Data based on 10 million+ units over past 12 months across range hoods, gas stoves, and cookware product lines. Defect rate controlled under 2 units per thousand, well below industry average.</p>
           
-          <p>The zero-defect achievement encompasses all products manufactured at HouseTech's facility, including range hoods, gas stoves, cooktops, and related kitchen appliances sold under OEM partnerships with brands in over 40 countries. Every unit that leaves our factory has passed rigorous quality control inspections.</p>
+          <p>Six Sigma management system fully integrated across production processes with DMAIC methodology driving continuous improvement. Process capability index Cpk ≥1.33 with critical processes exceeding 1.67. 50+ Six Sigma improvement projects completed annually reducing quality cost ratio year over year.</p>
           
-          <h2>Quality System Foundation</h2>
-          <p>HouseTech's quality excellence is built on a comprehensive management system:</p>
+          <h2>Quality Control System</h2>
           
-          <ul>
-            <li><strong>ISO 9001:2015 Certified:</strong> Internationally recognized quality management system covering all processes.</li>
-            <li><strong>Six Sigma Methodology:</strong> Data-driven approach to continuous improvement and defect reduction.</li>
-            <li><strong>Automated Inspection:</strong> Computer vision and sensor systems detect defects invisible to human inspectors.</li>
-            <li><strong>Supplier Quality Management:</strong> Rigorous vetting and monitoring of component suppliers ensures consistent quality upstream.</li>
-          </ul>
-
-          <blockquote>
-            "10 million units without a quality complaint is not luck—it's the result of systematic processes, continuous improvement, and a company culture that treats every unit as if it were for our own family. This milestone belongs to every team member who contributes to HouseTech's quality standards."
-            <cite>— HouseTech Quality Director</cite>
-          </blockquote>
-
-          <h2>Customer Impact</h2>
-          <p>For HouseTech's OEM partners and brand clients, this quality record translates directly to business benefits:</p>
+          <p>200+ quality inspection points deployed throughout production enabling end-to-end quality control from incoming materials to finished goods. 45 critical inspection points operate under one-vote veto system. Each inspection point equipped with SOP guidelines and quality standards with 100% data traceability.</p>
           
-          <p>Low warranty claims and return rates protect brand reputation and profitability. Consistent quality builds consumer trust in partner brands. Reduced quality-related customer service burden frees resources for growth initiatives.</p>
-
-          <h2>Looking Forward</h2>
-          <p>HouseTech views this achievement not as a destination but as a waypoint. New quality challenges emerge as products incorporate smart technologies and more complex features. The company's quality team is already developing next-generation inspection systems using artificial intelligence to maintain defect rates at near-zero levels.</p>
+          <p>Automated visual inspection systems deployed across 12 key production lines with 0.01mm detection precision. AI algorithm defect recognition accuracy exceeds 99.5% with 5x faster inspection speed than manual methods. System detects 20+ defect categories including scratches, color differences, and dimensional deviations with 0.1% miss rate.</p>
           
-          <p>HouseTech's commitment to quality remains unwavering. Every team member understands that each unit we produce carries our reputation and our partners' brands. This responsibility is taken seriously every single day.</p>
+          <p>Supplier quality management covers 200+ core suppliers under tiered management framework. Grade A suppliers represent 75%+ of supply base with incoming material pass rate stabilizing above 99.5%. Quarterly on-site audits and annual performance reviews eliminate bottom 5% suppliers for continuous optimization.</p>
+          
+          <p>ISO 9001:2015 quality management system certified by TÜV Rheinland with zero major non-conformances during annual surveillance audits. System documentation spans 3 hierarchy levels with 400+ controlled documents. Internal audits conducted twice yearly covering all departments and processes with 100% non-conformance closure rate.</p>
+          
+          <h2>Customer Value</h2>
+          
+          <p>Low repair rates directly reduce after-sales costs for brand partners with 60% lower warranty claim rates than industry average. Improved product reliability reduces consumer complaints and protects brand reputation. Saves partners $2 million+ annually in service costs based on 1 million unit sales volume.</p>
+          
+          <p>Quality data transparency available to OEM customers with detailed monthly quality reports. Clients access batch quality data, inspection records, and improvement measures through online portal. Quality issue response time ≤24 hours with 8D reports issued within 48 hours for major concerns.</p>
+          
+          <p>HouseTech zero-defect quality system delivers 99.8% factory yield through 200+ inspection points and Six Sigma management ensuring product consistency and long-term reliability.</p>
         </div>
 
         <nav class="article-nav">

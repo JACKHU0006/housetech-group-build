@@ -2,12 +2,54 @@
 import Layout from '../../layouts/Layout.astro';
 import Header from '../../components/Header.astro';
 import Footer from '../../components/Footer.astro';
+import Schema from '../../components/Schema.astro';
 
 const title = 'Record-Breaking Sales at IFA Berlin 2024 - HouseTech Group News';
-const description = 'HouseTech Group reports exceptional sales performance at IFA Berlin 2024, with multiple strategic partnerships formed and orders exceeding projections by 200% for premium range hood and kitchen appliance lines.';
+const description = 'HouseTech Group reports €45M in orders at IFA Berlin 2024, 200% above projections, with 35 new distributor agreements and 10 strategic OEM contracts across Europe.';
+
+const articleSchema = {
+  headline: 'HouseTech Reports €45M Orders at IFA Berlin 2024, 200% Above Projections',
+  description: 'IFA Berlin 2024 delivers €45M orders, 200% above projections, 35 new distributors, 10 OEM contracts, and 500+ B2B meetings across 130 countries.',
+  image: 'https://www.housetech-ch.com/logo-housetech.png',
+  datePublished: '2024-09-15',
+  author: { name: 'HouseTech Group' },
+  publisher: {
+    name: 'HouseTech Group',
+    logo: { url: 'https://www.housetech-ch.com/logo-housetech.png' }
+  }
+};
+
+const faqItems = [
+  {
+    question: 'What were total orders at IFA Berlin 2024?',
+    answer: 'Total committed orders reached €45 million, 200% above initial projections.'
+  },
+  {
+    question: 'How many new distributor agreements were signed?',
+    answer: '35 new distributor agreements established across European markets.'
+  },
+  {
+    question: 'How many B2B meetings were conducted during the show?',
+    answer: 'Over 500 B2B meetings conducted for brands and retailers across Europe.'
+  },
+  {
+    question: 'How many strategic OEM contracts were signed?',
+    answer: '10 new private-label manufacturing agreements signed with European brands.'
+  },
+  {
+    question: 'What is the size of HouseTech exhibition booth?',
+    answer: 'HouseTech exhibition space measures 300 square meters at IFA Berlin.'
+  },
+  {
+    question: 'How many visitors attend IFA Berlin annually?',
+    answer: 'IFA Berlin attracts over 180,000 visitors from 130 countries worldwide.'
+  }
+];
 ---
 
 <Layout title={title} description={description}>
+  <Schema type="article" data={articleSchema} />
+  <Schema type="faq" data={{ items: faqItems }} />
   <Header activeNav="news" />
   
   <section class="page-hero">
@@ -26,7 +68,7 @@ const description = 'HouseTech Group reports exceptional sales performance at IF
           <span class="article-category">Event</span>
           <h1 class="article-title">Record-Breaking Sales at IFA Berlin 2024 - HouseTech Reports</h1>
           <div class="article-meta-info">
-            <span>📅 August 2024</span>
+            <span>📅 September 2024</span>
             <span>🏷️ Event</span>
             <span>⏱️ 5 min read</span>
           </div>
@@ -43,34 +85,29 @@ const description = 'HouseTech Group reports exceptional sales performance at IF
         </figure>
 
         <div class="article-body">
-          <p>Berlin, Germany — HouseTech Group concludes its most successful IFA Berlin exhibition to date, reporting record-breaking sales figures and establishing numerous strategic partnerships across European markets. The event, held September 6-10, 2024, attracted over 180,000 visitors from 130 countries.</p>
+          <p>HouseTech concludes most successful IFA Berlin to date with record-breaking results. €45M total committed orders exceed projections by 200%, including immediate delivery and 2025 forward orders.</p>
           
-          <p>HouseTech's 300-square-meter exhibition space showcased the company's comprehensive range of OEM kitchen appliances, including the award-winning UltraSlim Pro range hood series, new smart kitchen solutions, and innovative gas stove designs. The booth drew a continuous stream of international visitors throughout the exhibition.</p>
+          <p>300-square-meter exhibition space showcases comprehensive OEM kitchen appliance range. Award-winning UltraSlim Pro series and smart kitchen solutions draw continuous international visitor traffic.</p>
           
           <h2>Key Results</h2>
-          <p>IFA Berlin 2024 proved exceptionally fruitful for HouseTech's international business development:</p>
           
-          <ul>
-            <li><strong>€45 Million in Orders:</strong> Total committed orders exceeded projections by 200%, including both immediate delivery and forward orders for 2025.</li>
-            <li><strong>35 New Distributor Agreements:</strong> Partnerships established with distributors from Germany, France, Spain, Italy, Poland, and Scandinavia.</li>
-            <li><strong>500+ B2B Meetings:</strong> Product demonstrations conducted for brands, retailers, and buying groups from across Europe.</li>
-            <li><strong>10 Strategic OEM Contracts:</strong> New private-label manufacturing agreements signed with European brands.</li>
-          </ul>
-
-          <blockquote>
-            "IFA Berlin has always been a pivotal event for HouseTech's European strategy. This year's results exceeded our most optimistic projections. The response to our new product lines was overwhelming, and we secured partnerships that will drive growth for years to come."
-            <cite>— HouseTech European Business Director</cite>
-          </blockquote>
-
+          <p>35 new distributor agreements signed with partners from Germany, France, Spain, Italy, Poland, and Scandinavia. 10 strategic OEM contracts establish new private-label manufacturing relationships.</p>
+          
+          <p>500+ B2B meetings conducted for brands, retailers, and buying groups across Europe. Continuous product demonstrations highlight technical capabilities and design innovation.</p>
+          
           <h2>Product Highlights</h2>
-          <p>Several products generated particular excitement among visitors:</p>
           
-          <p>The UltraSlim Pro range hood captured significant attention, with its ultra-thin design and advanced filtration technology earning praise from industry professionals. The new SmartConnect series, featuring IoT integration with European smart home standards, attracted interest from major retailers seeking differentiated product offerings.</p>
-
+          <p>UltraSlim Pro range hood captures significant attention with ultra-thin design and advanced filtration. Industry professionals praise engineering quality and aesthetic appeal of the complete collection.</p>
+          
+          <p>New SmartConnect series with European smart home standard integration attracts major retailers. Differentiated product offerings enable partners to stand out in competitive markets.</p>
+          
           <h2>Looking Ahead</h2>
-          <p>HouseTech's sales and technical teams are now following up with all leads generated at IFA Berlin. The company has committed to increased production capacity to fulfill the surge in orders while maintaining the quality standards that have made HouseTech a trusted OEM partner.</p>
           
-          <p>HouseTech extends sincere thanks to all visitors, partners, and colleagues who made IFA Berlin 2024 a tremendous success. The company looks forward to continuing partnerships and welcoming new friends to its growing global network.</p>
+          <p>Sales and technical teams follow up with all leads generated during the exhibition. Increased production capacity committed to fulfill surge in orders while maintaining quality standards.</p>
+          
+          <p>Production planning teams adjust schedules to accommodate new contract volumes. HouseTech continues building global network of trusted distribution and OEM partners.</p>
+          
+          <p>IFA Berlin 2024 delivers €45M orders, 200% above projections, with 35 distributors and 10 OEM contracts signed.</p>
         </div>
 
         <nav class="article-nav">

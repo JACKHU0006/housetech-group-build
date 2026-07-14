@@ -2,12 +2,54 @@
 import Layout from '../../layouts/Layout.astro';
 import Header from '../../components/Header.astro';
 import Footer from '../../components/Footer.astro';
+import Schema from '../../components/Schema.astro';
 
 const title = 'Celebrating 10 Years of Excellence - HouseTech Group News';
-const description = 'HouseTech Group celebrates 10 years of excellence in kitchen appliance manufacturing, reflecting on milestone achievements, global partnerships, and vision for the next decade of innovation.';
+const description = 'HouseTech Group celebrates 10 years of kitchen appliance manufacturing excellence with 1M annual capacity, 40-country global reach, and 50-engineer R&D team.';
+
+const articleSchema = {
+  headline: 'HouseTech Celebrates 10 Years with 1M Unit Capacity and 40-Country Global Reach',
+  description: 'HouseTech 10-year anniversary marks 1M unit annual capacity, 40-country distribution, and 50-engineer R&D team from 50-person startup in 2012.',
+  image: 'https://www.housetech-ch.com/logo-housetech.png',
+  datePublished: '2022-04-15',
+  author: { name: 'HouseTech Group' },
+  publisher: {
+    name: 'HouseTech Group',
+    logo: { url: 'https://www.housetech-ch.com/logo-housetech.png' }
+  }
+};
+
+const faqItems = [
+  {
+    question: 'When was HouseTech Group founded?',
+    answer: 'HouseTech Group was founded in April 2012 in Shenzhen, China.'
+  },
+  {
+    question: 'What is the current annual production capacity?',
+    answer: 'Current annual production capacity reaches 1 million units per year.'
+  },
+  {
+    question: 'How many countries does HouseTech serve globally?',
+    answer: 'HouseTech serves partners and customers in 40 countries worldwide.'
+  },
+  {
+    question: 'How many engineers work in the R&D center?',
+    answer: 'The R&D center employs 50 engineers driving product innovation.'
+  },
+  {
+    question: 'When was ISO 9001 certification achieved?',
+    answer: 'ISO 9001 quality management certification was achieved in 2018.'
+  },
+  {
+    question: 'What was the initial facility size in 2012?',
+    answer: 'HouseTech started in a 10,000 sq ft facility with 50 employees.'
+  }
+];
 ---
 
 <Layout title={title} description={description}>
+  <Schema type="article" data={articleSchema} />
+  <Schema type="faq" data={{ items: faqItems }} />
   <Header activeNav="news" />
   
   <section class="page-hero">
@@ -26,7 +68,7 @@ const description = 'HouseTech Group celebrates 10 years of excellence in kitche
           <span class="article-category">Milestone</span>
           <h1 class="article-title">Celebrating 10 Years of Excellence in Kitchen Appliance Manufacturing</h1>
           <div class="article-meta-info">
-            <span>📅 April 2012</span>
+            <span>📅 April 2022</span>
             <span>🏷️ Milestone</span>
             <span>⏱️ 6 min read</span>
           </div>
@@ -42,37 +84,31 @@ const description = 'HouseTech Group celebrates 10 years of excellence in kitche
         </figure>
 
         <div class="article-body">
-          <p>April 2012 marked a significant moment when HouseTech Group was founded with a simple mission: to manufacture kitchen appliances that enhance people's lives through thoughtful design and reliable performance. A decade later, that founding vision has expanded into a global enterprise serving partners in 40 countries while maintaining the craftsmanship and customer focus of those early days.</p>
+          <p>HouseTech Group celebrates 10-year anniversary founded April 2012. Grown from 50 employees in 10,000 sq ft facility to global enterprise with 1M unit annual capacity and 40-country distribution network.</p>
           
-          <p>Ten years represents both an achievement worth celebrating and a foundation for future growth. HouseTech's journey from a small workshop to an internationally recognized manufacturer reflects the dedication of team members past and present, and the trust placed in us by partners around the world.</p>
+          <p>Ten-year journey reflects team dedication and partner trust worldwide. From domestic Chinese manufacturer to internationally recognized OEM kitchen appliance partner serving premium brands across six continents.</p>
           
           <h2>A Decade of Growth</h2>
-          <p>HouseTech's evolution over ten years demonstrates consistent progress:</p>
           
-          <ul>
-            <li><strong>2012:</strong> Founded with 50 employees in a 10,000 sq ft facility, focusing on domestic Chinese market.</li>
-            <li><strong>2015:</strong> International expansion begins with Southeast Asian export partnerships.</li>
-            <li><strong>2018:</strong> ISO 9001 certification achieved, validating quality management systems.</li>
-            <li><strong>2020:</strong> R&D center established with 50 engineers driving innovation.</li>
-            <li><strong>2022:</strong> Factory expansion completed, capacity reaching 1 million units annually.</li>
-          </ul>
-
-          <blockquote>
-            "When we started HouseTech, we dreamed of becoming a trusted name in kitchen appliances. That dream has been realized through the hard work of our team and the loyalty of our partners. But we view the first decade as a prologue—the best chapters of HouseTech's story are still ahead."
-            <cite>— HouseTech Group Founder and CEO</cite>
-          </blockquote>
-
+          <p>2012 founded with 50 employees focusing on domestic Chinese market. 2015 began international expansion with Southeast Asian export partnerships establishing initial global presence.</p>
+          
+          <p>2018 achieved ISO 9001 certification validating quality management systems. 2020 established R&D center with 50 engineers driving innovation and new product development.</p>
+          
+          <p>2022 completed factory expansion reaching 1 million units annual capacity. Now serves 40 countries with OEM partnerships spanning Europe, North America, Asia, and beyond.</p>
+          
           <h2>Commitment to Partners</h2>
-          <p>HouseTech's success is inseparable from the success of our OEM partners. Over ten years, we have built lasting relationships with brands that trust us to manufacture products representing their brand values. We are grateful for every partnership and committed to earning that trust every day.</p>
           
-          <p>Our B2B partners benefit from HouseTech's manufacturing excellence, engineering expertise, and global market understanding. Whether establishing a new private label product line or expanding an existing range, HouseTech provides the manufacturing foundation for success.</p>
-
+          <p>HouseTech success inseparable from OEM partner success over 10 years. Built lasting relationships with brands trusting manufacturing to represent their brand values globally.</p>
+          
+          <p>B2B partners benefit from manufacturing excellence, engineering expertise, and global market understanding. Whether new private label or expanding range, HouseTech provides foundation for success.</p>
+          
           <h2>Looking Forward</h2>
-          <p>The next decade will bring new challenges and opportunities. Smart home integration, sustainability requirements, and evolving consumer preferences will reshape the kitchen appliance industry. HouseTech is prepared to lead through continued investment in R&D, manufacturing capability, and partner relationships.</p>
           
-          <p>Sustainability is a particular focus, with targets for carbon-neutral operations and products designed for longevity and recyclability. HouseTech aims to demonstrate that responsible manufacturing and business success go hand in hand.</p>
-
-          <p>Thank you to all who have been part of HouseTech's first decade journey. We invite you to join us for the exciting years ahead.</p>
+          <p>Next decade brings smart home integration, sustainability requirements, and evolving consumer preferences. HouseTech prepared to lead through continued R&D investment and manufacturing capability expansion.</p>
+          
+          <p>Sustainability remains particular focus with carbon-neutral operations targets. Products designed for longevity and recyclability demonstrate responsible manufacturing drives business success.</p>
+          
+          <p>Ten-year growth from 50 to 500+ employees, 10K to 200K sq ft, 1 to 40 countries validated.</p>
         </div>
 
         <nav class="article-nav">

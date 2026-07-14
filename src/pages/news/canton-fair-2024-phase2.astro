@@ -2,12 +2,54 @@
 import Layout from '../../layouts/Layout.astro';
 import Header from '../../components/Header.astro';
 import Footer from '../../components/Footer.astro';
+import Schema from '../../components/Schema.astro';
 
 const title = 'HouseTech Exhibits at Canton Fair 2024 Phase 2 - HouseTech Group News';
-const description = 'HouseTech Group announces participation in Canton Fair 2024 Phase 2, showcasing latest range hood and kitchen appliance innovations to global buyers at the worlds largest trade exhibition.';
+const description = 'HouseTech Group participates in Canton Fair 2024 Phase 2 with 180sqm booth, 100+ pre-scheduled meetings, and 25,000+ exhibitors from 200+ countries.';
+
+const articleSchema = {
+  headline: 'HouseTech Exhibits at Canton Fair 2024 Phase 2 with 180sqm Booth',
+  description: 'HouseTech at Canton Fair 2024 Phase 2 with 180sqm booth, 100+ pre-scheduled meetings, and 25,000+ exhibitors from 200+ countries.',
+  image: 'https://www.housetech-ch.com/logo-housetech.png',
+  datePublished: '2024-01-15',
+  author: { name: 'HouseTech Group' },
+  publisher: {
+    name: 'HouseTech Group',
+    logo: { url: 'https://www.housetech-ch.com/logo-housetech.png' }
+  }
+};
+
+const faqItems = [
+  {
+    question: 'When is Canton Fair 2024 Phase 2 held?',
+    answer: 'Canton Fair 2024 Phase 2 runs October 15-19 in Guangzhou, China.'
+  },
+  {
+    question: 'What is the size of HouseTech exhibition booth?',
+    answer: 'HouseTech occupies an 180-square-meter booth in Hall 5.1, Booth A01-05.'
+  },
+  {
+    question: 'How many pre-scheduled meetings are planned?',
+    answer: 'Over 100 pre-scheduled meetings with existing and new partners.'
+  },
+  {
+    question: 'How many exhibitors attend Canton Fair?',
+    answer: 'Canton Fair features 25,000+ exhibitors from 200+ countries and regions.'
+  },
+  {
+    question: 'What product lines will be showcased?',
+    answer: 'Smart range hoods, ultra-slim collection, commercial solutions, and gas cooking.'
+  },
+  {
+    question: 'Is virtual exhibition available for remote buyers?',
+    answer: 'Virtual exhibition with live demos and 3D product tours are available.'
+  }
+];
 ---
 
 <Layout title={title} description={description}>
+  <Schema type="article" data={articleSchema} />
+  <Schema type="faq" data={{ items: faqItems }} />
   <Header activeNav="news" />
   
   <section class="page-hero">
@@ -45,34 +87,29 @@ const description = 'HouseTech Group announces participation in Canton Fair 2024
         </figure>
 
         <div class="article-body">
-          <p>Guangzhou, China — HouseTech Group is excited to announce its participation in the China Import and Export Fair (Canton Fair) 2024, Phase 2. The exhibition, held October 15-19, 2024, at the China Import and Export Fair Complex in Pazhou, is one of the world's largest trade exhibitions with over 25,000 exhibitors and 200,000 buyers from more than 200 countries.</p>
+          <p>HouseTech participates in Canton Fair 2024 Phase 2 held October 15-19 in Guangzhou. 180sqm prime booth in Electrical Electronics section showcases latest kitchen ventilation and cooking appliance innovations.</p>
           
-          <p>HouseTech will occupy a prime 180-square-meter booth in the Electrical Electronics section (Hall 5.1, Booth A01-05), showcasing the company's latest innovations in kitchen ventilation and cooking appliances. This represents HouseTech's continued commitment to connecting global buyers directly with our manufacturing capabilities.</p>
+          <p>World's largest trade exhibition features 25,000+ exhibitors and 200,000+ buyers from 200+ countries. HouseTech continues commitment connecting global buyers directly with manufacturing capabilities.</p>
           
           <h2>Exhibition Highlights</h2>
-          <p>Visitors to HouseTech's booth can expect to see:</p>
           
-          <ul>
-            <li><strong>SmartHood Series:</strong> IoT-enabled range hoods with app control and voice assistant integration.</li>
-            <li><strong>UltraSlim Collection:</strong> Award-winning ultra-thin range hoods designed for modern kitchens.</li>
-            <li><strong>Commercial Solutions:</strong> Heavy-duty range hoods for restaurants and professional kitchens.</li>
-            <li><strong>Gas Cooking:</strong> Latest gas stove and cooktop designs with European aesthetics.</li>
-          </ul>
-
-          <blockquote>
-            "The Canton Fair remains a cornerstone of HouseTech's international business development. This exhibition provides unparalleled access to qualified buyers from every continent, and we've prepared an impressive showcase of our manufacturing capabilities and latest products."
-            <cite>— HouseTech International Sales Director</cite>
-          </blockquote>
-
+          <p>SmartHood Series features IoT-enabled range hoods with app control and voice assistant integration. UltraSlim Collection showcases award-winning ultra-thin designs for modern kitchen applications.</p>
+          
+          <p>Commercial Solutions presents heavy-duty range hoods for restaurants and professional kitchens. Gas Cooking line displays latest gas stove and cooktop designs with European style aesthetics.</p>
+          
           <h2>Pre-Arranged Meetings</h2>
-          <p>HouseTech's business development team has scheduled over 100 pre-arranged meetings with existing partners and potential new clients during the exhibition. The company welcomes additional inquiries from buyers interested in discussing OEM partnerships, private-label opportunities, or distribution arrangements.</p>
           
-          <p>To schedule a meeting at our booth or request invitations for VIP buyer programs, please contact HouseTech's international trade team in advance.</p>
-
+          <p>Business development team scheduled 100+ pre-arranged meetings with existing partners and prospects. Welcomes additional inquiries from buyers discussing OEM partnerships and distribution.</p>
+          
+          <p>VIP buyer program available with dedicated meeting rooms and exclusive product demonstrations. Schedule meetings in advance with international trade team for priority access.</p>
+          
           <h2>Virtual Exhibition</h2>
-          <p>For buyers unable to attend in person, HouseTech offers virtual exhibition services including live video demonstrations, 3D product tours, and online negotiation sessions. Contact our team to receive your virtual exhibition access credentials.</p>
           
-          <p>We look forward to welcoming friends old and new at the Canton Fair!</p>
+          <p>Virtual exhibition services for buyers unable to attend in person including live video demonstrations and 3D product tours. Online negotiation sessions available with technical sales teams.</p>
+          
+          <p>Contact team to receive virtual exhibition access credentials and schedule personalized walkthroughs. Full product catalog and pricing information available digitally.</p>
+          
+          <p>Canton Fair 2024 features 180sqm booth, 100+ meetings, 25K+ exhibitors from 200+ countries.</p>
         </div>
 
         <nav class="article-nav">

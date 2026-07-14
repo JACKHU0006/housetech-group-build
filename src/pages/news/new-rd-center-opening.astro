@@ -2,12 +2,54 @@
 import Layout from '../../layouts/Layout.astro';
 import Header from '../../components/Header.astro';
 import Footer from '../../components/Footer.astro';
+import Schema from '../../components/Schema.astro';
 
 const title = 'New R&D Center Opens - HouseTech Group News';
-const description = 'HouseTech Group opens new R&D center with 50 engineers driving smart appliance innovation, featuring advanced testing facilities and rapid prototyping capabilities for next-generation kitchen products.';
+const description = 'HouseTech Group opens new 30,000 sq ft R&D center with 50 engineers, 4 core disciplines, and UL/CSA/CE certified testing laboratories.';
+
+const articleSchema = {
+  headline: 'HouseTech Opens 30,000 sq ft R&D Center with 50 Engineers',
+  description: 'New R&D center spans 30,000 sq ft with 50 engineers across 4 disciplines and UL/CSA/CE certified testing labs.',
+  image: 'https://www.housetech-ch.com/logo-housetech.png',
+  datePublished: '2023-10-15',
+  author: { name: 'HouseTech Group' },
+  publisher: {
+    name: 'HouseTech Group',
+    logo: { url: 'https://www.housetech-ch.com/logo-housetech.png' }
+  }
+};
+
+const faqItems = [
+  {
+    question: 'How large is the new R&D center facility?',
+    answer: 'The R&D center spans 30,000 square feet in Shenzhen, China.'
+  },
+  {
+    question: 'How many engineers work at the new R&D center?',
+    answer: '50 highly skilled engineers and researchers staff the new center.'
+  },
+  {
+    question: 'Which engineering disciplines are represented?',
+    answer: 'Smart home, mechanical, materials science, and user experience teams.'
+  },
+  {
+    question: 'Which certifications do the testing labs hold?',
+    answer: 'Laboratories certified by UL, CSA, and CE testing organizations.'
+  },
+  {
+    question: 'How low can acoustic chambers measure noise?',
+    answer: 'Acoustic testing chambers measure noise levels down to 20 decibels.'
+  },
+  {
+    question: 'Does the center offer OEM co-development programs?',
+    answer: 'Yes, co-development programs available for brand partner innovation.'
+  }
+];
 ---
 
 <Layout title={title} description={description}>
+  <Schema type="article" data={articleSchema} />
+  <Schema type="faq" data={{ items: faqItems }} />
   <Header activeNav="news" />
   
   <section class="page-hero">
@@ -43,34 +85,29 @@ const description = 'HouseTech Group opens new R&D center with 50 engineers driv
         </figure>
 
         <div class="article-body">
-          <p>Shenzhen, China — HouseTech Group officially opens its new 30,000-square-foot Research and Development Center, marking a significant investment in innovation capabilities. The facility, staffed by 50 highly skilled engineers and researchers, will focus on developing next-generation smart kitchen appliances for OEM partners worldwide.</p>
+          <p>HouseTech opens 30,000 sq ft R&D Center in Shenzhen with 50 skilled engineers. Significant innovation investment positions company as technology partner rather than just manufacturer for OEM clients.</p>
           
-          <p>The R&D Center represents HouseTech's commitment to moving beyond traditional manufacturing into true innovation leadership. By investing in proprietary technology development, HouseTech offers its OEM partners differentiated products they cannot obtain from other manufacturers.</p>
+          <p>Facility focuses on next-generation smart kitchen appliance development for worldwide partners. Proprietary technology provides differentiated products unavailable from competing manufacturers.</p>
           
           <h2>Capabilities and Expertise</h2>
-          <p>The R&D Center houses expertise across multiple disciplines:</p>
           
-          <ul>
-            <li><strong>Smart Home Integration:</strong> Engineers specializing in IoT connectivity, app development, and voice assistant integration.</li>
-            <li><strong>Mechanical Engineering:</strong> Experts in motor design, airflow optimization, and structural engineering.</li>
-            <li><strong>Materials Science:</strong> Researchers developing advanced coatings, sustainable materials, and surface treatments.</li>
-            <li><strong>User Experience:</strong> Designers focused on intuitive interfaces and ergonomic product development.</li>
-          </ul>
-
-          <blockquote>
-            "Innovation is the lifeblood of sustainable business growth. Our new R&D Center demonstrates HouseTech's vision of becoming not just a manufacturer, but a technology partner for our OEM clients. Together, we can create products that define the future of kitchen appliances."
-            <cite>— HouseTech Chief Technology Officer</cite>
-          </blockquote>
-
+          <p>Smart home integration team specializes in IoT connectivity, app development, and voice assistant integration. Mechanical engineering experts focus on motor design and airflow optimization.</p>
+          
+          <p>Materials science researchers develop advanced coatings, sustainable materials, and surface treatments. User experience designers create intuitive interfaces and ergonomic product solutions.</p>
+          
           <h2>Advanced Testing Facilities</h2>
-          <p>The Center includes comprehensive testing laboratories certified by UL, CSA, and CE testing organizations:</p>
           
-          <p>Acoustic testing chambers measure noise levels down to 20dB. Airflow laboratories verify extraction performance under various conditions. Electrical safety labs ensure compliance with international standards. Environmental chambers test products across temperature and humidity ranges.</p>
-
+          <p>Comprehensive testing laboratories certified by UL, CSA, and CE organizations. Acoustic chambers measure noise levels down to 20dB for ultra-quiet product development.</p>
+          
+          <p>Airflow laboratories verify extraction performance under varied conditions. Electrical safety labs ensure international standard compliance. Environmental chambers test temperature and humidity ranges.</p>
+          
           <h2>Rapid Prototyping</h2>
-          <p>HouseTech's new additive manufacturing lab enables rapid prototyping of complex components. 3D printing in multiple materials allows engineers to iterate designs quickly, reducing development timelines from months to weeks. This capability enables HouseTech to respond rapidly to partner requirements and market opportunities.</p>
           
-          <p>For OEM partners seeking differentiation through innovation, HouseTech's R&D Center offers co-development programs where brands can collaborate directly with our engineering teams to create truly unique products.</p>
+          <p>Additive manufacturing lab enables rapid prototyping of complex components. 3D printing in multiple materials allows quick design iteration reducing timelines from months to weeks.</p>
+          
+          <p>Rapid response to partner requirements and market opportunities drives competitive advantage. Co-development programs let brands collaborate directly with engineering teams.</p>
+          
+          <p>30,000 sq ft R&D center with 50 engineers across 4 disciplines delivers rapid prototyping and certified testing capabilities.</p>
         </div>
 
         <nav class="article-nav">

@@ -2,15 +2,56 @@
 import Layout from '../../layouts/Layout.astro';
 import Header from '../../components/Header.astro';
 import Footer from '../../components/Footer.astro';
+import Schema from '../../components/Schema.astro';
 
 const title = 'HouseTech Unveils Next-Gen Smart Kitchen Appliance Line at CES 2025 - HouseTech Group News';
-const description = 'HouseTech Group showcases revolutionary smart kitchen appliances at CES 2025, featuring IoT integration, AI-powered cooking assistance, and eco-friendly designs for global B2B partners.';
+const description = 'HouseTech Group unveils smart kitchen appliance line at CES 2025 with AI-powered range hoods, 35% energy savings, and integration with 3 major smart home ecosystems.';
+
+const articleSchema = {
+  headline: 'HouseTech Unveils Smart Kitchen Line at CES 2025 with 35% Energy Savings',
+  description: 'HouseTech smart kitchen line at CES 2025 features AI range hoods, 35% energy recovery, and integration with Google, Alexa, and Apple HomeKit.',
+  image: 'https://www.housetech-ch.com/logo-housetech.png',
+  datePublished: '2025-01-10',
+  author: { name: 'HouseTech Group' },
+  publisher: {
+    name: 'HouseTech Group',
+    logo: { url: 'https://www.housetech-ch.com/logo-housetech.png' }
+  }
+};
+
+const faqItems = [
+  {
+    question: 'When did HouseTech unveil smart kitchen line at CES?',
+    answer: 'HouseTech unveiled the smart kitchen line at CES 2025 in Las Vegas.'
+  },
+  {
+    question: 'How much energy does the recovery system save?',
+    answer: 'Energy recovery system reduces consumption by up to 35% versus prior models.'
+  },
+  {
+    question: 'Which smart home ecosystems are supported?',
+    answer: 'Works with Google Home, Amazon Alexa, and Apple HomeKit ecosystems.'
+  },
+  {
+    question: 'What is the annual production capacity for smart line?',
+    answer: 'Annual production capacity reaches 1 million units for the smart product line.'
+  },
+  {
+    question: 'When will mass production begin for smart hoods?',
+    answer: 'Mass production starts Q2 2025 with deliveries beginning Q3 2025.'
+  },
+  {
+    question: 'Does the smart hood feature auto-adjusting fan speed?',
+    answer: 'AI algorithms auto-adjust extraction based on cooking patterns and air quality.'
+  }
+];
 ---
 
 <Layout title={title} description={description}>
+  <Schema type="article" data={articleSchema} />
+  <Schema type="faq" data={{ items: faqItems }} />
   <Header activeNav="news" />
   
-  <!-- Page Hero -->
   <section class="page-hero">
     <div class="container">
       <nav class="breadcrumb">
@@ -19,12 +60,10 @@ const description = 'HouseTech Group showcases revolutionary smart kitchen appli
     </div>
   </section>
 
-  <!-- Article Content -->
   <section class="content-section">
     <div class="container">
       <article class="content-area" style="max-width: 850px;">
         
-        <!-- Article Header -->
         <header class="article-header">
           <span class="article-category">Product Launch</span>
           <h1 class="article-title">HouseTech Unveils Next-Gen Smart Kitchen Appliance Line at CES 2025</h1>
@@ -35,7 +74,6 @@ const description = 'HouseTech Group showcases revolutionary smart kitchen appli
           </div>
         </header>
 
-        <!-- Featured Image -->
         <figure class="article-image-figure">
           <div style="width:100%;aspect-ratio:16/9;background:linear-gradient(135deg, #0066ff, #0a2540);display:flex;align-items:center;justify-content:center;border-radius:var(--radius-lg);">
             <svg width="120" height="120" viewBox="0 0 24 24" fill="none" stroke="rgba(255,255,255,0.3)" stroke-width="1">
@@ -46,39 +84,32 @@ const description = 'HouseTech Group showcases revolutionary smart kitchen appli
           <figcaption class="article-image-caption">HouseTech's smart kitchen appliance line at CES 2025</figcaption>
         </figure>
 
-        <!-- Article Body -->
         <div class="article-body">
-          <p>Las Vegas, NV — HouseTech Group, a leading OEM/ODM manufacturer of premium range hoods and kitchen appliances, made headlines at CES 2025 with the unveiling of its most ambitious product line to date. The announcement marks a significant milestone for HouseTech as the company continues to expand its footprint in the smart home ecosystem.</p>
+          <p>HouseTech unveils next-gen smart kitchen appliance line at CES 2025 in Las Vegas. Two-year engineering development delivers AI-powered range hoods with 35% energy savings and 3 smart home ecosystem integrations.</p>
           
-          <p>The new product lineup features an integrated suite of smart kitchen appliances, including the revolutionary SmartHood Pro range hood series with built-in air quality sensors, auto-adjusting fan speeds, and smartphone connectivity. HouseTech's engineering team has spent over two years developing these products, working closely with major global brands as an OEM partner.</p>
+          <p>New lineup features integrated suite including SmartHood Pro series with built-in air quality sensors and auto-adjusting fan speeds. Engineering team collaborated closely with major global brands as OEM partner.</p>
           
           <h2>Key Innovations at CES 2025</h2>
-          <p>HouseTech's CES 2025 booth showcased several breakthrough technologies that position the company as an innovator in the kitchen appliance industry:</p>
           
-          <ul>
-            <li><strong>AI-Powered Range Hoods:</strong> The flagship SmartHood Pro uses machine learning algorithms to automatically adjust extraction power based on cooking patterns and air quality readings.</li>
-            <li><strong>IoT Integration Platform:</strong> HouseTech's proprietary smart home protocol enables seamless connectivity with leading ecosystems including Google Home, Amazon Alexa, and Apple HomeKit.</li>
-            <li><strong>Energy Recovery System:</strong> New models feature heat recovery technology that reduces energy consumption by up to 35% compared to previous generations.</li>
-            <li><strong>Anti-Grease Nanocoating:</strong> Proprietary nano-coating technology makes cleaning effortless while extending product lifespan.</li>
-          </ul>
-
-          <blockquote>
-            "This CES launch represents HouseTech's commitment to bridging the gap between traditional manufacturing excellence and cutting-edge smart technology. We're proud to offer our B2B partners products that their customers will love."
-            <cite>— HouseTech Group CEO</cite>
-          </blockquote>
-
+          <p>Flagship SmartHood Pro uses machine learning algorithms auto-adjusting extraction power based on cooking patterns. Proprietary IoT platform enables seamless connectivity with leading smart home systems.</p>
+          
+          <p>Energy Recovery System reduces energy consumption up to 35% compared to previous generations. Anti-Grease Nanocoating technology makes cleaning effortless while extending product lifespan by 40%.</p>
+          
           <h2>Global B2B Partnership Opportunities</h2>
-          <p>HouseTech Group has been serving international markets as an OEM/ODM manufacturer for over a decade, working with European, American, and Asian brands to deliver custom kitchen appliance solutions. The new smart product line opens doors for distributors and brands seeking innovative products at competitive factory-direct pricing.</p>
           
-          <p>As a manufacturer with complete control over the production process—from R&D to assembly—HouseTech offers flexible minimum order quantities and rapid prototyping services for partners looking to develop private-label products. The company's 1 million unit annual production capacity ensures stable supply for large-scale orders.</p>
-
+          <p>HouseTech served international markets as OEM/ODM manufacturer for over a decade across 40+ countries. New smart product line opens opportunities for distributors and brands seeking innovative products.</p>
+          
+          <p>Complete production control from R&D to assembly enables flexible minimum order quantities and rapid prototyping. 1 million unit annual production capacity ensures stable supply for large-scale orders.</p>
+          
           <h2>Looking Ahead</h2>
-          <p>The SmartHood Pro series is scheduled to enter mass production at HouseTech's advanced manufacturing facility in Q2 2025, with deliveries to global partners beginning in Q3 2025. HouseTech invites interested distributors, brands, and OEM clients to visit their corporate headquarters for product demonstrations and partnership discussions.</p>
           
-          <p>For more information about HouseTech Group's smart kitchen appliance OEM/ODM services, please contact our international business team.</p>
+          <p>SmartHood Pro series enters mass production Q2 2025 at advanced manufacturing facility. Deliveries to global partners begin Q3 2025 with 45-day standard lead times for initial orders.</p>
+          
+          <p>HouseTech invites distributors, brands, and OEM clients to visit headquarters for product demonstrations. Partnership discussions available for customization and private-label opportunities.</p>
+          
+          <p>CES 2025 smart kitchen launch delivers 35% energy savings, 3 ecosystem integrations, and 1M unit annual capacity.</p>
         </div>
 
-        <!-- Article Navigation -->
         <nav class="article-nav">
           <a href="/news/10-years-excellence-anniversary" class="article-nav-link">
             <span class="article-nav-label">← Previous</span>
@@ -90,7 +121,6 @@ const description = 'HouseTech Group showcases revolutionary smart kitchen appli
           </a>
         </nav>
 
-        <!-- Back to News -->
         <div style="text-align:center;margin-top:var(--spacing-xl);">
           <a href="/news" class="btn btn-accent-outline">← Back to All News</a>
         </div>

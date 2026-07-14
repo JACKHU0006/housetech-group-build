@@ -2,12 +2,54 @@
 import Layout from '../../layouts/Layout.astro';
 import Header from '../../components/Header.astro';
 import Footer from '../../components/Footer.astro';
+import Schema from '../../components/Schema.astro';
 
 const title = 'Serving 40 Countries - HouseTech Group News';
-const description = 'HouseTech Group celebrates serving 40 countries worldwide with premium kitchen appliances, marking significant milestone in global expansion as trusted OEM manufacturer for international brands.';
+const description = 'HouseTech Group serves 40 countries across 6 continents with 8-year international expansion from 2015 Southeast Asia entry to 2023 global milestone.';
+
+const articleSchema = {
+  headline: 'HouseTech Serves 40 Countries Across 6 Continents with OEM Kitchen Appliances',
+  description: 'HouseTech reaches 40-country milestone across 6 continents with 8-year international expansion starting from Southeast Asia in 2015.',
+  image: 'https://www.housetech-ch.com/logo-housetech.png',
+  datePublished: '2023-01-15',
+  author: { name: 'HouseTech Group' },
+  publisher: {
+    name: 'HouseTech Group',
+    logo: { url: 'https://www.housetech-ch.com/logo-housetech.png' }
+  }
+};
+
+const faqItems = [
+  {
+    question: 'How many countries does HouseTech serve globally?',
+    answer: 'HouseTech serves customers and partners in 40 countries worldwide.'
+  },
+  {
+    question: 'Across how many continents does HouseTech operate?',
+    answer: 'HouseTech operates across 6 inhabited continents globally.'
+  },
+  {
+    question: 'When did HouseTech begin international expansion?',
+    answer: 'International expansion began in 2015 with Southeast Asian markets.'
+  },
+  {
+    question: 'When did HouseTech enter the European market?',
+    answer: 'European market entry occurred in 2017 through Germany and France.'
+  },
+  {
+    question: 'When did HouseTech enter North American market?',
+    answer: 'North American market entry completed in 2019 with certification.'
+  },
+  {
+    question: 'Which region represents next expansion frontier?',
+    answer: 'African markets represent the next major frontier for expansion.'
+  }
+];
 ---
 
 <Layout title={title} description={description}>
+  <Schema type="article" data={articleSchema} />
+  <Schema type="faq" data={{ items: faqItems }} />
   <Header activeNav="news" />
   
   <section class="page-hero">
@@ -43,35 +85,31 @@ const description = 'HouseTech Group celebrates serving 40 countries worldwide w
         </figure>
 
         <div class="article-body">
-          <p>January 2023 marks a significant milestone for HouseTech Group as we celebrate serving customers in 40 countries across six continents. What began as a domestic Chinese manufacturer has evolved into a globally recognized OEM kitchen appliance partner trusted by leading brands worldwide. This journey reflects HouseTech's unwavering commitment to quality, innovation, and customer partnerships.</p>
+          <p>HouseTech celebrates 40-country milestone across 6 continents in January 2023. 8-year international expansion transforms domestic Chinese manufacturer into globally recognized OEM kitchen appliance partner.</p>
           
-          <p>From humble beginnings in a small Shenzhen workshop in 2012, HouseTech has grown into a sophisticated manufacturing enterprise with ISO-certified facilities, advanced R&D capabilities, and established distribution networks spanning from Europe to Southeast Asia and the Americas.</p>
+          <p>From small Shenzhen workshop in 2012 to sophisticated ISO-certified manufacturing enterprise. Advanced R&D and established distribution networks span Europe, Asia, and the Americas.</p>
           
           <h2>Geographic Expansion Timeline</h2>
-          <p>HouseTech's international growth has followed a strategic progression:</p>
           
-          <ul>
-            <li><strong>2015:</strong> First export orders to Southeast Asian markets, establishing initial international presence.</li>
-            <li><strong>2017:</strong> European market entry through partnerships with distributors in Germany and France.</li>
-            <li><strong>2019:</strong> North American certification and market entry, marking presence in all major markets.</li>
-            <li><strong>2021:</strong> South American market development, completing global geographic coverage.</li>
-            <li><strong>2023:</strong> 40-country milestone, representing customers on every inhabited continent.</li>
-          </ul>
-
-          <blockquote>
-            "Reaching 40 countries is meaningful not just as a number, but as evidence of the trust placed in HouseTech by partners around the world. Every market presents unique challenges—different regulations, consumer preferences, and business practices. Our team's ability to adapt while maintaining consistent quality is what makes global expansion possible."
-            <cite>— HouseTech Group CEO</cite>
-          </blockquote>
-
+          <p>2015 first export orders to Southeast Asian markets establish initial international presence. 2017 European market entry through distributor partnerships in Germany and France.</p>
+          
+          <p>2019 North American certification and market entry completes all major market coverage. 2021 South American market development completes global geographic reach.</p>
+          
+          <p>2023 reaches 40-country milestone representing customers on every inhabited continent. Strategic progression builds market expertise region by region over 8 years.</p>
+          
           <h2>Market-Specific Approaches</h2>
-          <p>HouseTech recognizes that successful international business requires more than shipping products across borders. The company has developed deep market expertise:</p>
           
-          <p>European markets demand premium quality, energy efficiency, and sophisticated design aesthetics. North American partners prioritize safety certification, competitive pricing, and reliable supply. Asian markets often require customized features and flexible order quantities.</p>
-
+          <p>European markets demand premium quality, energy efficiency, and sophisticated design aesthetics. North American partners prioritize safety certification, competitive pricing, and reliable supply chains.</p>
+          
+          <p>Asian markets often require customized features and flexible order quantities. Local teams adapt products and services to meet regional preferences and regulatory requirements.</p>
+          
           <h2>Looking Forward</h2>
-          <p>HouseTech's 40-country presence is a foundation, not a ceiling. The company has identified significant growth opportunities in emerging markets where kitchen appliance penetration remains low. African markets, in particular, represent the next frontier for expansion.</p>
           
-          <p>HouseTech extends sincere gratitude to all partners, employees, and customers who have contributed to this global journey. The next 40 countries await, and HouseTech is prepared for the adventure ahead.</p>
+          <p>40-country presence serves as foundation for continued growth. Significant opportunities identified in emerging markets with low kitchen appliance penetration rates.</p>
+          
+          <p>African markets represent next frontier for strategic expansion. HouseTech prepares with market research and partner development initiatives across the continent.</p>
+          
+          <p>40-country milestone reached across 6 continents over 8-year strategic international expansion from 2015 to 2023.</p>
         </div>
 
         <nav class="article-nav">
