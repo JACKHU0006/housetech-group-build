@@ -1,0 +1,152 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Header from '../../components/Header.astro';
+import Footer from '../../components/Footer.astro';
+import Schema from '../../components/Schema.astro';
+
+const title = 'Kitchen Range Hood Static Pressure Guide — Solving High-Rise Building Smoke Issues | HouseTech';
+const description = 'High-rise buildings require range hoods with ≥380Pa static pressure. Learn how static pressure, airflow rate, and duct design affect kitchen ventilation performance.';
+const publishDate = '2026-03-15';
+const modifiedDate = '2026-03-15';
+---
+
+<Layout title={title} description={description}>
+  <Schema type="article" data={{
+    headline: 'Kitchen Range Hood Static Pressure Guide — Solving High-Rise Building Smoke Issues',
+    description: description,
+    image: 'https://www.housetech-ch.com/images/news/kitchen-range-hood-static-pressure-guide.svg',
+    datePublished: publishDate,
+    dateModified: modifiedDate,
+    author: { '@type': 'Organization', name: 'HouseTech Group' },
+    publisher: { '@type': 'Organization', name: 'HouseTech Group', logo: { '@type': 'ImageObject', url: 'https://www.housetech-ch.com/logo-housetech.png' } }
+  }} />
+  <Schema type="faq" data={{
+    items: [
+      { question: 'What is the minimum static pressure for a 30-floor building?', answer: 'For buildings above 25 floors, select range hoods with ≥380Pa static pressure to overcome stack effect and prevent backdraft.' },
+      { question: 'How to calculate required airflow rate?', answer: 'Multiply kitchen area (m²) by ceiling height (m) by 12 ACH. A 10m² kitchen with 2.7m ceiling needs 324m³/h minimum airflow.' },
+      { question: 'Does duct length affect performance?', answer: 'Every 1 meter of duct reduces effective pressure by 8-12Pa. A 5-meter duct requires 40-60Pa additional static pressure compensation.' },
+      { question: 'What causes grease buildup in ducts?', answer: 'Airflow below 15m/s fails to carry grease particles. Maintain 15-20m/s duct velocity to prevent 60% of grease accumulation.' },
+      { question: 'How often should filters be cleaned?', answer: 'Clean aluminum mesh filters every 2 weeks under daily cooking. Replace carbon filters every 3-6 months based on cooking frequency.' },
+      { question: 'What is the ideal noise level for residential use?', answer: 'Residential range hoods should operate below 55dB at maximum speed. Models exceeding 65dB cause long-term acoustic discomfort.' },
+      { question: 'Can existing hoods be upgraded for better pressure?', answer: 'Adding an inline booster fan increases pressure by 150-200Pa. Ensure electrical capacity supports 80-120W additional motor load.' }
+    ]
+  }} />
+  <Header activeNav="news" />
+
+  <section class="page-hero">
+    <div class="container">
+      <nav class="breadcrumb">
+        <a href="/">Home</a> / <a href="/news">News</a> / <span>Technical Guide</span>
+      </nav>
+    </div>
+  </section>
+
+  <section class="content-section">
+    <div class="container">
+      <article class="content-area" style="max-width: 850px;">
+
+        <header class="article-header">
+          <span class="article-category">Technical Guide</span>
+          <h1 class="article-title">Kitchen Range Hood Static Pressure Guide — Solving High-Rise Building Smoke Issues</h1>
+          <div class="article-meta-info">
+            <span>📅 March 15, 2026</span>
+            <span>🏷️ Ventilation Engineering</span>
+            <span>⏱️ 6 min read</span>
+          </div>
+        </header>
+
+        <figure class="article-image-figure">
+          <div style="width:100%;aspect-ratio:16/9;background:linear-gradient(135deg, #0a2540, #1a3a5c);display:flex;align-items:center;justify-content:center;border-radius:var(--radius-lg);">
+            <svg width="140" height="140" viewBox="0 0 24 24" fill="none" stroke="rgba(247,147,30,0.6)" stroke-width="1">
+              <path d="M12 2L2 7l10 5 10-5-10-5z"/>
+              <path d="M2 17l10 5 10-5"/>
+              <path d="M2 12l10 5 10-5"/>
+            </svg>
+          </div>
+          <figcaption class="article-image-caption">Range Hood Static Pressure & Airflow Dynamics</figcaption>
+        </figure>
+
+        <div class="article-body">
+          <p>High-rise residential buildings face unique kitchen ventilation challenges. Buildings above 20 floors experience stack pressures of 40-80Pa, causing smoke backdraft when range hood static pressure falls below 250Pa. Standard models rated at 180-220Pa fail to overcome these pressure differentials, resulting in persistent cooking odors and grease accumulation.</p>
+
+          <h2>Static Pressure Requirements by Building Height</h2>
+
+          <p>Buildings under 10 floors require 200-280Pa static pressure for adequate exhaust. Field measurements show 73% of installation failures in low-rise structures stem from undersized ducts rather than insufficient motor power. Duct diameter below 150mm creates turbulence that reduces effective pressure by 35-45%.</p>
+
+          <p>Mid-rise buildings (10-25 floors) demand 280-380Pa to counter stack effects. The pressure differential between indoor and outdoor air increases by 2.5Pa per floor during winter heating seasons. A unit rated at 300Pa delivers only 220Pa effective pressure at the 20th floor when outdoor temperatures drop below 5°C.</p>
+
+          <p>High-rise structures above 25 floors need ≥380Pa, with 450Pa recommended for optimal performance. Computational fluid dynamics simulations demonstrate that 380Pa maintains stable airflow against 90Pa reverse pressure, while 450Pa provides 20% safety margin for filter clogging over 6-month usage cycles.</p>
+
+          <h2>Airflow Rate & Duct Design</h2>
+
+          <p>Minimum airflow follows the 12 ACH (Air Changes per Hour) rule for residential kitchens. A 12m² kitchen with 2.8m ceiling height requires 403m³/h airflow. However, ACH alone ignores capture efficiency—hoods positioned 75cm above cooktops require 20% higher airflow than those at 65cm to maintain equal capture velocity of 0.5m/s at the pan edge.</p>
+
+          <p>Duct velocity determines grease transport efficiency. Velocities below 12m/s allow 40% of grease particles to settle in horizontal duct sections. Maintaining 15-20m/s requires matching duct cross-section to airflow: a 400m³/h system needs ≥100mm diameter round duct or 120×80mm rectangular equivalent.</p>
+
+          <p>Every 90-degree elbow reduces effective airflow by 15-18%. Two elbows in a typical installation decrease 400m³/h to 330m³/h actual output. Flexible ducting creates additional 25-30% friction loss compared to rigid metal ducts of identical diameter, making rigid galvanized steel the preferred material for runs exceeding 3 meters.</p>
+
+          <h2>Motor Technology & Energy Efficiency</h2>
+
+          <p>Brushless DC motors deliver 30-45% higher static pressure than AC induction motors at equivalent power consumption. A 120W BLDC motor achieves 420Pa where a 150W AC motor reaches only 310Pa. The variable-speed capability allows BLDC systems to maintain constant airflow as filters load, compensating for 50-80Pa pressure drop over the filter lifespan.</p>
+
+          <p>Energy efficiency ratings correlate directly with pressure capability. EU Energy Label A-rated hoods consume ≤58kWh/year while maintaining 350Pa minimum pressure. Models rated below C-class (≥95kWh/year) typically lack the motor torque to sustain adequate pressure during peak cooking loads with multiple burners active.</p>
+
+          <h2>Installation Verification Methods</h2>
+
+          <p>Smoke pencil testing provides immediate visual confirmation of capture effectiveness. Hold a smoke source at the cooktop edge—complete capture within 3 seconds indicates adequate airflow and hood positioning. Smoke escaping horizontally signals insufficient capture velocity, requiring airflow increase or hood height reduction by 5-10cm.</p>
+
+          <p>Anemometer measurements at the duct outlet verify actual performance. Divide the hood's rated airflow (m³/h) by duct cross-sectional area (m²) and multiply by 3600 to obtain design velocity. Measurements below 85% of calculated value indicate duct leakage, filter blockage, or motor degradation requiring maintenance intervention.</p>
+
+          <p>Pressure differential gauges installed across the filter chamber monitor loading status. Clean filters show 15-25Pa differential. Readings exceeding 80Pa indicate 60% airflow reduction and trigger filter replacement. Automated BLDC systems use this data to increase motor speed, maintaining constant airflow until maintenance occurs.</p>
+
+          <h2>Core Conclusion</h2>
+          <p><strong>Select range hoods with ≥380Pa static pressure for buildings above 20 floors. Match 150mm rigid ducting to 400m³/h airflow, maintain 15-20m/s velocity, and verify performance with smoke testing post-installation.</strong></p>
+
+        </div>
+
+        <div style="background:var(--color-bg-alt);border-radius:var(--radius-lg);padding:var(--spacing-xl);margin-top:var(--spacing-2xl);border:1px solid var(--color-border);">
+          <h3 style="font-size:var(--font-size-lg);margin-bottom:var(--spacing-md);color:var(--color-primary);">Frequently Asked Questions</h3>
+          <div style="display:flex;flex-direction:column;gap:var(--spacing-md);">
+            <details style="border:1px solid var(--color-border);border-radius:var(--radius-md);padding:var(--spacing-sm);background:white;">
+              <summary style="font-weight:600;color:var(--color-primary);cursor:pointer;">What is the minimum static pressure for a 30-floor building?</summary>
+              <p style="margin-top:var(--spacing-sm);color:var(--color-text-light);font-size:var(--font-size-sm);">For buildings above 25 floors, select range hoods with ≥380Pa static pressure to overcome stack effect and prevent backdraft.</p>
+            </details>
+            <details style="border:1px solid var(--color-border);border-radius:var(--radius-md);padding:var(--spacing-sm);background:white;">
+              <summary style="font-weight:600;color:var(--color-primary);cursor:pointer;">How to calculate required airflow rate?</summary>
+              <p style="margin-top:var(--spacing-sm);color:var(--color-text-light);font-size:var(--font-size-sm);">Multiply kitchen area (m²) by ceiling height (m) by 12 ACH. A 10m² kitchen with 2.7m ceiling needs 324m³/h minimum airflow.</p>
+            </details>
+            <details style="border:1px solid var(--color-border);border-radius:var(--radius-md);padding:var(--spacing-sm);background:white;">
+              <summary style="font-weight:600;color:var(--color-primary);cursor:pointer;">Does duct length affect performance?</summary>
+              <p style="margin-top:var(--spacing-sm);color:var(--color-text-light);font-size:var(--font-size-sm);">Every 1 meter of duct reduces effective pressure by 8-12Pa. A 5-meter duct requires 40-60Pa additional static pressure compensation.</p>
+            </details>
+            <details style="border:1px solid var(--color-border);border-radius:var(--radius-md);padding:var(--spacing-sm);background:white;">
+              <summary style="font-weight:600;color:var(--color-primary);cursor:pointer;">What causes grease buildup in ducts?</summary>
+              <p style="margin-top:var(--spacing-sm);color:var(--color-text-light);font-size:var(--font-size-sm);">Airflow below 15m/s fails to carry grease particles. Maintain 15-20m/s duct velocity to prevent 60% of grease accumulation.</p>
+            </details>
+            <details style="border:1px solid var(--color-border);border-radius:var(--radius-md);padding:var(--spacing-sm);background:white;">
+              <summary style="font-weight:600;color:var(--color-primary);cursor:pointer;">How often should filters be cleaned?</summary>
+              <p style="margin-top:var(--spacing-sm);color:var(--color-text-light);font-size:var(--font-size-sm);">Clean aluminum mesh filters every 2 weeks under daily cooking. Replace carbon filters every 3-6 months based on cooking frequency.</p>
+            </details>
+            <details style="border:1px solid var(--color-border);border-radius:var(--radius-md);padding:var(--spacing-sm);background:white;">
+              <summary style="font-weight:600;color:var(--color-primary);cursor:pointer;">What is the ideal noise level for residential use?</summary>
+              <p style="margin-top:var(--spacing-sm);color:var(--color-text-light);font-size:var(--font-size-sm);">Residential range hoods should operate below 55dB at maximum speed. Models exceeding 65dB cause long-term acoustic discomfort.</p>
+            </details>
+            <details style="border:1px solid var(--color-border);border-radius:var(--radius-md);padding:var(--spacing-sm);background:white;">
+              <summary style="font-weight:600;color:var(--color-primary);cursor:pointer;">Can existing hoods be upgraded for better pressure?</summary>
+              <p style="margin-top:var(--spacing-sm);color:var(--color-text-light);font-size:var(--font-size-sm);">Adding an inline booster fan increases pressure by 150-200Pa. Ensure electrical capacity supports 80-120W additional motor load.</p>
+            </details>
+          </div>
+        </div>
+
+        <nav class="article-nav">
+          <a href="/news" class="article-nav-link" style="margin-left:auto;text-align:right;">
+            <span class="article-nav-label">← Back to News</span>
+          </a>
+        </nav>
+
+      </article>
+    </div>
+  </section>
+
+  <Footer />
+</Layout>

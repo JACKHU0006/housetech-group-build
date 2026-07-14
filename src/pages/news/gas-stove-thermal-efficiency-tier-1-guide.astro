@@ -1,0 +1,152 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Header from '../../components/Header.astro';
+import Footer from '../../components/Footer.astro';
+import Schema from '../../components/Schema.astro';
+
+const title = 'Gas Stove Thermal Efficiency Guide — Achieving China Tier-1 Energy Rating | HouseTech';
+const description = 'China Tier-1 gas stoves require ≥63% thermal efficiency. Learn how burner design, flame distribution, and combustion optimization achieve this threshold.';
+const publishDate = '2026-04-22';
+const modifiedDate = '2026-04-22';
+---
+
+<Layout title={title} description={description}>
+  <Schema type="article" data={{
+    headline: 'Gas Stove Thermal Efficiency Guide — Achieving China Tier-1 Energy Rating',
+    description: description,
+    image: 'https://www.housetech-ch.com/images/news/gas-stove-thermal-efficiency-tier-1-guide.svg',
+    datePublished: publishDate,
+    dateModified: modifiedDate,
+    author: { '@type': 'Organization', name: 'HouseTech Group' },
+    publisher: { '@type': 'Organization', name: 'HouseTech Group', logo: { '@type': 'ImageObject', url: 'https://www.housetech-ch.com/logo-housetech.png' } }
+  }} />
+  <Schema type="faq" data={{
+    items: [
+      { question: 'What is the minimum thermal efficiency for Tier-1 gas stoves?', answer: 'China GB 30720 standard mandates ≥63% thermal efficiency for Tier-1. Tier-2 requires ≥59%, and Tier-3 requires ≥55%.' },
+      { question: 'How is thermal efficiency measured?', answer: 'Heat 5kg water from 25°C to 65°C. Divide absorbed heat (836kJ) by gas consumed energy. Result ×100 = efficiency %.' },
+      { question: 'Why do cast iron burners outperform brass?', answer: 'Cast iron retains 15-20% more radiant heat. Brass dissipates heat faster, lowering pan-bottom temperature by 30-40°C.' },
+      { question: 'What burner power suits Chinese wok cooking?', answer: 'High-heat wok cooking needs 4.0-5.2kW per burner. Below 3.5kW fails to achieve 200°C required for stir-fry.' },
+      { question: 'Does flame color indicate efficiency?', answer: 'Blue flame indicates complete combustion (≥99% methane burn). Yellow tips signal incomplete combustion, wasting 8-12% fuel.' },
+      { question: 'How often should burners be cleaned?', answer: 'Clean burner ports monthly. Clogged ports reduce efficiency by 10-15% and increase CO emissions above 800ppm.' },
+      { question: 'Can LPG and natural gas burners be swapped?', answer: 'No. LPG nozzles have 0.75-0.90mm diameter; natural gas uses 1.15-1.35mm. Swapping causes 25-40% efficiency loss.' }
+    ]
+  }} />
+  <Header activeNav="news" />
+
+  <section class="page-hero">
+    <div class="container">
+      <nav class="breadcrumb">
+        <a href="/">Home</a> / <a href="/news">News</a> / <span>Technical Guide</span>
+      </nav>
+    </div>
+  </section>
+
+  <section class="content-section">
+    <div class="container">
+      <article class="content-area" style="max-width: 850px;">
+
+        <header class="article-header">
+          <span class="article-category">Technical Guide</span>
+          <h1 class="article-title">Gas Stove Thermal Efficiency Guide — Achieving China Tier-1 Energy Rating</h1>
+          <div class="article-meta-info">
+            <span>📅 April 22, 2026</span>
+            <span>🏷️ Combustion Engineering</span>
+            <span>⏱️ 5 min read</span>
+          </div>
+        </header>
+
+        <figure class="article-image-figure">
+          <div style="width:100%;aspect-ratio:16/9;background:linear-gradient(135deg, #1a3a5c, #0d3b66);display:flex;align-items:center;justify-content:center;border-radius:var(--radius-lg);">
+            <svg width="140" height="140" viewBox="0 0 24 24" fill="none" stroke="rgba(247,147,30,0.6)" stroke-width="1">
+              <circle cx="12" cy="12" r="10"/>
+              <path d="M12 6v6l4 2"/>
+              <path d="M8 14l4-2"/>
+            </svg>
+          </div>
+          <figcaption class="article-image-caption">Gas Stove Burner Efficiency & Flame Dynamics</figcaption>
+        </figure>
+
+        <div class="article-body">
+          <p>China's GB 30720-2014 standard classifies domestic gas stoves into three tiers. Tier-1 requires ≥63% thermal efficiency, Tier-2 demands ≥59%, and Tier-3 sets ≥55%. Most conventional stoves operate at 52-58%, failing even Tier-3. Understanding the engineering parameters that bridge this gap enables informed product selection and usage optimization.</p>
+
+          <h2>Burner Design & Heat Transfer</h2>
+
+          <p>Cast iron burners achieve 65-68% efficiency through superior heat retention. Cast iron thermal conductivity of 52W/m·K distributes heat evenly across the flame port surface, maintaining 450-520°C at the burner cap. Brass burners (120W/m·K) conduct heat away too rapidly, dropping pan-bottom temperature by 30-40°C and reducing boiling speed by 18%.</p>
+
+          <p>Flame port geometry determines combustion completeness. Stoves with 0.8-1.0mm diameter ports produce 35-45mm blue flame cones optimal for 28-32cm pans. Ports below 0.6mm create 25mm flames that miss pan edges, wasting 22% heat. Ports above 1.2mm generate yellow tips signaling incomplete combustion and 8-12% fuel waste.</p>
+
+          <p>Inner-flame ring design adds 4-6% efficiency by concentrating heat at the pan center. Single-ring burners spread heat across 280mm diameter, but only 60% contacts the pan. Dual-ring configurations with 120mm inner and 200mm outer rings match heat distribution to standard cookware footprints, capturing 78% of generated thermal energy.</p>
+
+          <h2>Air-Fuel Ratio & Combustion Optimization</h2>
+
+          <p>Stoichiometric combustion requires 9.52m³ air per 1m³ natural gas. Primary air intake set at 45-55% of total air demand achieves optimal flame speed of 0.35-0.45m/s. Primary air below 40% produces yellow flames with CO emissions exceeding 1000ppm. Above 60% primary air lifts flames off ports, causing ignition failure and 15% efficiency loss.</p>
+
+          <p>Thermoelectric flame failure devices (FFD) maintain safety without efficiency penalty. FFD response time of 5-15 seconds meets EN 30-1-1 standards. Units exceeding 20 seconds allow unburned gas release of 0.8-1.2L per incident. Modern ionization sensors achieve 3-5 second cutoff, improving safety margin by 60%.</p>
+
+          <p>Altitude compensation matters for installations above 1000m. Air density decreases 12% per 1000m elevation, requiring 15-20% larger primary air ports. Stoves without altitude adjustment show 8-14% efficiency drop at 2000m elevation. Adjustable air shutters compensate within ±2% across 0-3000m range.</p>
+
+          <h2>Pan Compatibility & Cooking Efficiency</h2>
+
+          <p>Flat-bottom pans transfer 72-78% of burner heat versus 45-55% for round-bottom woks on standard grates. Wok adapters with 100-120mm concave depressions recover 18% of lost heat by redirecting flame flow. Carbon steel woks (1.2-1.5mm thickness) reach 200°C stir-fry temperature in 90 seconds, while stainless steel (3.0mm) requires 150 seconds.</p>
+
+          <p>Pan diameter matching improves efficiency by 10-15%. A 24cm pan on a burner optimized for 28cm captures only 68% of available heat. Burners with adjustable flame spread (80-120mm inner ring, 160-220mm outer ring) adapt to 20-36cm cookware, maintaining 63%+ efficiency across pan sizes.</p>
+
+          <h2>Maintenance & Performance Degradation</h2>
+
+          <p>Burner port clogging reduces efficiency by 10-15% within 3 months of daily use. Food residue blocking 20% of ports creates asymmetric flame patterns, increasing cook times by 25%. Monthly cleaning with wire brushes restores original performance. Deep cleaning every 6 months removes carbon deposits that permanently enlarge ports beyond 1.2mm.</p>
+
+          <p>Gas pressure regulation maintains consistent output. Nominal pressure for natural gas is 2.0kPa; deviations beyond ±0.3kPa alter flame height by 15mm and efficiency by 5-8%. Pressure regulators with 0.1kPa precision maintain Tier-1 performance across supply fluctuations. LPG systems require 2.8kPa with identical tolerance.</p>
+
+          <p>Ignition system choice affects long-term reliability. Piezoelectric ignitors deliver 12-15kV sparks with 30,000-cycle lifespan. Battery-powered pulse ignitors generate 16-20kV with 100,000-cycle rating but require 1.5V battery replacement every 8-12 months. Continuous ignition systems waste 0.02m³/h gas when malfunctioning.</p>
+
+          <h2>Core Conclusion</h2>
+          <p><strong>Tier-1 gas stoves require cast iron burners with 0.8-1.0mm ports, 45-55% primary air ratio, and dual-ring flame distribution. Match 4.0-5.2kW power to 28-32cm flat-bottom pans, clean ports monthly, and verify 2.0±0.3kPa gas pressure.</strong></p>
+
+        </div>
+
+        <div style="background:var(--color-bg-alt);border-radius:var(--radius-lg);padding:var(--spacing-xl);margin-top:var(--spacing-2xl);border:1px solid var(--color-border);">
+          <h3 style="font-size:var(--font-size-lg);margin-bottom:var(--spacing-md);color:var(--color-primary);">Frequently Asked Questions</h3>
+          <div style="display:flex;flex-direction:column;gap:var(--spacing-md);">
+            <details style="border:1px solid var(--color-border);border-radius:var(--radius-md);padding:var(--spacing-sm);background:white;">
+              <summary style="font-weight:600;color:var(--color-primary);cursor:pointer;">What is the minimum thermal efficiency for Tier-1 gas stoves?</summary>
+              <p style="margin-top:var(--spacing-sm);color:var(--color-text-light);font-size:var(--font-size-sm);">China GB 30720 standard mandates ≥63% thermal efficiency for Tier-1. Tier-2 requires ≥59%, and Tier-3 requires ≥55%.</p>
+            </details>
+            <details style="border:1px solid var(--color-border);border-radius:var(--radius-md);padding:var(--spacing-sm);background:white;">
+              <summary style="font-weight:600;color:var(--color-primary);cursor:pointer;">How is thermal efficiency measured?</summary>
+              <p style="margin-top:var(--spacing-sm);color:var(--color-text-light);font-size:var(--font-size-sm);">Heat 5kg water from 25°C to 65°C. Divide absorbed heat (836kJ) by gas consumed energy. Result ×100 = efficiency %.</p>
+            </details>
+            <details style="border:1px solid var(--color-border);border-radius:var(--radius-md);padding:var(--spacing-sm);background:white;">
+              <summary style="font-weight:600;color:var(--color-primary);cursor:pointer;">Why do cast iron burners outperform brass?</summary>
+              <p style="margin-top:var(--spacing-sm);color:var(--color-text-light);font-size:var(--font-size-sm);">Cast iron retains 15-20% more radiant heat. Brass dissipates heat faster, lowering pan-bottom temperature by 30-40°C.</p>
+            </details>
+            <details style="border:1px solid var(--color-border);border-radius:var(--radius-md);padding:var(--spacing-sm);background:white;">
+              <summary style="font-weight:600;color:var(--color-primary);cursor:pointer;">What burner power suits Chinese wok cooking?</summary>
+              <p style="margin-top:var(--spacing-sm);color:var(--color-text-light);font-size:var(--font-size-sm);">High-heat wok cooking needs 4.0-5.2kW per burner. Below 3.5kW fails to achieve 200°C required for stir-fry.</p>
+            </details>
+            <details style="border:1px solid var(--color-border);border-radius:var(--radius-md);padding:var(--spacing-sm);background:white;">
+              <summary style="font-weight:600;color:var(--color-primary);cursor:pointer;">Does flame color indicate efficiency?</summary>
+              <p style="margin-top:var(--spacing-sm);color:var(--color-text-light);font-size:var(--font-size-sm);">Blue flame indicates complete combustion (≥99% methane burn). Yellow tips signal incomplete combustion, wasting 8-12% fuel.</p>
+            </details>
+            <details style="border:1px solid var(--color-border);border-radius:var(--radius-md);padding:var(--spacing-sm);background:white;">
+              <summary style="font-weight:600;color:var(--color-primary);cursor:pointer;">How often should burners be cleaned?</summary>
+              <p style="margin-top:var(--spacing-sm);color:var(--color-text-light);font-size:var(--font-size-sm);">Clean burner ports monthly. Clogged ports reduce efficiency by 10-15% and increase CO emissions above 800ppm.</p>
+            </details>
+            <details style="border:1px solid var(--color-border);border-radius:var(--radius-md);padding:var(--spacing-sm);background:white;">
+              <summary style="font-weight:600;color:var(--color-primary);cursor:pointer;">Can LPG and natural gas burners be swapped?</summary>
+              <p style="margin-top:var(--spacing-sm);color:var(--color-text-light);font-size:var(--font-size-sm);">No. LPG nozzles have 0.75-0.90mm diameter; natural gas uses 1.15-1.35mm. Swapping causes 25-40% efficiency loss.</p>
+            </details>
+          </div>
+        </div>
+
+        <nav class="article-nav">
+          <a href="/news" class="article-nav-link" style="margin-left:auto;text-align:right;">
+            <span class="article-nav-label">← Back to News</span>
+          </a>
+        </nav>
+
+      </article>
+    </div>
+  </section>
+
+  <Footer />
+</Layout>

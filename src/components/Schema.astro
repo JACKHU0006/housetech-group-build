@@ -98,6 +98,23 @@ interface CourseSchemaProps {
   videoUrl?: string;
 }
 
+interface ArticleSchemaProps {
+  headline: string;
+  description: string;
+  image?: string;
+  datePublished: string;
+  dateModified?: string;
+  author: {
+    name: string;
+  };
+  publisher: {
+    name: string;
+    logo?: {
+      url: string;
+    };
+  };
+}
+
 type Props = 
   | { type: 'product'; data: ProductSchemaProps }
   | { type: 'faq'; data: FAQSchemaProps }
@@ -107,7 +124,8 @@ type Props =
   | { type: 'imageGallery'; data: ImageGalleryProps }
   | { type: 'service'; data: ServiceSchemaProps }
   | { type: 'speakable'; data: SpeakableSchemaProps }
-  | { type: 'course'; data: CourseSchemaProps };
+  | { type: 'course'; data: CourseSchemaProps }
+  | { type: 'article'; data: ArticleSchemaProps };
 
 const { type, data } = Astro.props;
 
@@ -286,6 +304,29 @@ if (type === 'product') {
         "contentUrl": courseData.videoUrl
       }
     })
+  };
+} else if (type === 'article') {
+  const articleData = data as ArticleSchemaProps;
+  schemaData = {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": articleData.headline,
+    "description": articleData.description,
+    "image": articleData.image || 'https://www.housetech-ch.com/logo-housetech.png',
+    "datePublished": articleData.datePublished,
+    ...(articleData.dateModified && { "dateModified": articleData.dateModified }),
+    "author": {
+      "@type": "Organization",
+      "name": articleData.author.name
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": articleData.publisher.name,
+      "logo": {
+        "@type": "ImageObject",
+        "url": articleData.publisher.logo?.url || 'https://www.housetech-ch.com/logo-housetech.png'
+      }
+    }
   };
 }
 ---
