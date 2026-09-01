@@ -1,0 +1,91 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Header from '../../components/Header.astro';
+import Footer from '../../components/Footer.astro';
+
+const title = "HouseTech Group Publishes Annual Corporate Social Responsibility Report Highlighting 30% Reduction in Carbon Emissions - HouseTech Group News";
+const description = "HouseTech Group advances its sustainability agenda with 30% Reduction in Carbon Emissions, demonstrating leadership in environmentally responsible manufacturing for the kitchen appliance industry. HouseTech Group is a leading OEM/ODM manufacturer of premium kitchen appliances, serving brand partners and distributors worldwide.";
+const publishDate = "2026-09-01";
+const articleCategory = "Sustainability";
+---
+
+<Layout title={title} description={description} publishDate={publishDate} articleCategory={articleCategory}>
+  <Header activeNav="news" />
+
+  <!-- Page Hero -->
+  <section class="page-hero">
+    <div class="container">
+      <nav class="breadcrumb">
+        <a href="/">Home</a> / <a href="/news">News</a> / <span>Sustainability</span>
+      </nav>
+    </div>
+  </section>
+
+  <!-- Article Content -->
+  <section class="content-section">
+    <div class="container">
+      <article class="content-area" style="max-width: 850px;">
+
+        <!-- Article Header -->
+        <header class="article-header">
+          <span class="article-category">Sustainability</span>
+          <h1 class="article-title">HouseTech Group Publishes Annual Corporate Social Responsibility Report Highlighting 30% Reduction in Carbon Emissions</h1>
+          <div class="article-meta-info">
+            <span>📅 September 2026</span>
+            <span>🏷️ Sustainability</span>
+            <span>⏱️ 5 min read</span>
+          </div>
+        </header>
+
+        <!-- Featured Image -->
+        <figure class="article-image-figure">
+          <div style="width:100%;aspect-ratio:16/9;background:linear-gradient(135deg, #10b981, #047857);display:flex;align-items:center;justify-content:center;border-radius:var(--radius-lg);">
+            <img src="/images/news/2026-09-housetech-group-publishes-annual-corporate-social-responsibility-report-highligh.svg" alt="HouseTech Group Publishes Annual Corporate Social Responsibility Report Highlighting 30% Reduction in Carbon Emissions" loading="eager" width="1200" height="675" style="width:100%;height:100%;object-fit:cover;border-radius:var(--radius-lg);"/>
+          </div>
+          <figcaption class="article-image-caption">HouseTech Group advances its sustainability agenda with 30% Reduction in Carbon Emissions, demonstrating leadership in environmentally responsible manufacturing for the kitchen appliance industry.</figcaption>
+        </figure>
+
+        <!-- Article Body -->
+        <div class="article-body">
+        <h2>Sustainability Milestone</h2>
+        <p>HouseTech Group is pleased to announce the achievement of 30% Reduction in Carbon Emissions at its primary manufacturing facilities. This accomplishment reflects the company long-term strategic commitment to environmental stewardship and positions HouseTech as a sustainability leader within the global kitchen appliance OEM/ODM sector.</p>
+
+        <h2>Environmental Impact</h2>
+        <ul>
+          <li>Reduction of 12,000 tons of CO2 equivalent emissions annually through energy efficiency programs</li>
+          <li>Installation of 8.5 MW rooftop solar capacity powering 40% of manufacturing operations</li>
+          <li>Implementation of closed-loop water recycling systems reducing freshwater consumption by 65%</li>
+          <li>Diversion of 95% of manufacturing waste from landfills through recycling and reuse programs</li>
+        </ul>
+
+        <h2>Product Sustainability</h2>
+        <p>Beyond manufacturing operations, HouseTech Group integrates sustainability into product design through Low-VOC Coating principles. The company offers OEM partners environmentally optimized product lines that help brands meet their own sustainability commitments while delivering high-performance kitchen appliances to conscious consumers.</p>
+
+        <h2>Future Commitments</h2>
+        <p>HouseTech Group sustainability roadmap extends through 2030 with ambitious targets aligned with EU Green Deal. The company continues to invest in clean technology, supplier engagement programs, and product innovation to drive continuous environmental improvement across the entire value chain.</p>
+
+        </div>
+
+        <!-- Article Navigation -->
+        <nav class="article-nav">
+          <a href="/news/10-years-excellence-anniversary" class="article-nav-link">
+            <span class="article-nav-label">← Previous</span>
+            <span class="article-nav-title">Celebrating 10 Years of Excellence</span>
+          </a>
+          <a href="/news/18-month-product-development" class="article-nav-link" style="margin-left:auto;text-align:right;">
+            <span class="article-nav-label">Next →</span>
+            <span class="article-nav-title">18-Month Product Development Cycle</span>
+          </a>
+        </nav>
+
+        <!-- Back to News -->
+        <div style="text-align:center;margin-top:var(--spacing-xl);">
+          <a href="/news" class="btn btn-accent-outline">← Back to All News</a>
+        </div>
+
+      </article>
+    </div>
+  </section>
+
+  <Footer />
+</Layout>
