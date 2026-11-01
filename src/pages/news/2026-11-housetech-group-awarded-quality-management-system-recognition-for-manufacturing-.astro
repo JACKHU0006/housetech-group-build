@@ -1,0 +1,91 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Header from '../../components/Header.astro';
+import Footer from '../../components/Footer.astro';
+
+const title = "HouseTech Group Awarded Quality Management System Recognition for Manufacturing Excellence Excellence - HouseTech Group News";
+const description = "HouseTech Group receives Quality Management System certification, validating the company commitment to international standards in Manufacturing Excellence for Air Fryers products. HouseTech Group is a leading OEM/ODM manufacturer of premium kitchen appliances, serving brand partners and distributors worldwide.";
+const publishDate = "2026-11-01";
+const articleCategory = "Awards";
+---
+
+<Layout title={title} description={description} publishDate={publishDate} articleCategory={articleCategory}>
+  <Header activeNav="news" />
+
+  <!-- Page Hero -->
+  <section class="page-hero">
+    <div class="container">
+      <nav class="breadcrumb">
+        <a href="/">Home</a> / <a href="/news">News</a> / <span>Awards</span>
+      </nav>
+    </div>
+  </section>
+
+  <!-- Article Content -->
+  <section class="content-section">
+    <div class="container">
+      <article class="content-area" style="max-width: 850px;">
+
+        <!-- Article Header -->
+        <header class="article-header">
+          <span class="article-category">Awards</span>
+          <h1 class="article-title">HouseTech Group Awarded Quality Management System Recognition for Manufacturing Excellence Excellence</h1>
+          <div class="article-meta-info">
+            <span>📅 November 2026</span>
+            <span>🏷️ Awards</span>
+            <span>⏱️ 5 min read</span>
+          </div>
+        </header>
+
+        <!-- Featured Image -->
+        <figure class="article-image-figure">
+          <div style="width:100%;aspect-ratio:16/9;background:linear-gradient(135deg, #f59e0b, #d97706);display:flex;align-items:center;justify-content:center;border-radius:var(--radius-lg);">
+            <img src="/images/news/2026-11-housetech-group-awarded-quality-management-system-recognition-for-manufacturing-.svg" alt="HouseTech Group Awarded Quality Management System Recognition for Manufacturing Excellence Excellence" loading="eager" width="1200" height="675" style="width:100%;height:100%;object-fit:cover;border-radius:var(--radius-lg);"/>
+          </div>
+          <figcaption class="article-image-caption">HouseTech Group receives Quality Management System certification, validating the company commitment to international standards in Manufacturing Excellence for Air Fryers products.</figcaption>
+        </figure>
+
+        <!-- Article Body -->
+        <div class="article-body">
+        <h2>Certification Achievement</h2>
+        <p>HouseTech Group is proud to announce that its Air Fryers products have been awarded the Quality Management System certification by the relevant international certification body. This recognition validates the company unwavering commitment to meeting the highest standards of Manufacturing Excellence across all product lines.</p>
+
+        <h2>Certification Scope</h2>
+        <ul>
+          <li>Comprehensive audit of manufacturing processes and quality management systems</li>
+          <li>Independent laboratory testing of product samples across multiple performance criteria</li>
+          <li>Verification of supply chain traceability and component sourcing practices</li>
+          <li>Review of corporate social responsibility policies and worker safety standards</li>
+        </ul>
+
+        <h2>Benefits for OEM Partners</h2>
+        <p>The Quality Management System certification provides HouseTech Group OEM/ODM partners with significant market access advantages. Brand partners can leverage these certifications to streamline their own regulatory approval processes, accelerate time-to-market in regulated markets, and demonstrate compliance to retail buyers and end consumers.</p>
+
+        <h2>Continuous Improvement</h2>
+        <p>HouseTech Group views certification as an ongoing journey rather than a destination. The company maintains dedicated compliance and quality assurance teams that continuously monitor regulatory developments across all major markets, ensuring that products and processes remain at the forefront of industry standards.</p>
+
+        </div>
+
+        <!-- Article Navigation -->
+        <nav class="article-nav">
+          <a href="/news/10-years-excellence-anniversary" class="article-nav-link">
+            <span class="article-nav-label">← Previous</span>
+            <span class="article-nav-title">Celebrating 10 Years of Excellence</span>
+          </a>
+          <a href="/news/18-month-product-development" class="article-nav-link" style="margin-left:auto;text-align:right;">
+            <span class="article-nav-label">Next →</span>
+            <span class="article-nav-title">18-Month Product Development Cycle</span>
+          </a>
+        </nav>
+
+        <!-- Back to News -->
+        <div style="text-align:center;margin-top:var(--spacing-xl);">
+          <a href="/news" class="btn btn-accent-outline">← Back to All News</a>
+        </div>
+
+      </article>
+    </div>
+  </section>
+
+  <Footer />
+</Layout>
